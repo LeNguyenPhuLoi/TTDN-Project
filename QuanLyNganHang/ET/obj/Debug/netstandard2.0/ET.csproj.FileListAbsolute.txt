@@ -1,0 +1,10 @@
+D:\QuanLyNganHang\ET\bin\Debug\netstandard2.0\ET.deps.json
+D:\QuanLyNganHang\ET\bin\Debug\netstandard2.0\ET.dll
+D:\QuanLyNganHang\ET\bin\Debug\netstandard2.0\ET.pdb
+D:\QuanLyNganHang\ET\obj\Debug\netstandard2.0\ET.csproj.AssemblyReference.cache
+D:\QuanLyNganHang\ET\obj\Debug\netstandard2.0\ET.GeneratedMSBuildEditorConfig.editorconfig
+D:\QuanLyNganHang\ET\obj\Debug\netstandard2.0\ET.AssemblyInfoInputs.cache
+D:\QuanLyNganHang\ET\obj\Debug\netstandard2.0\ET.AssemblyInfo.cs
+D:\QuanLyNganHang\ET\obj\Debug\netstandard2.0\ET.csproj.CoreCompileInputs.cache
+D:\QuanLyNganHang\ET\obj\Debug\netstandard2.0\ET.dll
+D:\QuanLyNganHang\ET\obj\Debug\netstandard2.0\ET.pdb
