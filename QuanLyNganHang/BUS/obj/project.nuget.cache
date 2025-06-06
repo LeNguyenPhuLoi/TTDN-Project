@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "7wKQcT3D4vQ=",
+  "dgSpecHash": "AArbzdJTaFk=",
   "success": true,
-  "projectFilePath": "D:\\QuanLyNganHang\\BUS\\BUS.csproj",
+  "projectFilePath": "E:\\TTDN Project\\3\\New folder\\TTDN-Project\\QuanLyNganHang\\BUS\\BUS.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\leloi\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Users\\leloi\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+    "C:\\Users\\veros\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\veros\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
   ],
   "logs": []
 }
