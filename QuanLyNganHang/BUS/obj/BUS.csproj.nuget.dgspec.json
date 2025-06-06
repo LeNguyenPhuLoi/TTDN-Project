@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\QuanLyNganHang\\BUS\\BUS.csproj": {}
+    "E:\\TTDN Project\\3\\New folder\\TTDN-Project\\QuanLyNganHang\\BUS\\BUS.csproj": {}
   },
   "projects": {
-    "D:\\QuanLyNganHang\\BUS\\BUS.csproj": {
+    "E:\\TTDN Project\\3\\New folder\\TTDN-Project\\QuanLyNganHang\\BUS\\BUS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\QuanLyNganHang\\BUS\\BUS.csproj",
+        "projectUniqueName": "E:\\TTDN Project\\3\\New folder\\TTDN-Project\\QuanLyNganHang\\BUS\\BUS.csproj",
         "projectName": "BUS",
-        "projectPath": "D:\\QuanLyNganHang\\BUS\\BUS.csproj",
-        "packagesPath": "C:\\Users\\leloi\\.nuget\\packages\\",
-        "outputPath": "D:\\QuanLyNganHang\\BUS\\obj\\",
+        "projectPath": "E:\\TTDN Project\\3\\New folder\\TTDN-Project\\QuanLyNganHang\\BUS\\BUS.csproj",
+        "packagesPath": "C:\\Users\\veros\\.nuget\\packages\\",
+        "outputPath": "E:\\TTDN Project\\3\\New folder\\TTDN-Project\\QuanLyNganHang\\BUS\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\leloi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\veros\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -32,11 +32,11 @@
           "netstandard2.0": {
             "targetAlias": "netstandard2.0",
             "projectReferences": {
-              "D:\\QuanLyNganHang\\DAL\\DAL.csproj": {
-                "projectPath": "D:\\QuanLyNganHang\\DAL\\DAL.csproj"
+              "E:\\TTDN Project\\3\\New folder\\TTDN-Project\\QuanLyNganHang\\DAL\\DAL.csproj": {
+                "projectPath": "E:\\TTDN Project\\3\\New folder\\TTDN-Project\\QuanLyNganHang\\DAL\\DAL.csproj"
               },
-              "D:\\QuanLyNganHang\\ET\\ET.csproj": {
-                "projectPath": "D:\\QuanLyNganHang\\ET\\ET.csproj"
+              "E:\\TTDN Project\\3\\New folder\\TTDN-Project\\QuanLyNganHang\\ET\\ET.csproj": {
+                "projectPath": "E:\\TTDN Project\\3\\New folder\\TTDN-Project\\QuanLyNganHang\\ET\\ET.csproj"
               }
             }
           }
@@ -51,7 +51,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.200"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "netstandard2.0": {
@@ -75,24 +75,24 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\QuanLyNganHang\\DAL\\DAL.csproj": {
+    "E:\\TTDN Project\\3\\New folder\\TTDN-Project\\QuanLyNganHang\\DAL\\DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\QuanLyNganHang\\DAL\\DAL.csproj",
+        "projectUniqueName": "E:\\TTDN Project\\3\\New folder\\TTDN-Project\\QuanLyNganHang\\DAL\\DAL.csproj",
         "projectName": "DAL",
-        "projectPath": "D:\\QuanLyNganHang\\DAL\\DAL.csproj",
-        "packagesPath": "C:\\Users\\leloi\\.nuget\\packages\\",
-        "outputPath": "D:\\QuanLyNganHang\\DAL\\obj\\",
+        "projectPath": "E:\\TTDN Project\\3\\New folder\\TTDN-Project\\QuanLyNganHang\\DAL\\DAL.csproj",
+        "packagesPath": "C:\\Users\\veros\\.nuget\\packages\\",
+        "outputPath": "E:\\TTDN Project\\3\\New folder\\TTDN-Project\\QuanLyNganHang\\DAL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\leloi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\veros\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -107,8 +107,8 @@
           "netstandard2.0": {
             "targetAlias": "netstandard2.0",
             "projectReferences": {
-              "D:\\QuanLyNganHang\\ET\\ET.csproj": {
-                "projectPath": "D:\\QuanLyNganHang\\ET\\ET.csproj"
+              "E:\\TTDN Project\\3\\New folder\\TTDN-Project\\QuanLyNganHang\\ET\\ET.csproj": {
+                "projectPath": "E:\\TTDN Project\\3\\New folder\\TTDN-Project\\QuanLyNganHang\\ET\\ET.csproj"
               }
             }
           }
@@ -123,7 +123,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.200"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "netstandard2.0": {
@@ -147,24 +147,24 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\QuanLyNganHang\\ET\\ET.csproj": {
+    "E:\\TTDN Project\\3\\New folder\\TTDN-Project\\QuanLyNganHang\\ET\\ET.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\QuanLyNganHang\\ET\\ET.csproj",
+        "projectUniqueName": "E:\\TTDN Project\\3\\New folder\\TTDN-Project\\QuanLyNganHang\\ET\\ET.csproj",
         "projectName": "ET",
-        "projectPath": "D:\\QuanLyNganHang\\ET\\ET.csproj",
-        "packagesPath": "C:\\Users\\leloi\\.nuget\\packages\\",
-        "outputPath": "D:\\QuanLyNganHang\\ET\\obj\\",
+        "projectPath": "E:\\TTDN Project\\3\\New folder\\TTDN-Project\\QuanLyNganHang\\ET\\ET.csproj",
+        "packagesPath": "C:\\Users\\veros\\.nuget\\packages\\",
+        "outputPath": "E:\\TTDN Project\\3\\New folder\\TTDN-Project\\QuanLyNganHang\\ET\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\leloi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\veros\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -191,7 +191,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.200"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "netstandard2.0": {
@@ -215,7 +215,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     }
