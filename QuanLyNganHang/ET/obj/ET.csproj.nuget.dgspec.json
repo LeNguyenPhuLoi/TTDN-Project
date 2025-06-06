@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "E:\\TTDN Project\\3\\New folder\\TTDN-Project\\QuanLyNganHang\\ET\\ET.csproj": {}
+    "D:\\ĐỒ ÁN TTDN\\et\\TTDN-Project\\QuanLyNganHang\\ET\\ET.csproj": {}
   },
   "projects": {
-    "E:\\TTDN Project\\3\\New folder\\TTDN-Project\\QuanLyNganHang\\ET\\ET.csproj": {
+    "D:\\ĐỒ ÁN TTDN\\et\\TTDN-Project\\QuanLyNganHang\\ET\\ET.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\TTDN Project\\3\\New folder\\TTDN-Project\\QuanLyNganHang\\ET\\ET.csproj",
+        "projectUniqueName": "D:\\ĐỒ ÁN TTDN\\et\\TTDN-Project\\QuanLyNganHang\\ET\\ET.csproj",
         "projectName": "ET",
-        "projectPath": "E:\\TTDN Project\\3\\New folder\\TTDN-Project\\QuanLyNganHang\\ET\\ET.csproj",
-        "packagesPath": "C:\\Users\\veros\\.nuget\\packages\\",
-        "outputPath": "E:\\TTDN Project\\3\\New folder\\TTDN-Project\\QuanLyNganHang\\ET\\obj\\",
+        "projectPath": "D:\\ĐỒ ÁN TTDN\\et\\TTDN-Project\\QuanLyNganHang\\ET\\ET.csproj",
+        "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
+        "outputPath": "D:\\ĐỒ ÁN TTDN\\et\\TTDN-Project\\QuanLyNganHang\\ET\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\veros\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -44,7 +44,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.300"
+        "SdkAnalysisLevel": "9.0.200"
       },
       "frameworks": {
         "netstandard2.0": {
@@ -68,7 +68,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }
