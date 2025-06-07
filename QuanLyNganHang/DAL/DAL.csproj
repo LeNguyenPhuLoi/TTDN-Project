@@ -43,9 +43,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="DAL_ChiNhanh.cs" />
     <Compile Include="DAL_KhachHang.cs" />
     <Compile Include="DAL_LoaiTaiKhoan.cs" />
     <Compile Include="DAL_LoaiTien.cs" />
+    <Compile Include="DAL_NhanVien.cs" />
+    <Compile Include="DAL_PhongBan.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
