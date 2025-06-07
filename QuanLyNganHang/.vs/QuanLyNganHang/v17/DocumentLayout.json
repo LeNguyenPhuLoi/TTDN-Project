@@ -1,12 +1,53 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\TTDN-Project\\QuanLyNganHang\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2226E36C-7DB0-4B4F-8F41-79ECE8720F1A}|DAL\\DAL.csproj|d:\\ttdn-project\\quanlynganhang\\dal\\qlnh.dbml||{B465B5AD-8799-4507-B90A-EE29ACF36AF9}|",
+      "RelativeMoniker": "D:0:0:{2226E36C-7DB0-4B4F-8F41-79ECE8720F1A}|DAL\\DAL.csproj|solutionrelative:dal\\qlnh.dbml||{B465B5AD-8799-4507-B90A-EE29ACF36AF9}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2226E36C-7DB0-4B4F-8F41-79ECE8720F1A}|DAL\\DAL.csproj|d:\\ttdn-project\\quanlynganhang\\dal\\dal.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{2226E36C-7DB0-4B4F-8F41-79ECE8720F1A}|DAL\\DAL.csproj|solutionrelative:dal\\dal.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "QLNH.dbml",
+              "DocumentMoniker": "D:\\TTDN-Project\\QuanLyNganHang\\DAL\\QLNH.dbml",
+              "RelativeDocumentMoniker": "DAL\\QLNH.dbml",
+              "ToolTip": "D:\\TTDN-Project\\QuanLyNganHang\\DAL\\QLNH.dbml",
+              "RelativeToolTip": "DAL\\QLNH.dbml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001722|",
+              "WhenOpened": "2025-06-07T00:19:35.634Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DAL",
+              "DocumentMoniker": "D:\\TTDN-Project\\QuanLyNganHang\\DAL\\DAL.csproj",
+              "RelativeDocumentMoniker": "DAL\\DAL.csproj",
+              "ToolTip": "D:\\TTDN-Project\\QuanLyNganHang\\DAL\\DAL.csproj",
+              "RelativeToolTip": "DAL\\DAL.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-06-07T00:16:47.877Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
