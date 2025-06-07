@@ -33,5 +33,16 @@ namespace DAL.Properties {
                 return ((string)(this["QLNHConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-SR58UMU;Initial Catalog=QLNH;Integrated Security=True;Encrypt" +
+            "=True;TrustServerCertificate=True")]
+        public string QLNHConnectionString1 {
+            get {
+                return ((string)(this["QLNHConnectionString1"]));
+            }
+        }
     }
 }

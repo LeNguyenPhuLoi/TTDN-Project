@@ -9,15 +9,15 @@ namespace ET
         private string _MaKH;
         private string _TenKH;
         private string _GioiTinh;
-        private decimal _Cccd;
-        private decimal _Sdt;
+        private string _Cccd;
+        private string _Sdt;
         private string _Email;
         private string _DiaChi;
         private string _QuocTich;
         private string _DoiTuong;
         private DateTime _NgayTao;
 
-        public ET_KhachHang(string maKH, string tenKH, string gioiTinh, decimal cccd, decimal sdt, string email, string diaChi, string quocTich, string doiTuong, DateTime ngayTao)
+        public ET_KhachHang(string maKH, string tenKH, string gioiTinh, string cccd, string sdt, string email, string diaChi, string quocTich, string doiTuong, DateTime ngayTao)
         {
             _MaKH = maKH;
             _TenKH = tenKH;
@@ -34,8 +34,8 @@ namespace ET
         public string MaKH { get => _MaKH; set => _MaKH = value; }
         public string TenKH { get => _TenKH; set => _TenKH = value; }
         public string GioiTinh { get => _GioiTinh; set => _GioiTinh = value; }
-        public decimal Cccd { get => _Cccd; set => _Cccd = value; }
-        public decimal Sdt { get => _Sdt; set => _Sdt = value; }
+        public string Cccd { get => _Cccd; set => _Cccd = value; }
+        public string Sdt { get => _Sdt; set => _Sdt = value; }
         public string Email { get => _Email; set => _Email = value; }
         public string DiaChi { get => _DiaChi; set => _DiaChi = value; }
         public string QuocTich { get => _QuocTich; set => _QuocTich = value; }
