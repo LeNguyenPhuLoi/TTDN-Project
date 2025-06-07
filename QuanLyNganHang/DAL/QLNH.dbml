@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QLNH" Class="QLNHDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-SR58UMU;Initial Catalog=QLNH;Integrated Security=True;Encrypt=True;Trust Server Certificate=True" SettingsObjectName="DAL.Properties.Settings" SettingsPropertyName="QLNHConnectionString1" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=ADMIN-PC\SQLEXPRESS;Initial Catalog=QLNH;Integrated Security=True;Encrypt=True;Trust Server Certificate=True" SettingsObjectName="DAL.Properties.Settings" SettingsPropertyName="QLNHConnectionString2" Provider="System.Data.SqlClient" />
   <Table Name="dbo.APDUNGKHUYENMAI" Member="APDUNGKHUYENMAIs">
     <Type Name="APDUNGKHUYENMAI">
       <Column Name="MAKM" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -22,8 +22,8 @@
       <Column Name="HINHTHUCXL" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
       <Column Name="TRANGTHAIXL" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
       <Association Name="KHACHHANG_VIPHAM" Member="KHACHHANG" ThisKey="MAKH" OtherKey="MAKH" Type="KHACHHANG" IsForeignKey="true" />
-      <Association Name="NHANVIEN_VIPHAM" Member="NHANVIEN" ThisKey="MANV" OtherKey="MANV" Type="NHANVIEN" IsForeignKey="true" />
       <Association Name="NOIQUY_VIPHAM" Member="NOIQUY" ThisKey="MANQ" OtherKey="MANQ" Type="NOIQUY" IsForeignKey="true" />
+      <Association Name="NHANVIEN_VIPHAM" Member="NHANVIEN" ThisKey="MANV" OtherKey="MANV" Type="NHANVIEN" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.BIENLAI" Member="BIENLAIs">
@@ -162,6 +162,16 @@
       <Association Name="LOAITIEN_TAIKHOAN" Member="TAIKHOANs" ThisKey="MALOAITIEN" OtherKey="MALOAITIEN" Type="TAIKHOAN" />
     </Type>
   </Table>
+  <Table Name="dbo.NOIQUY" Member="NOIQUYs">
+    <Type Name="NOIQUY">
+      <Column Name="MANQ" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TIEUDE" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="MOTA" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="NGAYBH" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="LOAIAPDUNG" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
+      <Association Name="NOIQUY_VIPHAM" Member="VIPHAMs" ThisKey="MANQ" OtherKey="MANQ" Type="VIPHAM" />
+    </Type>
+  </Table>
   <Table Name="dbo.NHANVIEN" Member="NHANVIENs">
     <Type Name="NHANVIEN">
       <Column Name="MANV" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -179,16 +189,6 @@
       <Association Name="NHANVIEN_DANGNHAP" Member="DANGNHAPs" ThisKey="MANV" OtherKey="MANV" Type="DANGNHAP" />
       <Association Name="CHINHANH_NHANVIEN" Member="CHINHANH" ThisKey="MACN" OtherKey="MACN" Type="CHINHANH" IsForeignKey="true" />
       <Association Name="PHONGBAN_NHANVIEN" Member="PHONGBAN" ThisKey="MAPB" OtherKey="MAPB" Type="PHONGBAN" IsForeignKey="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.NOIQUY" Member="NOIQUYs">
-    <Type Name="NOIQUY">
-      <Column Name="MANQ" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="TIEUDE" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
-      <Column Name="MOTA" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
-      <Column Name="NGAYBH" Type="System.DateTime" DbType="Date" CanBeNull="true" />
-      <Column Name="LOAIAPDUNG" Type="System.String" DbType="NVarChar(225)" CanBeNull="true" />
-      <Association Name="NOIQUY_VIPHAM" Member="VIPHAMs" ThisKey="MANQ" OtherKey="MANQ" Type="VIPHAM" />
     </Type>
   </Table>
   <Table Name="dbo.PHONGBAN" Member="PHONGBANs">
