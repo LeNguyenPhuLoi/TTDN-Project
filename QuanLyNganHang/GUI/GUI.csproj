@@ -78,7 +78,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BUS\BUS.csproj">
-      <Project>{aaebb7d5-a52b-4682-9e33-f3ac8de8b417}</Project>
+      <Project>{0da6d398-4103-4732-81f1-3665cad4baf6}</Project>
       <Name>BUS</Name>
     </ProjectReference>
     <ProjectReference Include="..\ET\ET.csproj">
