@@ -60,9 +60,6 @@ namespace DAL
     partial void InsertKHUYENMAI(KHUYENMAI instance);
     partial void UpdateKHUYENMAI(KHUYENMAI instance);
     partial void DeleteKHUYENMAI(KHUYENMAI instance);
-    partial void InsertLAISUAT(LAISUAT instance);
-    partial void UpdateLAISUAT(LAISUAT instance);
-    partial void DeleteLAISUAT(LAISUAT instance);
     partial void InsertLICHSUTRANO(LICHSUTRANO instance);
     partial void UpdateLICHSUTRANO(LICHSUTRANO instance);
     partial void DeleteLICHSUTRANO(LICHSUTRANO instance);
@@ -84,10 +81,13 @@ namespace DAL
     partial void InsertTAIKHOAN(TAIKHOAN instance);
     partial void UpdateTAIKHOAN(TAIKHOAN instance);
     partial void DeleteTAIKHOAN(TAIKHOAN instance);
+    partial void InsertLAISUAT(LAISUAT instance);
+    partial void UpdateLAISUAT(LAISUAT instance);
+    partial void DeleteLAISUAT(LAISUAT instance);
     #endregion
 		
 		public QLNHDataContext() : 
-				base(global::DAL.Properties.Settings.Default.QLNHConnectionString2, mappingSource)
+				base(global::DAL.Properties.Settings.Default.QLNHConnectionString, mappingSource)
 		{
 			OnCreated();
 		}
@@ -196,14 +196,6 @@ namespace DAL
 			}
 		}
 		
-		public System.Data.Linq.Table<LAISUAT> LAISUATs
-		{
-			get
-			{
-				return this.GetTable<LAISUAT>();
-			}
-		}
-		
 		public System.Data.Linq.Table<LICHSUTRANO> LICHSUTRANOs
 		{
 			get
@@ -257,6 +249,14 @@ namespace DAL
 			get
 			{
 				return this.GetTable<TAIKHOAN>();
+			}
+		}
+		
+		public System.Data.Linq.Table<LAISUAT> LAISUATs
+		{
+			get
+			{
+				return this.GetTable<LAISUAT>();
 			}
 		}
 	}
@@ -3023,144 +3023,6 @@ namespace DAL
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.LAISUAT")]
-	public partial class LAISUAT : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private string _MALAISUAT;
-		
-		private string _TENLOAIVAY;
-		
-		private System.Nullable<int> _LAISUAT1;
-		
-		private EntitySet<KHOANVAY> _KHOANVAYs;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnMALAISUATChanging(string value);
-    partial void OnMALAISUATChanged();
-    partial void OnTENLOAIVAYChanging(string value);
-    partial void OnTENLOAIVAYChanged();
-    partial void OnLAISUAT1Changing(System.Nullable<int> value);
-    partial void OnLAISUAT1Changed();
-    #endregion
-		
-		public LAISUAT()
-		{
-			this._KHOANVAYs = new EntitySet<KHOANVAY>(new Action<KHOANVAY>(this.attach_KHOANVAYs), new Action<KHOANVAY>(this.detach_KHOANVAYs));
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MALAISUAT", DbType="Char(10) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
-		public string MALAISUAT
-		{
-			get
-			{
-				return this._MALAISUAT;
-			}
-			set
-			{
-				if ((this._MALAISUAT != value))
-				{
-					this.OnMALAISUATChanging(value);
-					this.SendPropertyChanging();
-					this._MALAISUAT = value;
-					this.SendPropertyChanged("MALAISUAT");
-					this.OnMALAISUATChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TENLOAIVAY", DbType="NVarChar(250)")]
-		public string TENLOAIVAY
-		{
-			get
-			{
-				return this._TENLOAIVAY;
-			}
-			set
-			{
-				if ((this._TENLOAIVAY != value))
-				{
-					this.OnTENLOAIVAYChanging(value);
-					this.SendPropertyChanging();
-					this._TENLOAIVAY = value;
-					this.SendPropertyChanged("TENLOAIVAY");
-					this.OnTENLOAIVAYChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="LAISUAT", Storage="_LAISUAT1", DbType="Int")]
-		public System.Nullable<int> LAISUAT1
-		{
-			get
-			{
-				return this._LAISUAT1;
-			}
-			set
-			{
-				if ((this._LAISUAT1 != value))
-				{
-					this.OnLAISUAT1Changing(value);
-					this.SendPropertyChanging();
-					this._LAISUAT1 = value;
-					this.SendPropertyChanged("LAISUAT1");
-					this.OnLAISUAT1Changed();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="LAISUAT_KHOANVAY", Storage="_KHOANVAYs", ThisKey="MALAISUAT", OtherKey="MALAISUAT")]
-		public EntitySet<KHOANVAY> KHOANVAYs
-		{
-			get
-			{
-				return this._KHOANVAYs;
-			}
-			set
-			{
-				this._KHOANVAYs.Assign(value);
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-		
-		private void attach_KHOANVAYs(KHOANVAY entity)
-		{
-			this.SendPropertyChanging();
-			entity.LAISUAT = this;
-		}
-		
-		private void detach_KHOANVAYs(KHOANVAY entity)
-		{
-			this.SendPropertyChanging();
-			entity.LAISUAT = null;
-		}
-	}
-	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.LICHSUTRANO")]
 	public partial class LICHSUTRANO : INotifyPropertyChanging, INotifyPropertyChanged
 	{
@@ -4842,6 +4704,144 @@ namespace DAL
 		{
 			this.SendPropertyChanging();
 			entity.TAIKHOAN = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.LAISUAT")]
+	public partial class LAISUAT : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private string _MALAISUAT;
+		
+		private string _TENLOAIVAY;
+		
+		private System.Nullable<int> _LAISUAT1;
+		
+		private EntitySet<KHOANVAY> _KHOANVAYs;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnMALAISUATChanging(string value);
+    partial void OnMALAISUATChanged();
+    partial void OnTENLOAIVAYChanging(string value);
+    partial void OnTENLOAIVAYChanged();
+    partial void OnLAISUAT1Changing(System.Nullable<int> value);
+    partial void OnLAISUAT1Changed();
+    #endregion
+		
+		public LAISUAT()
+		{
+			this._KHOANVAYs = new EntitySet<KHOANVAY>(new Action<KHOANVAY>(this.attach_KHOANVAYs), new Action<KHOANVAY>(this.detach_KHOANVAYs));
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MALAISUAT", DbType="Char(10) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string MALAISUAT
+		{
+			get
+			{
+				return this._MALAISUAT;
+			}
+			set
+			{
+				if ((this._MALAISUAT != value))
+				{
+					this.OnMALAISUATChanging(value);
+					this.SendPropertyChanging();
+					this._MALAISUAT = value;
+					this.SendPropertyChanged("MALAISUAT");
+					this.OnMALAISUATChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TENLOAIVAY", DbType="NVarChar(250)")]
+		public string TENLOAIVAY
+		{
+			get
+			{
+				return this._TENLOAIVAY;
+			}
+			set
+			{
+				if ((this._TENLOAIVAY != value))
+				{
+					this.OnTENLOAIVAYChanging(value);
+					this.SendPropertyChanging();
+					this._TENLOAIVAY = value;
+					this.SendPropertyChanged("TENLOAIVAY");
+					this.OnTENLOAIVAYChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="LAISUAT", Storage="_LAISUAT1", DbType="Int")]
+		public System.Nullable<int> LAISUAT1
+		{
+			get
+			{
+				return this._LAISUAT1;
+			}
+			set
+			{
+				if ((this._LAISUAT1 != value))
+				{
+					this.OnLAISUAT1Changing(value);
+					this.SendPropertyChanging();
+					this._LAISUAT1 = value;
+					this.SendPropertyChanged("LAISUAT1");
+					this.OnLAISUAT1Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="LAISUAT_KHOANVAY", Storage="_KHOANVAYs", ThisKey="MALAISUAT", OtherKey="MALAISUAT")]
+		public EntitySet<KHOANVAY> KHOANVAYs
+		{
+			get
+			{
+				return this._KHOANVAYs;
+			}
+			set
+			{
+				this._KHOANVAYs.Assign(value);
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_KHOANVAYs(KHOANVAY entity)
+		{
+			this.SendPropertyChanging();
+			entity.LAISUAT = this;
+		}
+		
+		private void detach_KHOANVAYs(KHOANVAY entity)
+		{
+			this.SendPropertyChanging();
+			entity.LAISUAT = null;
 		}
 	}
 }
