@@ -8,3 +8,14 @@ D:\QuanLyNganHang\ET\obj\Debug\netstandard2.0\ET.AssemblyInfo.cs
 D:\QuanLyNganHang\ET\obj\Debug\netstandard2.0\ET.csproj.CoreCompileInputs.cache
 D:\QuanLyNganHang\ET\obj\Debug\netstandard2.0\ET.dll
 D:\QuanLyNganHang\ET\obj\Debug\netstandard2.0\ET.pdb
+D:\TTDN-Project\QuanLyNganHang\ET\bin\Debug\netstandard2.0\ET.deps.json
+D:\TTDN-Project\QuanLyNganHang\ET\bin\Debug\netstandard2.0\ET.dll
+D:\TTDN-Project\QuanLyNganHang\ET\bin\Debug\netstandard2.0\ET.pdb
+D:\TTDN-Project\QuanLyNganHang\ET\obj\Debug\netstandard2.0\ET.csproj.AssemblyReference.cache
+D:\TTDN-Project\QuanLyNganHang\ET\obj\Debug\netstandard2.0\ET.GeneratedMSBuildEditorConfig.editorconfig
+D:\TTDN-Project\QuanLyNganHang\ET\obj\Debug\netstandard2.0\ET.AssemblyInfoInputs.cache
+D:\TTDN-Project\QuanLyNganHang\ET\obj\Debug\netstandard2.0\ET.AssemblyInfo.cs
+D:\TTDN-Project\QuanLyNganHang\ET\obj\Debug\netstandard2.0\ET.csproj.CoreCompileInputs.cache
+D:\TTDN-Project\QuanLyNganHang\ET\obj\Debug\netstandard2.0\ET.sourcelink.json
+D:\TTDN-Project\QuanLyNganHang\ET\obj\Debug\netstandard2.0\ET.dll
+D:\TTDN-Project\QuanLyNganHang\ET\obj\Debug\netstandard2.0\ET.pdb
