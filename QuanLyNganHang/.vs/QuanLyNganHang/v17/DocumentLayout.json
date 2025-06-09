@@ -1,12 +1,54 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\TTDN-Project\\QuanLyNganHang\\",
-  "Documents": [],
+  "WorkspaceRootPath": "D:\\\u0110\u1ED2 \u00C1N TTDN\\5dal\\TTDN-Project\\QuanLyNganHang\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{28FFE92F-BC73-4740-9150-176B686649BD}|DAL\\DAL.csproj|d:\\\u0111\u1ED3 \u00E1n ttdn\\5dal\\ttdn-project\\quanlynganhang\\dal\\dal_vipham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{28FFE92F-BC73-4740-9150-176B686649BD}|DAL\\DAL.csproj|solutionrelative:dal\\dal_vipham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28FFE92F-BC73-4740-9150-176B686649BD}|DAL\\DAL.csproj|d:\\\u0111\u1ED3 \u00E1n ttdn\\5dal\\ttdn-project\\quanlynganhang\\dal\\dal_noiquy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{28FFE92F-BC73-4740-9150-176B686649BD}|DAL\\DAL.csproj|solutionrelative:dal\\dal_noiquy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DAL_ViPham.cs",
+              "DocumentMoniker": "D:\\\u0110\u1ED2 \u00C1N TTDN\\5dal\\TTDN-Project\\QuanLyNganHang\\DAL\\DAL_ViPham.cs",
+              "RelativeDocumentMoniker": "DAL\\DAL_ViPham.cs",
+              "ToolTip": "D:\\\u0110\u1ED2 \u00C1N TTDN\\5dal\\TTDN-Project\\QuanLyNganHang\\DAL\\DAL_ViPham.cs",
+              "RelativeToolTip": "DAL\\DAL_ViPham.cs",
+              "ViewState": "AgIAAFIAAAAAAAAAAAAmwF4AAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-09T02:08:52.79Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DAL_NoiQuy.cs",
+              "DocumentMoniker": "D:\\\u0110\u1ED2 \u00C1N TTDN\\5dal\\TTDN-Project\\QuanLyNganHang\\DAL\\DAL_NoiQuy.cs",
+              "RelativeDocumentMoniker": "DAL\\DAL_NoiQuy.cs",
+              "ToolTip": "D:\\\u0110\u1ED2 \u00C1N TTDN\\5dal\\TTDN-Project\\QuanLyNganHang\\DAL\\DAL_NoiQuy.cs",
+              "RelativeToolTip": "DAL\\DAL_NoiQuy.cs",
+              "ViewState": "AgIAAEkAAAAAAAAAAAAkwGMAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-09T01:58:06.865Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

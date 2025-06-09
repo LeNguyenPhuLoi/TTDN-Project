@@ -7,37 +7,40 @@ using ET;
 
 namespace DAL
 {
-    public class DAL_PhongBan
+    public class DAL_NoiQuy
     {
         //Kết nối với Linq to SQL
         QLNHDataContext db = new QLNHDataContext();
 
-        //Lấy ds phòng ban
-        public IQueryable LoadDSPB()
+        //Lấy ds nhân viên
+        public IQueryable LoadDSNV()
         {
-            IQueryable PB = from pb in db.PHONGBANs
-                            select pb;
-            return PB;
+            IQueryable NQ = from nq in db.NOIQUYs
+                            select nq;
+            return NQ;
         }
 
-        //Thêm phòng ban
-        public bool ThemPB(ET_PhongBan et)
+        //Thêm nội quy
+        public bool ThemNQ(ET_NoiQuy et)
         {
             bool ss = false;
             try
             {
-                var amp = db.PHONGBANs.Any(pb => pb.MAPB == et.MaPB);
+                var amp = db.NOIQUYs.Any(nq => nq.MANQ == et.MaNQ);
                 if (!amp)
                 {
-                    PHONGBAN pb = new PHONGBAN
+                    NOIQUY nq = new NOIQUY
                     {
-                        MAPB = et.MaPB,
-                        TENPB = et.TenPB
+                        MANQ = et.MaNQ,
+                        TIEUDE = et.TieuDe,
+                        MOTA = et.MoTa,
+                        NGAYBH = et.NgayBH,
+                        LOAIAPDUNG = et.LoaiApDung
                     };
-                    db.PHONGBANs.InsertOnSubmit(pb);
+                    db.NOIQUYs.InsertOnSubmit(nq);
                     db.SubmitChanges();
                     ss = true;
-                }            
+                }
             }
             catch (Exception ex)
             {
@@ -47,17 +50,20 @@ namespace DAL
             return ss;
         }
 
-        //Sửa phòng ban
-        public bool SuaPB(ET_PhongBan et)
+        //Sửa nội quy
+        public bool SuaNQ(ET_NoiQuy et)
         {
             bool ss = false;
             try
             {
-                var change = db.PHONGBANs.SingleOrDefault(pb => pb.MAPB == et.MaPB);
+                var change = db.NOIQUYs.SingleOrDefault(nq => nq.MANQ == et.MaNQ);
                 if (change != null)
                 {
-                    change.MAPB = et.MaPB;
-                    change.TENPB = et.TenPB;
+                    change.MANQ = et.MaNQ;
+                    change.TIEUDE = et.TieuDe; 
+                    change.MOTA = et.MoTa;
+                    change.NGAYBH = et.NgayBH;
+                    change.LOAIAPDUNG = et.LoaiApDung;
 
                     db.SubmitChanges();
                     ss = true;
@@ -71,16 +77,16 @@ namespace DAL
             return ss;
         }
 
-        //Xóa phòng ban
-        public bool XoaPB(ET_PhongBan et)
+        //Xóa nội quy
+        public bool XoaNQ(ET_NoiQuy et)
         {
             bool ss = false;
             try
             {
-                var delete = db.PHONGBANs.SingleOrDefault(pb => pb.MAPB == et.MaPB);
+                var delete = db.NOIQUYs.SingleOrDefault(nq => nq.MANQ == et.MaNQ);
                 if (delete != null)
                 {
-                    db.PHONGBANs.DeleteOnSubmit(delete);
+                    db.NOIQUYs.DeleteOnSubmit(delete);
                     db.SubmitChanges();
                     ss = true;
                 }
