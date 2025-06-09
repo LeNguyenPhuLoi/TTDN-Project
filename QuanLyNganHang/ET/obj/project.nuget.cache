@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "lBolIgrfRL4=",
+  "dgSpecHash": "jGJ920/Y5oE=",
   "success": true,
-  "projectFilePath": "E:\\TTDN Project\\9-6-2025\\New folder\\TTDN-Project\\QuanLyNganHang\\ET\\ET.csproj",
+  "projectFilePath": "D:\\TTDN-Project\\QuanLyNganHang\\ET\\ET.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\veros\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Users\\veros\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+    "C:\\Users\\leloi\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\leloi\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
   ],
   "logs": []
 }
