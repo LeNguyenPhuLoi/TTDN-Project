@@ -1,14 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\\u0110\u1ED2 \u00C1N TTDN\\5dal\\TTDN-Project\\QuanLyNganHang\\",
+  "WorkspaceRootPath": "E:\\TTDN Project\\9-6-2025\\New folder\\TTDN-Project\\QuanLyNganHang\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{28FFE92F-BC73-4740-9150-176B686649BD}|DAL\\DAL.csproj|d:\\\u0111\u1ED3 \u00E1n ttdn\\5dal\\ttdn-project\\quanlynganhang\\dal\\dal_vipham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{28FFE92F-BC73-4740-9150-176B686649BD}|DAL\\DAL.csproj|solutionrelative:dal\\dal_vipham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{28FFE92F-BC73-4740-9150-176B686649BD}|DAL\\DAL.csproj|e:\\ttdn project\\9-6-2025\\new folder\\ttdn-project\\quanlynganhang\\dal\\dal_taikhoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{28FFE92F-BC73-4740-9150-176B686649BD}|DAL\\DAL.csproj|solutionrelative:dal\\dal_taikhoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{28FFE92F-BC73-4740-9150-176B686649BD}|DAL\\DAL.csproj|d:\\\u0111\u1ED3 \u00E1n ttdn\\5dal\\ttdn-project\\quanlynganhang\\dal\\dal_noiquy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{28FFE92F-BC73-4740-9150-176B686649BD}|DAL\\DAL.csproj|solutionrelative:dal\\dal_noiquy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{28FFE92F-BC73-4740-9150-176B686649BD}|DAL\\DAL.csproj|E:\\TTDN Project\\9-6-2025\\New folder\\TTDN-Project\\QuanLyNganHang\\dal\\dal_giaodich.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{28FFE92F-BC73-4740-9150-176B686649BD}|DAL\\DAL.csproj|solutionrelative:dal\\dal_giaodich.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28FFE92F-BC73-4740-9150-176B686649BD}|DAL\\DAL.csproj|E:\\TTDN Project\\9-6-2025\\New folder\\TTDN-Project\\QuanLyNganHang\\dal\\dal_bienlai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{28FFE92F-BC73-4740-9150-176B686649BD}|DAL\\DAL.csproj|solutionrelative:dal\\dal_bienlai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -23,28 +27,39 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "DAL_ViPham.cs",
-              "DocumentMoniker": "D:\\\u0110\u1ED2 \u00C1N TTDN\\5dal\\TTDN-Project\\QuanLyNganHang\\DAL\\DAL_ViPham.cs",
-              "RelativeDocumentMoniker": "DAL\\DAL_ViPham.cs",
-              "ToolTip": "D:\\\u0110\u1ED2 \u00C1N TTDN\\5dal\\TTDN-Project\\QuanLyNganHang\\DAL\\DAL_ViPham.cs",
-              "RelativeToolTip": "DAL\\DAL_ViPham.cs",
-              "ViewState": "AgIAAFIAAAAAAAAAAAAmwF4AAAAeAAAAAAAAAA==",
+              "Title": "DAL_TaiKhoan.cs",
+              "DocumentMoniker": "E:\\TTDN Project\\9-6-2025\\New folder\\TTDN-Project\\QuanLyNganHang\\DAL\\DAL_TaiKhoan.cs",
+              "RelativeDocumentMoniker": "DAL\\DAL_TaiKhoan.cs",
+              "ToolTip": "E:\\TTDN Project\\9-6-2025\\New folder\\TTDN-Project\\QuanLyNganHang\\DAL\\DAL_TaiKhoan.cs",
+              "RelativeToolTip": "DAL\\DAL_TaiKhoan.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-09T02:08:52.79Z",
+              "WhenOpened": "2025-06-09T02:30:04.933Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "DAL_NoiQuy.cs",
-              "DocumentMoniker": "D:\\\u0110\u1ED2 \u00C1N TTDN\\5dal\\TTDN-Project\\QuanLyNganHang\\DAL\\DAL_NoiQuy.cs",
-              "RelativeDocumentMoniker": "DAL\\DAL_NoiQuy.cs",
-              "ToolTip": "D:\\\u0110\u1ED2 \u00C1N TTDN\\5dal\\TTDN-Project\\QuanLyNganHang\\DAL\\DAL_NoiQuy.cs",
-              "RelativeToolTip": "DAL\\DAL_NoiQuy.cs",
-              "ViewState": "AgIAAEkAAAAAAAAAAAAkwGMAAAAJAAAAAAAAAA==",
+              "Title": "DAL_GiaoDich.cs",
+              "DocumentMoniker": "E:\\TTDN Project\\9-6-2025\\New folder\\TTDN-Project\\QuanLyNganHang\\DAL\\DAL_GiaoDich.cs",
+              "RelativeDocumentMoniker": "DAL\\DAL_GiaoDich.cs",
+              "ToolTip": "E:\\TTDN Project\\9-6-2025\\New folder\\TTDN-Project\\QuanLyNganHang\\DAL\\DAL_GiaoDich.cs",
+              "RelativeToolTip": "DAL\\DAL_GiaoDich.cs",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAwwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-09T01:58:06.865Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-09T02:29:56.685Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DAL_BienLai.cs",
+              "DocumentMoniker": "E:\\TTDN Project\\9-6-2025\\New folder\\TTDN-Project\\QuanLyNganHang\\DAL\\DAL_BienLai.cs",
+              "RelativeDocumentMoniker": "DAL\\DAL_BienLai.cs",
+              "ToolTip": "E:\\TTDN Project\\9-6-2025\\New folder\\TTDN-Project\\QuanLyNganHang\\DAL\\DAL_BienLai.cs",
+              "RelativeToolTip": "DAL\\DAL_BienLai.cs",
+              "ViewState": "AgIAAHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-09T02:29:48.68Z"
             }
           ]
         }
