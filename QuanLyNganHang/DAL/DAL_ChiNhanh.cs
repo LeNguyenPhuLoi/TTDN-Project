@@ -13,7 +13,7 @@ namespace DAL
         QLNHDataContext db = new QLNHDataContext();
 
         //Lấy ds chi nhánh
-        public IQueryable LayDSCN()
+        public IQueryable LoadDSCN()
         {
             IQueryable CN = from cn in db.CHINHANHs
                             select cn;

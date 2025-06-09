@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QLNH" Class="QLNHDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=YUITORIA\SQLEXPRESS01;Initial Catalog=QLNH;Integrated Security=True;Encrypt=True;Trust Server Certificate=True" SettingsObjectName="DAL.Properties.Settings" SettingsPropertyName="QLNHConnectionString" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=ADMIN-PC\SQLEXPRESS;Initial Catalog=QLNH;Integrated Security=True;Encrypt=True;Trust Server Certificate=True" SettingsObjectName="DAL.Properties.Settings" SettingsPropertyName="QLNHConnectionString2" Provider="System.Data.SqlClient" />
   <Table Name="dbo.APDUNGKHUYENMAI" Member="APDUNGKHUYENMAIs">
     <Type Name="APDUNGKHUYENMAI">
       <Column Name="MAKM" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -128,6 +128,14 @@
       <Association Name="KHUYENMAI_APDUNGKHUYENMAI" Member="APDUNGKHUYENMAIs" ThisKey="MAKM" OtherKey="MAKM" Type="APDUNGKHUYENMAI" />
     </Type>
   </Table>
+  <Table Name="dbo.LAISUAT" Member="LAISUATs">
+    <Type Name="LAISUAT">
+      <Column Name="MALAISUAT" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TENLOAIVAY" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="LAISUAT" Member="LAISUAT1" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="LAISUAT_KHOANVAY" Member="KHOANVAYs" ThisKey="MALAISUAT" OtherKey="MALAISUAT" Type="KHOANVAY" />
+    </Type>
+  </Table>
   <Table Name="dbo.LICHSUTRANO" Member="LICHSUTRANOs">
     <Type Name="LICHSUTRANO">
       <Column Name="MALICHSU" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -207,14 +215,6 @@
       <Association Name="KHACHHANG_TAIKHOAN" Member="KHACHHANG" ThisKey="MAKH" OtherKey="MAKH" Type="KHACHHANG" IsForeignKey="true" />
       <Association Name="LOAITIEN_TAIKHOAN" Member="LOAITIEN" ThisKey="MALOAITIEN" OtherKey="MALOAITIEN" Type="LOAITIEN" IsForeignKey="true" />
       <Association Name="LOAITAIKHOAN_TAIKHOAN" Member="LOAITAIKHOAN" ThisKey="MALOAITK" OtherKey="MALOAITK" Type="LOAITAIKHOAN" IsForeignKey="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.LAISUAT" Member="LAISUATs">
-    <Type Name="LAISUAT">
-      <Column Name="MALAISUAT" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="TENLOAIVAY" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
-      <Column Name="LAISUAT" Member="LAISUAT1" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Association Name="LAISUAT_KHOANVAY" Member="KHOANVAYs" ThisKey="MALAISUAT" OtherKey="MALAISUAT" Type="KHOANVAY" />
     </Type>
   </Table>
 </Database>
