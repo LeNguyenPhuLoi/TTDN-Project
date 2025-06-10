@@ -11,7 +11,13 @@ namespace DAL
     public class DAL_GiaoDich
     {
         //kết nối với database = linq to sql
-        QLNHDataContext db = new QLNHDataContext();
+        AutoConnect conn = new AutoConnect();
+        QLNHDataContext db;
+
+        public DAL_GiaoDich()
+        {
+            db = new QLNHDataContext(conn.GetConnection());
+        }
 
         //hàm lấy danh sách giao dịch
         public IQueryable LayDSGiaoDich()

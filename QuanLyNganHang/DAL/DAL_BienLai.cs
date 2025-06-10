@@ -11,7 +11,13 @@ namespace DAL
     public class DAL_BienLai
     {
         //kết nối tới database = linq to sql
-        QLNHDataContext db = new QLNHDataContext();
+        AutoConnect conn = new AutoConnect();
+        QLNHDataContext db;
+
+        public DAL_BienLai()
+        {
+            db = new QLNHDataContext(conn.GetConnection());
+        }
 
         //hàm lấy danh sách biên lai
         public IQueryable LayDSBienLai()

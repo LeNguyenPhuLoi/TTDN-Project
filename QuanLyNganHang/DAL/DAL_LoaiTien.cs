@@ -11,7 +11,13 @@ namespace DAL
     public class DAL_LoaiTien
     {
         //kết nối database = linq to sql
-        QLNHDataContext db = new QLNHDataContext();
+        AutoConnect conn = new AutoConnect();
+        QLNHDataContext db;
+
+        public DAL_LoaiTien()
+        {
+            db = new QLNHDataContext(conn.GetConnection());
+        }
 
         //hàm lấy danh sách loại tiền
         public IQueryable LayDSLoaiTien()
