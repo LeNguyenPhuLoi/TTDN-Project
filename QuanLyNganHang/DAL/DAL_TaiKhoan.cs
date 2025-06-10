@@ -11,7 +11,13 @@ namespace DAL
     public class DAL_TaiKhoan
     {
         //kết nối database = linq to sql
-        QLNHDataContext db = new QLNHDataContext();
+        AutoConnect conn = new AutoConnect();
+        QLNHDataContext db;
+
+        public DAL_TaiKhoan()
+        {
+            db = new QLNHDataContext(conn.GetConnection());
+        }
 
         //Hàm lấy danh sách tài khoản
         public IQueryable LayDSTaiKhoan()

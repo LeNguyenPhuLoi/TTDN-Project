@@ -12,7 +12,13 @@ namespace DAL
     public class DAL_KhachHang
     {
         //kết nối database = linq to sql
-        QLNHDataContext db = new QLNHDataContext();
+        AutoConnect conn = new AutoConnect();
+        QLNHDataContext db;
+
+        public DAL_KhachHang()
+        {
+            db = new QLNHDataContext(conn.GetConnection());
+        }
 
         //Hàm lấy danh sách khách hàng
         public IQueryable LoadDSKhachHang()
