@@ -1,14 +1,10 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\TTDN-Project\\QuanLyNganHang\\",
+  "WorkspaceRootPath": "D:\\\u0110\u1ED2 \u00C1N TTDN\\5bus\\TTDN-Project\\QuanLyNganHang\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{28FFE92F-BC73-4740-9150-176B686649BD}|DAL\\DAL.csproj|d:\\ttdn-project\\quanlynganhang\\dal\\dal_apdungkhuyenmai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{28FFE92F-BC73-4740-9150-176B686649BD}|DAL\\DAL.csproj|solutionrelative:dal\\dal_apdungkhuyenmai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{28FFE92F-BC73-4740-9150-176B686649BD}|DAL\\DAL.csproj|d:\\ttdn-project\\quanlynganhang\\dal\\dal_laisuat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{28FFE92F-BC73-4740-9150-176B686649BD}|DAL\\DAL.csproj|solutionrelative:dal\\dal_laisuat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0DA6D398-4103-4732-81F1-3665CAD4BAF6}|BUS\\BUS.csproj|d:\\\u0111\u1ED3 \u00E1n ttdn\\5bus\\ttdn-project\\quanlynganhang\\bus\\bus_vipham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0DA6D398-4103-4732-81F1-3665CAD4BAF6}|BUS\\BUS.csproj|solutionrelative:bus\\bus_vipham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -23,27 +19,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "DAL_ApDungKhuyenMai.cs",
-              "DocumentMoniker": "D:\\TTDN-Project\\QuanLyNganHang\\DAL\\DAL_ApDungKhuyenMai.cs",
-              "RelativeDocumentMoniker": "DAL\\DAL_ApDungKhuyenMai.cs",
-              "ToolTip": "D:\\TTDN-Project\\QuanLyNganHang\\DAL\\DAL_ApDungKhuyenMai.cs",
-              "RelativeToolTip": "DAL\\DAL_ApDungKhuyenMai.cs",
-              "ViewState": "AgIAACMAAAAAAAAAAAAqwFIAAAArAAAAAAAAAA==",
+              "Title": "BUS_ViPham.cs",
+              "DocumentMoniker": "D:\\\u0110\u1ED2 \u00C1N TTDN\\5bus\\TTDN-Project\\QuanLyNganHang\\BUS\\BUS_ViPham.cs",
+              "RelativeDocumentMoniker": "BUS\\BUS_ViPham.cs",
+              "ToolTip": "D:\\\u0110\u1ED2 \u00C1N TTDN\\5bus\\TTDN-Project\\QuanLyNganHang\\BUS\\BUS_ViPham.cs",
+              "RelativeToolTip": "BUS\\BUS_ViPham.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAtwB8AAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-09T05:50:39.896Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "DAL_LaiSuat.cs",
-              "DocumentMoniker": "D:\\TTDN-Project\\QuanLyNganHang\\DAL\\DAL_LaiSuat.cs",
-              "RelativeDocumentMoniker": "DAL\\DAL_LaiSuat.cs",
-              "ToolTip": "D:\\TTDN-Project\\QuanLyNganHang\\DAL\\DAL_LaiSuat.cs",
-              "RelativeToolTip": "DAL\\DAL_LaiSuat.cs",
-              "ViewState": "AgIAAEoAAAAAAAAAAAAQwFkAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-09T05:41:13.368Z",
+              "WhenOpened": "2025-06-10T01:38:18.628Z",
               "EditorCaption": ""
             }
           ]
