@@ -58,6 +58,24 @@
     <Compile Include="Frm_ChiNhanh.Designer.cs">
       <DependentUpon>Frm_ChiNhanh.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frm_KhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_KhachHang.Designer.cs">
+      <DependentUpon>Frm_KhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_LoaiTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_LoaiTaiKhoan.Designer.cs">
+      <DependentUpon>Frm_LoaiTaiKhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_LoaiTien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_LoaiTien.Designer.cs">
+      <DependentUpon>Frm_LoaiTien.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm_NhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,6 +92,15 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Frm_ChiNhanh.resx">
       <DependentUpon>Frm_ChiNhanh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_KhachHang.resx">
+      <DependentUpon>Frm_KhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_LoaiTaiKhoan.resx">
+      <DependentUpon>Frm_LoaiTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_LoaiTien.resx">
+      <DependentUpon>Frm_LoaiTien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_NhanVien.resx">
       <DependentUpon>Frm_NhanVien.cs</DependentUpon>
