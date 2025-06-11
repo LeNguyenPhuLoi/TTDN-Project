@@ -70,3 +70,15 @@ E:\TTDN Project\11-6-2025\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.csproj.C
 E:\TTDN Project\11-6-2025\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.csproj.Up2Date
 E:\TTDN Project\11-6-2025\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.exe
 E:\TTDN Project\11-6-2025\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.pdb
+D:\TTDN-Project\QuanLyNganHang\GUI\bin\Debug\DAL.dll
+D:\TTDN-Project\QuanLyNganHang\GUI\bin\Debug\DAL.pdb
+D:\TTDN-Project\QuanLyNganHang\GUI\bin\Debug\DAL.dll.config
+D:\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.frmChuyenKhoan.resources
+D:\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.Frm_ChiNhanh.resources
+D:\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.Frm_KhachHang.resources
+D:\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.Frm_LoaiTaiKhoan.resources
+D:\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.Frm_LoaiTien.resources
+D:\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.Frm_NhanVien.resources
+D:\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.Frm_PhongBan.resources
+D:\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.frmKhoanVay.resources
+D:\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.frmLaiSuat.resources
