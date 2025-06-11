@@ -26,3 +26,23 @@ D:\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.csproj.CoreCompileInputs.cache
 D:\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.csproj.Up2Date
 D:\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.exe
 D:\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.pdb
+D:\ĐỒ ÁN TTDN\design form\TTDN-Project\QuanLyNganHang\GUI\bin\Debug\GUI.exe.config
+D:\ĐỒ ÁN TTDN\design form\TTDN-Project\QuanLyNganHang\GUI\bin\Debug\GUI.exe
+D:\ĐỒ ÁN TTDN\design form\TTDN-Project\QuanLyNganHang\GUI\bin\Debug\GUI.pdb
+D:\ĐỒ ÁN TTDN\design form\TTDN-Project\QuanLyNganHang\GUI\bin\Debug\BUS.dll
+D:\ĐỒ ÁN TTDN\design form\TTDN-Project\QuanLyNganHang\GUI\bin\Debug\ET.dll
+D:\ĐỒ ÁN TTDN\design form\TTDN-Project\QuanLyNganHang\GUI\bin\Debug\BUS.pdb
+D:\ĐỒ ÁN TTDN\design form\TTDN-Project\QuanLyNganHang\GUI\bin\Debug\ET.pdb
+D:\ĐỒ ÁN TTDN\design form\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.csproj.AssemblyReference.cache
+D:\ĐỒ ÁN TTDN\design form\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.Frm_NhanVien.resources
+D:\ĐỒ ÁN TTDN\design form\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.Properties.Resources.resources
+D:\ĐỒ ÁN TTDN\design form\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.csproj.GenerateResource.cache
+D:\ĐỒ ÁN TTDN\design form\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.csproj.CoreCompileInputs.cache
+D:\ĐỒ ÁN TTDN\design form\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.csproj.Up2Date
+D:\ĐỒ ÁN TTDN\design form\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.exe
+D:\ĐỒ ÁN TTDN\design form\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.pdb
+D:\ĐỒ ÁN TTDN\design form\TTDN-Project\QuanLyNganHang\GUI\bin\Debug\DAL.dll
+D:\ĐỒ ÁN TTDN\design form\TTDN-Project\QuanLyNganHang\GUI\bin\Debug\DAL.pdb
+D:\ĐỒ ÁN TTDN\design form\TTDN-Project\QuanLyNganHang\GUI\bin\Debug\DAL.dll.config
+D:\ĐỒ ÁN TTDN\design form\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.Frm_PhongBan.resources
+D:\ĐỒ ÁN TTDN\design form\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.Frm_ChiNhanh.resources

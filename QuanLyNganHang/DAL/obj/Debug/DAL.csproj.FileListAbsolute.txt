@@ -8,3 +8,13 @@ D:\ĐỒ ÁN TTDN\5bus\TTDN-Project\QuanLyNganHang\DAL\obj\Debug\DAL.csproj.Core
 D:\ĐỒ ÁN TTDN\5bus\TTDN-Project\QuanLyNganHang\DAL\obj\Debug\DAL.csproj.Up2Date
 D:\ĐỒ ÁN TTDN\5bus\TTDN-Project\QuanLyNganHang\DAL\obj\Debug\DAL.dll
 D:\ĐỒ ÁN TTDN\5bus\TTDN-Project\QuanLyNganHang\DAL\obj\Debug\DAL.pdb
+D:\ĐỒ ÁN TTDN\design form\TTDN-Project\QuanLyNganHang\DAL\bin\Debug\DAL.dll.config
+D:\ĐỒ ÁN TTDN\design form\TTDN-Project\QuanLyNganHang\DAL\bin\Debug\DAL.dll
+D:\ĐỒ ÁN TTDN\design form\TTDN-Project\QuanLyNganHang\DAL\bin\Debug\DAL.pdb
+D:\ĐỒ ÁN TTDN\design form\TTDN-Project\QuanLyNganHang\DAL\bin\Debug\ET.dll
+D:\ĐỒ ÁN TTDN\design form\TTDN-Project\QuanLyNganHang\DAL\bin\Debug\ET.pdb
+D:\ĐỒ ÁN TTDN\design form\TTDN-Project\QuanLyNganHang\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+D:\ĐỒ ÁN TTDN\design form\TTDN-Project\QuanLyNganHang\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+D:\ĐỒ ÁN TTDN\design form\TTDN-Project\QuanLyNganHang\DAL\obj\Debug\DAL.csproj.Up2Date
+D:\ĐỒ ÁN TTDN\design form\TTDN-Project\QuanLyNganHang\DAL\obj\Debug\DAL.dll
+D:\ĐỒ ÁN TTDN\design form\TTDN-Project\QuanLyNganHang\DAL\obj\Debug\DAL.pdb
