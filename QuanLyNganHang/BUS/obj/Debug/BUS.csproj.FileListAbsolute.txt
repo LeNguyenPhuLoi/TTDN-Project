@@ -58,3 +58,15 @@ E:\TTDN Project\12-6-2025\TTDN-Project\QuanLyNganHang\BUS\obj\Debug\BUS.csproj.C
 E:\TTDN Project\12-6-2025\TTDN-Project\QuanLyNganHang\BUS\obj\Debug\BUS.csproj.Up2Date
 E:\TTDN Project\12-6-2025\TTDN-Project\QuanLyNganHang\BUS\obj\Debug\BUS.dll
 E:\TTDN Project\12-6-2025\TTDN-Project\QuanLyNganHang\BUS\obj\Debug\BUS.pdb
+D:\ĐỒ ÁN TTDN\them design\TTDN-Project\QuanLyNganHang\BUS\bin\Debug\BUS.dll
+D:\ĐỒ ÁN TTDN\them design\TTDN-Project\QuanLyNganHang\BUS\bin\Debug\BUS.pdb
+D:\ĐỒ ÁN TTDN\them design\TTDN-Project\QuanLyNganHang\BUS\bin\Debug\DAL.dll
+D:\ĐỒ ÁN TTDN\them design\TTDN-Project\QuanLyNganHang\BUS\bin\Debug\ET.dll
+D:\ĐỒ ÁN TTDN\them design\TTDN-Project\QuanLyNganHang\BUS\bin\Debug\DAL.pdb
+D:\ĐỒ ÁN TTDN\them design\TTDN-Project\QuanLyNganHang\BUS\bin\Debug\DAL.dll.config
+D:\ĐỒ ÁN TTDN\them design\TTDN-Project\QuanLyNganHang\BUS\bin\Debug\ET.pdb
+D:\ĐỒ ÁN TTDN\them design\TTDN-Project\QuanLyNganHang\BUS\obj\Debug\BUS.csproj.AssemblyReference.cache
+D:\ĐỒ ÁN TTDN\them design\TTDN-Project\QuanLyNganHang\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+D:\ĐỒ ÁN TTDN\them design\TTDN-Project\QuanLyNganHang\BUS\obj\Debug\BUS.csproj.Up2Date
+D:\ĐỒ ÁN TTDN\them design\TTDN-Project\QuanLyNganHang\BUS\obj\Debug\BUS.dll
+D:\ĐỒ ÁN TTDN\them design\TTDN-Project\QuanLyNganHang\BUS\obj\Debug\BUS.pdb

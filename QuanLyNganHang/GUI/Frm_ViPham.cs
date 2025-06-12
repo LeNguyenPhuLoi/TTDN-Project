@@ -12,16 +12,16 @@ using BUS;
 
 namespace GUI
 {
-    public partial class Frm_ChiNhanh : Form
+    public partial class Frm_ViPham : Form
     {
-        public Frm_ChiNhanh()
+        public Frm_ViPham()
         {
             InitializeComponent();
         }
 
-        BUS_ChiNhanh bus_ChiNhanh = new BUS_ChiNhanh();
+        BUS_ViPham bus_ViPham = new BUS_ViPham();
 
-        private void Frm_ChiNhanh_Load(object sender, EventArgs e)
+        private void Frm_ViPham_Load(object sender, EventArgs e)
         {
             int width = this.Width;
             int height = this.Height;
@@ -32,10 +32,10 @@ namespace GUI
             gb_DanhSach.Width = (width / 3) * 2;
             gb_ThongTin.Location = new Point(width - 510, 150);
             gb_ChucNang.Location = new Point(width - 510, 50);
-            dgv_chinhanh.DataSource = bus_ChiNhanh.LoadDSCN();
+            dgv_vipham.DataSource = bus_ViPham.LoadDSVP();
         }
 
-        private void Frm_ChiNhanh_Resize(object sender, EventArgs e)
+        private void Frm_ViPham_Resize(object sender, EventArgs e)
         {
             int width = this.Width;
             int height = this.Height;

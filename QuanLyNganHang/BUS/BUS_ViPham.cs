@@ -12,7 +12,7 @@ namespace BUS
     {
         DAL_ViPham vp = new DAL_ViPham();
 
-        public IQueryable LoadDSVP(ET_ViPham et)
+        public IQueryable LoadDSVP()
         {
             return vp.LoadDSVP();
         }
