@@ -143,3 +143,11 @@ D:\ĐỒ ÁN TTDN\them design\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.cspr
 D:\ĐỒ ÁN TTDN\them design\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.csproj.Up2Date
 D:\ĐỒ ÁN TTDN\them design\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.exe
 D:\ĐỒ ÁN TTDN\them design\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.pdb
+D:\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.Frm_BienLai.resources
+D:\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.Frm_GiaoDich.resources
+D:\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.Frm_NoiQuy.resources
+D:\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.Frm_TaiKhoan.resources
+D:\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.Frm_ViPham.resources
+D:\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.frmDangNhap.resources
+D:\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.frmLichSuTraNo.resources
+D:\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.frmMainUser.resources

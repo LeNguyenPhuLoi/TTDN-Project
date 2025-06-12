@@ -49,11 +49,11 @@
             this.lbTim = new System.Windows.Forms.Label();
             this.dgvKhoanVay = new System.Windows.Forms.DataGridView();
             this.pnlMain = new System.Windows.Forms.Panel();
-            this.cboTrangThai = new System.Windows.Forms.ComboBox();
-            this.txtMaVay = new System.Windows.Forms.TextBox();
-            this.btnTim = new System.Windows.Forms.Button();
-            this.dtpNgayVay = new System.Windows.Forms.DateTimePicker();
             this.dtpThoiHan = new System.Windows.Forms.DateTimePicker();
+            this.dtpNgayVay = new System.Windows.Forms.DateTimePicker();
+            this.txtMaVay = new System.Windows.Forms.TextBox();
+            this.cboTrangThai = new System.Windows.Forms.ComboBox();
+            this.btnTim = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLaiSuat)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKhoanVay)).BeginInit();
             this.pnlMain.SuspendLayout();
@@ -284,6 +284,36 @@
             this.pnlMain.Size = new System.Drawing.Size(770, 273);
             this.pnlMain.TabIndex = 30;
             // 
+            // dtpThoiHan
+            // 
+            this.dtpThoiHan.CustomFormat = "dd/MM/yyyy";
+            this.dtpThoiHan.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpThoiHan.Location = new System.Drawing.Point(445, 49);
+            this.dtpThoiHan.MaxDate = new System.DateTime(2999, 11, 11, 0, 0, 0, 0);
+            this.dtpThoiHan.Name = "dtpThoiHan";
+            this.dtpThoiHan.Size = new System.Drawing.Size(180, 22);
+            this.dtpThoiHan.TabIndex = 22;
+            this.dtpThoiHan.Value = new System.DateTime(2025, 6, 11, 0, 0, 0, 0);
+            // 
+            // dtpNgayVay
+            // 
+            this.dtpNgayVay.CustomFormat = "dd/MM/yyyy";
+            this.dtpNgayVay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpNgayVay.Location = new System.Drawing.Point(445, 19);
+            this.dtpNgayVay.MaxDate = new System.DateTime(2025, 6, 12, 0, 0, 0, 0);
+            this.dtpNgayVay.Name = "dtpNgayVay";
+            this.dtpNgayVay.Size = new System.Drawing.Size(180, 22);
+            this.dtpNgayVay.TabIndex = 21;
+            this.dtpNgayVay.Value = new System.DateTime(2025, 6, 11, 0, 0, 0, 0);
+            // 
+            // txtMaVay
+            // 
+            this.txtMaVay.Location = new System.Drawing.Point(98, 21);
+            this.txtMaVay.Margin = new System.Windows.Forms.Padding(4);
+            this.txtMaVay.Name = "txtMaVay";
+            this.txtMaVay.Size = new System.Drawing.Size(142, 22);
+            this.txtMaVay.TabIndex = 20;
+            // 
             // cboTrangThai
             // 
             this.cboTrangThai.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -298,14 +328,6 @@
             this.cboTrangThai.Size = new System.Drawing.Size(182, 24);
             this.cboTrangThai.TabIndex = 19;
             // 
-            // txtMaVay
-            // 
-            this.txtMaVay.Location = new System.Drawing.Point(98, 21);
-            this.txtMaVay.Margin = new System.Windows.Forms.Padding(4);
-            this.txtMaVay.Name = "txtMaVay";
-            this.txtMaVay.Size = new System.Drawing.Size(142, 22);
-            this.txtMaVay.TabIndex = 20;
-            // 
             // btnTim
             // 
             this.btnTim.Location = new System.Drawing.Point(442, 302);
@@ -314,28 +336,6 @@
             this.btnTim.TabIndex = 37;
             this.btnTim.Text = "Tìm";
             this.btnTim.UseVisualStyleBackColor = true;
-            // 
-            // dtpNgayVay
-            // 
-            this.dtpNgayVay.CustomFormat = "dd/MM/yyyy";
-            this.dtpNgayVay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpNgayVay.Location = new System.Drawing.Point(445, 19);
-            this.dtpNgayVay.MaxDate = new System.DateTime(2025, 6, 11, 0, 0, 0, 0);
-            this.dtpNgayVay.Name = "dtpNgayVay";
-            this.dtpNgayVay.Size = new System.Drawing.Size(180, 22);
-            this.dtpNgayVay.TabIndex = 21;
-            this.dtpNgayVay.Value = new System.DateTime(2025, 6, 11, 0, 0, 0, 0);
-            // 
-            // dtpThoiHan
-            // 
-            this.dtpThoiHan.CustomFormat = "dd/MM/yyyy";
-            this.dtpThoiHan.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpThoiHan.Location = new System.Drawing.Point(445, 49);
-            this.dtpThoiHan.MaxDate = new System.DateTime(2999, 11, 11, 0, 0, 0, 0);
-            this.dtpThoiHan.Name = "dtpThoiHan";
-            this.dtpThoiHan.Size = new System.Drawing.Size(180, 22);
-            this.dtpThoiHan.TabIndex = 22;
-            this.dtpThoiHan.Value = new System.DateTime(2025, 6, 11, 0, 0, 0, 0);
             // 
             // frmKhoanVay
             // 

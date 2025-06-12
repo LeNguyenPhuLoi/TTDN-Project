@@ -321,7 +321,6 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmChuyenKhoan";
             this.Text = "Quản Lý Chuyển Khoản";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmChuyenKhoan_Load);
             this.pnlMain.ResumeLayout(false);
             this.pnlMain.PerformLayout();
