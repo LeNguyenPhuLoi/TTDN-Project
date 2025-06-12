@@ -58,11 +58,23 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frm_BienLai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_BienLai.Designer.cs">
+      <DependentUpon>Frm_BienLai.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm_ChiNhanh.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Frm_ChiNhanh.Designer.cs">
       <DependentUpon>Frm_ChiNhanh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_GiaoDich.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_GiaoDich.Designer.cs">
+      <DependentUpon>Frm_GiaoDich.cs</DependentUpon>
     </Compile>
     <Compile Include="Frm_KhachHang.cs">
       <SubType>Form</SubType>
@@ -94,6 +106,12 @@
     <Compile Include="Frm_PhongBan.Designer.cs">
       <DependentUpon>Frm_PhongBan.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frm_TaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_TaiKhoan.Designer.cs">
+      <DependentUpon>Frm_TaiKhoan.cs</DependentUpon>
+    </Compile>
     <Compile Include="KhoanVay.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,8 +129,14 @@
     <EmbeddedResource Include="ChuyenKhoan.resx">
       <DependentUpon>ChuyenKhoan.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Frm_BienLai.resx">
+      <DependentUpon>Frm_BienLai.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Frm_ChiNhanh.resx">
       <DependentUpon>Frm_ChiNhanh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_GiaoDich.resx">
+      <DependentUpon>Frm_GiaoDich.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_KhachHang.resx">
       <DependentUpon>Frm_KhachHang.cs</DependentUpon>
@@ -128,6 +152,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_PhongBan.resx">
       <DependentUpon>Frm_PhongBan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_TaiKhoan.resx">
+      <DependentUpon>Frm_TaiKhoan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="KhoanVay.resx">
       <DependentUpon>KhoanVay.cs</DependentUpon>

@@ -82,3 +82,33 @@ D:\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.Frm_NhanVien.resources
 D:\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.Frm_PhongBan.resources
 D:\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.frmKhoanVay.resources
 D:\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.frmLaiSuat.resources
+E:\TTDN Project\12-6-2025\TTDN-Project\QuanLyNganHang\GUI\bin\Debug\GUI.exe.config
+E:\TTDN Project\12-6-2025\TTDN-Project\QuanLyNganHang\GUI\bin\Debug\GUI.exe
+E:\TTDN Project\12-6-2025\TTDN-Project\QuanLyNganHang\GUI\bin\Debug\GUI.pdb
+E:\TTDN Project\12-6-2025\TTDN-Project\QuanLyNganHang\GUI\bin\Debug\BUS.dll
+E:\TTDN Project\12-6-2025\TTDN-Project\QuanLyNganHang\GUI\bin\Debug\ET.dll
+E:\TTDN Project\12-6-2025\TTDN-Project\QuanLyNganHang\GUI\bin\Debug\DAL.dll
+E:\TTDN Project\12-6-2025\TTDN-Project\QuanLyNganHang\GUI\bin\Debug\BUS.pdb
+E:\TTDN Project\12-6-2025\TTDN-Project\QuanLyNganHang\GUI\bin\Debug\ET.pdb
+E:\TTDN Project\12-6-2025\TTDN-Project\QuanLyNganHang\GUI\bin\Debug\DAL.pdb
+E:\TTDN Project\12-6-2025\TTDN-Project\QuanLyNganHang\GUI\bin\Debug\DAL.dll.config
+E:\TTDN Project\12-6-2025\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.csproj.AssemblyReference.cache
+E:\TTDN Project\12-6-2025\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.exe.config
+E:\TTDN Project\12-6-2025\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.frmChuyenKhoan.resources
+E:\TTDN Project\12-6-2025\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.Frm_ChiNhanh.resources
+E:\TTDN Project\12-6-2025\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.Frm_KhachHang.resources
+E:\TTDN Project\12-6-2025\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.Frm_LoaiTaiKhoan.resources
+E:\TTDN Project\12-6-2025\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.Frm_LoaiTien.resources
+E:\TTDN Project\12-6-2025\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.Frm_NhanVien.resources
+E:\TTDN Project\12-6-2025\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.Frm_PhongBan.resources
+E:\TTDN Project\12-6-2025\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.frmKhoanVay.resources
+E:\TTDN Project\12-6-2025\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.frmLaiSuat.resources
+E:\TTDN Project\12-6-2025\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.Properties.Resources.resources
+E:\TTDN Project\12-6-2025\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.csproj.GenerateResource.cache
+E:\TTDN Project\12-6-2025\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.csproj.CoreCompileInputs.cache
+E:\TTDN Project\12-6-2025\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.csproj.Up2Date
+E:\TTDN Project\12-6-2025\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.exe
+E:\TTDN Project\12-6-2025\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.pdb
+E:\TTDN Project\12-6-2025\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.Frm_TaiKhoan.resources
+E:\TTDN Project\12-6-2025\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.Frm_GiaoDich.resources
+E:\TTDN Project\12-6-2025\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.Frm_BienLai.resources
