@@ -12,9 +12,9 @@ namespace BUS
     {
         DAL_NoiQuy nq = new DAL_NoiQuy();
 
-        public IQueryable LoadDSNQ(ET_NoiQuy et)
+        public IQueryable LoadDSNQ()
         {
-            return nq.LoadDSNV();
+            return nq.LoadDSNQ();
         }
 
         public bool ThemNQ(ET_NoiQuy et)

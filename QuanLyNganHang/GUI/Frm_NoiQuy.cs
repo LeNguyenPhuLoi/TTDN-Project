@@ -12,16 +12,16 @@ using BUS;
 
 namespace GUI
 {
-    public partial class Frm_ChiNhanh : Form
+    public partial class Frm_NoiQuy : Form
     {
-        public Frm_ChiNhanh()
+        public Frm_NoiQuy()
         {
             InitializeComponent();
         }
 
-        BUS_ChiNhanh bus_ChiNhanh = new BUS_ChiNhanh();
+        BUS_NoiQuy bus_NoiQuy = new BUS_NoiQuy();
 
-        private void Frm_ChiNhanh_Load(object sender, EventArgs e)
+        private void Frm_NoiQuy_Load(object sender, EventArgs e)
         {
             int width = this.Width;
             int height = this.Height;
@@ -32,10 +32,10 @@ namespace GUI
             gb_DanhSach.Width = (width / 3) * 2;
             gb_ThongTin.Location = new Point(width - 510, 150);
             gb_ChucNang.Location = new Point(width - 510, 50);
-            dgv_chinhanh.DataSource = bus_ChiNhanh.LoadDSCN();
+            dgv_noiquy.DataSource = bus_NoiQuy.LoadDSNQ();
         }
 
-        private void Frm_ChiNhanh_Resize(object sender, EventArgs e)
+        private void Frm_NoiQuy_Resize(object sender, EventArgs e)
         {
             int width = this.Width;
             int height = this.Height;

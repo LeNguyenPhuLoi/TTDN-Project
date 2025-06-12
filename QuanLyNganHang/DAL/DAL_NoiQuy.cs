@@ -13,7 +13,7 @@ namespace DAL
         QLNHDataContext db = new QLNHDataContext();
 
         //Lấy ds nhân viên
-        public IQueryable LoadDSNV()
+        public IQueryable LoadDSNQ()
         {
             IQueryable NQ = from nq in db.NOIQUYs
                             select nq;
