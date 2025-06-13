@@ -15,7 +15,7 @@ namespace DAL
 
         public DAL_PhongBan()
         {
-            db = new QLNHDataContext();
+            db = new QLNHDataContext(conn.GetConnection());
         }
 
         //Lấy ds phòng ban
