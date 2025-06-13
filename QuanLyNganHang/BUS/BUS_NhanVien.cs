@@ -17,6 +17,36 @@ namespace BUS
             return nv.LoadDSNV();
         }
 
+        public IQueryable LoadTenPB()
+        {
+            return nv.LoadTenPB();
+        }
+
+        public IQueryable LoadTenCN()
+        {
+            return nv.LoadTenCN();
+        }
+
+        public string LayTenPBTheoMa(int ma)
+        {
+            return nv.LayTenPBTheoMa(ma);
+        }
+
+        public string LayTenCNTheoMa(string ma)
+        {
+            return nv.LayTenCNTheoMa(ma);
+        }
+
+        public int LayMaPBTheoTen(string ten)
+        {
+            return nv.LayMaPBTheoTen(ten);
+        }
+
+        public string LayMaCNTheoTen(string ten)
+        {
+            return nv.LayMaCNTheoTen(ten);
+        }
+
         public bool ThemNV(ET_NhanVien et)
         {
             return nv.ThemNV(et);
