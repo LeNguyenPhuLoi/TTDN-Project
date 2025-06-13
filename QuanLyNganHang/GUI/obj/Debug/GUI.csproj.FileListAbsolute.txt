@@ -151,3 +151,37 @@ D:\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.Frm_ViPham.resources
 D:\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.frmDangNhap.resources
 D:\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.frmLichSuTraNo.resources
 D:\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.frmMainUser.resources
+D:\ĐỒ ÁN TTDN\chuc nang\TTDN-Project\QuanLyNganHang\GUI\bin\Debug\GUI.exe.config
+D:\ĐỒ ÁN TTDN\chuc nang\TTDN-Project\QuanLyNganHang\GUI\bin\Debug\GUI.exe
+D:\ĐỒ ÁN TTDN\chuc nang\TTDN-Project\QuanLyNganHang\GUI\bin\Debug\GUI.pdb
+D:\ĐỒ ÁN TTDN\chuc nang\TTDN-Project\QuanLyNganHang\GUI\bin\Debug\BUS.dll
+D:\ĐỒ ÁN TTDN\chuc nang\TTDN-Project\QuanLyNganHang\GUI\bin\Debug\ET.dll
+D:\ĐỒ ÁN TTDN\chuc nang\TTDN-Project\QuanLyNganHang\GUI\bin\Debug\DAL.dll
+D:\ĐỒ ÁN TTDN\chuc nang\TTDN-Project\QuanLyNganHang\GUI\bin\Debug\BUS.pdb
+D:\ĐỒ ÁN TTDN\chuc nang\TTDN-Project\QuanLyNganHang\GUI\bin\Debug\ET.pdb
+D:\ĐỒ ÁN TTDN\chuc nang\TTDN-Project\QuanLyNganHang\GUI\bin\Debug\DAL.pdb
+D:\ĐỒ ÁN TTDN\chuc nang\TTDN-Project\QuanLyNganHang\GUI\bin\Debug\DAL.dll.config
+D:\ĐỒ ÁN TTDN\chuc nang\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.csproj.AssemblyReference.cache
+D:\ĐỒ ÁN TTDN\chuc nang\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.frmChuyenKhoan.resources
+D:\ĐỒ ÁN TTDN\chuc nang\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.frmDangNhap.resources
+D:\ĐỒ ÁN TTDN\chuc nang\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.Frm_BienLai.resources
+D:\ĐỒ ÁN TTDN\chuc nang\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.Frm_ChiNhanh.resources
+D:\ĐỒ ÁN TTDN\chuc nang\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.Frm_GiaoDich.resources
+D:\ĐỒ ÁN TTDN\chuc nang\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.Frm_KhachHang.resources
+D:\ĐỒ ÁN TTDN\chuc nang\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.Frm_LoaiTaiKhoan.resources
+D:\ĐỒ ÁN TTDN\chuc nang\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.Frm_LoaiTien.resources
+D:\ĐỒ ÁN TTDN\chuc nang\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.Frm_NhanVien.resources
+D:\ĐỒ ÁN TTDN\chuc nang\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.Frm_NoiQuy.resources
+D:\ĐỒ ÁN TTDN\chuc nang\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.Frm_PhongBan.resources
+D:\ĐỒ ÁN TTDN\chuc nang\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.Frm_TaiKhoan.resources
+D:\ĐỒ ÁN TTDN\chuc nang\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.Frm_ViPham.resources
+D:\ĐỒ ÁN TTDN\chuc nang\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.frmKhoanVay.resources
+D:\ĐỒ ÁN TTDN\chuc nang\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.frmLaiSuat.resources
+D:\ĐỒ ÁN TTDN\chuc nang\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.frmLichSuTraNo.resources
+D:\ĐỒ ÁN TTDN\chuc nang\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.frmMainUser.resources
+D:\ĐỒ ÁN TTDN\chuc nang\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.Properties.Resources.resources
+D:\ĐỒ ÁN TTDN\chuc nang\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.csproj.GenerateResource.cache
+D:\ĐỒ ÁN TTDN\chuc nang\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.csproj.CoreCompileInputs.cache
+D:\ĐỒ ÁN TTDN\chuc nang\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.csproj.Up2Date
+D:\ĐỒ ÁN TTDN\chuc nang\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.exe
+D:\ĐỒ ÁN TTDN\chuc nang\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.pdb

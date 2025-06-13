@@ -16,12 +16,58 @@ namespace DAL
         public IQueryable LoadDSNV()
         {
             IQueryable NV = from nv in db.NHANVIENs
-                            select nv;
+                            select new {nv.MANV, nv.TENNV, nv.GIOITINH, nv.NGAYSINH, nv.CHUC, nv.LUONG, nv.DIACHI, nv.SDT, nv.MAPB, nv.MACN};
             return NV;
         }
 
+        public IQueryable LoadTenPB()
+        {
+            IQueryable PB = from pb in db.PHONGBANs
+                            select pb.TENPB;
+            return PB;
+        }
+
+        public IQueryable LoadTenCN()
+        {
+            IQueryable CN = from cn in db.CHINHANHs
+                            select cn.TENCN;
+            return CN;
+        }
+
+        public string LayTenPBTheoMa(int ma)
+        {
+            string ten = (from pb in db.PHONGBANs
+                          where pb.MAPB == ma
+                          select pb.TENPB).FirstOrDefault();
+            return ten;
+        }
+
+        public string LayTenCNTheoMa(string ma)
+        {
+            string ten = (from cn in db.CHINHANHs
+                          where cn.MACN == ma
+                          select cn.TENCN).FirstOrDefault();
+            return ten;
+        }
+
+        public int LayMaPBTheoTen(string ten)
+        {
+            int ma = (from pb in db.PHONGBANs
+                      where pb.TENPB == ten
+                      select pb.MAPB).FirstOrDefault();
+            return ma;
+        }
+
+        public string LayMaCNTheoTen(string ten)
+        {
+            string ma = (from cn in db.CHINHANHs
+                         where cn.TENCN == ten
+                         select cn.MACN).FirstOrDefault();
+            return ma;
+        }
+
         //Thêm nhân viên
-        public bool ThemNV(ET_NhanVien et)
+        public bool     ThemNV(ET_NhanVien et)
         {
             bool ss = false;
             try
