@@ -15,7 +15,7 @@ namespace DAL
 
         public DAL_NhanVien()
         {
-            db = new QLNHDataContext();
+            db = new QLNHDataContext(conn.GetConnection());
         }
 
         //Lấy ds nhân viên
