@@ -8,8 +8,14 @@ namespace DAL
 {
     public class DAL_DangNhap
     {
-        //Kết nối với Linq to SQL
-        QLNHDataContext db = new QLNHDataContext();
+        //kết nối tới database = linq to sql
+        AutoConnect conn = new AutoConnect();
+        QLNHDataContext db;
+
+        public DAL_DangNhap()
+        {
+            db = new QLNHDataContext(conn.GetConnection());
+        }
 
         //Kiểm tra đăng nhập
         public bool KiemTraDangNhap(string tenDangNhap, string matKhau)

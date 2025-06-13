@@ -9,8 +9,14 @@ namespace DAL
 {
     public class DAL_ChuyenKhoan
     {
-        //Kết nối với Linq to SQL
-        QLNHDataContext db = new QLNHDataContext();
+        //kết nối tới database = linq to sql
+        AutoConnect conn = new AutoConnect();
+        QLNHDataContext db;
+
+        public DAL_ChuyenKhoan()
+        {
+            db = new QLNHDataContext(conn.GetConnection());
+        }
 
         //Lấy ds chuyển khoản
         public IQueryable LayDSChuyenKhoan()

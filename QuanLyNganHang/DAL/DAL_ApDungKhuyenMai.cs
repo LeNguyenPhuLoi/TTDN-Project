@@ -9,7 +9,14 @@ namespace DAL
 {
     public class DAL_ApDungKhuyenMai
     {
-        QLNHDataContext db = new QLNHDataContext();
+        //kết nối tới database = linq to sql
+        AutoConnect conn = new AutoConnect();
+        QLNHDataContext db;
+
+        public DAL_ApDungKhuyenMai()
+        {
+            db = new QLNHDataContext(conn.GetConnection());
+        }
         // Lấy danh sách áp dụng khuyến mãi
         public IQueryable LoadKhuyenMai()
         {

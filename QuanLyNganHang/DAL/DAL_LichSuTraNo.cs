@@ -9,7 +9,15 @@ namespace DAL
 {
     public class DAL_LichSuTraNo
     {
-        QLNHDataContext db = new QLNHDataContext();
+        //kết nối tới database = linq to sql
+        AutoConnect conn = new AutoConnect();
+        QLNHDataContext db;
+
+        public DAL_LichSuTraNo()
+        {
+            db = new QLNHDataContext(conn.GetConnection());
+        }
+
         // Lấy danh sách lịch sử trả nợ
         public IQueryable LoadLichSuTraNo()
         {

@@ -9,8 +9,15 @@ namespace DAL
 {
     public class DAL_KhuyenMai
     {
-        
-        QLNHDataContext db = new QLNHDataContext();
+
+        //kết nối tới database = linq to sql
+        AutoConnect conn = new AutoConnect();
+        QLNHDataContext db;
+
+        public DAL_KhuyenMai()
+        {
+            db = new QLNHDataContext(conn.GetConnection());
+        }
 
         public IQueryable LoadKM()
         {
