@@ -10,7 +10,13 @@ namespace DAL
     public class DAL_PhongBan
     {
         //Kết nối với Linq to SQL
-        QLNHDataContext db = new QLNHDataContext();
+        AutoConnect conn = new AutoConnect();
+        QLNHDataContext db;
+
+        public DAL_PhongBan()
+        {
+            db = new QLNHDataContext();
+        }
 
         //Lấy ds phòng ban
         public IQueryable LoadDSPB()

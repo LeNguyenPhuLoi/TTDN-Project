@@ -1,21 +1,29 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\\u0110\u1ED2 \u00C1N TTDN\\chuc nang\\TTDN-Project\\QuanLyNganHang\\",
+  "WorkspaceRootPath": "D:\\\u0110\u1ED2 \u00C1N TTDN\\f\\TTDN-Project\\QuanLyNganHang\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DD5CDC54-9399-46A4-B844-FB2507673A03}|GUI\\GUI.csproj|d:\\\u0111\u1ED3 \u00E1n ttdn\\chuc nang\\ttdn-project\\quanlynganhang\\gui\\frm_phongban.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{28FFE92F-BC73-4740-9150-176B686649BD}|DAL\\DAL.csproj|d:\\\u0111\u1ED3 \u00E1n ttdn\\f\\ttdn-project\\quanlynganhang\\dal\\dal_phongban.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{28FFE92F-BC73-4740-9150-176B686649BD}|DAL\\DAL.csproj|solutionrelative:dal\\dal_phongban.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28FFE92F-BC73-4740-9150-176B686649BD}|DAL\\DAL.csproj|d:\\\u0111\u1ED3 \u00E1n ttdn\\f\\ttdn-project\\quanlynganhang\\dal\\dal_nhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{28FFE92F-BC73-4740-9150-176B686649BD}|DAL\\DAL.csproj|solutionrelative:dal\\dal_nhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD5CDC54-9399-46A4-B844-FB2507673A03}|GUI\\GUI.csproj|d:\\\u0111\u1ED3 \u00E1n ttdn\\f\\ttdn-project\\quanlynganhang\\gui\\frm_phongban.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DD5CDC54-9399-46A4-B844-FB2507673A03}|GUI\\GUI.csproj|solutionrelative:gui\\frm_phongban.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DD5CDC54-9399-46A4-B844-FB2507673A03}|GUI\\GUI.csproj|d:\\\u0111\u1ED3 \u00E1n ttdn\\chuc nang\\ttdn-project\\quanlynganhang\\gui\\frm_nhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{DD5CDC54-9399-46A4-B844-FB2507673A03}|GUI\\GUI.csproj|D:\\\u0110\u1ED2 \u00C1N TTDN\\f\\TTDN-Project\\QuanLyNganHang\\gui\\frm_nhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DD5CDC54-9399-46A4-B844-FB2507673A03}|GUI\\GUI.csproj|solutionrelative:gui\\frm_nhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DD5CDC54-9399-46A4-B844-FB2507673A03}|GUI\\GUI.csproj|d:\\\u0111\u1ED3 \u00E1n ttdn\\chuc nang\\ttdn-project\\quanlynganhang\\gui\\frm_phongban.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{DD5CDC54-9399-46A4-B844-FB2507673A03}|GUI\\GUI.csproj|D:\\\u0110\u1ED2 \u00C1N TTDN\\f\\TTDN-Project\\QuanLyNganHang\\gui\\frm_phongban.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{DD5CDC54-9399-46A4-B844-FB2507673A03}|GUI\\GUI.csproj|solutionrelative:gui\\frm_phongban.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DD5CDC54-9399-46A4-B844-FB2507673A03}|GUI\\GUI.csproj|d:\\\u0111\u1ED3 \u00E1n ttdn\\chuc nang\\ttdn-project\\quanlynganhang\\gui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{DD5CDC54-9399-46A4-B844-FB2507673A03}|GUI\\GUI.csproj|D:\\\u0110\u1ED2 \u00C1N TTDN\\f\\TTDN-Project\\QuanLyNganHang\\gui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DD5CDC54-9399-46A4-B844-FB2507673A03}|GUI\\GUI.csproj|solutionrelative:gui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -30,25 +38,50 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "Program.cs",
-              "DocumentMoniker": "D:\\\u0110\u1ED2 \u00C1N TTDN\\chuc nang\\TTDN-Project\\QuanLyNganHang\\GUI\\Program.cs",
+              "DocumentMoniker": "D:\\\u0110\u1ED2 \u00C1N TTDN\\f\\TTDN-Project\\QuanLyNganHang\\GUI\\Program.cs",
               "RelativeDocumentMoniker": "GUI\\Program.cs",
-              "ToolTip": "D:\\\u0110\u1ED2 \u00C1N TTDN\\chuc nang\\TTDN-Project\\QuanLyNganHang\\GUI\\Program.cs",
+              "ToolTip": "D:\\\u0110\u1ED2 \u00C1N TTDN\\f\\TTDN-Project\\QuanLyNganHang\\GUI\\Program.cs",
               "RelativeToolTip": "GUI\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-11T01:35:45.31Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "DAL_PhongBan.cs",
+              "DocumentMoniker": "D:\\\u0110\u1ED2 \u00C1N TTDN\\f\\TTDN-Project\\QuanLyNganHang\\DAL\\DAL_PhongBan.cs",
+              "RelativeDocumentMoniker": "DAL\\DAL_PhongBan.cs",
+              "ToolTip": "D:\\\u0110\u1ED2 \u00C1N TTDN\\f\\TTDN-Project\\QuanLyNganHang\\DAL\\DAL_PhongBan.cs",
+              "RelativeToolTip": "DAL\\DAL_PhongBan.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-13T03:01:42.527Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DAL_NhanVien.cs",
+              "DocumentMoniker": "D:\\\u0110\u1ED2 \u00C1N TTDN\\f\\TTDN-Project\\QuanLyNganHang\\DAL\\DAL_NhanVien.cs",
+              "RelativeDocumentMoniker": "DAL\\DAL_NhanVien.cs",
+              "ToolTip": "D:\\\u0110\u1ED2 \u00C1N TTDN\\f\\TTDN-Project\\QuanLyNganHang\\DAL\\DAL_NhanVien.cs",
+              "RelativeToolTip": "DAL\\DAL_NhanVien.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-13T03:00:17.089Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Frm_PhongBan.cs",
-              "DocumentMoniker": "D:\\\u0110\u1ED2 \u00C1N TTDN\\chuc nang\\TTDN-Project\\QuanLyNganHang\\GUI\\Frm_PhongBan.cs",
+              "DocumentMoniker": "D:\\\u0110\u1ED2 \u00C1N TTDN\\f\\TTDN-Project\\QuanLyNganHang\\GUI\\Frm_PhongBan.cs",
               "RelativeDocumentMoniker": "GUI\\Frm_PhongBan.cs",
-              "ToolTip": "D:\\\u0110\u1ED2 \u00C1N TTDN\\chuc nang\\TTDN-Project\\QuanLyNganHang\\GUI\\Frm_PhongBan.cs",
+              "ToolTip": "D:\\\u0110\u1ED2 \u00C1N TTDN\\f\\TTDN-Project\\QuanLyNganHang\\GUI\\Frm_PhongBan.cs",
               "RelativeToolTip": "GUI\\Frm_PhongBan.cs",
               "ViewState": "AgIAADUAAAAAAAAAAAAswGsAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -57,28 +90,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Frm_NhanVien.cs",
-              "DocumentMoniker": "D:\\\u0110\u1ED2 \u00C1N TTDN\\chuc nang\\TTDN-Project\\QuanLyNganHang\\GUI\\Frm_NhanVien.cs",
+              "DocumentMoniker": "D:\\\u0110\u1ED2 \u00C1N TTDN\\f\\TTDN-Project\\QuanLyNganHang\\GUI\\Frm_NhanVien.cs",
               "RelativeDocumentMoniker": "GUI\\Frm_NhanVien.cs",
-              "ToolTip": "D:\\\u0110\u1ED2 \u00C1N TTDN\\chuc nang\\TTDN-Project\\QuanLyNganHang\\GUI\\Frm_NhanVien.cs",
+              "ToolTip": "D:\\\u0110\u1ED2 \u00C1N TTDN\\f\\TTDN-Project\\QuanLyNganHang\\GUI\\Frm_NhanVien.cs",
               "RelativeToolTip": "GUI\\Frm_NhanVien.cs",
               "ViewState": "AgIAAJ4AAAAAAAAAAAAUwLwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-13T02:30:26.917Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-13T02:30:26.917Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "Frm_PhongBan.cs [Design]",
-              "DocumentMoniker": "D:\\\u0110\u1ED2 \u00C1N TTDN\\chuc nang\\TTDN-Project\\QuanLyNganHang\\GUI\\Frm_PhongBan.cs",
+              "DocumentMoniker": "D:\\\u0110\u1ED2 \u00C1N TTDN\\f\\TTDN-Project\\QuanLyNganHang\\GUI\\Frm_PhongBan.cs",
               "RelativeDocumentMoniker": "GUI\\Frm_PhongBan.cs",
               "ToolTip": "D:\\\u0110\u1ED2 \u00C1N TTDN\\chuc nang\\TTDN-Project\\QuanLyNganHang\\GUI\\Frm_PhongBan.cs [Design]",
-              "RelativeToolTip": "GUI\\Frm_PhongBan.cs [Design]",
+              "RelativeToolTip": "..\\..\\..\\chuc nang\\TTDN-Project\\QuanLyNganHang\\GUI\\Frm_PhongBan.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-13T02:30:15.418Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-06-13T02:30:15.418Z"
             }
           ]
         }
