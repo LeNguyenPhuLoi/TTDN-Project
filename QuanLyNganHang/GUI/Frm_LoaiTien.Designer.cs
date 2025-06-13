@@ -129,6 +129,7 @@
             // 
             // dgv_LoaiTien
             // 
+            this.dgv_LoaiTien.AllowUserToAddRows = false;
             this.dgv_LoaiTien.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_LoaiTien.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgv_LoaiTien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;

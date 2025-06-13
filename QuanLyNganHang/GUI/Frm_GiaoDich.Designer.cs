@@ -320,6 +320,7 @@
             // 
             // dgv_GiaoDich
             // 
+            this.dgv_GiaoDich.AllowUserToAddRows = false;
             this.dgv_GiaoDich.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_GiaoDich.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgv_GiaoDich.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;

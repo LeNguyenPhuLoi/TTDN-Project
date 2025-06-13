@@ -23,6 +23,7 @@ namespace GUI
         private void Frm_KhachHang_Load(object sender, EventArgs e)
         {
             this.MinimumSize = new System.Drawing.Size(1600, 900);
+            dtp_NgayTao.MaxDate = DateTime.Today;
             SetSize();
             dgv_KhachHang.DataSource = bUS_KhachHang.LoadDSKhachHang();
         }
@@ -30,6 +31,22 @@ namespace GUI
         private void Frm_KhachHang_Resize(object sender, EventArgs e)
         {
             SetSize();
+        }
+
+        public void Clear()
+        {
+            txt_MaKH.Clear();
+            txt_TenKH.Clear();
+            rdb_Nam.Checked = true;
+            txt_CCCD.Clear();
+            txt_SDT.Clear();
+            txt_Email.Clear();
+            txt_DiaChi.Clear();
+            txt_QuocTich.Clear();
+            cbo_DoiTuong.Text = null;
+            dtp_NgayTao.Text = dtp_NgayTao.MaxDate.ToString();
+            cbo_PhuongThuc.Text = null;
+            txt_GiaTri.Clear();
         }
 
         public void SetSize()
@@ -43,6 +60,157 @@ namespace GUI
             gb_DanhSach.Width = (width / 3) * 2;
             gb_ThongTin.Location = new Point(width - 510, 150);
             gb_ChucNang.Location = new Point(width - 510, 50);
+        }
+
+        public string LayGioiTinh()
+        {
+            if (rdb_Nam.Checked)
+            {
+                return rdb_Nam.Text;
+            }
+            else 
+            {
+                return rdb_Nu.Text;
+            }
+        }
+
+        private void btn_Them_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ET_KhachHang kh = new ET_KhachHang(txt_MaKH.Text,
+                                                    txt_TenKH.Text,
+                                                    LayGioiTinh(),
+                                                    txt_CCCD.Text,
+                                                    txt_SDT.Text,
+                                                    txt_Email.Text,
+                                                    txt_DiaChi.Text,
+                                                    txt_QuocTich.Text,
+                                                    cbo_DoiTuong.Text,
+                                                    dtp_NgayTao.Value);
+                if (bUS_KhachHang.ThemKhachHang(kh) == true)
+                {
+                    MessageBox.Show("Thêm thành công!");
+                    Clear();
+                }
+                else 
+                {
+                    MessageBox.Show("Thêm không thành công!");
+                }
+
+            }
+            catch (Exception ex) 
+            {
+                MessageBox.Show("Lỗi: "+ex.Message);
+            }
+            dgv_KhachHang.DataSource = bUS_KhachHang.LoadDSKhachHang();
+        }
+
+        private void btn_Lammoi_Click(object sender, EventArgs e)
+        {
+            Clear();
+        }
+
+        public void KTGioiTinh(string t)
+        {
+            if(t == "NAM")
+            {
+                rdb_Nam.Checked = true;
+            }
+            else
+            {
+                rdb_Nu.Checked = true;
+            }
+        }
+
+        private void dgv_KhachHang_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int dong = dgv_KhachHang.CurrentCell.RowIndex;
+                txt_MaKH.Text = dgv_KhachHang.Rows[dong].Cells[0].Value.ToString();
+                txt_TenKH.Text = dgv_KhachHang.Rows[dong].Cells[1].Value.ToString();
+                KTGioiTinh(dgv_KhachHang.Rows[dong].Cells[2].Value.ToString());
+                txt_CCCD.Text = dgv_KhachHang.Rows[dong].Cells[3].Value.ToString();
+                txt_SDT.Text = dgv_KhachHang.Rows[dong].Cells[4].Value.ToString();
+                txt_Email.Text = dgv_KhachHang.Rows[dong].Cells[5].Value.ToString();
+                txt_DiaChi.Text = dgv_KhachHang.Rows[dong].Cells[6].Value.ToString();
+                txt_QuocTich.Text = dgv_KhachHang.Rows[dong].Cells[7].Value.ToString();
+                cbo_DoiTuong.Text = dgv_KhachHang.Rows[dong].Cells[8].Value.ToString();
+                dtp_NgayTao.Text = dgv_KhachHang.Rows[dong].Cells[9].Value.ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi: " + ex.Message);
+            }
+        }
+
+        private void btn_Sua_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ET_KhachHang kh = new ET_KhachHang(txt_MaKH.Text,
+                                                    txt_TenKH.Text,
+                                                    LayGioiTinh(),
+                                                    txt_CCCD.Text,
+                                                    txt_SDT.Text,
+                                                    txt_Email.Text,
+                                                    txt_DiaChi.Text,
+                                                    txt_QuocTich.Text,
+                                                    cbo_DoiTuong.Text,
+                                                    dtp_NgayTao.Value);
+                if (bUS_KhachHang.SuaThongTinKhachHang(kh) == true)
+                {
+                    MessageBox.Show("Sửa thành công!");
+                    Clear();
+                }
+                else
+                {
+                    MessageBox.Show("Sửa không thành công!");
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi: " + ex.Message);
+            }
+            dgv_KhachHang.DataSource = bUS_KhachHang.LoadDSKhachHang();
+        }
+
+        private void btn_Xoa_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DialogResult = MessageBox.Show("Bạn có muốn xóa?", "Thông báo!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (DialogResult == DialogResult.Yes)
+                {
+                    ET_KhachHang kh = new ET_KhachHang(txt_MaKH.Text,
+                                                    txt_TenKH.Text,
+                                                    LayGioiTinh(),
+                                                    txt_CCCD.Text,
+                                                    txt_SDT.Text,
+                                                    txt_Email.Text,
+                                                    txt_DiaChi.Text,
+                                                    txt_QuocTich.Text,
+                                                    cbo_DoiTuong.Text,
+                                                    dtp_NgayTao.Value);
+                    if (bUS_KhachHang.XoaKhachHang(kh) == true)
+                    {
+                        MessageBox.Show("Xóa thành công!");
+                        Clear();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Xóa không thành công!");
+                    }
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi: " + ex.Message);
+            }
+            dgv_KhachHang.DataSource = bUS_KhachHang.LoadDSKhachHang();
         }
     }
 }
