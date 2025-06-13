@@ -10,7 +10,13 @@ namespace DAL
     public class DAL_NhanVien
     {
         //Kết nối với Linq to SQL
-        QLNHDataContext db = new QLNHDataContext();
+        AutoConnect conn = new AutoConnect();
+        QLNHDataContext db;
+
+        public DAL_NhanVien()
+        {
+            db = new QLNHDataContext();
+        }
 
         //Lấy ds nhân viên
         public IQueryable LoadDSNV()
