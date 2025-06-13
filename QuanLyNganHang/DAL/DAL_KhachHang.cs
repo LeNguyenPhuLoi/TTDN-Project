@@ -72,7 +72,7 @@ namespace DAL
                 var update = db.KHACHHANGs.SingleOrDefault(kh => kh.MAKH == et.MaKH);
                 if (update != null)
                 {
-                    update.TENKH = et.MaKH;
+                    update.TENKH = et.TenKH;
                     update.GIOITINH = et.GioiTinh;
                     update.CCCD = et.Cccd;
                     update.SDT = et.Sdt;
