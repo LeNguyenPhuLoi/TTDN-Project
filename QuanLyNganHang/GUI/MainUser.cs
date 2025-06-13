@@ -154,7 +154,8 @@ namespace GUI
 
         private void btnKhuyenMai_Click(object sender, EventArgs e)
         {
-      
+            frmApDungKhuyenMai frm = new frmApDungKhuyenMai();
+            OpenMain(frm);
         }
     }
 }

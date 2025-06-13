@@ -220,3 +220,7 @@ E:\TTDN Project\13-6-2025\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.csproj.C
 E:\TTDN Project\13-6-2025\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.csproj.Up2Date
 E:\TTDN Project\13-6-2025\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.exe
 E:\TTDN Project\13-6-2025\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.pdb
+D:\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.frmKhuyenMai.resources
+D:\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.frmMainAddmin.resources
+D:\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.frmApDungKhuyenMai.resources
+D:\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.frmTKDangNhap.resources

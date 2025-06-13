@@ -9,7 +9,14 @@ namespace DAL
 {
     public class DAL_LaiSuat
     {
-        QLNHDataContext db = new QLNHDataContext();
+        //kết nối tới database = linq to sql
+        AutoConnect conn = new AutoConnect();
+        QLNHDataContext db;
+
+        public DAL_LaiSuat()
+        {
+            db = new QLNHDataContext(conn.GetConnection());
+        }
 
         // Lấy danh sách lãi suất
         public IQueryable LoadLaiSuat()

@@ -9,7 +9,14 @@ namespace DAL
 {
     public class DAL_KhoanVay
     {
-        QLNHDataContext db = new QLNHDataContext();
+        //kết nối tới database = linq to sql
+        AutoConnect conn = new AutoConnect();
+        QLNHDataContext db;
+
+        public DAL_KhoanVay()
+        {
+            db = new QLNHDataContext(conn.GetConnection());
+        }
 
         // Lấy danh sách khoản vay
         public IQueryable LoadKhoanVay()
