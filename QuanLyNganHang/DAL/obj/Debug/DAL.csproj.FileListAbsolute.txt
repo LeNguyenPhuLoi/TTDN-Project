@@ -68,3 +68,13 @@ D:\ĐỒ ÁN TTDN\chuc nang\TTDN-Project\QuanLyNganHang\DAL\obj\Debug\DAL.csproj
 D:\ĐỒ ÁN TTDN\chuc nang\TTDN-Project\QuanLyNganHang\DAL\obj\Debug\DAL.csproj.Up2Date
 D:\ĐỒ ÁN TTDN\chuc nang\TTDN-Project\QuanLyNganHang\DAL\obj\Debug\DAL.dll
 D:\ĐỒ ÁN TTDN\chuc nang\TTDN-Project\QuanLyNganHang\DAL\obj\Debug\DAL.pdb
+E:\TTDN Project\13-6-2025\TTDN-Project\QuanLyNganHang\DAL\bin\Debug\DAL.dll.config
+E:\TTDN Project\13-6-2025\TTDN-Project\QuanLyNganHang\DAL\bin\Debug\DAL.dll
+E:\TTDN Project\13-6-2025\TTDN-Project\QuanLyNganHang\DAL\bin\Debug\DAL.pdb
+E:\TTDN Project\13-6-2025\TTDN-Project\QuanLyNganHang\DAL\bin\Debug\ET.dll
+E:\TTDN Project\13-6-2025\TTDN-Project\QuanLyNganHang\DAL\bin\Debug\ET.pdb
+E:\TTDN Project\13-6-2025\TTDN-Project\QuanLyNganHang\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+E:\TTDN Project\13-6-2025\TTDN-Project\QuanLyNganHang\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+E:\TTDN Project\13-6-2025\TTDN-Project\QuanLyNganHang\DAL\obj\Debug\DAL.csproj.Up2Date
+E:\TTDN Project\13-6-2025\TTDN-Project\QuanLyNganHang\DAL\obj\Debug\DAL.dll
+E:\TTDN Project\13-6-2025\TTDN-Project\QuanLyNganHang\DAL\obj\Debug\DAL.pdb

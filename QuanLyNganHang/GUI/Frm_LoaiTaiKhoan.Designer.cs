@@ -123,6 +123,7 @@
             // 
             // dgv_LoaiTaiKhoan
             // 
+            this.dgv_LoaiTaiKhoan.AllowUserToAddRows = false;
             this.dgv_LoaiTaiKhoan.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_LoaiTaiKhoan.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgv_LoaiTaiKhoan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -131,6 +132,7 @@
             this.dgv_LoaiTaiKhoan.Name = "dgv_LoaiTaiKhoan";
             this.dgv_LoaiTaiKhoan.Size = new System.Drawing.Size(710, 306);
             this.dgv_LoaiTaiKhoan.TabIndex = 11;
+            this.dgv_LoaiTaiKhoan.Click += new System.EventHandler(this.dgv_LoaiTaiKhoan_Click);
             // 
             // lbl_title
             // 
@@ -164,6 +166,7 @@
             this.btn_Them.TabIndex = 32;
             this.btn_Them.Text = "Thêm";
             this.btn_Them.UseVisualStyleBackColor = true;
+            this.btn_Them.Click += new System.EventHandler(this.btn_Them_Click);
             // 
             // btn_Lammoi
             // 
@@ -173,6 +176,7 @@
             this.btn_Lammoi.TabIndex = 35;
             this.btn_Lammoi.Text = "Làm mới";
             this.btn_Lammoi.UseVisualStyleBackColor = true;
+            this.btn_Lammoi.Click += new System.EventHandler(this.btn_Lammoi_Click);
             // 
             // btn_Sua
             // 
@@ -182,6 +186,7 @@
             this.btn_Sua.TabIndex = 33;
             this.btn_Sua.Text = "Sửa";
             this.btn_Sua.UseVisualStyleBackColor = true;
+            this.btn_Sua.Click += new System.EventHandler(this.btn_Sua_Click);
             // 
             // btn_Xoa
             // 
@@ -191,6 +196,7 @@
             this.btn_Xoa.TabIndex = 34;
             this.btn_Xoa.Text = "Xóa";
             this.btn_Xoa.UseVisualStyleBackColor = true;
+            this.btn_Xoa.Click += new System.EventHandler(this.btn_Xoa_Click);
             // 
             // gb_ThongTin
             // 

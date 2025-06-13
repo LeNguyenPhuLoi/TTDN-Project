@@ -47,15 +47,15 @@
             this.cbo_PhuongThuc = new System.Windows.Forms.ComboBox();
             this.gb_Timkiem = new System.Windows.Forms.GroupBox();
             this.btn_Tim = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.txt_MaKH = new System.Windows.Forms.TextBox();
+            this.txt_TenKH = new System.Windows.Forms.TextBox();
+            this.txt_CCCD = new System.Windows.Forms.TextBox();
+            this.txt_SDT = new System.Windows.Forms.TextBox();
+            this.txt_Email = new System.Windows.Forms.TextBox();
+            this.txt_DiaChi = new System.Windows.Forms.TextBox();
+            this.txt_QuocTich = new System.Windows.Forms.TextBox();
+            this.cbo_DoiTuong = new System.Windows.Forms.ComboBox();
+            this.dtp_NgayTao = new System.Windows.Forms.DateTimePicker();
             this.rdb_Nam = new System.Windows.Forms.RadioButton();
             this.rdb_Nu = new System.Windows.Forms.RadioButton();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -176,6 +176,7 @@
             // 
             // dgv_KhachHang
             // 
+            this.dgv_KhachHang.AllowUserToAddRows = false;
             this.dgv_KhachHang.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_KhachHang.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgv_KhachHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -184,6 +185,7 @@
             this.dgv_KhachHang.Name = "dgv_KhachHang";
             this.dgv_KhachHang.Size = new System.Drawing.Size(710, 306);
             this.dgv_KhachHang.TabIndex = 11;
+            this.dgv_KhachHang.Click += new System.EventHandler(this.dgv_KhachHang_Click);
             // 
             // gb_DanhSach
             // 
@@ -252,69 +254,76 @@
             this.btn_Tim.Text = "Tìm";
             this.btn_Tim.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // txt_MaKH
             // 
-            this.textBox1.Location = new System.Drawing.Point(174, 37);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(297, 32);
-            this.textBox1.TabIndex = 19;
+            this.txt_MaKH.Location = new System.Drawing.Point(174, 37);
+            this.txt_MaKH.Name = "txt_MaKH";
+            this.txt_MaKH.Size = new System.Drawing.Size(297, 32);
+            this.txt_MaKH.TabIndex = 19;
             // 
-            // textBox2
+            // txt_TenKH
             // 
-            this.textBox2.Location = new System.Drawing.Point(175, 87);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(297, 32);
-            this.textBox2.TabIndex = 20;
+            this.txt_TenKH.Location = new System.Drawing.Point(175, 87);
+            this.txt_TenKH.Name = "txt_TenKH";
+            this.txt_TenKH.Size = new System.Drawing.Size(297, 32);
+            this.txt_TenKH.TabIndex = 20;
             // 
-            // textBox3
+            // txt_CCCD
             // 
-            this.textBox3.Location = new System.Drawing.Point(175, 200);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(297, 32);
-            this.textBox3.TabIndex = 21;
+            this.txt_CCCD.Location = new System.Drawing.Point(175, 200);
+            this.txt_CCCD.Name = "txt_CCCD";
+            this.txt_CCCD.Size = new System.Drawing.Size(297, 32);
+            this.txt_CCCD.TabIndex = 21;
             // 
-            // textBox4
+            // txt_SDT
             // 
-            this.textBox4.Location = new System.Drawing.Point(175, 257);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(297, 32);
-            this.textBox4.TabIndex = 22;
+            this.txt_SDT.Location = new System.Drawing.Point(175, 257);
+            this.txt_SDT.Name = "txt_SDT";
+            this.txt_SDT.Size = new System.Drawing.Size(297, 32);
+            this.txt_SDT.TabIndex = 22;
             // 
-            // textBox5
+            // txt_Email
             // 
-            this.textBox5.Location = new System.Drawing.Point(175, 311);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(297, 32);
-            this.textBox5.TabIndex = 23;
+            this.txt_Email.Location = new System.Drawing.Point(175, 311);
+            this.txt_Email.Name = "txt_Email";
+            this.txt_Email.Size = new System.Drawing.Size(297, 32);
+            this.txt_Email.TabIndex = 23;
             // 
-            // textBox6
+            // txt_DiaChi
             // 
-            this.textBox6.Location = new System.Drawing.Point(175, 367);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(297, 32);
-            this.textBox6.TabIndex = 24;
+            this.txt_DiaChi.Location = new System.Drawing.Point(175, 367);
+            this.txt_DiaChi.Name = "txt_DiaChi";
+            this.txt_DiaChi.Size = new System.Drawing.Size(297, 32);
+            this.txt_DiaChi.TabIndex = 24;
             // 
-            // textBox7
+            // txt_QuocTich
             // 
-            this.textBox7.Location = new System.Drawing.Point(175, 420);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(297, 32);
-            this.textBox7.TabIndex = 25;
+            this.txt_QuocTich.Location = new System.Drawing.Point(175, 420);
+            this.txt_QuocTich.Name = "txt_QuocTich";
+            this.txt_QuocTich.Size = new System.Drawing.Size(297, 32);
+            this.txt_QuocTich.TabIndex = 25;
             // 
-            // comboBox1
+            // cbo_DoiTuong
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(175, 475);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(297, 31);
-            this.comboBox1.TabIndex = 26;
+            this.cbo_DoiTuong.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbo_DoiTuong.FormattingEnabled = true;
+            this.cbo_DoiTuong.Items.AddRange(new object[] {
+            "Cá Nhân",
+            "Doanh Nghiệp"});
+            this.cbo_DoiTuong.Location = new System.Drawing.Point(175, 475);
+            this.cbo_DoiTuong.Name = "cbo_DoiTuong";
+            this.cbo_DoiTuong.Size = new System.Drawing.Size(297, 31);
+            this.cbo_DoiTuong.TabIndex = 26;
             // 
-            // dateTimePicker1
+            // dtp_NgayTao
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(175, 527);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(297, 32);
-            this.dateTimePicker1.TabIndex = 27;
+            this.dtp_NgayTao.CustomFormat = "dd/MM/yyyy HH:mm:ss";
+            this.dtp_NgayTao.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtp_NgayTao.Location = new System.Drawing.Point(175, 527);
+            this.dtp_NgayTao.MinDate = new System.DateTime(1985, 1, 1, 0, 0, 0, 0);
+            this.dtp_NgayTao.Name = "dtp_NgayTao";
+            this.dtp_NgayTao.Size = new System.Drawing.Size(297, 32);
+            this.dtp_NgayTao.TabIndex = 27;
             // 
             // rdb_Nam
             // 
@@ -352,23 +361,23 @@
             this.gb_ThongTin.Controls.Add(this.label1);
             this.gb_ThongTin.Controls.Add(this.panel1);
             this.gb_ThongTin.Controls.Add(this.label2);
-            this.gb_ThongTin.Controls.Add(this.dateTimePicker1);
+            this.gb_ThongTin.Controls.Add(this.dtp_NgayTao);
             this.gb_ThongTin.Controls.Add(this.label3);
-            this.gb_ThongTin.Controls.Add(this.comboBox1);
+            this.gb_ThongTin.Controls.Add(this.cbo_DoiTuong);
             this.gb_ThongTin.Controls.Add(this.label4);
-            this.gb_ThongTin.Controls.Add(this.textBox7);
+            this.gb_ThongTin.Controls.Add(this.txt_QuocTich);
             this.gb_ThongTin.Controls.Add(this.label5);
-            this.gb_ThongTin.Controls.Add(this.textBox6);
+            this.gb_ThongTin.Controls.Add(this.txt_DiaChi);
             this.gb_ThongTin.Controls.Add(this.label6);
-            this.gb_ThongTin.Controls.Add(this.textBox5);
+            this.gb_ThongTin.Controls.Add(this.txt_Email);
             this.gb_ThongTin.Controls.Add(this.label7);
-            this.gb_ThongTin.Controls.Add(this.textBox4);
+            this.gb_ThongTin.Controls.Add(this.txt_SDT);
             this.gb_ThongTin.Controls.Add(this.label8);
-            this.gb_ThongTin.Controls.Add(this.textBox3);
+            this.gb_ThongTin.Controls.Add(this.txt_CCCD);
             this.gb_ThongTin.Controls.Add(this.label9);
-            this.gb_ThongTin.Controls.Add(this.textBox2);
+            this.gb_ThongTin.Controls.Add(this.txt_TenKH);
             this.gb_ThongTin.Controls.Add(this.label10);
-            this.gb_ThongTin.Controls.Add(this.textBox1);
+            this.gb_ThongTin.Controls.Add(this.txt_MaKH);
             this.gb_ThongTin.Location = new System.Drawing.Point(1071, 171);
             this.gb_ThongTin.Name = "gb_ThongTin";
             this.gb_ThongTin.Size = new System.Drawing.Size(489, 579);
@@ -384,6 +393,7 @@
             this.btn_Them.TabIndex = 32;
             this.btn_Them.Text = "Thêm";
             this.btn_Them.UseVisualStyleBackColor = true;
+            this.btn_Them.Click += new System.EventHandler(this.btn_Them_Click);
             // 
             // btn_Sua
             // 
@@ -393,6 +403,7 @@
             this.btn_Sua.TabIndex = 33;
             this.btn_Sua.Text = "Sửa";
             this.btn_Sua.UseVisualStyleBackColor = true;
+            this.btn_Sua.Click += new System.EventHandler(this.btn_Sua_Click);
             // 
             // btn_Xoa
             // 
@@ -402,6 +413,7 @@
             this.btn_Xoa.TabIndex = 34;
             this.btn_Xoa.Text = "Xóa";
             this.btn_Xoa.UseVisualStyleBackColor = true;
+            this.btn_Xoa.Click += new System.EventHandler(this.btn_Xoa_Click);
             // 
             // btn_Lammoi
             // 
@@ -411,6 +423,7 @@
             this.btn_Lammoi.TabIndex = 35;
             this.btn_Lammoi.Text = "Làm mới";
             this.btn_Lammoi.UseVisualStyleBackColor = true;
+            this.btn_Lammoi.Click += new System.EventHandler(this.btn_Lammoi_Click);
             // 
             // gb_ChucNang
             // 
@@ -476,15 +489,15 @@
         private System.Windows.Forms.ComboBox cbo_PhuongThuc;
         private System.Windows.Forms.GroupBox gb_Timkiem;
         private System.Windows.Forms.Button btn_Tim;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.TextBox txt_MaKH;
+        private System.Windows.Forms.TextBox txt_TenKH;
+        private System.Windows.Forms.TextBox txt_CCCD;
+        private System.Windows.Forms.TextBox txt_SDT;
+        private System.Windows.Forms.TextBox txt_Email;
+        private System.Windows.Forms.TextBox txt_DiaChi;
+        private System.Windows.Forms.TextBox txt_QuocTich;
+        private System.Windows.Forms.ComboBox cbo_DoiTuong;
+        private System.Windows.Forms.DateTimePicker dtp_NgayTao;
         private System.Windows.Forms.RadioButton rdb_Nam;
         private System.Windows.Forms.RadioButton rdb_Nu;
         private System.Windows.Forms.Panel panel1;

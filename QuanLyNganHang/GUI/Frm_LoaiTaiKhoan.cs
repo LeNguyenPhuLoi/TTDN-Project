@@ -32,6 +32,14 @@ namespace GUI
             SetSize();
         }
 
+        public void Clear()
+        {
+            txt_MaLoaiTK.Clear();
+            rtxt_ChiTiet.Clear();
+            cbo_PhuongThuc.Text = null;
+            txt_GiaTri.Clear();
+        }
+
         public void SetSize()
         {
             int width = this.Width;
@@ -43,6 +51,103 @@ namespace GUI
             gb_DanhSach.Width = (width / 3) * 2;
             gb_ThongTin.Location = new Point(width - 510, 150);
             gb_ChucNang.Location = new Point(width - 510, 50);
+        }
+
+        private void btn_Lammoi_Click(object sender, EventArgs e)
+        {
+            Clear();
+        }
+
+        private void btn_Them_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ET_LoaiTaiKhoan ltk = new ET_LoaiTaiKhoan(txt_MaLoaiTK.Text,
+                                                            rtxt_ChiTiet.Text);
+                if (bUS_LoaiTaiKhoan.ThemLoaiTaiKhoan(ltk) == true)
+                {
+                    MessageBox.Show("Thêm thành công!");
+                    Clear();
+                }
+                else
+                {
+                    MessageBox.Show("Thêm không thành công!");
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi: " + ex.Message);
+            }
+            dgv_LoaiTaiKhoan.DataSource = bUS_LoaiTaiKhoan.LoadDSLoaiTaiKhoan();
+        }
+
+        private void dgv_LoaiTaiKhoan_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int dong = dgv_LoaiTaiKhoan.CurrentCell.RowIndex;
+                txt_MaLoaiTK.Text = dgv_LoaiTaiKhoan.Rows[dong].Cells[0].Value.ToString();
+                rtxt_ChiTiet.Text = dgv_LoaiTaiKhoan.Rows[dong].Cells[1].Value.ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi: " + ex.Message);
+            }
+        }
+
+        private void btn_Sua_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ET_LoaiTaiKhoan ltk = new ET_LoaiTaiKhoan(txt_MaLoaiTK.Text,
+                                                            rtxt_ChiTiet.Text);
+                if (bUS_LoaiTaiKhoan.SuaThongTinLoaiTaiKhoan(ltk) == true)
+                {
+                    MessageBox.Show("Sửa thành công!");
+                    Clear();
+                }
+                else
+                {
+                    MessageBox.Show("Sửa không thành công!");
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi: " + ex.Message);
+            }
+            dgv_LoaiTaiKhoan.DataSource = bUS_LoaiTaiKhoan.LoadDSLoaiTaiKhoan();
+        }
+
+        private void btn_Xoa_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+                DialogResult = MessageBox.Show("Bạn có muốn xóa?", "Thông báo!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (DialogResult == DialogResult.Yes)
+                {
+                    ET_LoaiTaiKhoan ltk = new ET_LoaiTaiKhoan(txt_MaLoaiTK.Text,
+                                                                rtxt_ChiTiet.Text);
+                    if (bUS_LoaiTaiKhoan.XoaLoaiTaiKhoan(ltk) == true)
+                    {
+                        MessageBox.Show("Xóa thành công!");
+                        Clear();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Xóa không thành công!");
+                    }
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi: " + ex.Message);
+            }
+            dgv_LoaiTaiKhoan.DataSource = bUS_LoaiTaiKhoan.LoadDSLoaiTaiKhoan();
+
         }
     }
 }
