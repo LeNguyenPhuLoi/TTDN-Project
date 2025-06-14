@@ -19,6 +19,58 @@ namespace BUS
         {
             return tk.LayDSTaiKhoan();
         }
+        //gọi Hàm lấy danh sách loại tài khoản
+        public IQueryable LayDSLoaiTaiKhoan()
+        {
+            return tk.LayDSLoaiTaiKhoan();
+        }
+        //gọi Hàm lấy danh sách tên loại tiền
+        public IQueryable LayDSTenLoaiTien()
+        {
+            return tk.LayDSTenLoaiTien();
+        }
+
+        //gọi hàm lấy danh sách tên khách hàng
+        public IQueryable LayDSTenKH()
+        {
+            return tk.LayDSTenKH();
+        }
+
+        //gọi hàm lấy mã khách hàng theo tên
+        public string LayMaKHTheoTen(string ten)
+        {
+            return tk.LayMaKHTheoTen(ten);
+        }
+
+        //gọi hàm lấy mã loại tài khoản theo chi tiết
+        public string LayMaLTKTheoChiTiet(string chitiet)
+        {
+            return tk.LayMaLTKTheoChiTiet(chitiet);
+        }
+
+        //gọi hàm lấy mã loại tiền theo tên
+        public string LayMaLTTheoTen(string ten)
+        {
+            return tk.LayMaLTTheoTen(ten);
+        }
+
+        //gọi hàm lấy tên khách hàng theo mã
+        public string LayTenKHTheoMa(string ma)
+        {
+            return tk.LayTenKHTheoMa(ma);
+        }
+
+        //hàm lấy chi tiết theo mã loại tài khoản
+        public string LayChiTietTheoMaLTK(string ma)
+        {
+            return tk.LayChiTietTheoMaLTK(ma);
+        }
+
+        //hàm lấy tên theo mã loại tiền
+        public string LayTenTheoMaLT(string ma)
+        {
+            return tk.LayTenTheoMaLT(ma);
+        }
 
         //gọi hàm ThemTaiKhoan từ DAL
         public bool ThemTaiKhoan(ET_TaiKhoan et)

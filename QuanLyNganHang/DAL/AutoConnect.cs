@@ -10,22 +10,16 @@ namespace DAL
 {
     public class AutoConnect
     {
-        private string connectionString;
+        private readonly string connectionString;
 
         public AutoConnect()
         {
             string host = Dns.GetHostName();
             string[] instanceOptions = { host, host + "\\SQLEXPRESS" };
 
-            foreach (var instance in instanceOptions)
-            {
-                string testConn = $"Data Source={instance};Initial Catalog=QLNH;Integrated Security=True;TrustServerCertificate=True";
-                if (TestConnection(testConn))
-                {
-                    connectionString = testConn;
-                    break;
-                }
-            }
+            connectionString = instanceOptions
+                .Select(instance => $"Data Source={instance};Initial Catalog=QLNH;Integrated Security=True;TrustServerCertificate=True;Connect Timeout=2;")
+                .FirstOrDefault(TestConnection);
 
             if (connectionString == null)
             {
