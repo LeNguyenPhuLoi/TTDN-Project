@@ -8,6 +8,7 @@ using System.Windows.Forms;
 
 using ET;
 using BUS;
+using System.Linq;
 
 namespace GUI
 {
@@ -24,10 +25,22 @@ namespace GUI
         {
             this.MinimumSize = new System.Drawing.Size(1600, 900);
             SetSize();
+            dtp_NgayMoTK.MaxDate = DateTime.Now;
             dgv_TaiKhoan.DataSource = bUS_TaiKhoan.LayDSTaiKhoan();
             dgv_TaiKhoan.Columns["KHACHHANG"].Visible = false;
             dgv_TaiKhoan.Columns["LOAITIEN"].Visible = false;
             dgv_TaiKhoan.Columns["LOAITAIKHOAN"].Visible = false;
+            ThemVaoCBO(cbo_TenKH, bUS_TaiKhoan.LayDSTenKH());
+            ThemVaoCBO(cbo_LoaiTaiKhoan, bUS_TaiKhoan.LayDSLoaiTaiKhoan());
+            ThemVaoCBO(cbo_LoaiTien, bUS_TaiKhoan.LayDSTenLoaiTien());
+        }
+
+        public void ThemVaoCBO(ComboBox cbo, IQueryable list)
+        {
+            foreach (string s in list) 
+            { 
+                cbo.Items.Add(s);
+            }
         }
 
         public void SetSize()
@@ -46,6 +59,136 @@ namespace GUI
         private void Frm_TaiKhoan_Resize(object sender, EventArgs e)
         {
             SetSize();
+        }
+
+        public void Clear()
+        {
+            txt_MaTK.Clear();
+            cbo_TenKH.Text = null;
+            txt_SoTK.Clear();
+            cbo_LoaiTaiKhoan.Text = null;
+            txt_SoDu.Clear();
+            cbo_LoaiTien.Text = null;
+            dtp_NgayMoTK.Text = dtp_NgayMoTK.MaxDate.ToString();
+            cbo_TrangThai.Text = null;
+        }
+
+        private void btn_Them_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ET_TaiKhoan tk = new ET_TaiKhoan(txt_MaTK.Text,
+                                                    bUS_TaiKhoan.LayMaKHTheoTen(cbo_TenKH.Text),
+                                                    txt_SoTK.Text,
+                                                    bUS_TaiKhoan.LayMaLTKTheoChiTiet(cbo_LoaiTaiKhoan.Text),
+                                                    Convert.ToDecimal(txt_SoDu.Text),
+                                                    bUS_TaiKhoan.LayMaLTTheoTen(cbo_LoaiTien.Text),
+                                                    dtp_NgayMoTK.Value,
+                                                    cbo_TrangThai.Text);
+                if (bUS_TaiKhoan.ThemTaiKhoan(tk) == true)
+                {
+                    MessageBox.Show("Thêm thành công!");
+                    Clear();
+                }
+                else
+                {
+                    MessageBox.Show("Thêm không thành công!");
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi: " + ex.Message);
+            }
+            dgv_TaiKhoan.DataSource = bUS_TaiKhoan.LayDSTaiKhoan();
+        }
+
+        private void btn_Lammoi_Click(object sender, EventArgs e)
+        {
+            Clear();
+        }
+
+        private void dgv_TaiKhoan_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int dong = dgv_TaiKhoan.CurrentCell.RowIndex;
+                txt_MaTK.Text = dgv_TaiKhoan.Rows[dong].Cells[0].Value.ToString();
+                cbo_TenKH.Text = bUS_TaiKhoan.LayTenKHTheoMa(dgv_TaiKhoan.Rows[dong].Cells[1].Value.ToString());
+                txt_SoTK.Text = dgv_TaiKhoan.Rows[dong].Cells[2].Value.ToString();
+                cbo_LoaiTaiKhoan.Text = bUS_TaiKhoan.LayChiTietTheoMaLTK(dgv_TaiKhoan.Rows[dong].Cells[3].Value.ToString());
+                txt_SoDu.Text = dgv_TaiKhoan.Rows[dong].Cells[4].Value.ToString();
+                cbo_LoaiTien.Text = bUS_TaiKhoan.LayTenTheoMaLT(dgv_TaiKhoan.Rows[dong].Cells[5].Value.ToString());
+                dtp_NgayMoTK.Text = dgv_TaiKhoan.Rows[dong].Cells[6].Value.ToString();
+                cbo_TrangThai.Text = dgv_TaiKhoan.Rows[dong].Cells[7].Value.ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi: " + ex.Message);
+            }
+        }
+
+        private void btn_Sua_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ET_TaiKhoan tk = new ET_TaiKhoan(txt_MaTK.Text,
+                                                    bUS_TaiKhoan.LayMaKHTheoTen(cbo_TenKH.Text),
+                                                    txt_SoTK.Text,
+                                                    bUS_TaiKhoan.LayMaLTKTheoChiTiet(cbo_LoaiTaiKhoan.Text),
+                                                    Convert.ToDecimal(txt_SoDu.Text),
+                                                    bUS_TaiKhoan.LayMaLTTheoTen(cbo_LoaiTien.Text),
+                                                    dtp_NgayMoTK.Value,
+                                                    cbo_TrangThai.Text);
+                if (bUS_TaiKhoan.SuaTaiKhoan(tk) == true)
+                {
+                    MessageBox.Show("Sửa thành công!");
+                    Clear();
+                }
+                else
+                {
+                    MessageBox.Show("Sửa không thành công!");
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi: " + ex.Message);
+            }
+            dgv_TaiKhoan.DataSource = bUS_TaiKhoan.LayDSTaiKhoan();
+        }
+
+        private void btn_Xoa_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DialogResult = MessageBox.Show("Bạn có muốn xóa?", "Thông báo!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (DialogResult == DialogResult.Yes)
+                {
+                    ET_TaiKhoan tk = new ET_TaiKhoan(txt_MaTK.Text,
+                                                    bUS_TaiKhoan.LayMaKHTheoTen(cbo_TenKH.Text),
+                                                    txt_SoTK.Text,
+                                                    bUS_TaiKhoan.LayMaLTKTheoChiTiet(cbo_LoaiTaiKhoan.Text),
+                                                    Convert.ToDecimal(txt_SoDu.Text),
+                                                    bUS_TaiKhoan.LayMaLTTheoTen(cbo_LoaiTien.Text),
+                                                    dtp_NgayMoTK.Value,
+                                                    cbo_TrangThai.Text);
+                    if (bUS_TaiKhoan.XoaTaiKhoan(tk) == true)
+                    {
+                        MessageBox.Show("Xóa thành công!");
+                        Clear();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Xóa không thành công!");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi: " + ex.Message);
+            }
+            dgv_TaiKhoan.DataSource = bUS_TaiKhoan.LayDSTaiKhoan();
         }
     }
 }

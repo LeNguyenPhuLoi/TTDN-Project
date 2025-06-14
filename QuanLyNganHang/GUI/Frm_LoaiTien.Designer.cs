@@ -43,16 +43,16 @@
             this.btn_Sua = new System.Windows.Forms.Button();
             this.btn_Xoa = new System.Windows.Forms.Button();
             this.gb_ThongTin = new System.Windows.Forms.GroupBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.cbo_TrangThai = new System.Windows.Forms.ComboBox();
+            this.txt_KyHieu = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_QuocGia = new System.Windows.Forms.TextBox();
+            this.txt_TenLoaiTien = new System.Windows.Forms.TextBox();
+            this.txt_MaLoaiTien = new System.Windows.Forms.TextBox();
             this.gb_Timkiem.SuspendLayout();
             this.gb_DanhSach.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_LoaiTien)).BeginInit();
@@ -138,6 +138,7 @@
             this.dgv_LoaiTien.Name = "dgv_LoaiTien";
             this.dgv_LoaiTien.Size = new System.Drawing.Size(710, 306);
             this.dgv_LoaiTien.TabIndex = 11;
+            this.dgv_LoaiTien.Click += new System.EventHandler(this.dgv_LoaiTien_Click);
             // 
             // lbl_title
             // 
@@ -171,6 +172,7 @@
             this.btn_Them.TabIndex = 32;
             this.btn_Them.Text = "Thêm";
             this.btn_Them.UseVisualStyleBackColor = true;
+            this.btn_Them.Click += new System.EventHandler(this.btn_Them_Click);
             // 
             // btn_Lammoi
             // 
@@ -180,6 +182,7 @@
             this.btn_Lammoi.TabIndex = 35;
             this.btn_Lammoi.Text = "Làm mới";
             this.btn_Lammoi.UseVisualStyleBackColor = true;
+            this.btn_Lammoi.Click += new System.EventHandler(this.btn_Lammoi_Click);
             // 
             // btn_Sua
             // 
@@ -189,6 +192,7 @@
             this.btn_Sua.TabIndex = 33;
             this.btn_Sua.Text = "Sửa";
             this.btn_Sua.UseVisualStyleBackColor = true;
+            this.btn_Sua.Click += new System.EventHandler(this.btn_Sua_Click);
             // 
             // btn_Xoa
             // 
@@ -198,19 +202,20 @@
             this.btn_Xoa.TabIndex = 34;
             this.btn_Xoa.Text = "Xóa";
             this.btn_Xoa.UseVisualStyleBackColor = true;
+            this.btn_Xoa.Click += new System.EventHandler(this.btn_Xoa_Click);
             // 
             // gb_ThongTin
             // 
-            this.gb_ThongTin.Controls.Add(this.comboBox1);
-            this.gb_ThongTin.Controls.Add(this.textBox5);
+            this.gb_ThongTin.Controls.Add(this.cbo_TrangThai);
+            this.gb_ThongTin.Controls.Add(this.txt_KyHieu);
             this.gb_ThongTin.Controls.Add(this.label1);
             this.gb_ThongTin.Controls.Add(this.label2);
             this.gb_ThongTin.Controls.Add(this.label3);
             this.gb_ThongTin.Controls.Add(this.label4);
             this.gb_ThongTin.Controls.Add(this.label5);
-            this.gb_ThongTin.Controls.Add(this.textBox3);
-            this.gb_ThongTin.Controls.Add(this.textBox2);
-            this.gb_ThongTin.Controls.Add(this.textBox1);
+            this.gb_ThongTin.Controls.Add(this.txt_QuocGia);
+            this.gb_ThongTin.Controls.Add(this.txt_TenLoaiTien);
+            this.gb_ThongTin.Controls.Add(this.txt_MaLoaiTien);
             this.gb_ThongTin.Location = new System.Drawing.Point(1080, 169);
             this.gb_ThongTin.Name = "gb_ThongTin";
             this.gb_ThongTin.Size = new System.Drawing.Size(489, 303);
@@ -218,21 +223,24 @@
             this.gb_ThongTin.TabStop = false;
             this.gb_ThongTin.Text = "Thông Tin Loại Tiền";
             // 
-            // comboBox1
+            // cbo_TrangThai
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(140, 257);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(331, 31);
-            this.comboBox1.TabIndex = 20;
+            this.cbo_TrangThai.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbo_TrangThai.FormattingEnabled = true;
+            this.cbo_TrangThai.Items.AddRange(new object[] {
+            "Còn Hoạt Động",
+            "Ngưng Hoạt Động"});
+            this.cbo_TrangThai.Location = new System.Drawing.Point(140, 257);
+            this.cbo_TrangThai.Name = "cbo_TrangThai";
+            this.cbo_TrangThai.Size = new System.Drawing.Size(331, 31);
+            this.cbo_TrangThai.TabIndex = 20;
             // 
-            // textBox5
+            // txt_KyHieu
             // 
-            this.textBox5.Location = new System.Drawing.Point(140, 143);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(331, 32);
-            this.textBox5.TabIndex = 23;
+            this.txt_KyHieu.Location = new System.Drawing.Point(140, 143);
+            this.txt_KyHieu.Name = "txt_KyHieu";
+            this.txt_KyHieu.Size = new System.Drawing.Size(331, 32);
+            this.txt_KyHieu.TabIndex = 23;
             // 
             // label1
             // 
@@ -279,26 +287,26 @@
             this.label5.TabIndex = 5;
             this.label5.Text = "Trạng Thái";
             // 
-            // textBox3
+            // txt_QuocGia
             // 
-            this.textBox3.Location = new System.Drawing.Point(140, 200);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(331, 32);
-            this.textBox3.TabIndex = 21;
+            this.txt_QuocGia.Location = new System.Drawing.Point(140, 200);
+            this.txt_QuocGia.Name = "txt_QuocGia";
+            this.txt_QuocGia.Size = new System.Drawing.Size(331, 32);
+            this.txt_QuocGia.TabIndex = 21;
             // 
-            // textBox2
+            // txt_TenLoaiTien
             // 
-            this.textBox2.Location = new System.Drawing.Point(140, 87);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(331, 32);
-            this.textBox2.TabIndex = 20;
+            this.txt_TenLoaiTien.Location = new System.Drawing.Point(140, 87);
+            this.txt_TenLoaiTien.Name = "txt_TenLoaiTien";
+            this.txt_TenLoaiTien.Size = new System.Drawing.Size(331, 32);
+            this.txt_TenLoaiTien.TabIndex = 20;
             // 
-            // textBox1
+            // txt_MaLoaiTien
             // 
-            this.textBox1.Location = new System.Drawing.Point(140, 37);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(332, 32);
-            this.textBox1.TabIndex = 19;
+            this.txt_MaLoaiTien.Location = new System.Drawing.Point(140, 37);
+            this.txt_MaLoaiTien.Name = "txt_MaLoaiTien";
+            this.txt_MaLoaiTien.Size = new System.Drawing.Size(332, 32);
+            this.txt_MaLoaiTien.TabIndex = 19;
             // 
             // Frm_LoaiTien
             // 
@@ -349,10 +357,10 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox txt_QuocGia;
+        private System.Windows.Forms.TextBox txt_TenLoaiTien;
+        private System.Windows.Forms.TextBox txt_MaLoaiTien;
+        private System.Windows.Forms.TextBox txt_KyHieu;
+        private System.Windows.Forms.ComboBox cbo_TrangThai;
     }
 }

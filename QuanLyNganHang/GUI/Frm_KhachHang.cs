@@ -23,7 +23,7 @@ namespace GUI
         private void Frm_KhachHang_Load(object sender, EventArgs e)
         {
             this.MinimumSize = new System.Drawing.Size(1600, 900);
-            dtp_NgayTao.MaxDate = DateTime.Today;
+            dtp_NgayTao.MaxDate = DateTime.Now;
             SetSize();
             dgv_KhachHang.DataSource = bUS_KhachHang.LoadDSKhachHang();
         }
