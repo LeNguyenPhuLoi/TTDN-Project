@@ -148,12 +148,7 @@ namespace DAL
                 var update = db.TAIKHOANs.SingleOrDefault(x => x.MATK == et.MaTK);
                 if (update != null)
                 {
-                    var khachHang = db.KHACHHANGs.SingleOrDefault(kh => kh.MAKH == et.MaKH);
-                    if (khachHang != null)
-                    {
-                        update.KHACHHANG = khachHang; // Gán thông qua liên kết thay vì update.MAKH
-                    }
-
+                    update.MAKH = et.MaKH;
                     update.SOTAIKHOAN = et.SoTaiKhoan;
                     update.MALOAITK = et.MaLoaiTK;
                     update.SODU = et.SoDu;
