@@ -10,7 +10,13 @@ namespace DAL
     public class DAL_ChiNhanh
     {
         //Kết nối với Linq to SQL
-        QLNHDataContext db = new QLNHDataContext();
+        AutoConnect conn = new AutoConnect();
+        QLNHDataContext db;
+
+        public DAL_ChiNhanh()
+        {
+            db = new QLNHDataContext(conn.GetConnection());
+        }
 
         //Lấy ds chi nhánh
         public IQueryable LoadDSCN()

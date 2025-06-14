@@ -47,5 +47,113 @@ namespace GUI
             gb_ThongTin.Location = new Point(width - 510, 150);
             gb_ChucNang.Location = new Point(width - 510, 50);
         }
+
+        public void Clear()
+        {
+            txt_macn.Clear();
+            txt_tencn.Clear();
+            txt_diachicn.Clear();
+            txt_sdtcn.Clear();
+        }
+
+        private void btn_Lammoi_Click(object sender, EventArgs e)
+        {
+            Clear();
+        }
+
+        private void dgv_chinhanh_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int dong = dgv_chinhanh.CurrentCell.RowIndex;
+                txt_macn.Text = dgv_chinhanh.Rows[dong].Cells[0].Value.ToString();
+                txt_tencn.Text = dgv_chinhanh.Rows[dong].Cells[1].Value.ToString();
+                txt_diachicn.Text = dgv_chinhanh.Rows[dong].Cells[2].Value.ToString();
+                txt_sdtcn.Text = dgv_chinhanh.Rows[dong].Cells[3].Value.ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi " + ex.Message);
+            }
+        }
+
+        private void btn_Them_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ET_ChiNhanh cn = new ET_ChiNhanh(txt_macn.Text,
+                                                    txt_tencn.Text,
+                                                    txt_diachicn.Text,
+                                                    int.Parse(txt_sdtcn.Text));
+                if(bus_ChiNhanh.ThemCN(cn) == true)
+                {
+                    MessageBox.Show("Thêm chi nhánh thành công!");
+                    Clear();
+                }
+                else
+                {
+                    MessageBox.Show("Thêm chi nhánh thất bại!");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi " + ex.Message);
+            }
+            dgv_chinhanh.DataSource = bus_ChiNhanh.LoadDSCN();
+        }
+
+        private void btn_Sua_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ET_ChiNhanh cn = new ET_ChiNhanh(txt_macn.Text,
+                                                    txt_tencn.Text,
+                                                    txt_diachicn.Text,
+                                                    int.Parse(txt_sdtcn.Text));
+                if (bus_ChiNhanh.SuaCN(cn) == true)
+                {
+                    MessageBox.Show("Sửa chi nhánh thành công!");
+                    Clear();
+                }
+                else
+                {
+                    MessageBox.Show("Sửa chi nhánh thất bại!");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi " + ex.Message);
+            }
+            dgv_chinhanh.DataSource = bus_ChiNhanh.LoadDSCN();
+        }
+
+        private void btn_Xoa_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DialogResult = MessageBox.Show("Bạn có muốn xóa?", "Thông báo!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (DialogResult == DialogResult.Yes)
+                {
+                    ET_ChiNhanh cn = new ET_ChiNhanh(txt_macn.Text,
+                                                    txt_tencn.Text,
+                                                    txt_diachicn.Text,
+                                                    int.Parse(txt_sdtcn.Text));
+                    if (bus_ChiNhanh.XoaCN(cn) == true)
+                    {
+                        MessageBox.Show("Xóa chi nhánh thành công!");
+                        Clear();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Xóa chi nhánh thất bại!");
+                    }
+                }        
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi " + ex.Message);
+            }
+            dgv_chinhanh.DataSource = bus_ChiNhanh.LoadDSCN();
+        }
     }
 }

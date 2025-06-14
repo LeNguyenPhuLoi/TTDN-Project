@@ -10,7 +10,13 @@ namespace DAL
     public class DAL_NoiQuy
     {
         //Kết nối với Linq to SQL
-        QLNHDataContext db = new QLNHDataContext();
+        AutoConnect conn = new AutoConnect();
+        QLNHDataContext db;
+
+        public DAL_NoiQuy()
+        {
+            db = new QLNHDataContext(conn.GetConnection());
+        }
 
         //Lấy ds nhân viên
         public IQueryable LoadDSNQ()
