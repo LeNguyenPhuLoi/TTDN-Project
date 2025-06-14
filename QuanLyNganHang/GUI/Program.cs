@@ -16,7 +16,40 @@ namespace GUI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Frm_TaiKhoan());
+            Application.Run(new frmTKDangNhap());
         }
     }
+
+
+
+    // MỞ RA KHI MUỐN SỬ DỤNG ĐĂNG NHẬP
+
+    //internal static class Program
+    //{
+    //    /// <summary>
+    //    /// The main entry point for the application.
+    //    /// </summary>
+    //    [STAThread]
+    //    static void Main()
+    //    {
+    //        Application.EnableVisualStyles();
+    //        Application.SetCompatibleTextRenderingDefault(false);
+    //        while (true)
+    //        {
+    //            using (frmDangNhap log = new frmDangNhap())
+    //            {
+    //                DialogResult result = log.ShowDialog();
+    //                if (result == DialogResult.OK && log.NextForm != null)
+    //                {
+    //                    Application.Run(log.NextForm);
+    //                }
+    //                else
+    //                {
+    //                    break;
+    //                }
+    //            }
+    //        }
+
+    //    }
+    //}
 }
