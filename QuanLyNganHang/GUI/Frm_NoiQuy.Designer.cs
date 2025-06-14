@@ -48,11 +48,11 @@
             this.btn_Sua = new System.Windows.Forms.Button();
             this.btn_Xoa = new System.Windows.Forms.Button();
             this.gb_ThongTin = new System.Windows.Forms.GroupBox();
+            this.txt_mota = new System.Windows.Forms.TextBox();
             this.txt_loaiapdung = new System.Windows.Forms.TextBox();
             this.txt_tieude = new System.Windows.Forms.TextBox();
             this.txt_manq = new System.Windows.Forms.TextBox();
             this.lbl_title = new System.Windows.Forms.Label();
-            this.txt_mota = new System.Windows.Forms.TextBox();
             this.gb_Timkiem.SuspendLayout();
             this.gb_DanhSach.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_noiquy)).BeginInit();
@@ -129,6 +129,8 @@
             // dtp_ngaybanhanh
             // 
             this.dtp_ngaybanhanh.Location = new System.Drawing.Point(174, 203);
+            this.dtp_ngaybanhanh.MaxDate = new System.DateTime(2025, 12, 31, 0, 0, 0, 0);
+            this.dtp_ngaybanhanh.MinDate = new System.DateTime(1950, 1, 1, 0, 0, 0, 0);
             this.dtp_ngaybanhanh.Name = "dtp_ngaybanhanh";
             this.dtp_ngaybanhanh.Size = new System.Drawing.Size(297, 22);
             this.dtp_ngaybanhanh.TabIndex = 27;
@@ -190,6 +192,7 @@
             this.dgv_noiquy.RowHeadersWidth = 51;
             this.dgv_noiquy.Size = new System.Drawing.Size(710, 316);
             this.dgv_noiquy.TabIndex = 11;
+            this.dgv_noiquy.Click += new System.EventHandler(this.dgv_noiquy_Click);
             // 
             // gb_ChucNang
             // 
@@ -212,6 +215,7 @@
             this.btn_Them.TabIndex = 32;
             this.btn_Them.Text = "Thêm";
             this.btn_Them.UseVisualStyleBackColor = true;
+            this.btn_Them.Click += new System.EventHandler(this.btn_Them_Click);
             // 
             // btn_Lammoi
             // 
@@ -221,6 +225,7 @@
             this.btn_Lammoi.TabIndex = 35;
             this.btn_Lammoi.Text = "Làm mới";
             this.btn_Lammoi.UseVisualStyleBackColor = true;
+            this.btn_Lammoi.Click += new System.EventHandler(this.btn_Lammoi_Click);
             // 
             // btn_Sua
             // 
@@ -230,6 +235,7 @@
             this.btn_Sua.TabIndex = 33;
             this.btn_Sua.Text = "Sửa";
             this.btn_Sua.UseVisualStyleBackColor = true;
+            this.btn_Sua.Click += new System.EventHandler(this.btn_Sua_Click);
             // 
             // btn_Xoa
             // 
@@ -239,6 +245,7 @@
             this.btn_Xoa.TabIndex = 34;
             this.btn_Xoa.Text = "Xóa";
             this.btn_Xoa.UseVisualStyleBackColor = true;
+            this.btn_Xoa.Click += new System.EventHandler(this.btn_Xoa_Click);
             // 
             // gb_ThongTin
             // 
@@ -258,6 +265,13 @@
             this.gb_ThongTin.TabIndex = 45;
             this.gb_ThongTin.TabStop = false;
             this.gb_ThongTin.Text = "Thông Tin Nội Quy";
+            // 
+            // txt_mota
+            // 
+            this.txt_mota.Location = new System.Drawing.Point(175, 146);
+            this.txt_mota.Name = "txt_mota";
+            this.txt_mota.Size = new System.Drawing.Size(297, 22);
+            this.txt_mota.TabIndex = 28;
             // 
             // txt_loaiapdung
             // 
@@ -290,13 +304,6 @@
             this.lbl_title.Size = new System.Drawing.Size(384, 53);
             this.lbl_title.TabIndex = 42;
             this.lbl_title.Text = "Quản Lý Nội Quy";
-            // 
-            // txt_mota
-            // 
-            this.txt_mota.Location = new System.Drawing.Point(175, 146);
-            this.txt_mota.Name = "txt_mota";
-            this.txt_mota.Size = new System.Drawing.Size(297, 22);
-            this.txt_mota.TabIndex = 28;
             // 
             // Frm_NoiQuy
             // 
