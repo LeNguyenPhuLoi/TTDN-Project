@@ -12,7 +12,7 @@ namespace BUS
     {
         DAL_DangNhap lg = new DAL_DangNhap();
 
-        public bool DangNhap(string username, string password)
+        public ET_DangNhap DangNhap(string username, string password)
         {
             return lg.KiemTraDangNhap(username, password); // trả về null nếu sai
         }

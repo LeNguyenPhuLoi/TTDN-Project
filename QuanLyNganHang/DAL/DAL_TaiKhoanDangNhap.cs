@@ -18,11 +18,32 @@ namespace DAL
             db = new QLNHDataContext(conn.GetConnection());
         }
 
+        //Lấy danh sách nhân viên
+        public IQueryable LoadNhanVien()
+        {
+            IQueryable nhanvien = from nv in db.NHANVIENs
+                                  select new 
+                                  { 
+                                      nv.MANV,
+                                      nv.TENNV,
+                                      nv.GIOITINH,
+                                      nv.NGAYSINH,
+                                      nv.CHUC
+                                  };
+            return nhanvien;
+        }
+
         // Lấy danh sách tài khoản đăng nhập
         public IQueryable LayDSTaiKhoanDangNhap()
         {
             IQueryable ds = from tk in db.DANGNHAPs
-                            select tk;
+                            select new
+                            {
+                                tk.MADN,
+                                tk.PASS,
+                                tk.QUYEN,
+                                tk.MANV
+                            };
             return ds;
         }
 
@@ -68,6 +89,7 @@ namespace DAL
                     capnhat.QUYEN = et.QUYEN;
                     capnhat.MANV = et.MANV;
                     flag = true;
+                    db.SubmitChanges();
                 }
             }
             catch (Exception ex)
@@ -77,7 +99,7 @@ namespace DAL
             }
             finally
             {
-                db.SubmitChanges();
+                
             }
             return flag;
         }

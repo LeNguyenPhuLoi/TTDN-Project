@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTKDangNhap));
             this.pnlMain = new System.Windows.Forms.Panel();
+            this.cboQuyen = new System.Windows.Forms.ComboBox();
             this.txtMaNV = new System.Windows.Forms.TextBox();
             this.txtMaDN = new System.Windows.Forms.TextBox();
             this.dgvNhanVien = new System.Windows.Forms.DataGridView();
@@ -46,7 +47,6 @@
             this.txtTim = new System.Windows.Forms.TextBox();
             this.lbTim = new System.Windows.Forms.Label();
             this.dgvTaiKhoan = new System.Windows.Forms.DataGridView();
-            this.cboQuyen = new System.Windows.Forms.ComboBox();
             this.pnlMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNhanVien)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTaiKhoan)).BeginInit();
@@ -72,12 +72,24 @@
             this.pnlMain.Controls.Add(this.label2);
             this.pnlMain.Location = new System.Drawing.Point(12, 16);
             this.pnlMain.Name = "pnlMain";
-            this.pnlMain.Size = new System.Drawing.Size(770, 242);
+            this.pnlMain.Size = new System.Drawing.Size(1016, 242);
             this.pnlMain.TabIndex = 43;
+            // 
+            // cboQuyen
+            // 
+            this.cboQuyen.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboQuyen.FormattingEnabled = true;
+            this.cboQuyen.Items.AddRange(new object[] {
+            "ADMIN",
+            "NHANVIEN"});
+            this.cboQuyen.Location = new System.Drawing.Point(523, 22);
+            this.cboQuyen.Name = "cboQuyen";
+            this.cboQuyen.Size = new System.Drawing.Size(196, 24);
+            this.cboQuyen.TabIndex = 24;
             // 
             // txtMaNV
             // 
-            this.txtMaNV.Location = new System.Drawing.Point(445, 62);
+            this.txtMaNV.Location = new System.Drawing.Point(523, 63);
             this.txtMaNV.Margin = new System.Windows.Forms.Padding(4);
             this.txtMaNV.Name = "txtMaNV";
             this.txtMaNV.Size = new System.Drawing.Size(290, 22);
@@ -85,10 +97,10 @@
             // 
             // txtMaDN
             // 
-            this.txtMaDN.Location = new System.Drawing.Point(112, 22);
+            this.txtMaDN.Location = new System.Drawing.Point(143, 22);
             this.txtMaDN.Margin = new System.Windows.Forms.Padding(4);
             this.txtMaDN.Name = "txtMaDN";
-            this.txtMaDN.Size = new System.Drawing.Size(190, 22);
+            this.txtMaDN.Size = new System.Drawing.Size(161, 22);
             this.txtMaDN.TabIndex = 20;
             // 
             // dgvNhanVien
@@ -102,38 +114,42 @@
             this.dgvNhanVien.Name = "dgvNhanVien";
             this.dgvNhanVien.ReadOnly = true;
             this.dgvNhanVien.RowHeadersWidth = 51;
-            this.dgvNhanVien.Size = new System.Drawing.Size(420, 122);
+            this.dgvNhanVien.Size = new System.Drawing.Size(633, 122);
             this.dgvNhanVien.TabIndex = 17;
+            this.dgvNhanVien.Click += new System.EventHandler(this.dgvNhanVien_Click);
             // 
             // btnSua
             // 
             this.btnSua.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnSua.Location = new System.Drawing.Point(212, 119);
+            this.btnSua.Location = new System.Drawing.Point(114, 119);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(92, 46);
             this.btnSua.TabIndex = 10;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnXoa
             // 
             this.btnXoa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnXoa.Location = new System.Drawing.Point(114, 119);
+            this.btnXoa.Location = new System.Drawing.Point(212, 119);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(92, 46);
             this.btnXoa.TabIndex = 11;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnHoanTac
             // 
             this.btnHoanTac.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnHoanTac.Location = new System.Drawing.Point(647, 15);
+            this.btnHoanTac.Location = new System.Drawing.Point(725, 16);
             this.btnHoanTac.Name = "btnHoanTac";
             this.btnHoanTac.Size = new System.Drawing.Size(88, 37);
             this.btnHoanTac.TabIndex = 12;
             this.btnHoanTac.Text = "Hoàn tác";
             this.btnHoanTac.UseVisualStyleBackColor = true;
+            this.btnHoanTac.Click += new System.EventHandler(this.btnHoanTac_Click);
             // 
             // btnThem
             // 
@@ -144,6 +160,7 @@
             this.btnThem.TabIndex = 12;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // label5
             // 
@@ -156,16 +173,16 @@
             // 
             // txtPass
             // 
-            this.txtPass.Location = new System.Drawing.Point(114, 62);
+            this.txtPass.Location = new System.Drawing.Point(143, 59);
             this.txtPass.Margin = new System.Windows.Forms.Padding(4);
             this.txtPass.Name = "txtPass";
-            this.txtPass.Size = new System.Drawing.Size(190, 22);
+            this.txtPass.Size = new System.Drawing.Size(216, 22);
             this.txtPass.TabIndex = 1;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(329, 64);
+            this.label8.Location = new System.Drawing.Point(407, 65);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(94, 16);
@@ -185,7 +202,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(329, 24);
+            this.label1.Location = new System.Drawing.Point(407, 25);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(99, 16);
@@ -232,26 +249,15 @@
             this.dgvTaiKhoan.Name = "dgvTaiKhoan";
             this.dgvTaiKhoan.ReadOnly = true;
             this.dgvTaiKhoan.RowHeadersWidth = 62;
-            this.dgvTaiKhoan.Size = new System.Drawing.Size(770, 253);
+            this.dgvTaiKhoan.Size = new System.Drawing.Size(1016, 253);
             this.dgvTaiKhoan.TabIndex = 44;
-            // 
-            // cboQuyen
-            // 
-            this.cboQuyen.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboQuyen.FormattingEnabled = true;
-            this.cboQuyen.Items.AddRange(new object[] {
-            "ADMIN",
-            "NHANVIEN"});
-            this.cboQuyen.Location = new System.Drawing.Point(445, 21);
-            this.cboQuyen.Name = "cboQuyen";
-            this.cboQuyen.Size = new System.Drawing.Size(196, 24);
-            this.cboQuyen.TabIndex = 24;
+            this.dgvTaiKhoan.Click += new System.EventHandler(this.dgvTaiKhoan_Click);
             // 
             // frmTKDangNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(808, 564);
+            this.ClientSize = new System.Drawing.Size(1054, 564);
             this.Controls.Add(this.pnlMain);
             this.Controls.Add(this.txtTim);
             this.Controls.Add(this.lbTim);

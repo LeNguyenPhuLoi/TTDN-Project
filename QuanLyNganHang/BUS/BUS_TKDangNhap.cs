@@ -18,6 +18,12 @@ namespace BUS
             return login.LayDSTaiKhoanDangNhap();
         }
 
+        // Lấy danh sách nhân viên
+        public IQueryable LoadDSNV()
+        {
+            return login.LoadNhanVien();
+        }
+
         // Thêm tài khoản đăng nhập
         public bool ThemTKL(ET_DangNhap et)
         {

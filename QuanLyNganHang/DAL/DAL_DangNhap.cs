@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ET;
 
 namespace DAL
 {
@@ -18,10 +19,18 @@ namespace DAL
         }
 
         //Kiểm tra đăng nhập
-        public bool KiemTraDangNhap(string tenDangNhap, string matKhau)
+        public ET_DangNhap KiemTraDangNhap(string username, string password)
         {
-            var user = db.DANGNHAPs.FirstOrDefault(u => u.MADN == tenDangNhap && u.PASS == matKhau);
-            return user != null;
+            var user = db.DANGNHAPs
+                .Where(nd => nd.MADN == username && nd.PASS == password)
+                .Select(nd => new ET_DangNhap(
+                    nd.MADN,
+                    nd.PASS,
+                    nd.QUYEN,
+                    nd.MANV))
+                .FirstOrDefault();
+
+            return user; // Trả về null nếu không đúng
         }
     }
 }
