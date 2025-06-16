@@ -157,6 +157,7 @@
             // 
             // cbo_macn
             // 
+            this.cbo_macn.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbo_macn.FormattingEnabled = true;
             this.cbo_macn.Location = new System.Drawing.Point(174, 531);
             this.cbo_macn.Name = "cbo_macn";
@@ -232,6 +233,7 @@
             // 
             // cbo_mapb
             // 
+            this.cbo_mapb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbo_mapb.FormattingEnabled = true;
             this.cbo_mapb.Location = new System.Drawing.Point(175, 475);
             this.cbo_mapb.Name = "cbo_mapb";

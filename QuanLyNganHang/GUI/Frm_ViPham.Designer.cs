@@ -38,7 +38,6 @@
             this.dtp_ngayvp = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.txt_trangthaixl = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txt_hinhthucxl = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -51,14 +50,15 @@
             this.btn_Sua = new System.Windows.Forms.Button();
             this.btn_Xoa = new System.Windows.Forms.Button();
             this.gb_ThongTin = new System.Windows.Forms.GroupBox();
+            this.cbo_makh = new System.Windows.Forms.ComboBox();
+            this.cbo_manv = new System.Windows.Forms.ComboBox();
+            this.cbo_manq = new System.Windows.Forms.ComboBox();
             this.txt_motavp = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.txt_makh = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.txt_manq = new System.Windows.Forms.TextBox();
             this.txt_mavp = new System.Windows.Forms.TextBox();
             this.lbl_title = new System.Windows.Forms.Label();
-            this.txt_manv = new System.Windows.Forms.TextBox();
+            this.cbo_trangthai = new System.Windows.Forms.ComboBox();
             this.gb_Timkiem.SuspendLayout();
             this.gb_DanhSach.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_vipham)).BeginInit();
@@ -135,6 +135,8 @@
             // dtp_ngayvp
             // 
             this.dtp_ngayvp.Location = new System.Drawing.Point(174, 255);
+            this.dtp_ngayvp.MaxDate = new System.DateTime(2025, 12, 31, 0, 0, 0, 0);
+            this.dtp_ngayvp.MinDate = new System.DateTime(1950, 1, 1, 0, 0, 0, 0);
             this.dtp_ngayvp.Name = "dtp_ngayvp";
             this.dtp_ngayvp.Size = new System.Drawing.Size(297, 22);
             this.dtp_ngayvp.TabIndex = 27;
@@ -156,13 +158,6 @@
             this.label4.Size = new System.Drawing.Size(102, 16);
             this.label4.TabIndex = 4;
             this.label4.Text = "Mã Khách Hàng";
-            // 
-            // txt_trangthaixl
-            // 
-            this.txt_trangthaixl.Location = new System.Drawing.Point(175, 420);
-            this.txt_trangthaixl.Name = "txt_trangthaixl";
-            this.txt_trangthaixl.Size = new System.Drawing.Size(297, 22);
-            this.txt_trangthaixl.TabIndex = 25;
             // 
             // label5
             // 
@@ -210,6 +205,7 @@
             this.dgv_vipham.RowHeadersWidth = 51;
             this.dgv_vipham.Size = new System.Drawing.Size(710, 316);
             this.dgv_vipham.TabIndex = 11;
+            this.dgv_vipham.Click += new System.EventHandler(this.dgv_vipham_Click);
             // 
             // label6
             // 
@@ -241,6 +237,7 @@
             this.btn_Them.TabIndex = 32;
             this.btn_Them.Text = "Thêm";
             this.btn_Them.UseVisualStyleBackColor = true;
+            this.btn_Them.Click += new System.EventHandler(this.btn_Them_Click);
             // 
             // btn_Lammoi
             // 
@@ -250,6 +247,7 @@
             this.btn_Lammoi.TabIndex = 35;
             this.btn_Lammoi.Text = "Làm mới";
             this.btn_Lammoi.UseVisualStyleBackColor = true;
+            this.btn_Lammoi.Click += new System.EventHandler(this.btn_Lammoi_Click);
             // 
             // btn_Sua
             // 
@@ -259,6 +257,7 @@
             this.btn_Sua.TabIndex = 33;
             this.btn_Sua.Text = "Sửa";
             this.btn_Sua.UseVisualStyleBackColor = true;
+            this.btn_Sua.Click += new System.EventHandler(this.btn_Sua_Click);
             // 
             // btn_Xoa
             // 
@@ -268,24 +267,25 @@
             this.btn_Xoa.TabIndex = 34;
             this.btn_Xoa.Text = "Xóa";
             this.btn_Xoa.UseVisualStyleBackColor = true;
+            this.btn_Xoa.Click += new System.EventHandler(this.btn_Xoa_Click);
             // 
             // gb_ThongTin
             // 
-            this.gb_ThongTin.Controls.Add(this.txt_manv);
+            this.gb_ThongTin.Controls.Add(this.cbo_trangthai);
+            this.gb_ThongTin.Controls.Add(this.cbo_makh);
+            this.gb_ThongTin.Controls.Add(this.cbo_manv);
+            this.gb_ThongTin.Controls.Add(this.cbo_manq);
             this.gb_ThongTin.Controls.Add(this.label1);
             this.gb_ThongTin.Controls.Add(this.label2);
             this.gb_ThongTin.Controls.Add(this.dtp_ngayvp);
             this.gb_ThongTin.Controls.Add(this.label3);
             this.gb_ThongTin.Controls.Add(this.label4);
-            this.gb_ThongTin.Controls.Add(this.txt_trangthaixl);
             this.gb_ThongTin.Controls.Add(this.label5);
             this.gb_ThongTin.Controls.Add(this.txt_hinhthucxl);
             this.gb_ThongTin.Controls.Add(this.label6);
             this.gb_ThongTin.Controls.Add(this.txt_motavp);
             this.gb_ThongTin.Controls.Add(this.label7);
-            this.gb_ThongTin.Controls.Add(this.txt_makh);
             this.gb_ThongTin.Controls.Add(this.label8);
-            this.gb_ThongTin.Controls.Add(this.txt_manq);
             this.gb_ThongTin.Controls.Add(this.txt_mavp);
             this.gb_ThongTin.Location = new System.Drawing.Point(1086, 175);
             this.gb_ThongTin.Name = "gb_ThongTin";
@@ -293,6 +293,33 @@
             this.gb_ThongTin.TabIndex = 45;
             this.gb_ThongTin.TabStop = false;
             this.gb_ThongTin.Text = "Thông Tin Vi Phạm";
+            // 
+            // cbo_makh
+            // 
+            this.cbo_makh.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbo_makh.FormattingEnabled = true;
+            this.cbo_makh.Location = new System.Drawing.Point(174, 203);
+            this.cbo_makh.Name = "cbo_makh";
+            this.cbo_makh.Size = new System.Drawing.Size(298, 24);
+            this.cbo_makh.TabIndex = 30;
+            // 
+            // cbo_manv
+            // 
+            this.cbo_manv.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbo_manv.FormattingEnabled = true;
+            this.cbo_manv.Location = new System.Drawing.Point(175, 146);
+            this.cbo_manv.Name = "cbo_manv";
+            this.cbo_manv.Size = new System.Drawing.Size(296, 24);
+            this.cbo_manv.TabIndex = 29;
+            // 
+            // cbo_manq
+            // 
+            this.cbo_manq.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbo_manq.FormattingEnabled = true;
+            this.cbo_manq.Location = new System.Drawing.Point(174, 87);
+            this.cbo_manq.Name = "cbo_manq";
+            this.cbo_manq.Size = new System.Drawing.Size(298, 24);
+            this.cbo_manq.TabIndex = 28;
             // 
             // txt_motavp
             // 
@@ -310,13 +337,6 @@
             this.label7.TabIndex = 7;
             this.label7.Text = "Hình Thức Xử Lý";
             // 
-            // txt_makh
-            // 
-            this.txt_makh.Location = new System.Drawing.Point(175, 200);
-            this.txt_makh.Name = "txt_makh";
-            this.txt_makh.Size = new System.Drawing.Size(297, 22);
-            this.txt_makh.TabIndex = 22;
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -325,13 +345,6 @@
             this.label8.Size = new System.Drawing.Size(108, 16);
             this.label8.TabIndex = 8;
             this.label8.Text = "Trạng Thái Xử Lý";
-            // 
-            // txt_manq
-            // 
-            this.txt_manq.Location = new System.Drawing.Point(175, 87);
-            this.txt_manq.Name = "txt_manq";
-            this.txt_manq.Size = new System.Drawing.Size(297, 22);
-            this.txt_manq.TabIndex = 20;
             // 
             // txt_mavp
             // 
@@ -351,12 +364,17 @@
             this.lbl_title.TabIndex = 42;
             this.lbl_title.Text = "Quản Lý Vi Phạm";
             // 
-            // txt_manv
+            // cbo_trangthai
             // 
-            this.txt_manv.Location = new System.Drawing.Point(174, 146);
-            this.txt_manv.Name = "txt_manv";
-            this.txt_manv.Size = new System.Drawing.Size(297, 22);
-            this.txt_manv.TabIndex = 28;
+            this.cbo_trangthai.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbo_trangthai.FormattingEnabled = true;
+            this.cbo_trangthai.Items.AddRange(new object[] {
+            "ĐÃ XỬ LÝ",
+            "CHƯA XỬ LÝ"});
+            this.cbo_trangthai.Location = new System.Drawing.Point(175, 423);
+            this.cbo_trangthai.Name = "cbo_trangthai";
+            this.cbo_trangthai.Size = new System.Drawing.Size(298, 24);
+            this.cbo_trangthai.TabIndex = 31;
             // 
             // Frm_ViPham
             // 
@@ -397,7 +415,6 @@
         private System.Windows.Forms.DateTimePicker dtp_ngayvp;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txt_trangthaixl;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txt_hinhthucxl;
         private System.Windows.Forms.Label label1;
@@ -412,11 +429,12 @@
         private System.Windows.Forms.GroupBox gb_ThongTin;
         private System.Windows.Forms.TextBox txt_motavp;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txt_makh;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txt_manq;
         private System.Windows.Forms.TextBox txt_mavp;
         private System.Windows.Forms.Label lbl_title;
-        private System.Windows.Forms.TextBox txt_manv;
+        private System.Windows.Forms.ComboBox cbo_makh;
+        private System.Windows.Forms.ComboBox cbo_manv;
+        private System.Windows.Forms.ComboBox cbo_manq;
+        private System.Windows.Forms.ComboBox cbo_trangthai;
     }
 }
