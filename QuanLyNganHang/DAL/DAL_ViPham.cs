@@ -22,8 +22,77 @@ namespace DAL
         public IQueryable LoadDSVP()
         {
             IQueryable VP = from vp in db.VIPHAMs
-                            select vp;
+                            select new {vp.MAVP, vp.MANQ, vp.MANV, vp.MAKH, vp.NGAYVP, vp.MOTAVP, vp.HINHTHUCXL, vp.TRANGTHAIXL };
             return VP;
+        }
+
+        public IQueryable LoadNQ()
+        {
+            IQueryable NQ = from nq in db.NOIQUYs
+                            select nq.TIEUDE;
+            return NQ;
+        }
+
+        public IQueryable LoadNV()
+        {
+            IQueryable NV = from nv in db.NHANVIENs
+                            select nv.TENNV;
+            return NV;
+        }
+
+        public IQueryable LoadKH()
+        {
+            IQueryable KH = from kh in db.KHACHHANGs
+                            select kh.TENKH;
+            return KH;
+        }
+
+        public string LayTieuDeNQTheoMa(string ma)
+        {
+            string ten = (from nq in db.NOIQUYs
+                            where nq.MANQ == ma
+                            select nq.TIEUDE).FirstOrDefault();
+            return ten;
+        }
+
+        public string LayTenNVTheoMa(string ma)
+        {
+            string ten = (from nv in db.NHANVIENs
+                          where nv.MANV == ma
+                          select nv.TENNV).FirstOrDefault();
+            return ten;
+        }
+
+        public string LayTenKHTheoMa(string ma)
+        {
+            string ten = (from kh in db.KHACHHANGs
+                          where kh.MAKH == ma
+                          select kh.TENKH).FirstOrDefault();
+            return ten;
+        }
+
+        public string LayMaNQTheoTieuDe(string ten)
+        {
+            string ma = (from nq in db.NOIQUYs
+                         where nq.TIEUDE == ten
+                         select nq.MANQ).FirstOrDefault();
+            return ma;
+        }
+
+        public string LayMaNVTheoTen(string ten)
+        {
+            string ma = (from nv in db.NHANVIENs
+                         where nv.TENNV == ten
+                         select nv.MANV).FirstOrDefault();
+            return ma;
+        }
+
+        public string LayMaKHTheoTen(string ten)
+        {
+            string ma = (from kh in db.KHACHHANGs
+                         where kh.TENKH == ten
+                         select kh.MAKH).FirstOrDefault();
+            return ma;
         }
 
         //Thêm vi phạm
