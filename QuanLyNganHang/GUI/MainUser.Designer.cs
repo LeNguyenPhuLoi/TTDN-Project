@@ -348,7 +348,7 @@
             this.picBanner.Dock = System.Windows.Forms.DockStyle.Fill;
             this.picBanner.Location = new System.Drawing.Point(0, 0);
             this.picBanner.Name = "picBanner";
-            this.picBanner.Size = new System.Drawing.Size(800, 975);
+            this.picBanner.Size = new System.Drawing.Size(1042, 975);
             this.picBanner.TabIndex = 4;
             this.picBanner.TabStop = false;
             // 
@@ -356,14 +356,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 975);
+            this.ClientSize = new System.Drawing.Size(1042, 975);
             this.Controls.Add(this.pnlMenu);
             this.Controls.Add(this.picBanner);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.Name = "frmMainUser";
-            this.Text = "MainUser";
+            this.Text = "Quản Lý Ngân Hàng MindLess (User)";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmMainUser_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

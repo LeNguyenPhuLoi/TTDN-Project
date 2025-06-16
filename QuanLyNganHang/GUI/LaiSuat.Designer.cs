@@ -38,7 +38,7 @@
             this.label12 = new System.Windows.Forms.Label();
             this.txtTenLoai = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.txtTen = new System.Windows.Forms.TextBox();
+            this.txtMaLS = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.dgvLaiSuat = new System.Windows.Forms.DataGridView();
             this.pnlMain.SuspendLayout();
@@ -57,7 +57,7 @@
             this.pnlMain.Controls.Add(this.label12);
             this.pnlMain.Controls.Add(this.txtTenLoai);
             this.pnlMain.Controls.Add(this.label11);
-            this.pnlMain.Controls.Add(this.txtTen);
+            this.pnlMain.Controls.Add(this.txtMaLS);
             this.pnlMain.Controls.Add(this.label10);
             this.pnlMain.Location = new System.Drawing.Point(15, 5);
             this.pnlMain.Margin = new System.Windows.Forms.Padding(4);
@@ -73,6 +73,7 @@
             this.btnSua.TabIndex = 17;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnXoa
             // 
@@ -82,6 +83,7 @@
             this.btnXoa.TabIndex = 18;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnHoanTac
             // 
@@ -91,6 +93,7 @@
             this.btnHoanTac.TabIndex = 19;
             this.btnHoanTac.Text = "Hoàn tác";
             this.btnHoanTac.UseVisualStyleBackColor = true;
+            this.btnHoanTac.Click += new System.EventHandler(this.btnHoanTac_Click);
             // 
             // btnThem
             // 
@@ -100,6 +103,7 @@
             this.btnThem.TabIndex = 19;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // txtLaiSuat
             // 
@@ -145,15 +149,15 @@
             this.label11.TabIndex = 3;
             this.label11.Text = "Tên Loại vay:";
             // 
-            // txtTen
+            // txtMaLS
             // 
-            this.txtTen.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.txtMaLS.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtTen.Location = new System.Drawing.Point(163, 25);
-            this.txtTen.Margin = new System.Windows.Forms.Padding(4);
-            this.txtTen.Name = "txtTen";
-            this.txtTen.Size = new System.Drawing.Size(141, 22);
-            this.txtTen.TabIndex = 7;
+            this.txtMaLS.Location = new System.Drawing.Point(163, 25);
+            this.txtMaLS.Margin = new System.Windows.Forms.Padding(4);
+            this.txtMaLS.Name = "txtMaLS";
+            this.txtMaLS.Size = new System.Drawing.Size(141, 22);
+            this.txtMaLS.TabIndex = 7;
             // 
             // label10
             // 
@@ -180,6 +184,7 @@
             this.dgvLaiSuat.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvLaiSuat.Size = new System.Drawing.Size(706, 258);
             this.dgvLaiSuat.TabIndex = 23;
+            this.dgvLaiSuat.Click += new System.EventHandler(this.dgvLaiSuat_Click);
             // 
             // frmLaiSuat
             // 
@@ -210,7 +215,7 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox txtTenLoai;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox txtTen;
+        private System.Windows.Forms.TextBox txtMaLS;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.DataGridView dgvLaiSuat;
     }
