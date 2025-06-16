@@ -163,7 +163,6 @@ namespace DAL
             catch (Exception ex)
             {
                 flag = false;
-                File.AppendAllText(@"D:\log.txt", ex.ToString());
                 Console.WriteLine("Lỗi: " + ex.ToString());
             }
             return flag;

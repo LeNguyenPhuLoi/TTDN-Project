@@ -20,6 +20,42 @@ namespace BUS
             return gd.LayDSGiaoDich();
         }
 
+        //gọi hàm lấy số tài khoản
+        public IQueryable LaySoTK()
+        {
+            return gd.LaySoTK();
+        }
+
+        //gọi hàm kiểm tra số tiền trong tài khoản
+        public bool KTTienTrongTK(string sotk, decimal sotiengd)
+        {
+            return gd.KTTienTrongTK(sotk, sotiengd);
+        }
+
+        //gọi hàm lấy mã tài khoản theo số tài khoản
+        public string LayMaTKTheoSo(string so)
+        {
+            return gd.LayMaTKTheoSo(so);
+        }
+
+        //gọi hàm lấy số tài khoản theo mã tài khoản
+        public string LaySoTKTheoMa(string ma)
+        {
+            return gd.LaySoTKTheoMa(ma);
+        }
+
+        //hàm thêm tiền vào lại tài khoản khi xóa
+        public void ThemTienVaoLaiTK(decimal sotiengd, string sotk)
+        {
+            gd.ThemTienVaoLaiTK(sotiengd, sotk);
+        }
+
+        //gọi hàm trừ tiền trong tài khoản
+        public void TruTien(decimal sotiendg, string sotk)
+        {
+            gd.TruTien(sotiendg, sotk);
+        }
+
         //gọi hàm ThemGiaoDich từ DAL
         public bool ThemGiaoDich(ET_GiaoDich et)
         {

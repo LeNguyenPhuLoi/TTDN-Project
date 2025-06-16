@@ -389,7 +389,6 @@
             this.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "Frm_TaiKhoan";
             this.Text = "Quản Trị Tài Khoản";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Frm_TaiKhoan_Load);
             this.Resize += new System.EventHandler(this.Frm_TaiKhoan_Resize);
             this.gb_ChucNang.ResumeLayout(false);
