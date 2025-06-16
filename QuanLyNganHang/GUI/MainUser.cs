@@ -52,48 +52,38 @@ namespace GUI
         {
             tmrBannerLoop.Interval = 6000;
             tmrBannerLoop.Start();
+            // Ẩn nút phóng to, thu nhỏ
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
 
-            this.BackColor = ColorTranslator.FromHtml("#DED4CA");
-            pnlMenu.BackColor = ColorTranslator.FromHtml("#B12830");
+            // Màu nền chính nhẹ nhàng
+            this.BackColor = ColorTranslator.FromHtml("#F5F7FA");
 
-            btnThoat.ForeColor = ColorTranslator.FromHtml("#DED4CA");
-            btnThoat.BackColor = ColorTranslator.FromHtml("#B12830");
+            // Màu menu trái (sidebar) đậm, chuyên nghiệp
+            pnlMenu.BackColor = ColorTranslator.FromHtml("#263238");
 
-            btnTaiKhoan.BackColor = ColorTranslator.FromHtml("#52362A");
-            btnTaiKhoan.ForeColor = ColorTranslator.FromHtml("#DED4CA");
+            // Nút Thoát - đỏ nổi bật
+            btnThoat.ForeColor = ColorTranslator.FromHtml("#FFFFFF");
+            btnThoat.BackColor = ColorTranslator.FromHtml("#E53935");
 
-            btnVay.BackColor = ColorTranslator.FromHtml("#52362A");
-            btnVay.ForeColor = ColorTranslator.FromHtml("#DED4CA");
+            // Màu nền nút menu - xám đậm
+            Color buttonBackColor = ColorTranslator.FromHtml("#37474F");
+            // Màu chữ trên nút - trắng
+            Color buttonForeColor = ColorTranslator.FromHtml("#FFFFFF");
 
-            btnKH.BackColor = ColorTranslator.FromHtml("#52362A");
-            btnKH.ForeColor = ColorTranslator.FromHtml("#DED4CA");
-
-            btnCK.BackColor = ColorTranslator.FromHtml("#52362A");
-            btnCK.ForeColor = ColorTranslator.FromHtml("#DED4CA");
-
-            btnLichSu.BackColor = ColorTranslator.FromHtml("#52362A");
-            btnLichSu.ForeColor = ColorTranslator.FromHtml("#DED4CA");
-
-            btnKhuyenMai.BackColor = ColorTranslator.FromHtml("#52362A");
-            btnKhuyenMai.ForeColor = ColorTranslator.FromHtml("#DED4CA");
-
-            btnPhieuVay.BackColor = ColorTranslator.FromHtml("#52362A");
-            btnPhieuVay.ForeColor = ColorTranslator.FromHtml("#DED4CA");
-
-            btnPhieuNo.BackColor = ColorTranslator.FromHtml("#52362A");
-            btnPhieuNo.ForeColor = ColorTranslator.FromHtml("#DED4CA");
-
-            btnBL.BackColor = ColorTranslator.FromHtml("#52362A");
-            btnBL.ForeColor = ColorTranslator.FromHtml("#DED4CA");
-
-            btnDangXuat.BackColor = ColorTranslator.FromHtml("#52362A");
-            btnDangXuat.ForeColor = ColorTranslator.FromHtml("#DED4CA");
-
-            btnInBL.BackColor = ColorTranslator.FromHtml("#52362A");
-            btnInBL.ForeColor = ColorTranslator.FromHtml("#DED4CA");
-
-            btnGD.BackColor = ColorTranslator.FromHtml("#52362A");
-            btnGD.ForeColor = ColorTranslator.FromHtml("#DED4CA");
+            // Gán cho các nút
+            btnTaiKhoan.BackColor = buttonBackColor; btnTaiKhoan.ForeColor = buttonForeColor;
+            btnVay.BackColor = buttonBackColor; btnVay.ForeColor = buttonForeColor;
+            btnKH.BackColor = buttonBackColor; btnKH.ForeColor = buttonForeColor;
+            btnCK.BackColor = buttonBackColor; btnCK.ForeColor = buttonForeColor;
+            btnLichSu.BackColor = buttonBackColor; btnLichSu.ForeColor = buttonForeColor;
+            btnKhuyenMai.BackColor = buttonBackColor; btnKhuyenMai.ForeColor = buttonForeColor;
+            btnPhieuVay.BackColor = buttonBackColor; btnPhieuVay.ForeColor = buttonForeColor;
+            btnPhieuNo.BackColor = buttonBackColor; btnPhieuNo.ForeColor = buttonForeColor;
+            btnBL.BackColor = buttonBackColor; btnBL.ForeColor = buttonForeColor;
+            btnDangXuat.BackColor = buttonBackColor; btnDangXuat.ForeColor = buttonForeColor;
+            btnInBL.BackColor = buttonBackColor; btnInBL.ForeColor = buttonForeColor;
+            btnGD.BackColor = buttonBackColor; btnGD.ForeColor = buttonForeColor;
         }
 
         private void btnVay_Click(object sender, EventArgs e)
