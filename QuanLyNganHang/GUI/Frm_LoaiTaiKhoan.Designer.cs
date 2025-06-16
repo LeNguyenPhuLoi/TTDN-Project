@@ -256,7 +256,6 @@
             this.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "Frm_LoaiTaiKhoan";
             this.Text = "Quản Trị Loại Tài Khoản";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Frm_LoaiTaiKhoan_Load);
             this.Resize += new System.EventHandler(this.Frm_LoaiTaiKhoan_Resize);
             this.gb_Timkiem.ResumeLayout(false);

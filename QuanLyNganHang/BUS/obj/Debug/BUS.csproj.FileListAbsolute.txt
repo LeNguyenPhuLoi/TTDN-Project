@@ -130,3 +130,15 @@ D:\ĐỒ ÁN TTDN\formcuoi\TTDN-Project\QuanLyNganHang\BUS\obj\Debug\BUS.csproj.
 D:\ĐỒ ÁN TTDN\formcuoi\TTDN-Project\QuanLyNganHang\BUS\obj\Debug\BUS.csproj.Up2Date
 D:\ĐỒ ÁN TTDN\formcuoi\TTDN-Project\QuanLyNganHang\BUS\obj\Debug\BUS.dll
 D:\ĐỒ ÁN TTDN\formcuoi\TTDN-Project\QuanLyNganHang\BUS\obj\Debug\BUS.pdb
+E:\TTDN Project\16-6-2025\TTDN-Project\QuanLyNganHang\BUS\bin\Debug\BUS.dll
+E:\TTDN Project\16-6-2025\TTDN-Project\QuanLyNganHang\BUS\bin\Debug\BUS.pdb
+E:\TTDN Project\16-6-2025\TTDN-Project\QuanLyNganHang\BUS\bin\Debug\DAL.dll
+E:\TTDN Project\16-6-2025\TTDN-Project\QuanLyNganHang\BUS\bin\Debug\ET.dll
+E:\TTDN Project\16-6-2025\TTDN-Project\QuanLyNganHang\BUS\bin\Debug\DAL.pdb
+E:\TTDN Project\16-6-2025\TTDN-Project\QuanLyNganHang\BUS\bin\Debug\DAL.dll.config
+E:\TTDN Project\16-6-2025\TTDN-Project\QuanLyNganHang\BUS\bin\Debug\ET.pdb
+E:\TTDN Project\16-6-2025\TTDN-Project\QuanLyNganHang\BUS\obj\Debug\BUS.csproj.AssemblyReference.cache
+E:\TTDN Project\16-6-2025\TTDN-Project\QuanLyNganHang\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+E:\TTDN Project\16-6-2025\TTDN-Project\QuanLyNganHang\BUS\obj\Debug\BUS.csproj.Up2Date
+E:\TTDN Project\16-6-2025\TTDN-Project\QuanLyNganHang\BUS\obj\Debug\BUS.dll
+E:\TTDN Project\16-6-2025\TTDN-Project\QuanLyNganHang\BUS\obj\Debug\BUS.pdb

@@ -451,7 +451,6 @@
             this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.Name = "Frm_KhachHang";
             this.Text = "Quản Trị Khách Hàng";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Frm_KhachHang_Load);
             this.Resize += new System.EventHandler(this.Frm_KhachHang_Resize);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_KhachHang)).EndInit();

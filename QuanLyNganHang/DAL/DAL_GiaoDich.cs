@@ -27,6 +27,86 @@ namespace DAL
             return GD;
         }
 
+        //hàm lấy số tài khoản
+        public IQueryable LaySoTK()
+        {
+            IQueryable sotk = from tk in db.TAIKHOANs
+                              select tk.SOTAIKHOAN;
+            return sotk;
+        }
+
+        //hàm kiểm tra số tiền trong tài khoản
+        public bool KTTienTrongTK(string sotk, decimal sotiengd)
+        {
+            decimal sotientk = (decimal)(from tk in db.TAIKHOANs
+                                       where tk.SOTAIKHOAN == sotk
+                                       select tk.SODU).FirstOrDefault();
+            if(sotiengd > sotientk)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+
+        //hàm trừ tiền trong tài khoản
+        public void TruTien(decimal sotiendg, string sotk)
+        {
+            try
+            {
+                var update = db.TAIKHOANs.SingleOrDefault(x => x.SOTAIKHOAN == sotk);
+                if (update != null)
+                {
+                    update.SODU = (update.SODU - sotiendg);
+
+                    db.SubmitChanges();
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Lỗi: " + ex.ToString());
+            }
+        }
+
+        //hàm lấy mã tài khoản theo số tài khoản
+        public string LayMaTKTheoSo(string so)
+        {
+            string ma = (from tk in db.TAIKHOANs
+                        where tk.SOTAIKHOAN == so
+                        select tk.MATK).FirstOrDefault();
+            return ma;
+        }
+
+        //hàm lấy số tài khoản theo mã tài khoản
+        public string LaySoTKTheoMa(string ma)
+        {
+            string so = (from tk in db.TAIKHOANs
+                         where tk.MATK == ma
+                         select tk.SOTAIKHOAN).FirstOrDefault();
+            return so;
+        }
+
+        //hàm thêm tiền vào lại tài khoản khi xóa
+        public void ThemTienVaoLaiTK(decimal sotiengd, string sotk)
+        {
+            try
+            {
+                var update = db.TAIKHOANs.SingleOrDefault(x => x.SOTAIKHOAN == sotk);
+                if (update != null)
+                {
+                    update.SODU = (update.SODU + sotiengd);
+
+                    db.SubmitChanges();
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Lỗi: " + ex.ToString());
+            }
+        }
+
         //hàm thêm giao dịch
         public bool ThemGiaoDich(ET_GiaoDich et)
         {
