@@ -20,6 +20,92 @@ namespace BUS
             return bl.LayDSBienLai();
         }
 
+
+        //gọi hàm lấy mã giao dịch
+        public IQueryable LayMaGD()
+        {
+            return bl.LayMaGD();
+        }
+
+        //gọi hàm lấy tên khách hàng
+        public IQueryable LayTenKHTheoMaBL(string ma)
+        {
+            return bl.LayTenKHTheoMaBL(ma);
+        }
+
+        //gọi hàm lấy số tài khoản theo mã
+        public IQueryable LaySoTKTheoTen(string ten)
+        {
+            return bl.LaySoTKTheoTen(ten);
+        }
+
+        //gọi hàm lấy danh sách số tiền theo số tài khoản
+        public IQueryable LayDSSoTienTheoSTK(string stk)
+        {
+            return bl.LayDSSoTienTheoSTK(stk);
+        }
+
+        //gọi hàm lấy tên loại tiền theo số tài khoản
+        public IQueryable LayTenLoaiTienTheoSTK(string stk)
+        {
+            return bl.LayTenLoaiTienTheoSTK(stk);
+        }
+
+        //gọi hàm lấy tên danh sách tên nhân viên
+        public IQueryable LayDSTenNV()
+        {
+            return bl.LayDSTenNV();
+        }
+
+        //gọi hàm lấy tên nhân viên theo mã
+        public string LayTenNVTheoMa(string ma)
+        {
+            return bl.LayTenNVTheoMa(ma);
+        }
+
+        //gọi hàm lấy tên khách hàng theo mã khách hàng
+        public string LayTenKHTheoMaKH(string ma)
+        {
+            return bl.LayTenKHTheoMaKH(ma);
+        }
+
+        //gọi hàm lấy số tài khoản theo mã tài khoản
+        public string LaySoTKTheoMaTK(string ma)
+        {
+            return bl.LaySoTKTheoMaTK(ma);
+        }
+
+        //gọi hàm lấy tên loại tiền theo mã loại tiền
+        public string LayTenLTTheoMaLT(string ma)
+        {
+            return bl.LayTenLTTheoMaLT(ma);
+        }
+
+        //gọi hàm lấy mã khách hàng theo tên
+        public string LayMaKHTheoTen(string ten)
+        {
+            return bl.LayMaKHTheoTen(ten);
+        }
+
+        //gọi hàm lấy mã tài khoản theo số tài khoản
+        public string LayMaTKTheoSo(string so)
+        {
+            return bl.LayMaTKTheoSo(so);
+        }
+
+        //gọi hàm lấy mã nhân viên theo tên 
+        public string LayMaNVTheoTen(string ten)
+        {
+            return bl.LayMaNVTheoTen(ten);   
+        }
+
+        //gọi hàm lấy mã loại tiền theo tên
+        public string LayMaLoaiTienTheoTen(string ten)
+        {
+            return bl.LayMaLoaiTienTheoTen(ten);
+        }
+
+
         //gọi hàm ThemBienLai từ DAL
         public bool ThemBienLai(ET_BienLai et)
         {
