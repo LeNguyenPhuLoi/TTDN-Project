@@ -70,11 +70,6 @@
             // 
             this.cboMaTKGui.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboMaTKGui.FormattingEnabled = true;
-            this.cboMaTKGui.Items.AddRange(new object[] {
-            "kg",
-            "lít",
-            "quả",
-            "gói"});
             this.cboMaTKGui.Location = new System.Drawing.Point(190, 96);
             this.cboMaTKGui.Name = "cboMaTKGui";
             this.cboMaTKGui.Size = new System.Drawing.Size(182, 24);
@@ -85,7 +80,7 @@
             this.dtpNgayChuyen.CustomFormat = "dd/MM/yyyy";
             this.dtpNgayChuyen.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpNgayChuyen.Location = new System.Drawing.Point(531, 26);
-            this.dtpNgayChuyen.MaxDate = new System.DateTime(2025, 6, 11, 0, 0, 0, 0);
+            this.dtpNgayChuyen.MaxDate = new System.DateTime(9998, 6, 11, 0, 0, 0, 0);
             this.dtpNgayChuyen.Name = "dtpNgayChuyen";
             this.dtpNgayChuyen.Size = new System.Drawing.Size(180, 22);
             this.dtpNgayChuyen.TabIndex = 13;
@@ -94,22 +89,24 @@
             // btnSua
             // 
             this.btnSua.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnSua.Location = new System.Drawing.Point(229, 187);
+            this.btnSua.Location = new System.Drawing.Point(131, 187);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(92, 46);
             this.btnSua.TabIndex = 10;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnXoa
             // 
             this.btnXoa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnXoa.Location = new System.Drawing.Point(131, 187);
+            this.btnXoa.Location = new System.Drawing.Point(229, 187);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(92, 46);
             this.btnXoa.TabIndex = 11;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnHoanTac
             // 
@@ -120,6 +117,7 @@
             this.btnHoanTac.TabIndex = 12;
             this.btnHoanTac.Text = "Hoàn tác";
             this.btnHoanTac.UseVisualStyleBackColor = true;
+            this.btnHoanTac.Click += new System.EventHandler(this.btnHoanTac_Click);
             // 
             // btnThem
             // 
@@ -130,6 +128,7 @@
             this.btnThem.TabIndex = 12;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // label5
             // 
@@ -197,11 +196,6 @@
             // 
             this.cboMaTKNhan.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboMaTKNhan.FormattingEnabled = true;
-            this.cboMaTKNhan.Items.AddRange(new object[] {
-            "kg",
-            "lít",
-            "quả",
-            "gói"});
             this.cboMaTKNhan.Location = new System.Drawing.Point(190, 133);
             this.cboMaTKNhan.Name = "cboMaTKNhan";
             this.cboMaTKNhan.Size = new System.Drawing.Size(182, 24);
@@ -297,6 +291,7 @@
             this.dgvChuyenKhoan.RowHeadersWidth = 62;
             this.dgvChuyenKhoan.Size = new System.Drawing.Size(770, 434);
             this.dgvChuyenKhoan.TabIndex = 32;
+            this.dgvChuyenKhoan.Click += new System.EventHandler(this.dgvChuyenKhoan_Click);
             // 
             // btnTim
             // 

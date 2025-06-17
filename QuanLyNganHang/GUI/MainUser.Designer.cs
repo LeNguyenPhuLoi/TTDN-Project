@@ -296,12 +296,12 @@
             this.btnCK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCK.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCK.Image = ((System.Drawing.Image)(resources.GetObject("btnCK.Image")));
+            this.btnCK.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCK.Location = new System.Drawing.Point(0, 288);
             this.btnCK.Name = "btnCK";
             this.btnCK.Size = new System.Drawing.Size(226, 50);
             this.btnCK.TabIndex = 8;
-            this.btnCK.Text = "CHUYỂN KHOẢN";
-            this.btnCK.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCK.Text = "CHUYỂN TIỀN";
             this.btnCK.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCK.UseVisualStyleBackColor = true;
             this.btnCK.Click += new System.EventHandler(this.btnCK_Click);
@@ -329,10 +329,9 @@
             this.btnThoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThoat.Image = ((System.Drawing.Image)(resources.GetObject("btnThoat.Image")));
-            this.btnThoat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThoat.Location = new System.Drawing.Point(12, 926);
+            this.btnThoat.Location = new System.Drawing.Point(12, 916);
             this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(146, 37);
+            this.btnThoat.Size = new System.Drawing.Size(145, 47);
             this.btnThoat.TabIndex = 7;
             this.btnThoat.Text = "THOÁT";
             this.btnThoat.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -343,6 +342,7 @@
             // picBanner
             // 
             this.picBanner.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.picBanner.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picBanner.BackgroundImage")));
             this.picBanner.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picBanner.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.picBanner.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -362,6 +362,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
+            this.MaximizeBox = false;
             this.Name = "frmMainUser";
             this.Text = "Quản Lý Ngân Hàng MindLess (User)";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

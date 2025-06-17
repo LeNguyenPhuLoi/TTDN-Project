@@ -5,9 +5,12 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Reflection;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
+
 
 namespace GUI
 {
@@ -17,6 +20,7 @@ namespace GUI
         {
             InitializeComponent();
         }
+
         // Biến tạm
         Form currentForm = new Form();
         private void OpenMain(Form childForm)
@@ -52,9 +56,11 @@ namespace GUI
         {
             tmrBannerLoop.Interval = 6000;
             tmrBannerLoop.Start();
-            // Ẩn nút phóng to, thu nhỏ
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
+            
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.Anchor = AnchorStyles.Top;
+            pictureBox1.Margin = new Padding(0, 10, 0, 10);
+            pictureBox1.BackColor = Color.Transparent;
 
             // Màu nền chính nhẹ nhàng
             this.BackColor = ColorTranslator.FromHtml("#F5F7FA");

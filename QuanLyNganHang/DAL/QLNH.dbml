@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QLNH" Class="QLNHDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=ADMIN-PC\SQLEXPRESS;Initial Catalog=QLNH;Integrated Security=True;Encrypt=True;Trust Server Certificate=True" SettingsObjectName="DAL.Properties.Settings" SettingsPropertyName="QLNHConnectionString2" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=YUITORIA\SQLEXPRESS01;Initial Catalog=QLNH;Integrated Security=True;Encrypt=True;Trust Server Certificate=True" SettingsObjectName="DAL.Properties.Settings" SettingsPropertyName="QLNHConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="dbo.APDUNGKHUYENMAI" Member="APDUNGKHUYENMAIs">
     <Type Name="APDUNGKHUYENMAI">
       <Column Name="MAKM" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -55,12 +55,12 @@
     <Type Name="CHUYENKHOAN">
       <Column Name="MACK" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="NGAYCK" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="SOTIEN" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="SOTIEN" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
       <Column Name="MATKGUI" Type="System.String" DbType="Char(10)" CanBeNull="true" />
       <Column Name="MATKNHAN" Type="System.String" DbType="Char(10)" CanBeNull="true" />
       <Column Name="NOIDUNG" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
-      <Association Name="TAIKHOAN_CHUYENKHOAN" Member="TAIKHOAN" ThisKey="MATKGUI" OtherKey="MATK" Type="TAIKHOAN" IsForeignKey="true" />
-      <Association Name="TAIKHOAN_CHUYENKHOAN1" Member="TAIKHOAN1" ThisKey="MATKNHAN" OtherKey="MATK" Type="TAIKHOAN" IsForeignKey="true" />
+      <Association Name="TAIKHOAN_CHUYENKHOAN" Member="TAIKHOAN1" ThisKey="MATKGUI" OtherKey="MATK" Type="TAIKHOAN" IsForeignKey="true" />
+      <Association Name="TAIKHOAN_CHUYENKHOAN1" Member="TAIKHOAN" ThisKey="MATKNHAN" OtherKey="MATK" Type="TAIKHOAN" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.DANGNHAP" Member="DANGNHAPs">
@@ -106,7 +106,7 @@
   <Table Name="dbo.KHOANVAY" Member="KHOANVAYs">
     <Type Name="KHOANVAY">
       <Column Name="MAVAY" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="SOTIENVAY" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="SOTIENVAY" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
       <Column Name="NGAYVAY" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Column Name="THOIHAN" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Column Name="TRANGTHAI" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
@@ -140,7 +140,7 @@
     <Type Name="LICHSUTRANO">
       <Column Name="MALICHSU" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="MAVAY" Type="System.String" DbType="Char(10)" CanBeNull="true" />
-      <Column Name="SOTIENTRA" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="SOTIENTRA" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
       <Column Name="NGAYTRA" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Association Name="KHOANVAY_LICHSUTRANO" Member="KHOANVAY" ThisKey="MAVAY" OtherKey="MAVAY" Type="KHOANVAY" IsForeignKey="true" />
     </Type>
@@ -209,8 +209,8 @@
       <Column Name="NGAYMOTK" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Column Name="TRANGTHAI" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
       <Association Name="TAIKHOAN_APDUNGKHUYENMAI" Member="APDUNGKHUYENMAIs" ThisKey="MATK" OtherKey="MATK" Type="APDUNGKHUYENMAI" />
-      <Association Name="TAIKHOAN_CHUYENKHOAN" Member="CHUYENKHOANs" ThisKey="MATK" OtherKey="MATKGUI" Type="CHUYENKHOAN" />
-      <Association Name="TAIKHOAN_CHUYENKHOAN1" Member="CHUYENKHOANs1" ThisKey="MATK" OtherKey="MATKNHAN" Type="CHUYENKHOAN" />
+      <Association Name="TAIKHOAN_CHUYENKHOAN" Member="CHUYENKHOANs1" ThisKey="MATK" OtherKey="MATKGUI" Type="CHUYENKHOAN" />
+      <Association Name="TAIKHOAN_CHUYENKHOAN1" Member="CHUYENKHOANs" ThisKey="MATK" OtherKey="MATKNHAN" Type="CHUYENKHOAN" />
       <Association Name="TAIKHOAN_GIAODICH" Member="GIAODICHes" ThisKey="MATK" OtherKey="MATK" Type="GIAODICH" />
       <Association Name="KHACHHANG_TAIKHOAN" Member="KHACHHANG" ThisKey="MAKH" OtherKey="MAKH" Type="KHACHHANG" IsForeignKey="true" />
       <Association Name="LOAITIEN_TAIKHOAN" Member="LOAITIEN" ThisKey="MALOAITIEN" OtherKey="MALOAITIEN" Type="LOAITIEN" IsForeignKey="true" />
