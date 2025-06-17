@@ -87,7 +87,7 @@ namespace DAL
     #endregion
 		
 		public QLNHDataContext() : 
-				base(global::DAL.Properties.Settings.Default.QLNHConnectionString2, mappingSource)
+				base(global::DAL.Properties.Settings.Default.QLNHConnectionString, mappingSource)
 		{
 			OnCreated();
 		}
@@ -1403,7 +1403,7 @@ namespace DAL
 		
 		private System.Nullable<System.DateTime> _NGAYCK;
 		
-		private System.Nullable<double> _SOTIEN;
+		private System.Nullable<decimal> _SOTIEN;
 		
 		private string _MATKGUI;
 		
@@ -1411,9 +1411,9 @@ namespace DAL
 		
 		private string _NOIDUNG;
 		
-		private EntityRef<TAIKHOAN> _TAIKHOAN;
-		
 		private EntityRef<TAIKHOAN> _TAIKHOAN1;
+		
+		private EntityRef<TAIKHOAN> _TAIKHOAN;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -1423,7 +1423,7 @@ namespace DAL
     partial void OnMACKChanged();
     partial void OnNGAYCKChanging(System.Nullable<System.DateTime> value);
     partial void OnNGAYCKChanged();
-    partial void OnSOTIENChanging(System.Nullable<double> value);
+    partial void OnSOTIENChanging(System.Nullable<decimal> value);
     partial void OnSOTIENChanged();
     partial void OnMATKGUIChanging(string value);
     partial void OnMATKGUIChanged();
@@ -1435,8 +1435,8 @@ namespace DAL
 		
 		public CHUYENKHOAN()
 		{
-			this._TAIKHOAN = default(EntityRef<TAIKHOAN>);
 			this._TAIKHOAN1 = default(EntityRef<TAIKHOAN>);
+			this._TAIKHOAN = default(EntityRef<TAIKHOAN>);
 			OnCreated();
 		}
 		
@@ -1480,8 +1480,8 @@ namespace DAL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SOTIEN", DbType="Float")]
-		public System.Nullable<double> SOTIEN
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SOTIEN", DbType="Decimal(18,0)")]
+		public System.Nullable<decimal> SOTIEN
 		{
 			get
 			{
@@ -1511,7 +1511,7 @@ namespace DAL
 			{
 				if ((this._MATKGUI != value))
 				{
-					if (this._TAIKHOAN.HasLoadedOrAssignedValue)
+					if (this._TAIKHOAN1.HasLoadedOrAssignedValue)
 					{
 						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
 					}
@@ -1535,7 +1535,7 @@ namespace DAL
 			{
 				if ((this._MATKNHAN != value))
 				{
-					if (this._TAIKHOAN1.HasLoadedOrAssignedValue)
+					if (this._TAIKHOAN.HasLoadedOrAssignedValue)
 					{
 						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
 					}
@@ -1568,41 +1568,7 @@ namespace DAL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TAIKHOAN_CHUYENKHOAN", Storage="_TAIKHOAN", ThisKey="MATKGUI", OtherKey="MATK", IsForeignKey=true)]
-		public TAIKHOAN TAIKHOAN
-		{
-			get
-			{
-				return this._TAIKHOAN.Entity;
-			}
-			set
-			{
-				TAIKHOAN previousValue = this._TAIKHOAN.Entity;
-				if (((previousValue != value) 
-							|| (this._TAIKHOAN.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._TAIKHOAN.Entity = null;
-						previousValue.CHUYENKHOANs.Remove(this);
-					}
-					this._TAIKHOAN.Entity = value;
-					if ((value != null))
-					{
-						value.CHUYENKHOANs.Add(this);
-						this._MATKGUI = value.MATK;
-					}
-					else
-					{
-						this._MATKGUI = default(string);
-					}
-					this.SendPropertyChanged("TAIKHOAN");
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TAIKHOAN_CHUYENKHOAN1", Storage="_TAIKHOAN1", ThisKey="MATKNHAN", OtherKey="MATK", IsForeignKey=true)]
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TAIKHOAN_CHUYENKHOAN", Storage="_TAIKHOAN1", ThisKey="MATKGUI", OtherKey="MATK", IsForeignKey=true)]
 		public TAIKHOAN TAIKHOAN1
 		{
 			get
@@ -1625,13 +1591,47 @@ namespace DAL
 					if ((value != null))
 					{
 						value.CHUYENKHOANs1.Add(this);
+						this._MATKGUI = value.MATK;
+					}
+					else
+					{
+						this._MATKGUI = default(string);
+					}
+					this.SendPropertyChanged("TAIKHOAN1");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TAIKHOAN_CHUYENKHOAN1", Storage="_TAIKHOAN", ThisKey="MATKNHAN", OtherKey="MATK", IsForeignKey=true)]
+		public TAIKHOAN TAIKHOAN
+		{
+			get
+			{
+				return this._TAIKHOAN.Entity;
+			}
+			set
+			{
+				TAIKHOAN previousValue = this._TAIKHOAN.Entity;
+				if (((previousValue != value) 
+							|| (this._TAIKHOAN.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._TAIKHOAN.Entity = null;
+						previousValue.CHUYENKHOANs.Remove(this);
+					}
+					this._TAIKHOAN.Entity = value;
+					if ((value != null))
+					{
+						value.CHUYENKHOANs.Add(this);
 						this._MATKNHAN = value.MATK;
 					}
 					else
 					{
 						this._MATKNHAN = default(string);
 					}
-					this.SendPropertyChanged("TAIKHOAN1");
+					this.SendPropertyChanged("TAIKHOAN");
 				}
 			}
 		}
@@ -2505,7 +2505,7 @@ namespace DAL
 		
 		private string _MAVAY;
 		
-		private System.Nullable<double> _SOTIENVAY;
+		private System.Nullable<decimal> _SOTIENVAY;
 		
 		private System.Nullable<System.DateTime> _NGAYVAY;
 		
@@ -2529,7 +2529,7 @@ namespace DAL
     partial void OnCreated();
     partial void OnMAVAYChanging(string value);
     partial void OnMAVAYChanged();
-    partial void OnSOTIENVAYChanging(System.Nullable<double> value);
+    partial void OnSOTIENVAYChanging(System.Nullable<decimal> value);
     partial void OnSOTIENVAYChanged();
     partial void OnNGAYVAYChanging(System.Nullable<System.DateTime> value);
     partial void OnNGAYVAYChanged();
@@ -2571,8 +2571,8 @@ namespace DAL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SOTIENVAY", DbType="Float")]
-		public System.Nullable<double> SOTIENVAY
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SOTIENVAY", DbType="Decimal(18,0)")]
+		public System.Nullable<decimal> SOTIENVAY
 		{
 			get
 			{
@@ -3171,7 +3171,7 @@ namespace DAL
 		
 		private string _MAVAY;
 		
-		private System.Nullable<double> _SOTIENTRA;
+		private System.Nullable<decimal> _SOTIENTRA;
 		
 		private System.Nullable<System.DateTime> _NGAYTRA;
 		
@@ -3185,7 +3185,7 @@ namespace DAL
     partial void OnMALICHSUChanged();
     partial void OnMAVAYChanging(string value);
     partial void OnMAVAYChanged();
-    partial void OnSOTIENTRAChanging(System.Nullable<double> value);
+    partial void OnSOTIENTRAChanging(System.Nullable<decimal> value);
     partial void OnSOTIENTRAChanged();
     partial void OnNGAYTRAChanging(System.Nullable<System.DateTime> value);
     partial void OnNGAYTRAChanged();
@@ -3241,8 +3241,8 @@ namespace DAL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SOTIENTRA", DbType="Float")]
-		public System.Nullable<double> SOTIENTRA
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SOTIENTRA", DbType="Decimal(18,0)")]
+		public System.Nullable<decimal> SOTIENTRA
 		{
 			get
 			{
@@ -4404,9 +4404,9 @@ namespace DAL
 		
 		private EntitySet<APDUNGKHUYENMAI> _APDUNGKHUYENMAIs;
 		
-		private EntitySet<CHUYENKHOAN> _CHUYENKHOANs;
-		
 		private EntitySet<CHUYENKHOAN> _CHUYENKHOANs1;
+		
+		private EntitySet<CHUYENKHOAN> _CHUYENKHOANs;
 		
 		private EntitySet<GIAODICH> _GIAODICHes;
 		
@@ -4441,8 +4441,8 @@ namespace DAL
 		public TAIKHOAN()
 		{
 			this._APDUNGKHUYENMAIs = new EntitySet<APDUNGKHUYENMAI>(new Action<APDUNGKHUYENMAI>(this.attach_APDUNGKHUYENMAIs), new Action<APDUNGKHUYENMAI>(this.detach_APDUNGKHUYENMAIs));
-			this._CHUYENKHOANs = new EntitySet<CHUYENKHOAN>(new Action<CHUYENKHOAN>(this.attach_CHUYENKHOANs), new Action<CHUYENKHOAN>(this.detach_CHUYENKHOANs));
 			this._CHUYENKHOANs1 = new EntitySet<CHUYENKHOAN>(new Action<CHUYENKHOAN>(this.attach_CHUYENKHOANs1), new Action<CHUYENKHOAN>(this.detach_CHUYENKHOANs1));
+			this._CHUYENKHOANs = new EntitySet<CHUYENKHOAN>(new Action<CHUYENKHOAN>(this.attach_CHUYENKHOANs), new Action<CHUYENKHOAN>(this.detach_CHUYENKHOANs));
 			this._GIAODICHes = new EntitySet<GIAODICH>(new Action<GIAODICH>(this.attach_GIAODICHes), new Action<GIAODICH>(this.detach_GIAODICHes));
 			this._KHACHHANG = default(EntityRef<KHACHHANG>);
 			this._LOAITIEN = default(EntityRef<LOAITIEN>);
@@ -4635,20 +4635,7 @@ namespace DAL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TAIKHOAN_CHUYENKHOAN", Storage="_CHUYENKHOANs", ThisKey="MATK", OtherKey="MATKGUI")]
-		public EntitySet<CHUYENKHOAN> CHUYENKHOANs
-		{
-			get
-			{
-				return this._CHUYENKHOANs;
-			}
-			set
-			{
-				this._CHUYENKHOANs.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TAIKHOAN_CHUYENKHOAN1", Storage="_CHUYENKHOANs1", ThisKey="MATK", OtherKey="MATKNHAN")]
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TAIKHOAN_CHUYENKHOAN", Storage="_CHUYENKHOANs1", ThisKey="MATK", OtherKey="MATKGUI")]
 		public EntitySet<CHUYENKHOAN> CHUYENKHOANs1
 		{
 			get
@@ -4658,6 +4645,19 @@ namespace DAL
 			set
 			{
 				this._CHUYENKHOANs1.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TAIKHOAN_CHUYENKHOAN1", Storage="_CHUYENKHOANs", ThisKey="MATK", OtherKey="MATKNHAN")]
+		public EntitySet<CHUYENKHOAN> CHUYENKHOANs
+		{
+			get
+			{
+				return this._CHUYENKHOANs;
+			}
+			set
+			{
+				this._CHUYENKHOANs.Assign(value);
 			}
 		}
 		
@@ -4808,18 +4808,6 @@ namespace DAL
 			entity.TAIKHOAN = null;
 		}
 		
-		private void attach_CHUYENKHOANs(CHUYENKHOAN entity)
-		{
-			this.SendPropertyChanging();
-			entity.TAIKHOAN = this;
-		}
-		
-		private void detach_CHUYENKHOANs(CHUYENKHOAN entity)
-		{
-			this.SendPropertyChanging();
-			entity.TAIKHOAN = null;
-		}
-		
 		private void attach_CHUYENKHOANs1(CHUYENKHOAN entity)
 		{
 			this.SendPropertyChanging();
@@ -4830,6 +4818,18 @@ namespace DAL
 		{
 			this.SendPropertyChanging();
 			entity.TAIKHOAN1 = null;
+		}
+		
+		private void attach_CHUYENKHOANs(CHUYENKHOAN entity)
+		{
+			this.SendPropertyChanging();
+			entity.TAIKHOAN = this;
+		}
+		
+		private void detach_CHUYENKHOANs(CHUYENKHOAN entity)
+		{
+			this.SendPropertyChanging();
+			entity.TAIKHOAN = null;
 		}
 		
 		private void attach_GIAODICHes(GIAODICH entity)

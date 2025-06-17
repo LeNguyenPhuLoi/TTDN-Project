@@ -6,7 +6,7 @@ namespace ET
 {
     public class ET_LichSuTraNo
     {
-        public ET_LichSuTraNo(string mALICHSU, string mAVAY, float sOTIENTRA, DateTime nGAYTRA)
+        public ET_LichSuTraNo(string mALICHSU, string mAVAY, decimal sOTIENTRA, DateTime nGAYTRA)
         {
             MALICHSU = mALICHSU;
             MAVAY = mAVAY;
@@ -16,7 +16,7 @@ namespace ET
 
         public string MALICHSU { get; set; }
         public string MAVAY { get; set; }
-        public float SOTIENTRA { get; set; }
+        public decimal SOTIENTRA { get; set; }
         public DateTime NGAYTRA { get; set; }
     }
 }

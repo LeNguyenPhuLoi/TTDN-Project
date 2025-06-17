@@ -12,6 +12,12 @@ namespace BUS
     {
         DAL_ChuyenKhoan chuyenKhoan = new DAL_ChuyenKhoan();
 
+        //lấy danh sách tài khoản
+        public IQueryable LoadMaTK()
+        {
+            return chuyenKhoan.LoadDSTK();
+        }
+
         //lấy danh sách chuyển khoản
         public IQueryable LoadDSTK()
         {
@@ -19,21 +25,21 @@ namespace BUS
         }
 
         //thêm chuyển khoản
-        public bool ThemChuyenKhoan(ET_ChuyenKhoan et)
+        public bool ThemChuyenKhoan(ET_ChuyenKhoan et, out string error)
         {
-            return chuyenKhoan.ThemChuyenKhoan(et);
+            return chuyenKhoan.ThemChuyenKhoan(et, out error);
         }
 
         //cập nhật chuyển khoản
-        public bool CapNhatChuyenKhoan(ET_ChuyenKhoan et)
+        public bool CapNhatChuyenKhoan(ET_ChuyenKhoan et,out string error)
         {
-            return chuyenKhoan.CapNhapChuyenKhoan(et);
+            return chuyenKhoan.CapNhapChuyenKhoan(et, out error);
         }
 
         //xóa chuyển khoản
-        public bool XoaChuyenKhoan(ET_ChuyenKhoan et)
+        public bool XoaChuyenKhoan(ET_ChuyenKhoan et, out string error)
         {
-            return chuyenKhoan.XoaChuyenKhoan(et);
+            return chuyenKhoan.XoaChuyenKhoan(et,out error);
         }
     }
 }
