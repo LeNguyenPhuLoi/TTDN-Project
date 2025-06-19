@@ -32,10 +32,10 @@
             this.txtNoiDung = new System.Windows.Forms.RichTextBox();
             this.dtNgayKetThuc = new System.Windows.Forms.DateTimePicker();
             this.dtNgayBatDau = new System.Windows.Forms.DateTimePicker();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnNew = new System.Windows.Forms.Button();
+            this.btnSua = new System.Windows.Forms.Button();
+            this.btnXoa = new System.Windows.Forms.Button();
+            this.btnThem = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.txtDKApDung = new System.Windows.Forms.TextBox();
@@ -80,41 +80,45 @@
             this.dtNgayBatDau.Size = new System.Drawing.Size(120, 22);
             this.dtNgayBatDau.TabIndex = 13;
             // 
-            // button6
+            // btnNew
             // 
-            this.button6.Location = new System.Drawing.Point(419, 159);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(140, 41);
-            this.button6.TabIndex = 9;
-            this.button6.Text = "Hoàn tác";
-            this.button6.UseVisualStyleBackColor = true;
+            this.btnNew.Location = new System.Drawing.Point(419, 159);
+            this.btnNew.Name = "btnNew";
+            this.btnNew.Size = new System.Drawing.Size(140, 41);
+            this.btnNew.TabIndex = 9;
+            this.btnNew.Text = "Hoàn tác";
+            this.btnNew.UseVisualStyleBackColor = true;
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
             // 
-            // button4
+            // btnSua
             // 
-            this.button4.Location = new System.Drawing.Point(744, 143);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(140, 41);
-            this.button4.TabIndex = 10;
-            this.button4.Text = "Sửa";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnSua.Location = new System.Drawing.Point(744, 143);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(140, 41);
+            this.btnSua.TabIndex = 10;
+            this.btnSua.Text = "Sửa";
+            this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
-            // button3
+            // btnXoa
             // 
-            this.button3.Location = new System.Drawing.Point(744, 88);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(140, 41);
-            this.button3.TabIndex = 11;
-            this.button3.Text = "Xóa";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnXoa.Location = new System.Drawing.Point(744, 88);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(140, 41);
+            this.btnXoa.TabIndex = 11;
+            this.btnXoa.Text = "Xóa";
+            this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
-            // button2
+            // btnThem
             // 
-            this.button2.Location = new System.Drawing.Point(744, 32);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(140, 41);
-            this.button2.TabIndex = 12;
-            this.button2.Text = "Thêm";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnThem.Location = new System.Drawing.Point(744, 32);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(140, 41);
+            this.btnThem.TabIndex = 12;
+            this.btnThem.Text = "Thêm";
+            this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // label8
             // 
@@ -141,7 +145,7 @@
             this.txtDKApDung.Location = new System.Drawing.Point(541, 99);
             this.txtDKApDung.Margin = new System.Windows.Forms.Padding(4);
             this.txtDKApDung.Name = "txtDKApDung";
-            this.txtDKApDung.Size = new System.Drawing.Size(141, 22);
+            this.txtDKApDung.Size = new System.Drawing.Size(196, 22);
             this.txtDKApDung.TabIndex = 1;
             // 
             // label4
@@ -184,7 +188,6 @@
             // 
             // txtMaKM
             // 
-            this.txtMaKM.Enabled = false;
             this.txtMaKM.Location = new System.Drawing.Point(156, 32);
             this.txtMaKM.Margin = new System.Windows.Forms.Padding(4);
             this.txtMaKM.Name = "txtMaKM";
@@ -231,6 +234,7 @@
             this.dgvKhuyenMai.RowHeadersWidth = 62;
             this.dgvKhuyenMai.Size = new System.Drawing.Size(949, 365);
             this.dgvKhuyenMai.TabIndex = 21;
+            this.dgvKhuyenMai.Click += new System.EventHandler(this.dgvKhuyenMai_Click);
             // 
             // pnlMain
             // 
@@ -239,10 +243,10 @@
             this.pnlMain.Controls.Add(this.txtNoiDung);
             this.pnlMain.Controls.Add(this.dtNgayKetThuc);
             this.pnlMain.Controls.Add(this.dtNgayBatDau);
-            this.pnlMain.Controls.Add(this.button6);
-            this.pnlMain.Controls.Add(this.button4);
-            this.pnlMain.Controls.Add(this.button3);
-            this.pnlMain.Controls.Add(this.button2);
+            this.pnlMain.Controls.Add(this.btnNew);
+            this.pnlMain.Controls.Add(this.btnSua);
+            this.pnlMain.Controls.Add(this.btnXoa);
+            this.pnlMain.Controls.Add(this.btnThem);
             this.pnlMain.Controls.Add(this.label8);
             this.pnlMain.Controls.Add(this.label7);
             this.pnlMain.Controls.Add(this.txtDKApDung);
@@ -283,10 +287,10 @@
         private System.Windows.Forms.RichTextBox txtNoiDung;
         private System.Windows.Forms.DateTimePicker dtNgayKetThuc;
         private System.Windows.Forms.DateTimePicker dtNgayBatDau;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnNew;
+        private System.Windows.Forms.Button btnSua;
+        private System.Windows.Forms.Button btnXoa;
+        private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtDKApDung;
