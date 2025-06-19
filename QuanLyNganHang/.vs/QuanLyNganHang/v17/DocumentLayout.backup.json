@@ -7,19 +7,7 @@
       "RelativeMoniker": "D:0:0:{DD5CDC54-9399-46A4-B844-FB2507673A03}|GUI\\GUI.csproj|solutionrelative:gui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DD5CDC54-9399-46A4-B844-FB2507673A03}|GUI\\GUI.csproj|D:\\TTDN-Project\\QuanLyNganHang\\gui\\chuyenkhoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{DD5CDC54-9399-46A4-B844-FB2507673A03}|GUI\\GUI.csproj|solutionrelative:gui\\chuyenkhoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DD5CDC54-9399-46A4-B844-FB2507673A03}|GUI\\GUI.csproj|d:\\ttdn-project\\quanlynganhang\\gui\\mainuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{DD5CDC54-9399-46A4-B844-FB2507673A03}|GUI\\GUI.csproj|solutionrelative:gui\\mainuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DD5CDC54-9399-46A4-B844-FB2507673A03}|GUI\\GUI.csproj|D:\\TTDN-Project\\QuanLyNganHang\\gui\\chuyenkhoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DD5CDC54-9399-46A4-B844-FB2507673A03}|GUI\\GUI.csproj|solutionrelative:gui\\chuyenkhoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{28FFE92F-BC73-4740-9150-176B686649BD}|DAL\\DAL.csproj|D:\\TTDN-Project\\QuanLyNganHang\\dal\\autoconnect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{28FFE92F-BC73-4740-9150-176B686649BD}|DAL\\DAL.csproj|d:\\ttdn-project\\quanlynganhang\\dal\\autoconnect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{28FFE92F-BC73-4740-9150-176B686649BD}|DAL\\DAL.csproj|solutionrelative:dal\\autoconnect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -38,9 +26,9 @@
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\TTDN-Project\\QuanLyNganHang\\GUI\\Program.cs",
               "RelativeDocumentMoniker": "GUI\\Program.cs",
-              "ToolTip": "D:\\TTDN-Project\\QuanLyNganHang\\GUI\\Program.cs",
-              "RelativeToolTip": "GUI\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAqAAAAAAAAAA==",
+              "ToolTip": "D:\\TTDN-Project\\QuanLyNganHang\\GUI\\Program.cs*",
+              "RelativeToolTip": "GUI\\Program.cs*",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAADUAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-16T08:52:20.569Z",
               "IsPinned": true,
@@ -48,53 +36,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "AutoConnect.cs",
               "DocumentMoniker": "D:\\TTDN-Project\\QuanLyNganHang\\DAL\\AutoConnect.cs",
               "RelativeDocumentMoniker": "DAL\\AutoConnect.cs",
               "ToolTip": "D:\\TTDN-Project\\QuanLyNganHang\\DAL\\AutoConnect.cs",
               "RelativeToolTip": "DAL\\AutoConnect.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAABFAAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAawBEAAABFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-17T06:48:47.935Z",
-              "IsPinned": true
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MainUser.cs [Design]",
-              "DocumentMoniker": "D:\\TTDN-Project\\QuanLyNganHang\\GUI\\MainUser.cs",
-              "RelativeDocumentMoniker": "GUI\\MainUser.cs",
-              "ToolTip": "D:\\TTDN-Project\\QuanLyNganHang\\GUI\\MainUser.cs [Design]",
-              "RelativeToolTip": "GUI\\MainUser.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-17T09:28:04.654Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ChuyenKhoan.cs",
-              "DocumentMoniker": "D:\\TTDN-Project\\QuanLyNganHang\\GUI\\ChuyenKhoan.cs",
-              "RelativeDocumentMoniker": "GUI\\ChuyenKhoan.cs",
-              "ToolTip": "D:\\TTDN-Project\\QuanLyNganHang\\GUI\\ChuyenKhoan.cs",
-              "RelativeToolTip": "GUI\\ChuyenKhoan.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAmwBwAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-17T06:49:17.19Z",
+              "WhenOpened": "2025-06-19T07:21:18.406Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ChuyenKhoan.cs [Design]",
-              "DocumentMoniker": "D:\\TTDN-Project\\QuanLyNganHang\\GUI\\ChuyenKhoan.cs",
-              "RelativeDocumentMoniker": "GUI\\ChuyenKhoan.cs",
-              "ToolTip": "D:\\TTDN-Project\\QuanLyNganHang\\GUI\\ChuyenKhoan.cs [Design]",
-              "RelativeToolTip": "GUI\\ChuyenKhoan.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-17T06:49:08.069Z",
-              "EditorCaption": " [Design]"
             }
           ]
         }

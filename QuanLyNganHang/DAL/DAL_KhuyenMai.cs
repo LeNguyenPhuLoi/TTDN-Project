@@ -22,7 +22,15 @@ namespace DAL
         public IQueryable LoadKM()
         {
             IQueryable KM = from km in db.KHUYENMAIs
-                            select km;
+                            select new
+                            {
+                                km.MAKM,
+                                km.TENKM,
+                                km.MOTA,
+                                km.NGAYBD,
+                                km.NGAYKT,
+                                km.DKAPDUNG
+                            };
             return KM;
         }
 
@@ -42,11 +50,13 @@ namespace DAL
             return KM;
         }
 
-        public bool ThemKM(ET_KhuyenMai et)
+        public bool ThemKM(ET_KhuyenMai et, out string error)
         {
+            error = string.Empty;
             bool clone = false;
             try
             {
+                //ktra xem ma khuyến mãi đã tồn tại chưa
                 var space = db.KHUYENMAIs.Any(x => x.MAKM == et.MAKM);
                 if (!space)
                 {
@@ -64,20 +74,27 @@ namespace DAL
                     db.SubmitChanges();
                     clone = true;
                 }
+                else
+                {
+                    error = "Mã khuyến mãi đã tồn tại.";
+                }
             }
             catch (Exception ex)
             {
                 clone = false;
-                Console.WriteLine("Lỗi khi thêm khuyến mãi: " + ex.Message);
+                error = "Lỗi khi thêm khuyến mãi: \n\n" + ex.Message;
             }
             return clone;
         }
 
-        public bool SuaKM(ET_KhuyenMai et)
+        public bool SuaKM(ET_KhuyenMai et, out string error)
         {
+            error = string.Empty;
             bool clone = false;
             try
             {
+
+                //kiểm tra xem mã khuyến mãi có tồn tại không
                 var capnhat = db.KHUYENMAIs.Single(km => km.MAKM == et.MAKM);
                 if (capnhat != null)
                 {
@@ -89,21 +106,26 @@ namespace DAL
 
                     db.SubmitChanges();
                     clone = true;
+                } else
+                {
+                    error = "Mã khuyến mãi không tồn tại cập nhật thất bại.";
                 }
             }
             catch (Exception ex)
             {
                 clone = false;
-                Console.WriteLine("Lỗi khi sửa khuyến mãi: " + ex.Message);
+                error = "Lỗi khi sửa khuyến mãi: \n\n" + ex.Message;
             }
             return clone;
         }
 
-        public bool XoaKM(ET_KhuyenMai et)
+        public bool XoaKM(ET_KhuyenMai et, out string error)
         {
+            error = string.Empty;
             bool clone = false;
             try
             {
+                //kiểm tra xem mã khuyến mãi có tồn tại không
                 var xoa = from km in db.KHUYENMAIs
                           where km.MAKM == et.MAKM
                           select km;
@@ -116,12 +138,16 @@ namespace DAL
                     }
                     clone = true;
                 }
+                else
+                {
+                    error = "Mã khuyến mãi không tồn tại.";
+                }
 
             }
             catch (Exception ex)
             {
                 clone = false;
-                Console.WriteLine("Lỗi khi xóa khuyến mãi: " + ex.Message);
+                error = "Lỗi khi xóa khuyến mãi: " + ex.Message;
             }
             return clone;
         }
