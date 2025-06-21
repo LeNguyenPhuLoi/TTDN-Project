@@ -63,7 +63,6 @@
             // 
             this.txtMaLaiSuat.Location = new System.Drawing.Point(445, 81);
             this.txtMaLaiSuat.Name = "txtMaLaiSuat";
-            this.txtMaLaiSuat.ReadOnly = true;
             this.txtMaLaiSuat.Size = new System.Drawing.Size(304, 22);
             this.txtMaLaiSuat.TabIndex = 18;
             // 
@@ -80,16 +79,12 @@
             this.dgvLaiSuat.RowHeadersWidth = 51;
             this.dgvLaiSuat.Size = new System.Drawing.Size(420, 153);
             this.dgvLaiSuat.TabIndex = 17;
+            this.dgvLaiSuat.Click += new System.EventHandler(this.dgvLaiSuat_Click);
             // 
             // cboMaKH
             // 
             this.cboMaKH.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboMaKH.FormattingEnabled = true;
-            this.cboMaKH.Items.AddRange(new object[] {
-            "kg",
-            "lít",
-            "quả",
-            "gói"});
             this.cboMaKH.Location = new System.Drawing.Point(122, 82);
             this.cboMaKH.Name = "cboMaKH";
             this.cboMaKH.Size = new System.Drawing.Size(182, 24);
@@ -104,6 +99,7 @@
             this.btnSua.TabIndex = 10;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnXoa
             // 
@@ -114,6 +110,7 @@
             this.btnXoa.TabIndex = 11;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnHoanTac
             // 
@@ -124,6 +121,7 @@
             this.btnHoanTac.TabIndex = 12;
             this.btnHoanTac.Text = "Hoàn tác";
             this.btnHoanTac.UseVisualStyleBackColor = true;
+            this.btnHoanTac.Click += new System.EventHandler(this.btnHoanTac_Click);
             // 
             // btnThem
             // 
@@ -134,6 +132,7 @@
             this.btnThem.TabIndex = 12;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // label5
             // 
@@ -254,6 +253,7 @@
             this.dgvKhoanVay.RowHeadersWidth = 62;
             this.dgvKhoanVay.Size = new System.Drawing.Size(770, 328);
             this.dgvKhoanVay.TabIndex = 31;
+            this.dgvKhoanVay.Click += new System.EventHandler(this.dgvKhoanVay_Click);
             // 
             // pnlMain
             // 
@@ -300,7 +300,7 @@
             this.dtpNgayVay.CustomFormat = "dd/MM/yyyy";
             this.dtpNgayVay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpNgayVay.Location = new System.Drawing.Point(445, 19);
-            this.dtpNgayVay.MaxDate = new System.DateTime(2025, 6, 12, 0, 0, 0, 0);
+            this.dtpNgayVay.MaxDate = new System.DateTime(2999, 6, 12, 0, 0, 0, 0);
             this.dtpNgayVay.Name = "dtpNgayVay";
             this.dtpNgayVay.Size = new System.Drawing.Size(180, 22);
             this.dtpNgayVay.TabIndex = 21;
@@ -319,10 +319,8 @@
             this.cboTrangThai.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboTrangThai.FormattingEnabled = true;
             this.cboTrangThai.Items.AddRange(new object[] {
-            "kg",
-            "lít",
-            "quả",
-            "gói"});
+            "Đang vay",
+            "Đã trả xong"});
             this.cboTrangThai.Location = new System.Drawing.Point(122, 120);
             this.cboTrangThai.Name = "cboTrangThai";
             this.cboTrangThai.Size = new System.Drawing.Size(182, 24);
