@@ -153,5 +153,7 @@ namespace GUI
             frmApDungKhuyenMai frm = new frmApDungKhuyenMai();
             OpenMain(frm);
         }
+
+        
     }
 }

@@ -18,17 +18,53 @@ namespace DAL
             db = new QLNHDataContext(conn.GetConnection());
         }
 
+        //lay ten khach hang
+        public IQueryable LoadTenKhachHang()
+        {
+            IQueryable ds = from kh in db.KHACHHANGs
+                               select kh.TENKH;
+            return ds;
+        }
+
+        // Lấy mã khách hàng theo ten
+        public string GetMaKhachHang(string tenKhachHang)
+        {
+            var maKhachHang = (from kh in db.KHACHHANGs
+                               where kh.TENKH == tenKhachHang
+                               select kh.MAKH).FirstOrDefault();
+            return maKhachHang;
+        }
+
+        //lay ten theo ma khach hang
+        public string GetTenKhachHang(string maKhachHang)
+        {
+            var tenKhachHang = (from kh in db.KHACHHANGs
+                                where kh.MAKH == maKhachHang
+                                select kh.TENKH).FirstOrDefault();
+            return tenKhachHang;
+        }
+
         // Lấy danh sách khoản vay
         public IQueryable LoadKhoanVay()
         {
             IQueryable ds = from kv in db.KHOANVAYs
-                            select kv;
+                            select new 
+                            { 
+                                kv.MAVAY,
+                                kv.SOTIENVAY,
+                                kv.NGAYVAY,
+                                kv.THOIHAN,
+                                kv.TRANGTHAI,
+                                kv.MAKH,
+                                kv.MALAISUAT
+                            };
             return ds;
         }
 
         // Thêm khoản vay
-        public bool ThemKhoanVay(ET_KhoanVay et)
+        public bool ThemKhoanVay(ET_KhoanVay et,out string error)
         {
+            error = string.Empty;
             bool flag = false;
             try
             {
@@ -49,18 +85,23 @@ namespace DAL
                     db.SubmitChanges();
                     flag = true;
                 }
+                else
+                {
+                    error = "Mã khoản vay đã tồn tại!";
+                }
             }
             catch (Exception ex)
             {
                 flag = false;
-                Console.WriteLine("Lỗi: " + ex.ToString());
+                error = "Lỗi: " + ex.ToString();
             }
             return flag;
         }
 
         // Sửa khoản vay
-        public bool CapNhatKhoanVay(ET_KhoanVay et)
+        public bool CapNhatKhoanVay(ET_KhoanVay et,out string error)
         {
+            error = string.Empty;
             bool flag = false;
             try
             {
@@ -75,19 +116,24 @@ namespace DAL
                     kv.MALAISUAT = et.MALAISUAT;
                     db.SubmitChanges();
                     flag = true;
+                } 
+                else
+                {
+                    error = "Mã khoản vay không tồn tại!";
                 }
             }
             catch (Exception ex)
             {
                 flag = false;
-                Console.WriteLine("Lỗi: " + ex.ToString());
+                error = "Lỗi: " + ex.ToString();
             }
             return flag;
         }
 
         // Xóa khoản vay
-        public bool XoaKhoanVay(ET_KhoanVay et)
+        public bool XoaKhoanVay(ET_KhoanVay et,out string error)
         {
+            error = string.Empty;
             bool flag = false;
             try
             {
@@ -103,11 +149,15 @@ namespace DAL
                     }
                     flag = true;
                 }
+                else
+                {
+                    error = "Mã khoản vay không tồn tại!";
+                }
             }
             catch (Exception ex)
             {
                 flag = false;
-                Console.WriteLine("Lỗi: " + ex.ToString());
+                error = "Lỗi: " + ex.ToString();
             }
             return flag;
         }

@@ -17,22 +17,41 @@ namespace BUS
             return kv.LoadKhoanVay();
         }
 
-        // Thêm khoản vay
-        public bool ThemKhoanVay(ET.ET_KhoanVay et)
+        // lay danh sách khách hàng
+        public IQueryable LoadTenKhachHang()
         {
-            return kv.ThemKhoanVay(et);
+            return kv.LoadTenKhachHang();
+        }
+
+        // Lấy mã khách hàng theo tên
+        public string GetMaKhachHang(string tenKhachHang)
+        {
+            return kv.GetMaKhachHang(tenKhachHang);
+        }
+
+        // Lấy tên khách hàng theo mã
+        public string GetTenKhachHang(string maKhachHang)
+        {
+            return kv.GetTenKhachHang(maKhachHang);
+        }
+
+
+        // Thêm khoản vay
+        public bool ThemKhoanVay(ET.ET_KhoanVay et,out string error)
+        {
+            return kv.ThemKhoanVay(et, out error);
         }
 
         // Cập nhật khoản vay
-        public bool CapNhatKhoanVay(ET.ET_KhoanVay et)
+        public bool CapNhatKhoanVay(ET.ET_KhoanVay et,out string error)
         {
-            return kv.CapNhatKhoanVay(et);
+            return kv.CapNhatKhoanVay(et, out error);
         }
 
         // Xóa khoản vay
-        public bool XoaKhoanVay(ET.ET_KhoanVay et)
+        public bool XoaKhoanVay(ET.ET_KhoanVay et, out string error)
         {
-            return kv.XoaKhoanVay(et);
+            return kv.XoaKhoanVay(et, out error);
         }
     }
 }
