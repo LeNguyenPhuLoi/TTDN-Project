@@ -17,11 +17,48 @@ namespace DAL
         {
             db = new QLNHDataContext(conn.GetConnection());
         }
+
+        //Lay danh sách khach hàng
+        public IQueryable LoadDSKH()
+        {
+            IQueryable ds = from kh in db.KHACHHANGs
+                            select new
+                            {
+                                kh.MAKH,
+                                kh.TENKH,
+                                kh.SDT,
+                                kh.GIOITINH
+                            };
+            return ds;
+        }
+
+        // Lấy danh sách tài khoản
+        public IQueryable LoadDSKM()
+        {
+            IQueryable ds = from tk in db.KHUYENMAIs
+                            select new
+                            {
+                                tk.MAKM,
+                                tk.TENKM,
+                                tk.MOTA,
+                                tk.NGAYBD,
+                                tk.NGAYKT,
+                                tk.DKAPDUNG
+                            };
+            return ds;
+        }
+
         // Lấy danh sách áp dụng khuyến mãi
         public IQueryable LoadKhuyenMai()
         {
             IQueryable ds = from adkm in db.APDUNGKHUYENMAIs
-                            select adkm;
+                            select new
+                            {
+                                adkm.MAKM,
+                                adkm.MAKH,
+                                adkm.MATK,
+                                adkm.NGAYAPDUNG
+                            };
             return ds;
         }
         // Thêm Áp Dung khuyến mãi

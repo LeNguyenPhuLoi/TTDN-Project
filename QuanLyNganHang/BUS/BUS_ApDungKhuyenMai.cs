@@ -18,6 +18,18 @@ namespace BUS
             return adkm.LoadKhuyenMai();
         }
 
+        // Lấy danh sách khách hàng
+        public IQueryable LoadDSKhachHang()
+        {
+            return adkm.LoadDSKH();
+        }
+
+        // Lấy danh sách tài khoản
+        public IQueryable LoadDSKM()
+        {
+            return adkm.LoadDSKM();
+        }
+
         // Thêm áp dụng khuyến mãi
         public bool ThemApDungKhuyenMai(ET_ApDungKhuyenMai et)
         {
