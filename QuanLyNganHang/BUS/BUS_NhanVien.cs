@@ -47,6 +47,26 @@ namespace BUS
             return nv.LayMaCNTheoTen(ten);
         }
 
+        public IQueryable TimNVTheoMa(string ma)
+        {
+            return nv.TimNVTheoMa(ma);
+        }
+
+        public IQueryable TimNVTheoTen(string ten)
+        {
+            return nv.TimNVTheoTen(ten);
+        }
+
+        public IQueryable TimNVTheoSDT(int sdt)
+        {
+            return nv.TimNVTheoSDT(sdt);
+        }
+
+        public IQueryable TimNVTheoTenCN(string tencn)
+        {
+            return nv.TimNVTheoTenCN(tencn);
+        }
+
         public bool ThemNV(ET_NhanVien et)
         {
             return nv.ThemNV(et);
