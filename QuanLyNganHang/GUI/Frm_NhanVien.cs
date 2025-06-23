@@ -35,9 +35,12 @@ namespace GUI
             dtp_ngaysinh.MaxDate = DateTime.Now.AddYears(-0);
             dgv_nhanvien.DataSource = bus_NhanVien.LoadDSNV();
             rdb_nam.Checked = true;
+            cbo_timcn.Visible = false;
+            txt_giatri.Visible = true;
             AddToCBO(bus_NhanVien.LoadTenPB(), cbo_mapb);
             AddToCBO(bus_NhanVien.LoadTenCN(), cbo_macn);
-
+            AddToCBO(bus_NhanVien.LoadTenCN(), cbo_timcn);
+            cbo_phuongthuc.SelectedIndex = 0;
         }
 
         private void Frm_NhanVien_Resize(object sender, EventArgs e)
@@ -74,6 +77,10 @@ namespace GUI
             txt_sdt.Clear();
             cbo_mapb.Text = null;
             cbo_macn.Text = null;
+            txt_giatri.Clear();
+            cbo_timcn.Text = null;
+            cbo_phuongthuc.SelectedIndex = 0;
+            dgv_nhanvien.DataSource = bus_NhanVien.LoadDSNV();
         }
 
         private void btn_Lammoi_Click(object sender, EventArgs e)
@@ -213,6 +220,53 @@ namespace GUI
                 MessageBox.Show("Lỗi " + ex.Message);
             }
             dgv_nhanvien.DataSource = bus_NhanVien.LoadDSNV();
+        }
+
+        private void cbo_phuongthuc_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if(cbo_phuongthuc.Text == "Chi Nhánh")
+                {
+                    cbo_timcn.Visible = true;
+                    txt_giatri.Visible = false;
+                }
+                else
+                {
+                    cbo_timcn.Visible = false;
+                    txt_giatri.Visible = true;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi " + ex.Message);
+            }
+        }
+
+        private void btn_Tim_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                switch (cbo_phuongthuc.Text)
+                {
+                    case "Mã Nhân Viên":
+                        dgv_nhanvien.DataSource = bus_NhanVien.TimNVTheoMa(txt_giatri.Text);
+                        break;
+                    case "Tên Nhân Viên":
+                        dgv_nhanvien.DataSource = bus_NhanVien.TimNVTheoTen(txt_giatri.Text);
+                        break;
+                    case "SĐT":
+                        dgv_nhanvien.DataSource = bus_NhanVien.TimNVTheoSDT(int.Parse(txt_giatri.Text));
+                        break;
+                    case "Chi Nhánh":
+                        dgv_nhanvien.DataSource = bus_NhanVien.TimNVTheoTenCN(cbo_timcn.Text);
+                        break;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi " + ex.Message);
+            }
         }
     }
 }

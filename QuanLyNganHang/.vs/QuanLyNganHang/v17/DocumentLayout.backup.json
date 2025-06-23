@@ -1,30 +1,22 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\TTDN-Project\\QuanLyNganHang\\",
+  "WorkspaceRootPath": "D:\\\u0110\u1ED2 \u00C1N TTDN\\TTDN-Project\\QuanLyNganHang\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DD5CDC54-9399-46A4-B844-FB2507673A03}|GUI\\GUI.csproj|d:\\ttdn-project\\quanlynganhang\\gui\\khoanvay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{DD5CDC54-9399-46A4-B844-FB2507673A03}|GUI\\GUI.csproj|solutionrelative:gui\\khoanvay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{DD5CDC54-9399-46A4-B844-FB2507673A03}|GUI\\GUI.csproj|d:\\\u0111\u1ED3 \u00E1n ttdn\\ttdn-project\\quanlynganhang\\gui\\frm_nhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{DD5CDC54-9399-46A4-B844-FB2507673A03}|GUI\\GUI.csproj|solutionrelative:gui\\frm_nhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DD5CDC54-9399-46A4-B844-FB2507673A03}|GUI\\GUI.csproj|D:\\TTDN-Project\\QuanLyNganHang\\gui\\mainuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{DD5CDC54-9399-46A4-B844-FB2507673A03}|GUI\\GUI.csproj|solutionrelative:gui\\mainuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{28FFE92F-BC73-4740-9150-176B686649BD}|DAL\\DAL.csproj|d:\\\u0111\u1ED3 \u00E1n ttdn\\ttdn-project\\quanlynganhang\\dal\\dal_nhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{28FFE92F-BC73-4740-9150-176B686649BD}|DAL\\DAL.csproj|solutionrelative:dal\\dal_nhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DD5CDC54-9399-46A4-B844-FB2507673A03}|GUI\\GUI.csproj|D:\\TTDN-Project\\QuanLyNganHang\\gui\\mainuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DD5CDC54-9399-46A4-B844-FB2507673A03}|GUI\\GUI.csproj|solutionrelative:gui\\mainuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0DA6D398-4103-4732-81F1-3665CAD4BAF6}|BUS\\BUS.csproj|d:\\\u0111\u1ED3 \u00E1n ttdn\\ttdn-project\\quanlynganhang\\bus\\bus_nhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0DA6D398-4103-4732-81F1-3665CAD4BAF6}|BUS\\BUS.csproj|solutionrelative:bus\\bus_nhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DD5CDC54-9399-46A4-B844-FB2507673A03}|GUI\\GUI.csproj|D:\\TTDN-Project\\QuanLyNganHang\\gui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DD5CDC54-9399-46A4-B844-FB2507673A03}|GUI\\GUI.csproj|solutionrelative:gui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{28FFE92F-BC73-4740-9150-176B686649BD}|DAL\\DAL.csproj|D:\\TTDN-Project\\QuanLyNganHang\\dal\\autoconnect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{28FFE92F-BC73-4740-9150-176B686649BD}|DAL\\DAL.csproj|solutionrelative:dal\\autoconnect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DD5CDC54-9399-46A4-B844-FB2507673A03}|GUI\\GUI.csproj|D:\\TTDN-Project\\QuanLyNganHang\\gui\\khoanvay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DD5CDC54-9399-46A4-B844-FB2507673A03}|GUI\\GUI.csproj|solutionrelative:gui\\khoanvay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DD5CDC54-9399-46A4-B844-FB2507673A03}|GUI\\GUI.csproj|d:\\\u0111\u1ED3 \u00E1n ttdn\\ttdn-project\\quanlynganhang\\gui\\frm_nhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD5CDC54-9399-46A4-B844-FB2507673A03}|GUI\\GUI.csproj|solutionrelative:gui\\frm_nhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,80 +26,57 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\TTDN-Project\\QuanLyNganHang\\GUI\\Program.cs",
-              "RelativeDocumentMoniker": "GUI\\Program.cs",
-              "ToolTip": "D:\\TTDN-Project\\QuanLyNganHang\\GUI\\Program.cs",
-              "RelativeToolTip": "GUI\\Program.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAADUAAAAFAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "BUS_NhanVien.cs",
+              "DocumentMoniker": "D:\\\u0110\u1ED2 \u00C1N TTDN\\TTDN-Project\\QuanLyNganHang\\BUS\\BUS_NhanVien.cs",
+              "RelativeDocumentMoniker": "BUS\\BUS_NhanVien.cs",
+              "ToolTip": "D:\\\u0110\u1ED2 \u00C1N TTDN\\TTDN-Project\\QuanLyNganHang\\BUS\\BUS_NhanVien.cs",
+              "RelativeToolTip": "BUS\\BUS_NhanVien.cs",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAQwEIAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-16T08:52:20.569Z",
-              "IsPinned": true
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "AutoConnect.cs",
-              "DocumentMoniker": "D:\\TTDN-Project\\QuanLyNganHang\\DAL\\AutoConnect.cs",
-              "RelativeDocumentMoniker": "DAL\\AutoConnect.cs",
-              "ToolTip": "D:\\TTDN-Project\\QuanLyNganHang\\DAL\\AutoConnect.cs",
-              "RelativeToolTip": "DAL\\AutoConnect.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAawBEAAABFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-19T07:21:18.406Z",
-              "IsPinned": true
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "KhoanVay.cs",
-              "DocumentMoniker": "D:\\TTDN-Project\\QuanLyNganHang\\GUI\\KhoanVay.cs",
-              "RelativeDocumentMoniker": "GUI\\KhoanVay.cs",
-              "ToolTip": "D:\\TTDN-Project\\QuanLyNganHang\\GUI\\KhoanVay.cs",
-              "RelativeToolTip": "GUI\\KhoanVay.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAlwBsAAAA+AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-21T08:06:52.675Z",
+              "WhenOpened": "2025-06-23T01:25:36.639Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MainUser.cs",
-              "DocumentMoniker": "D:\\TTDN-Project\\QuanLyNganHang\\GUI\\MainUser.cs",
-              "RelativeDocumentMoniker": "GUI\\MainUser.cs",
-              "ToolTip": "D:\\TTDN-Project\\QuanLyNganHang\\GUI\\MainUser.cs",
-              "RelativeToolTip": "GUI\\MainUser.cs",
-              "ViewState": "AgIAAD0AAAAAAAAAAAAAAEQAAABBAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "DAL_NhanVien.cs",
+              "DocumentMoniker": "D:\\\u0110\u1ED2 \u00C1N TTDN\\TTDN-Project\\QuanLyNganHang\\DAL\\DAL_NhanVien.cs",
+              "RelativeDocumentMoniker": "DAL\\DAL_NhanVien.cs",
+              "ToolTip": "D:\\\u0110\u1ED2 \u00C1N TTDN\\TTDN-Project\\QuanLyNganHang\\DAL\\DAL_NhanVien.cs",
+              "RelativeToolTip": "DAL\\DAL_NhanVien.cs",
+              "ViewState": "AgIAAEMAAAAAAAAAAADwv04AAACPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-21T08:06:18.506Z"
+              "WhenOpened": "2025-06-23T01:11:18.196Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MainUser.cs [Design]",
-              "DocumentMoniker": "D:\\TTDN-Project\\QuanLyNganHang\\GUI\\MainUser.cs",
-              "RelativeDocumentMoniker": "GUI\\MainUser.cs",
-              "ToolTip": "D:\\TTDN-Project\\QuanLyNganHang\\GUI\\MainUser.cs [Design]",
-              "RelativeToolTip": "GUI\\MainUser.cs [Design]",
+              "DocumentIndex": 3,
+              "Title": "Frm_NhanVien.cs",
+              "DocumentMoniker": "D:\\\u0110\u1ED2 \u00C1N TTDN\\TTDN-Project\\QuanLyNganHang\\GUI\\Frm_NhanVien.cs",
+              "RelativeDocumentMoniker": "GUI\\Frm_NhanVien.cs",
+              "ToolTip": "D:\\\u0110\u1ED2 \u00C1N TTDN\\TTDN-Project\\QuanLyNganHang\\GUI\\Frm_NhanVien.cs*",
+              "RelativeToolTip": "GUI\\Frm_NhanVien.cs*",
+              "ViewState": "AgIAAPEAAAAAAAAAAAAAAAUBAABNAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-21T08:06:16.241Z"
+              "WhenOpened": "2025-06-23T01:10:55.522Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "KhoanVay.cs [Design]",
-              "DocumentMoniker": "D:\\TTDN-Project\\QuanLyNganHang\\GUI\\KhoanVay.cs",
-              "RelativeDocumentMoniker": "GUI\\KhoanVay.cs",
-              "ToolTip": "D:\\TTDN-Project\\QuanLyNganHang\\GUI\\KhoanVay.cs [Design]",
-              "RelativeToolTip": "GUI\\KhoanVay.cs [Design]",
+              "Title": "Frm_NhanVien.cs [Design]",
+              "DocumentMoniker": "D:\\\u0110\u1ED2 \u00C1N TTDN\\TTDN-Project\\QuanLyNganHang\\GUI\\Frm_NhanVien.cs",
+              "RelativeDocumentMoniker": "GUI\\Frm_NhanVien.cs",
+              "ToolTip": "D:\\\u0110\u1ED2 \u00C1N TTDN\\TTDN-Project\\QuanLyNganHang\\GUI\\Frm_NhanVien.cs [Design]*",
+              "RelativeToolTip": "GUI\\Frm_NhanVien.cs [Design]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-21T02:06:43.603Z",
+              "WhenOpened": "2025-06-23T01:10:34.615Z",
               "EditorCaption": " [Design]"
             }
           ]

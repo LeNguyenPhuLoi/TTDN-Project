@@ -151,3 +151,14 @@ E:\TTDN Project\17-6-2025\TTDN-Project\QuanLyNganHang\ET\obj\Debug\netstandard2.
 E:\TTDN Project\17-6-2025\TTDN-Project\QuanLyNganHang\ET\obj\Debug\netstandard2.0\ET.sourcelink.json
 E:\TTDN Project\17-6-2025\TTDN-Project\QuanLyNganHang\ET\obj\Debug\netstandard2.0\ET.dll
 E:\TTDN Project\17-6-2025\TTDN-Project\QuanLyNganHang\ET\obj\Debug\netstandard2.0\ET.pdb
+D:\ĐỒ ÁN TTDN\TTDN-Project\QuanLyNganHang\ET\bin\Debug\netstandard2.0\ET.deps.json
+D:\ĐỒ ÁN TTDN\TTDN-Project\QuanLyNganHang\ET\bin\Debug\netstandard2.0\ET.dll
+D:\ĐỒ ÁN TTDN\TTDN-Project\QuanLyNganHang\ET\bin\Debug\netstandard2.0\ET.pdb
+D:\ĐỒ ÁN TTDN\TTDN-Project\QuanLyNganHang\ET\obj\Debug\netstandard2.0\ET.csproj.AssemblyReference.cache
+D:\ĐỒ ÁN TTDN\TTDN-Project\QuanLyNganHang\ET\obj\Debug\netstandard2.0\ET.GeneratedMSBuildEditorConfig.editorconfig
+D:\ĐỒ ÁN TTDN\TTDN-Project\QuanLyNganHang\ET\obj\Debug\netstandard2.0\ET.AssemblyInfoInputs.cache
+D:\ĐỒ ÁN TTDN\TTDN-Project\QuanLyNganHang\ET\obj\Debug\netstandard2.0\ET.AssemblyInfo.cs
+D:\ĐỒ ÁN TTDN\TTDN-Project\QuanLyNganHang\ET\obj\Debug\netstandard2.0\ET.csproj.CoreCompileInputs.cache
+D:\ĐỒ ÁN TTDN\TTDN-Project\QuanLyNganHang\ET\obj\Debug\netstandard2.0\ET.sourcelink.json
+D:\ĐỒ ÁN TTDN\TTDN-Project\QuanLyNganHang\ET\obj\Debug\netstandard2.0\ET.dll
+D:\ĐỒ ÁN TTDN\TTDN-Project\QuanLyNganHang\ET\obj\Debug\netstandard2.0\ET.pdb

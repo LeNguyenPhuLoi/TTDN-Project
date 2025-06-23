@@ -72,6 +72,39 @@ namespace DAL
             return ma;
         }
 
+        public IQueryable TimNVTheoMa(string ma)
+        {
+            IQueryable NV = from nv in db.NHANVIENs
+                            where nv.MANV.Contains(ma)
+                            select new { nv.MANV, nv.TENNV, nv.GIOITINH, nv.NGAYSINH, nv.CHUC, nv.LUONG, nv.DIACHI, nv.SDT, nv.MAPB, nv.MACN };
+            return NV;
+        }
+
+        public IQueryable TimNVTheoTen(string ten)
+        {
+            IQueryable NV = from nv in db.NHANVIENs
+                            where nv.TENNV.Contains(ten)
+                            select new { nv.MANV, nv.TENNV, nv.GIOITINH, nv.NGAYSINH, nv.CHUC, nv.LUONG, nv.DIACHI, nv.SDT, nv.MAPB, nv.MACN };
+            return NV;
+        }
+
+        public IQueryable TimNVTheoSDT(int sdt)
+        {
+            IQueryable NV = from nv in db.NHANVIENs
+                            where nv.SDT == sdt
+                            select new { nv.MANV, nv.TENNV, nv.GIOITINH, nv.NGAYSINH, nv.CHUC, nv.LUONG, nv.DIACHI, nv.SDT, nv.MAPB, nv.MACN };
+            return NV;
+        }
+
+        public IQueryable TimNVTheoTenCN(string tencn)
+        {
+            IQueryable NV = from nv in db.NHANVIENs
+                            where nv.MACN.Contains(LayMaCNTheoTen(tencn))
+                            select new { nv.MANV, nv.TENNV, nv.GIOITINH, nv.NGAYSINH, nv.CHUC, nv.LUONG, nv.DIACHI, nv.SDT, nv.MAPB, nv.MACN };
+
+            return NV;
+        }
+
         //Thêm nhân viên
         public bool     ThemNV(ET_NhanVien et)
         {

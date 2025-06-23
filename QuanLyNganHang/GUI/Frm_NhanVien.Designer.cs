@@ -65,6 +65,7 @@
             this.gb_DanhSach = new System.Windows.Forms.GroupBox();
             this.dgv_nhanvien = new System.Windows.Forms.DataGridView();
             this.lbl_title = new System.Windows.Forms.Label();
+            this.cbo_timcn = new System.Windows.Forms.ComboBox();
             this.gb_ChucNang.SuspendLayout();
             this.gb_ThongTin.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -347,6 +348,7 @@
             // 
             // gb_Timkiem
             // 
+            this.gb_Timkiem.Controls.Add(this.cbo_timcn);
             this.gb_Timkiem.Controls.Add(this.btn_Tim);
             this.gb_Timkiem.Controls.Add(this.label11);
             this.gb_Timkiem.Controls.Add(this.cbo_phuongthuc);
@@ -367,6 +369,7 @@
             this.btn_Tim.TabIndex = 19;
             this.btn_Tim.Text = "Tìm";
             this.btn_Tim.UseVisualStyleBackColor = true;
+            this.btn_Tim.Click += new System.EventHandler(this.btn_Tim_Click);
             // 
             // label11
             // 
@@ -381,10 +384,16 @@
             // 
             this.cbo_phuongthuc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbo_phuongthuc.FormattingEnabled = true;
+            this.cbo_phuongthuc.Items.AddRange(new object[] {
+            "Mã Nhân Viên",
+            "Tên Nhân Viên",
+            "SĐT",
+            "Chi Nhánh"});
             this.cbo_phuongthuc.Location = new System.Drawing.Point(172, 34);
             this.cbo_phuongthuc.Name = "cbo_phuongthuc";
             this.cbo_phuongthuc.Size = new System.Drawing.Size(315, 24);
             this.cbo_phuongthuc.TabIndex = 17;
+            this.cbo_phuongthuc.TextChanged += new System.EventHandler(this.cbo_phuongthuc_TextChanged);
             // 
             // label12
             // 
@@ -435,6 +444,15 @@
             this.lbl_title.Size = new System.Drawing.Size(428, 53);
             this.lbl_title.TabIndex = 37;
             this.lbl_title.Text = "Quản Lý Nhân Viên";
+            // 
+            // cbo_timcn
+            // 
+            this.cbo_timcn.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbo_timcn.FormattingEnabled = true;
+            this.cbo_timcn.Location = new System.Drawing.Point(568, 33);
+            this.cbo_timcn.Name = "cbo_timcn";
+            this.cbo_timcn.Size = new System.Drawing.Size(315, 24);
+            this.cbo_timcn.TabIndex = 20;
             // 
             // Frm_NhanVien
             // 
@@ -504,5 +522,6 @@
         private System.Windows.Forms.DataGridView dgv_nhanvien;
         private System.Windows.Forms.Label lbl_title;
         private System.Windows.Forms.ComboBox cbo_macn;
+        private System.Windows.Forms.ComboBox cbo_timcn;
     }
 }
