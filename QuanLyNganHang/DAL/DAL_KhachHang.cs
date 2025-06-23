@@ -28,6 +28,42 @@ namespace DAL
             return KH;
         }
 
+        //hàm tìm khách hàng theo mã
+        public IQueryable TimKHTheoMa(string ma)
+        {
+            IQueryable KH = from kh in db.KHACHHANGs
+                            where kh.MAKH.Contains(ma)
+                            select kh;
+            return KH;
+        }
+
+        //hàm tìm khách hàng theo tên
+        public IQueryable TimKHTheoTen(string ten)
+        {
+            IQueryable KH = from kh in db.KHACHHANGs
+                            where kh.TENKH.Contains(ten)
+                            select kh;
+            return KH;
+        }
+
+        //hàm tìm khách hàng theo CCCD/CMND
+        public IQueryable TimKHTheoCCCD(string cccd)
+        {
+            IQueryable KH = from kh in db.KHACHHANGs
+                            where kh.CCCD == cccd
+                            select kh;
+            return KH;
+        }
+
+        //hàm tìm khách hàng theo SDT
+        public IQueryable TimKHTheoSDT(string sdt)
+        {
+            IQueryable KH = from kh in db.KHACHHANGs
+                            where kh.SDT == sdt
+                            select kh;
+            return KH;
+        }
+
         //hàm thêm khách hàng
         public bool ThemKhachHang(ET_KhachHang et)
         {

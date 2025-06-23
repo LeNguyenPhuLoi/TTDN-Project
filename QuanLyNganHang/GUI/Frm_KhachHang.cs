@@ -26,6 +26,7 @@ namespace GUI
             dtp_NgayTao.MaxDate = DateTime.Now;
             SetSize();
             dgv_KhachHang.DataSource = bUS_KhachHang.LoadDSKhachHang();
+            Clear();
         }
 
         private void Frm_KhachHang_Resize(object sender, EventArgs e)
@@ -45,8 +46,9 @@ namespace GUI
             txt_QuocTich.Clear();
             cbo_DoiTuong.Text = null;
             dtp_NgayTao.Text = dtp_NgayTao.MaxDate.ToString();
-            cbo_PhuongThuc.Text = null;
+            cbo_PhuongThuc.SelectedIndex = 0;
             txt_GiaTri.Clear();
+            dgv_KhachHang.DataSource = bUS_KhachHang.LoadDSKhachHang();
         }
 
         public void SetSize()
@@ -211,6 +213,35 @@ namespace GUI
                 MessageBox.Show("Lỗi: " + ex.Message);
             }
             dgv_KhachHang.DataSource = bUS_KhachHang.LoadDSKhachHang();
+        }
+
+        private void btn_Tim_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                switch (cbo_PhuongThuc.Text) 
+                {
+                    case "Mã Khách Hàng":
+                        dgv_KhachHang.DataSource = bUS_KhachHang.TimKHTheoMa(txt_GiaTri.Text);
+                        break;
+
+                    case "Tên Khách Hàng":
+                        dgv_KhachHang.DataSource = bUS_KhachHang.TimKHTheoTen(txt_GiaTri.Text);
+                        break;
+
+                    case "Số CCCD/CMND":
+                        dgv_KhachHang.DataSource = bUS_KhachHang.TimKHTheoCCCD(txt_GiaTri.Text);
+                        break;
+
+                    case "Số Điện Thoại":
+                        dgv_KhachHang.DataSource = bUS_KhachHang.TimKHTheoSDT(txt_GiaTri.Text);
+                        break;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi: " + ex.Message);
+            }
         }
     }
 }

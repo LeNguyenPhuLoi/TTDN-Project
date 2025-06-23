@@ -1,22 +1,26 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\\u0110\u1ED2 \u00C1N TTDN\\TTDN-Project\\QuanLyNganHang\\",
+  "WorkspaceRootPath": "E:\\TTDN Project\\23-6-2025\\TTDN-Project\\QuanLyNganHang\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DD5CDC54-9399-46A4-B844-FB2507673A03}|GUI\\GUI.csproj|d:\\\u0111\u1ED3 \u00E1n ttdn\\ttdn-project\\quanlynganhang\\gui\\frm_nhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{DD5CDC54-9399-46A4-B844-FB2507673A03}|GUI\\GUI.csproj|solutionrelative:gui\\frm_nhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{DD5CDC54-9399-46A4-B844-FB2507673A03}|GUI\\GUI.csproj|e:\\ttdn project\\23-6-2025\\ttdn-project\\quanlynganhang\\gui\\frm_khachhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD5CDC54-9399-46A4-B844-FB2507673A03}|GUI\\GUI.csproj|solutionrelative:gui\\frm_khachhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{28FFE92F-BC73-4740-9150-176B686649BD}|DAL\\DAL.csproj|d:\\\u0111\u1ED3 \u00E1n ttdn\\ttdn-project\\quanlynganhang\\dal\\dal_nhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{28FFE92F-BC73-4740-9150-176B686649BD}|DAL\\DAL.csproj|solutionrelative:dal\\dal_nhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0DA6D398-4103-4732-81F1-3665CAD4BAF6}|BUS\\BUS.csproj|e:\\ttdn project\\23-6-2025\\ttdn-project\\quanlynganhang\\bus\\bus_khachhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0DA6D398-4103-4732-81F1-3665CAD4BAF6}|BUS\\BUS.csproj|solutionrelative:bus\\bus_khachhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0DA6D398-4103-4732-81F1-3665CAD4BAF6}|BUS\\BUS.csproj|d:\\\u0111\u1ED3 \u00E1n ttdn\\ttdn-project\\quanlynganhang\\bus\\bus_nhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0DA6D398-4103-4732-81F1-3665CAD4BAF6}|BUS\\BUS.csproj|solutionrelative:bus\\bus_nhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{28FFE92F-BC73-4740-9150-176B686649BD}|DAL\\DAL.csproj|e:\\ttdn project\\23-6-2025\\ttdn-project\\quanlynganhang\\dal\\dal_khachhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{28FFE92F-BC73-4740-9150-176B686649BD}|DAL\\DAL.csproj|solutionrelative:dal\\dal_khachhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DD5CDC54-9399-46A4-B844-FB2507673A03}|GUI\\GUI.csproj|d:\\\u0111\u1ED3 \u00E1n ttdn\\ttdn-project\\quanlynganhang\\gui\\frm_nhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DD5CDC54-9399-46A4-B844-FB2507673A03}|GUI\\GUI.csproj|solutionrelative:gui\\frm_nhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DD5CDC54-9399-46A4-B844-FB2507673A03}|GUI\\GUI.csproj|e:\\ttdn project\\23-6-2025\\ttdn-project\\quanlynganhang\\gui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD5CDC54-9399-46A4-B844-FB2507673A03}|GUI\\GUI.csproj|solutionrelative:gui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD5CDC54-9399-46A4-B844-FB2507673A03}|GUI\\GUI.csproj|e:\\ttdn project\\23-6-2025\\ttdn-project\\quanlynganhang\\gui\\frm_khachhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{DD5CDC54-9399-46A4-B844-FB2507673A03}|GUI\\GUI.csproj|solutionrelative:gui\\frm_khachhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,53 +34,69 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "BUS_NhanVien.cs",
-              "DocumentMoniker": "D:\\\u0110\u1ED2 \u00C1N TTDN\\TTDN-Project\\QuanLyNganHang\\BUS\\BUS_NhanVien.cs",
-              "RelativeDocumentMoniker": "BUS\\BUS_NhanVien.cs",
-              "ToolTip": "D:\\\u0110\u1ED2 \u00C1N TTDN\\TTDN-Project\\QuanLyNganHang\\BUS\\BUS_NhanVien.cs",
-              "RelativeToolTip": "BUS\\BUS_NhanVien.cs",
-              "ViewState": "AgIAAC8AAAAAAAAAAAAQwEIAAAAkAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\TTDN Project\\23-6-2025\\TTDN-Project\\QuanLyNganHang\\GUI\\Program.cs",
+              "RelativeDocumentMoniker": "GUI\\Program.cs",
+              "ToolTip": "E:\\TTDN Project\\23-6-2025\\TTDN-Project\\QuanLyNganHang\\GUI\\Program.cs",
+              "RelativeToolTip": "GUI\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-23T01:25:36.639Z",
+              "WhenOpened": "2025-06-23T02:13:47.833Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DAL_KhachHang.cs",
+              "DocumentMoniker": "E:\\TTDN Project\\23-6-2025\\TTDN-Project\\QuanLyNganHang\\DAL\\DAL_KhachHang.cs",
+              "RelativeDocumentMoniker": "DAL\\DAL_KhachHang.cs",
+              "ToolTip": "E:\\TTDN Project\\23-6-2025\\TTDN-Project\\QuanLyNganHang\\DAL\\DAL_KhachHang.cs",
+              "RelativeToolTip": "DAL\\DAL_KhachHang.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAIwDsAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-23T02:25:37.274Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "DAL_NhanVien.cs",
-              "DocumentMoniker": "D:\\\u0110\u1ED2 \u00C1N TTDN\\TTDN-Project\\QuanLyNganHang\\DAL\\DAL_NhanVien.cs",
-              "RelativeDocumentMoniker": "DAL\\DAL_NhanVien.cs",
-              "ToolTip": "D:\\\u0110\u1ED2 \u00C1N TTDN\\TTDN-Project\\QuanLyNganHang\\DAL\\DAL_NhanVien.cs",
-              "RelativeToolTip": "DAL\\DAL_NhanVien.cs",
-              "ViewState": "AgIAAEMAAAAAAAAAAADwv04AAACPAAAAAAAAAA==",
+              "Title": "BUS_KhachHang.cs",
+              "DocumentMoniker": "E:\\TTDN Project\\23-6-2025\\TTDN-Project\\QuanLyNganHang\\BUS\\BUS_KhachHang.cs",
+              "RelativeDocumentMoniker": "BUS\\BUS_KhachHang.cs",
+              "ToolTip": "E:\\TTDN Project\\23-6-2025\\TTDN-Project\\QuanLyNganHang\\BUS\\BUS_KhachHang.cs",
+              "RelativeToolTip": "BUS\\BUS_KhachHang.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAgwCsAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-23T01:11:18.196Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Frm_NhanVien.cs",
-              "DocumentMoniker": "D:\\\u0110\u1ED2 \u00C1N TTDN\\TTDN-Project\\QuanLyNganHang\\GUI\\Frm_NhanVien.cs",
-              "RelativeDocumentMoniker": "GUI\\Frm_NhanVien.cs",
-              "ToolTip": "D:\\\u0110\u1ED2 \u00C1N TTDN\\TTDN-Project\\QuanLyNganHang\\GUI\\Frm_NhanVien.cs*",
-              "RelativeToolTip": "GUI\\Frm_NhanVien.cs*",
-              "ViewState": "AgIAAPEAAAAAAAAAAAAAAAUBAABNAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-23T01:10:55.522Z",
+              "WhenOpened": "2025-06-23T02:22:16.533Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Frm_NhanVien.cs [Design]",
-              "DocumentMoniker": "D:\\\u0110\u1ED2 \u00C1N TTDN\\TTDN-Project\\QuanLyNganHang\\GUI\\Frm_NhanVien.cs",
-              "RelativeDocumentMoniker": "GUI\\Frm_NhanVien.cs",
-              "ToolTip": "D:\\\u0110\u1ED2 \u00C1N TTDN\\TTDN-Project\\QuanLyNganHang\\GUI\\Frm_NhanVien.cs [Design]*",
-              "RelativeToolTip": "GUI\\Frm_NhanVien.cs [Design]*",
+              "Title": "Frm_KhachHang.cs",
+              "DocumentMoniker": "E:\\TTDN Project\\23-6-2025\\TTDN-Project\\QuanLyNganHang\\GUI\\Frm_KhachHang.cs",
+              "RelativeDocumentMoniker": "GUI\\Frm_KhachHang.cs",
+              "ToolTip": "E:\\TTDN Project\\23-6-2025\\TTDN-Project\\QuanLyNganHang\\GUI\\Frm_KhachHang.cs*",
+              "RelativeToolTip": "GUI\\Frm_KhachHang.cs*",
+              "ViewState": "AgIAANQAAAAAAAAAAADwv+wAAABNAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-23T01:10:34.615Z",
+              "WhenOpened": "2025-06-23T02:15:35.689Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Frm_KhachHang.cs [Design]",
+              "DocumentMoniker": "E:\\TTDN Project\\23-6-2025\\TTDN-Project\\QuanLyNganHang\\GUI\\Frm_KhachHang.cs",
+              "RelativeDocumentMoniker": "GUI\\Frm_KhachHang.cs",
+              "ToolTip": "E:\\TTDN Project\\23-6-2025\\TTDN-Project\\QuanLyNganHang\\GUI\\Frm_KhachHang.cs [Design]*",
+              "RelativeToolTip": "GUI\\Frm_KhachHang.cs [Design]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-23T02:15:31.267Z",
               "EditorCaption": " [Design]"
             }
           ]
