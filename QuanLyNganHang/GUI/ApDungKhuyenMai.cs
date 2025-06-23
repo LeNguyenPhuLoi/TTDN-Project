@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BUS;
+using ET;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,11 +19,127 @@ namespace GUI
             InitializeComponent();
         }
 
+        BUS_ChuyenKhoan bsck = new BUS_ChuyenKhoan();
+        BUS_ApDungKhuyenMai bs = new BUS_ApDungKhuyenMai();
+
         private void frmApDungKhuyenMai_Load(object sender, EventArgs e)
         {
             this.BackColor = ColorTranslator.FromHtml("#52362A");
             pnlMain.BackColor = ColorTranslator.FromHtml("#DED4CA");
             lbTim.ForeColor = ColorTranslator.FromHtml("#DED4CA");
+
+            dgvApDungKhuyenMai.DataSource = bs.LoadDSApDungKhuyenMai();
+            dgvKH.DataSource = bs.LoadDSKhachHang();
+            dgvKhuyenMai.DataSource = bs.LoadDSKM();
+            
+            // Thêm dữ liệu vào các ComboBox
+            AddToCombo(bsck.LoadMaTK(), cboMaTK);
+            
+            btnHoanTac.PerformClick();
+        }
+
+        public void AddToCombo(IQueryable list, ComboBox c)
+        {
+            foreach (var a in list)
+            {
+                c.Items.Add(a);
+            }
+        }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            ET_ApDungKhuyenMai et = new ET_ApDungKhuyenMai(txtMaKM.Text, txtMaKH.Text, cboMaTK.Text, dtpNgayApDung.Value);
+            if (bs.ThemApDungKhuyenMai(et) == true)
+            {
+                MessageBox.Show("Thêm thành công!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                btnHoanTac.PerformClick(); // Gọi hàm hoàn tác để làm sạch các trường nhập
+            }
+            else
+            {
+                MessageBox.Show("Thêm không thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            dgvApDungKhuyenMai.DataSource = bs.LoadDSApDungKhuyenMai();
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            ET_ApDungKhuyenMai et = new ET_ApDungKhuyenMai(txtMaKM.Text, txtMaKH.Text, cboMaTK.Text, dtpNgayApDung.Value);
+            if (bs.XoaApDungKhuyenMai(et) == true)
+            {
+                MessageBox.Show("Xóa thành công!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                btnHoanTac.PerformClick(); // Gọi hàm hoàn tác để làm sạch các trường nhập
+            }
+            else
+            {
+                MessageBox.Show("Xóa không thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            dgvApDungKhuyenMai.DataSource = bs.LoadDSApDungKhuyenMai();
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            ET_ApDungKhuyenMai et = new ET_ApDungKhuyenMai(txtMaKM.Text, txtMaKH.Text, cboMaTK.Text, dtpNgayApDung.Value);
+            if (bs.CapNhatApDungKhuyenMai(et) == true)
+            {
+                MessageBox.Show("Cập Nhật thành công!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Cập Nhật không thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            dgvApDungKhuyenMai.DataSource = bs.LoadDSApDungKhuyenMai();
+        }
+
+        private void dgvApDungKhuyenMai_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int dong = dgvApDungKhuyenMai.CurrentRow.Index;
+                txtMaKM.Text = dgvApDungKhuyenMai.Rows[dong].Cells[0].Value.ToString();
+                txtMaKH.Text = dgvApDungKhuyenMai.Rows[dong].Cells[1].Value.ToString();
+                cboMaTK.Text = dgvApDungKhuyenMai.Rows[dong].Cells[2].Value.ToString();
+                dtpNgayApDung.Text = dgvApDungKhuyenMai.Rows[dong].Cells[3].Value.ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void dgvKH_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int dong = dgvKH.CurrentRow.Index;
+                txtMaKH.Text = dgvKH.Rows[dong].Cells[0].Value.ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+
+        private void btnHoanTac_Click(object sender, EventArgs e)
+        {
+            txtMaKM.Clear();
+            txtMaKH.Clear();
+            cboMaTK.SelectedIndex = -1; // Đặt lại ComboBox về trạng thái không chọn
+            dtpNgayApDung.Value = DateTime.Now; // Đặt lại ngày áp dụng về ngày hiện tại
+            cboMaTK.Focus(); // Đặt con trỏ vào ô mã khuyến mãi để nhập tiếp
+        }
+
+        private void dgvKhuyenMai_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int dong = dgvKhuyenMai.CurrentRow.Index;
+                txtMaKM.Text = dgvKhuyenMai.Rows[dong].Cells[0].Value.ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }
