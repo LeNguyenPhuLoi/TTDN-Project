@@ -27,6 +27,24 @@ namespace DAL
             return LTK;
         }
 
+        //hàm tìm loại tài khoản theo mã
+        public IQueryable LayLTKTheoMa(string ma)
+        {
+            IQueryable LTK = from ltk in db.LOAITAIKHOANs
+                             where ltk.MALOAITK.Contains(ma)
+                             select ltk;
+            return LTK;
+        }
+
+        //hàm tìm loại tài khoản theo chi tiết
+        public IQueryable LayLTKTheoChiTiet(string chitiet)
+        {
+            IQueryable LTK = from ltk in db.LOAITAIKHOANs
+                             where ltk.CHITIET.Contains(chitiet)
+                             select ltk;
+            return LTK;
+        }
+
         //hàm thêm loại tài khoản
         public bool ThemLoaiTaiKhoan(ET_LoaiTaiKhoan et)
         {

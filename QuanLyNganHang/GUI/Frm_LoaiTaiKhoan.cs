@@ -24,7 +24,7 @@ namespace GUI
         {
             this.MinimumSize = new System.Drawing.Size(1600, 900);
             SetSize();
-            dgv_LoaiTaiKhoan.DataSource = bUS_LoaiTaiKhoan.LoadDSLoaiTaiKhoan();
+            Clear();
         }
 
         private void Frm_LoaiTaiKhoan_Resize(object sender, EventArgs e)
@@ -36,8 +36,9 @@ namespace GUI
         {
             txt_MaLoaiTK.Clear();
             rtxt_ChiTiet.Clear();
-            cbo_PhuongThuc.Text = null;
+            cbo_PhuongThuc.SelectedIndex = 0;
             txt_GiaTri.Clear();
+            dgv_LoaiTaiKhoan.DataSource = bUS_LoaiTaiKhoan.LoadDSLoaiTaiKhoan();
         }
 
         public void SetSize()
@@ -148,6 +149,28 @@ namespace GUI
             }
             dgv_LoaiTaiKhoan.DataSource = bUS_LoaiTaiKhoan.LoadDSLoaiTaiKhoan();
 
+        }
+
+        private void btn_Tim_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                switch (cbo_PhuongThuc.Text)
+                {
+                    case "Mã Loại":
+                        dgv_LoaiTaiKhoan.DataSource = bUS_LoaiTaiKhoan.LayLTKTheoMa(txt_GiaTri.Text);
+                        break;
+
+                    case "Chi Tiết":
+                        dgv_LoaiTaiKhoan.DataSource = bUS_LoaiTaiKhoan.LayLTKTheoChiTiet(txt_GiaTri.Text);
+                        break;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi: " + ex.Message);
+            }
         }
     }
 }

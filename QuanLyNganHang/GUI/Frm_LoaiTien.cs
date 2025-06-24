@@ -24,7 +24,7 @@ namespace GUI
         {
             this.MinimumSize = new System.Drawing.Size(1600, 900);
             SetSize();
-            dgv_LoaiTien.DataSource = bUS_LoaiTien.LayDSLoaiTien();
+            Clear();
         }
 
         private void Frm_LoaiTien_Resize(object sender, EventArgs e)
@@ -52,6 +52,8 @@ namespace GUI
             txt_KyHieu.Clear();
             txt_QuocGia.Clear();
             cbo_TrangThai.Text = null;
+            cbo_PhuongThuc.SelectedIndex = 0;
+            dgv_LoaiTien.DataSource = bUS_LoaiTien.LayDSLoaiTien();
         }
 
         private void btn_Them_Click(object sender, EventArgs e)
@@ -159,6 +161,31 @@ namespace GUI
                 MessageBox.Show("Lỗi: " + ex.Message);
             }
             dgv_LoaiTien.DataSource = bUS_LoaiTien.LayDSLoaiTien();
+        }
+
+        private void btn_Tim_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                switch (cbo_PhuongThuc.Text)
+                {
+                    case "Mã Loại Tiền":
+                        dgv_LoaiTien.DataSource = bUS_LoaiTien.TimLoaiTienTheoMa(txt_GiaTri.Text);
+                        break;
+
+                    case "Tên Loại Tiền":
+                        dgv_LoaiTien.DataSource = bUS_LoaiTien.TimLoaiTienTheoTen(txt_GiaTri.Text);
+                        break;
+
+                    case "Quốc Gia":
+                        dgv_LoaiTien.DataSource = bUS_LoaiTien.TimLoaiTienTheoQG(txt_GiaTri.Text);
+                        break;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi: " + ex.Message);
+            }
         }
     }
 }

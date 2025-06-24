@@ -27,6 +27,33 @@ namespace DAL
             return LT;
         }
 
+        //hàm tìm loại tiền theo mã
+        public IQueryable TimLoaiTienTheoMa(string ma)
+        {
+            IQueryable LT = from lt in db.LOAITIENs
+                            where lt.MALOAITIEN.Contains(ma)
+                            select lt;
+            return LT;
+        }
+
+        //hàm tìm loại tiền theo tên
+        public IQueryable TimLoaiTienTheoTen(string ten)
+        {
+            IQueryable LT = from lt in db.LOAITIENs
+                            where lt.TENLOAITIEN.Contains(ten)
+                            select lt;
+            return LT;
+        }
+
+        //hàm tìm loại tiền theo quốc gia
+        public IQueryable TimLoaiTienTheoQG(string qg)
+        {
+            IQueryable LT = from lt in db.LOAITIENs
+                            where lt.QUOCGIA.Contains(qg)
+                            select lt;
+            return LT;
+        }
+
         //hàm thêm loại tiền
         public bool ThemLoaiTien(ET_LoaiTien et)
         {
