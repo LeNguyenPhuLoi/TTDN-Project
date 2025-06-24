@@ -26,6 +26,29 @@ namespace DAL
             return PB;
         }
 
+        public IQueryable LoadTenPB()
+        {
+            IQueryable PB = from pb in db.PHONGBANs
+                            select pb.TENPB;
+            return PB;
+        }
+
+        public IQueryable TimPBTheoMa(int ma)
+        {
+            IQueryable PB = from pb in db.PHONGBANs
+                            where pb.MAPB == ma
+                            select pb;
+            return PB;
+        }
+
+        public IQueryable TimPBTheoTen(string ten)
+        {
+            IQueryable PB = from pb in db.PHONGBANs
+                            where pb.TENPB.Contains(ten)
+                            select pb;
+            return PB;
+        }
+
         //Thêm phòng ban
         public bool ThemPB(ET_PhongBan et)
         {
