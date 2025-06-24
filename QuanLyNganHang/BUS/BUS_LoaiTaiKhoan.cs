@@ -20,6 +20,18 @@ namespace BUS
             return ltk.LoadDSLoaiTaiKhoan();
         }
 
+        //gọi hàm tìm loại tài khoản theo mã
+        public IQueryable LayLTKTheoMa(string ma)
+        {
+            return ltk.LayLTKTheoMa(ma);
+        }
+
+        //gọi hàm tìm loại tài khoản theo chi tiết
+        public IQueryable LayLTKTheoChiTiet(string chitiet)
+        {
+            return ltk.LayLTKTheoChiTiet(chitiet);
+        }
+
         //gọi hàm ThemLoaiTaiKhoan từ DAL
         public bool ThemLoaiTaiKhoan(ET_LoaiTaiKhoan et)
         {

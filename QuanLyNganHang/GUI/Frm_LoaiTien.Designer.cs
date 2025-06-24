@@ -82,6 +82,7 @@
             this.btn_Tim.TabIndex = 19;
             this.btn_Tim.Text = "Tìm";
             this.btn_Tim.UseVisualStyleBackColor = true;
+            this.btn_Tim.Click += new System.EventHandler(this.btn_Tim_Click);
             // 
             // label11
             // 
@@ -96,6 +97,10 @@
             // 
             this.cbo_PhuongThuc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbo_PhuongThuc.FormattingEnabled = true;
+            this.cbo_PhuongThuc.Items.AddRange(new object[] {
+            "Mã Loại Tiền",
+            "Tên Loại Tiền",
+            "Quốc Gia"});
             this.cbo_PhuongThuc.Location = new System.Drawing.Point(172, 34);
             this.cbo_PhuongThuc.Name = "cbo_PhuongThuc";
             this.cbo_PhuongThuc.Size = new System.Drawing.Size(315, 31);

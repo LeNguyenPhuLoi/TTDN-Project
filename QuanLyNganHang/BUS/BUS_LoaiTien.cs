@@ -20,6 +20,24 @@ namespace BUS
             return lt.LayDSLoaiTien();
         }
 
+        //hàm tìm loại tiền theo mã
+        public IQueryable TimLoaiTienTheoMa(string ma)
+        {
+            return lt.TimLoaiTienTheoMa(ma);
+        }
+
+        //hàm tìm loại tiền theo tên
+        public IQueryable TimLoaiTienTheoTen(string ten)
+        {
+            return lt.TimLoaiTienTheoTen(ten);
+        }
+
+        //hàm tìm loại tiền theo quốc gia
+        public IQueryable TimLoaiTienTheoQG(string qg)
+        {
+            return lt.TimLoaiTienTheoQG(qg);
+        }
+
         //gọi hàm ThemLoaiTien từ DAL
         public bool ThemLoaiTien(ET_LoaiTien et)
         {
