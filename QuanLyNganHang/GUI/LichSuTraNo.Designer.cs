@@ -32,7 +32,7 @@
             this.btnTim = new System.Windows.Forms.Button();
             this.txtTim = new System.Windows.Forms.TextBox();
             this.lbTim = new System.Windows.Forms.Label();
-            this.dgvKhoanVay = new System.Windows.Forms.DataGridView();
+            this.dgvLichSu = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -43,13 +43,13 @@
             this.btnHoanTac = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
-            this.dgvLaiSuat = new System.Windows.Forms.DataGridView();
+            this.dgvMaVay = new System.Windows.Forms.DataGridView();
             this.txtMaLichSu = new System.Windows.Forms.TextBox();
             this.dtpNgayTra = new System.Windows.Forms.DateTimePicker();
             this.txtMaVay = new System.Windows.Forms.TextBox();
             this.pnlMain = new System.Windows.Forms.Panel();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvKhoanVay)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvLaiSuat)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLichSu)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMaVay)).BeginInit();
             this.pnlMain.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -80,20 +80,21 @@
             this.lbTim.TabIndex = 40;
             this.lbTim.Text = "Lịch Sử Khách Hàng Trả:";
             // 
-            // dgvKhoanVay
+            // dgvLichSu
             // 
-            this.dgvKhoanVay.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dgvLichSu.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvKhoanVay.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvKhoanVay.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvKhoanVay.Location = new System.Drawing.Point(11, 301);
-            this.dgvKhoanVay.MultiSelect = false;
-            this.dgvKhoanVay.Name = "dgvKhoanVay";
-            this.dgvKhoanVay.ReadOnly = true;
-            this.dgvKhoanVay.RowHeadersWidth = 62;
-            this.dgvKhoanVay.Size = new System.Drawing.Size(770, 328);
-            this.dgvKhoanVay.TabIndex = 39;
+            this.dgvLichSu.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvLichSu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvLichSu.Location = new System.Drawing.Point(11, 301);
+            this.dgvLichSu.MultiSelect = false;
+            this.dgvLichSu.Name = "dgvLichSu";
+            this.dgvLichSu.ReadOnly = true;
+            this.dgvLichSu.RowHeadersWidth = 62;
+            this.dgvLichSu.Size = new System.Drawing.Size(850, 328);
+            this.dgvLichSu.TabIndex = 39;
+            this.dgvLichSu.Click += new System.EventHandler(this.dgvLichSu_Click);
             // 
             // label2
             // 
@@ -161,6 +162,7 @@
             this.btnThem.TabIndex = 12;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // btnHoanTac
             // 
@@ -171,6 +173,7 @@
             this.btnHoanTac.TabIndex = 12;
             this.btnHoanTac.Text = "Hoàn tác";
             this.btnHoanTac.UseVisualStyleBackColor = true;
+            this.btnHoanTac.Click += new System.EventHandler(this.btnHoanTac_Click);
             // 
             // btnXoa
             // 
@@ -181,6 +184,7 @@
             this.btnXoa.TabIndex = 11;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnSua
             // 
@@ -191,20 +195,22 @@
             this.btnSua.TabIndex = 10;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
-            // dgvLaiSuat
+            // dgvMaVay
             // 
-            this.dgvLaiSuat.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dgvMaVay.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.dgvLaiSuat.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvLaiSuat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvLaiSuat.Location = new System.Drawing.Point(331, 95);
-            this.dgvLaiSuat.MultiSelect = false;
-            this.dgvLaiSuat.Name = "dgvLaiSuat";
-            this.dgvLaiSuat.ReadOnly = true;
-            this.dgvLaiSuat.RowHeadersWidth = 51;
-            this.dgvLaiSuat.Size = new System.Drawing.Size(420, 122);
-            this.dgvLaiSuat.TabIndex = 17;
+            this.dgvMaVay.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvMaVay.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMaVay.Location = new System.Drawing.Point(331, 95);
+            this.dgvMaVay.MultiSelect = false;
+            this.dgvMaVay.Name = "dgvMaVay";
+            this.dgvMaVay.ReadOnly = true;
+            this.dgvMaVay.RowHeadersWidth = 51;
+            this.dgvMaVay.Size = new System.Drawing.Size(490, 122);
+            this.dgvMaVay.TabIndex = 17;
+            this.dgvMaVay.Click += new System.EventHandler(this.dgvMaVay_Click);
             // 
             // txtMaLichSu
             // 
@@ -219,7 +225,7 @@
             this.dtpNgayTra.CustomFormat = "dd/MM/yyyy";
             this.dtpNgayTra.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpNgayTra.Location = new System.Drawing.Point(445, 19);
-            this.dtpNgayTra.MaxDate = new System.DateTime(2025, 6, 12, 0, 0, 0, 0);
+            this.dtpNgayTra.MaxDate = new System.DateTime(2999, 6, 12, 0, 0, 0, 0);
             this.dtpNgayTra.Name = "dtpNgayTra";
             this.dtpNgayTra.Size = new System.Drawing.Size(180, 22);
             this.dtpNgayTra.TabIndex = 21;
@@ -240,7 +246,7 @@
             this.pnlMain.Controls.Add(this.txtMaVay);
             this.pnlMain.Controls.Add(this.dtpNgayTra);
             this.pnlMain.Controls.Add(this.txtMaLichSu);
-            this.pnlMain.Controls.Add(this.dgvLaiSuat);
+            this.pnlMain.Controls.Add(this.dgvMaVay);
             this.pnlMain.Controls.Add(this.btnSua);
             this.pnlMain.Controls.Add(this.btnXoa);
             this.pnlMain.Controls.Add(this.btnHoanTac);
@@ -253,25 +259,25 @@
             this.pnlMain.Controls.Add(this.label2);
             this.pnlMain.Location = new System.Drawing.Point(11, 12);
             this.pnlMain.Name = "pnlMain";
-            this.pnlMain.Size = new System.Drawing.Size(770, 242);
+            this.pnlMain.Size = new System.Drawing.Size(850, 242);
             this.pnlMain.TabIndex = 38;
             // 
             // frmLichSuTraNo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(793, 450);
+            this.ClientSize = new System.Drawing.Size(873, 450);
             this.Controls.Add(this.btnTim);
             this.Controls.Add(this.txtTim);
             this.Controls.Add(this.lbTim);
-            this.Controls.Add(this.dgvKhoanVay);
+            this.Controls.Add(this.dgvLichSu);
             this.Controls.Add(this.pnlMain);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmLichSuTraNo";
             this.Text = "Quản Lý Lịch Sử Trả Nợ:";
             this.Load += new System.EventHandler(this.frmLichSuTraNo_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvKhoanVay)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvLaiSuat)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLichSu)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMaVay)).EndInit();
             this.pnlMain.ResumeLayout(false);
             this.pnlMain.PerformLayout();
             this.ResumeLayout(false);
@@ -284,7 +290,7 @@
         private System.Windows.Forms.Button btnTim;
         private System.Windows.Forms.TextBox txtTim;
         private System.Windows.Forms.Label lbTim;
-        private System.Windows.Forms.DataGridView dgvKhoanVay;
+        private System.Windows.Forms.DataGridView dgvLichSu;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
@@ -295,7 +301,7 @@
         private System.Windows.Forms.Button btnHoanTac;
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnSua;
-        private System.Windows.Forms.DataGridView dgvLaiSuat;
+        private System.Windows.Forms.DataGridView dgvMaVay;
         private System.Windows.Forms.TextBox txtMaLichSu;
         private System.Windows.Forms.DateTimePicker dtpNgayTra;
         private System.Windows.Forms.TextBox txtMaVay;
