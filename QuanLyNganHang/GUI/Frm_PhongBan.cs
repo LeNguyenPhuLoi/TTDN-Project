@@ -33,6 +33,9 @@ namespace GUI
             gb_ThongTin.Location = new Point(width - 510, 150);
             gb_ChucNang.Location = new Point(width - 510, 50);
             dgv_phongban.DataSource = bus_PhongBan.LoadDSPB();
+            cbo_timtenpb.Visible = false;
+            cbo_phuongthuc.SelectedIndex = 0;
+            AddToCBO(bus_PhongBan.LoadTenPB(), cbo_timtenpb);
         }
 
         private void Frm_PhongBan_Resize(object sender, EventArgs e)
@@ -48,10 +51,22 @@ namespace GUI
             gb_ChucNang.Location = new Point(width - 510, 50);
         }
 
+        public void AddToCBO(IQueryable list, ComboBox cbo)
+        {
+            foreach (var item in list)
+            {
+                cbo.Items.Add(item);
+            }
+        }
+
         public void Clear()
         {
             txt_mapb.Clear();
             txt_tenpb.Clear();
+            txt_giatri.Clear();
+            cbo_timtenpb.Text = null;
+            dgv_phongban.DataSource = bus_PhongBan.LoadDSPB();
+            cbo_phuongthuc.SelectedIndex = 0;
         }
 
         private void btn_Lammoi_Click(object sender, EventArgs e)
@@ -144,6 +159,48 @@ namespace GUI
                 MessageBox.Show("Lỗi " + ex.Message);
             }
             dgv_phongban.DataSource = bus_PhongBan.LoadDSPB();
+        }
+
+        private void cbo_phuongthuc_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (cbo_phuongthuc.Text == "Tên Phòng Ban")
+                {
+                    cbo_timtenpb.Visible = true;
+                    txt_giatri.Visible = false;
+                }
+                else
+                {
+                    cbo_timtenpb.Visible = false;
+                    txt_giatri.Visible = true;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi " + ex.Message);
+            }
+        }
+
+        private void btn_Tim_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                switch (cbo_phuongthuc.Text)
+                {
+                    case "Mã Phòng Ban":
+                        dgv_phongban.DataSource = bus_PhongBan.TimPBTheoMa(int.Parse(txt_giatri.Text));
+                        break;
+                    case "Tên Phòng Ban":
+                        dgv_phongban.DataSource = bus_PhongBan.TimPBTheoTen(cbo_timtenpb.Text);
+                        break;
+                    
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi " + ex.Message);
+            }
         }
     }
 }

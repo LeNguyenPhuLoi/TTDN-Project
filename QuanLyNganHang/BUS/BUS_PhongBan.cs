@@ -17,6 +17,21 @@ namespace BUS
             return pb.LoadDSPB();
         }
 
+        public IQueryable LoadTenPB()
+        {
+            return pb.LoadTenPB();
+        }
+
+        public IQueryable TimPBTheoMa(int ma)
+        {
+            return pb.TimPBTheoMa(ma);
+        }
+
+        public IQueryable TimPBTheoTen(string ten)
+        {
+            return pb.TimPBTheoTen(ten);
+        }
+
         public bool ThemPB(ET_PhongBan et)
         {
             return pb.ThemPB(et);
