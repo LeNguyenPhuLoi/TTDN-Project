@@ -320,7 +320,8 @@
             this.cboTrangThai.FormattingEnabled = true;
             this.cboTrangThai.Items.AddRange(new object[] {
             "Đang vay",
-            "Đã trả xong"});
+            "Đã trả xong",
+            "Còn nợ"});
             this.cboTrangThai.Location = new System.Drawing.Point(122, 120);
             this.cboTrangThai.Name = "cboTrangThai";
             this.cboTrangThai.Size = new System.Drawing.Size(182, 24);

@@ -17,22 +17,28 @@ namespace BUS
             return ls.LoadLichSuTraNo();
         }
 
-        // Thêm lịch sử trả nợ
-        public bool ThemLichSuTraNo(ET.ET_LichSuTraNo et)
+        // Lấy danh sách khoản vay
+        public IQueryable LoadDSKhoanVay()
         {
-            return ls.ThemLichSuTraNo(et);
+            return ls.LoadKhoanVay();
+        }
+
+        // Thêm lịch sử trả nợ
+        public bool ThemLichSuTraNo(ET.ET_LichSuTraNo et,out string error)
+        {
+            return ls.ThemLichSuTraNo(et, out error);
         }
 
         // Cập nhật lịch sử trả nợ
-        public bool CapNhatLichSuTraNo(ET.ET_LichSuTraNo et)
+        public bool CapNhatLichSuTraNo(ET.ET_LichSuTraNo et, out string error)
         {
-            return ls.CapNhatLichSuTraNo(et);
+            return ls.CapNhatLichSuTraNo(et, out error);
         }
 
         // Xóa lịch sử trả nợ
-        public bool XoaLichSuTraNo(ET.ET_LichSuTraNo et)
+        public bool XoaLichSuTraNo(ET.ET_LichSuTraNo et,out string error)
         {
-            return ls.XoaLichSuTraNo(et);
+            return ls.XoaLichSuTraNo(et, out error);
         }
     }
 }
