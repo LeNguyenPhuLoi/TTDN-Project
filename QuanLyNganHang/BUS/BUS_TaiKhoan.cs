@@ -36,6 +36,24 @@ namespace BUS
             return tk.LayDSTenKH();
         }
 
+        //gọi hàm tìm tài khoản theo mã tài khoản
+        public IQueryable TimTKTheoMaTK(string ma)
+        {
+            return tk.TimTKTheoMaTK(ma);
+        }
+
+        //gọi hàm tìm tài khoản theo tên khách hàng
+        public IQueryable TimTKTheoTenKH(string tenkh)
+        {
+            return tk.TimTKTheoTenKH(tenkh);
+        }
+
+        //gọi hàm tìm tài khoản theo số tài khoản
+        public IQueryable TimTKTheoSTK(string stk)
+        {
+            return tk.TimTKTheoSTK(stk);
+        }
+
         //gọi hàm lấy mã khách hàng theo tên
         public string LayMaKHTheoTen(string ten)
         {
