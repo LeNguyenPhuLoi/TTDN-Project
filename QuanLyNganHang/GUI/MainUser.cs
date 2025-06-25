@@ -21,6 +21,28 @@ namespace GUI
             InitializeComponent();
         }
 
+        private Button currentButton = null;
+
+        private void HighlightButton(Button btn)
+        {
+            if (currentButton != null)
+            {
+                // Reset lại màu của button trước
+                currentButton.BackColor = ColorTranslator.FromHtml("#37474F");
+                currentButton.ForeColor = ColorTranslator.FromHtml("#FFFFFF");
+                currentButton.FlatAppearance.BorderSize = 0;
+            }
+
+            // Highlight button mới
+            btn.BackColor = ColorTranslator.FromHtml("#F5F5F5"); // màu sáng nổi bật
+            btn.ForeColor = Color.Black;
+            btn.FlatAppearance.BorderSize = 2;
+            btn.FlatAppearance.BorderColor = Color.White;
+
+            currentButton = btn;
+        }
+
+
         // Biến tạm
         Form currentForm = new Form();
         private void OpenMain(Form childForm)
@@ -94,18 +116,21 @@ namespace GUI
 
         private void btnVay_Click(object sender, EventArgs e)
         {
+            HighlightButton(btnVay);
             frmKhoanVay frm = new frmKhoanVay();
             OpenMain(frm);
         }
 
         private void btnLichSu_Click(object sender, EventArgs e)
         {
+            HighlightButton(btnLichSu);
             frmLichSuTraNo frm = new frmLichSuTraNo();
             OpenMain(frm);
         }
 
         private void btnBL_Click(object sender, EventArgs e)
         {
+            HighlightButton(btnBL);
             Frm_BienLai frm = new Frm_BienLai();
             OpenMain(frm);
         }
@@ -126,30 +151,35 @@ namespace GUI
 
         private void btnTaiKhoan_Click(object sender, EventArgs e)
         {
+            HighlightButton(btnTaiKhoan);
             Frm_TaiKhoan frm = new Frm_TaiKhoan();
             OpenMain(frm);
         }
 
         private void btnCK_Click(object sender, EventArgs e)
         {
+            HighlightButton(btnCK);
             frmChuyenKhoan frm = new frmChuyenKhoan();
             OpenMain(frm);
         }
 
         private void btnGD_Click(object sender, EventArgs e)
         {
+            HighlightButton(btnGD);
             Frm_GiaoDich frm = new Frm_GiaoDich();
             OpenMain(frm);
         }
 
         private void btnKH_Click(object sender, EventArgs e)
         {
+            HighlightButton(btnKH);
             Frm_KhachHang frm = new Frm_KhachHang();
             OpenMain(frm);
         }
 
         private void btnKhuyenMai_Click(object sender, EventArgs e)
         {
+            HighlightButton(btnKhuyenMai);
             frmApDungKhuyenMai frm = new frmApDungKhuyenMai();
             OpenMain(frm);
         }
