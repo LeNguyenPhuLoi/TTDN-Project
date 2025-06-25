@@ -52,6 +52,33 @@ namespace DAL
             return KH;
         }
 
+        //hàm tìm tài khoản theo mã tài khoản
+        public IQueryable TimTKTheoMaTK(string ma)
+        {
+            IQueryable TK = from tk in db.TAIKHOANs
+                            where tk.MATK.Contains(ma)
+                            select tk;
+            return TK;
+        }
+
+        //hàm tìm tài khoản theo tên khách hàng
+        public IQueryable TimTKTheoTenKH(string tenkh)
+        {
+            IQueryable TK = from tk in db.TAIKHOANs
+                            where tk.MAKH.Contains(LayMaKHTheoTen(tenkh))
+                            select tk;
+            return TK;
+        }
+
+        //hàm tìm tài khoản theo số tài khoản
+        public IQueryable TimTKTheoSTK(string stk)
+        {
+            IQueryable TK = from tk in db.TAIKHOANs
+                            where tk.SOTAIKHOAN.Contains(stk)
+                            select tk;
+            return TK;
+        }
+
         //hàm lấy mã khách hàng theo tên
         public string LayMaKHTheoTen(string ten)
         {

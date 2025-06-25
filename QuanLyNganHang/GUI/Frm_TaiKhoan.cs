@@ -26,7 +26,7 @@ namespace GUI
             this.MinimumSize = new System.Drawing.Size(1600, 900);
             SetSize();
             dtp_NgayMoTK.MaxDate = DateTime.Now;
-            dgv_TaiKhoan.DataSource = bUS_TaiKhoan.LayDSTaiKhoan();
+            Clear();
             dgv_TaiKhoan.Columns["KHACHHANG"].Visible = false;
             dgv_TaiKhoan.Columns["LOAITIEN"].Visible = false;
             dgv_TaiKhoan.Columns["LOAITAIKHOAN"].Visible = false;
@@ -71,6 +71,8 @@ namespace GUI
             cbo_LoaiTien.Text = null;
             dtp_NgayMoTK.Text = dtp_NgayMoTK.MaxDate.ToString();
             cbo_TrangThai.Text = null;
+            cbo_PhuongThuc.SelectedIndex = 0;
+            dgv_TaiKhoan.DataSource = bUS_TaiKhoan.LayDSTaiKhoan();
         }
 
         private void btn_Them_Click(object sender, EventArgs e)
@@ -189,6 +191,54 @@ namespace GUI
                 MessageBox.Show("Lỗi: " + ex.Message);
             }
             dgv_TaiKhoan.DataSource = bUS_TaiKhoan.LayDSTaiKhoan();
+        }
+
+        private void cbo_PhuongThuc_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (cbo_PhuongThuc.Text == "Tên Khách Hàng")
+                {
+                    cbo_TenKHTK.Visible = true;
+                    cbo_TenKHTK.Items.Clear();
+                    ThemVaoCBO(cbo_TenKHTK, bUS_TaiKhoan.LayDSTenKH());
+                    txt_GiaTri.Visible = false;
+                }
+                else
+                {
+                    txt_GiaTri.Visible = true;
+                    cbo_TenKHTK.Visible = false;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi: " + ex.Message);
+            }
+        }
+
+        private void btn_Tim_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                switch (cbo_PhuongThuc.Text)
+                {
+                    case "Mã Tài Khoản":
+                        dgv_TaiKhoan.DataSource = bUS_TaiKhoan.TimTKTheoMaTK(txt_GiaTri.Text);
+                        break;
+
+                    case "Tên Khách Hàng":
+                        dgv_TaiKhoan.DataSource = bUS_TaiKhoan.TimTKTheoTenKH(cbo_TenKHTK.Text);
+                        break;
+
+                    case "Số Tài Khoản":
+                        dgv_TaiKhoan.DataSource = bUS_TaiKhoan.TimTKTheoSTK(txt_GiaTri.Text);
+                        break;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi: " + ex.Message);
+            }
         }
     }
 }
