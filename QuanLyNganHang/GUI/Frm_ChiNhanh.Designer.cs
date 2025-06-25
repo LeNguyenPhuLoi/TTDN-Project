@@ -80,6 +80,7 @@
             this.btn_Tim.TabIndex = 19;
             this.btn_Tim.Text = "Tìm";
             this.btn_Tim.UseVisualStyleBackColor = true;
+            this.btn_Tim.Click += new System.EventHandler(this.btn_Tim_Click);
             // 
             // label11
             // 
@@ -94,6 +95,10 @@
             // 
             this.cbo_phuongthuc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbo_phuongthuc.FormattingEnabled = true;
+            this.cbo_phuongthuc.Items.AddRange(new object[] {
+            "Mã Chi Nhánh",
+            "Tên Chi Nhánh",
+            "SĐT Chi Nhánh"});
             this.cbo_phuongthuc.Location = new System.Drawing.Point(172, 34);
             this.cbo_phuongthuc.Name = "cbo_phuongthuc";
             this.cbo_phuongthuc.Size = new System.Drawing.Size(315, 24);
