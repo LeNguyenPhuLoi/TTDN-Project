@@ -26,6 +26,30 @@ namespace DAL
             return CN;
         }
 
+        public IQueryable TimCNTheoMa(string ma)
+        {
+            IQueryable CN = from cn in db.CHINHANHs
+                            where cn.MACN.Contains(ma)
+                            select cn;
+            return CN;
+        }
+
+        public IQueryable TimCNTheoTen(string ten)
+        {
+            IQueryable CN = from cn in db.CHINHANHs
+                            where cn.TENCN.Contains(ten)
+                            select cn;
+            return CN;
+        }
+
+        public IQueryable TimCNTheoSDT(int sdt)
+        {
+            IQueryable CN = from cn in db.CHINHANHs
+                            where cn.SDTCN == sdt
+                            select cn;
+            return CN;
+        }
+
         //Thêm chi nhánh
         public bool ThemCN(ET_ChiNhanh et)
         {

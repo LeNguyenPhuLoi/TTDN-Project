@@ -17,6 +17,21 @@ namespace BUS
             return cn.LoadDSCN();
         }
 
+        public IQueryable TimCNTheoMa(string ma)
+        {
+            return cn.TimCNTheoMa(ma);
+        }
+
+        public IQueryable TimCNTheoTen(string ten)
+        {
+            return cn.TimCNTheoTen(ten);
+        }
+
+        public IQueryable TimCNTheoSDT(int sdt)
+        {
+            return cn.TimCNTheoSDT(sdt);
+        }
+
         public bool ThemCN(ET_ChiNhanh et)
         {
             return cn.ThemCN(et);

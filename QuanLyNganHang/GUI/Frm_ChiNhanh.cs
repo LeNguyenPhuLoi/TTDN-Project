@@ -32,6 +32,7 @@ namespace GUI
             gb_DanhSach.Width = (width / 3) * 2;
             gb_ThongTin.Location = new Point(width - 510, 150);
             gb_ChucNang.Location = new Point(width - 510, 50);
+            cbo_phuongthuc.SelectedIndex = 0;
             dgv_chinhanh.DataSource = bus_ChiNhanh.LoadDSCN();
         }
 
@@ -54,11 +55,14 @@ namespace GUI
             txt_tencn.Clear();
             txt_diachicn.Clear();
             txt_sdtcn.Clear();
+            txt_giatri.Clear();
+            dgv_chinhanh.DataSource = bus_ChiNhanh.LoadDSCN();
+            cbo_phuongthuc.SelectedIndex = 0;
         }
 
         private void btn_Lammoi_Click(object sender, EventArgs e)
         {
-            Clear();
+            Clear();           
         }
 
         private void dgv_chinhanh_Click(object sender, EventArgs e)
@@ -154,6 +158,29 @@ namespace GUI
                 MessageBox.Show("Lỗi " + ex.Message);
             }
             dgv_chinhanh.DataSource = bus_ChiNhanh.LoadDSCN();
+        }
+
+        private void btn_Tim_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                switch (cbo_phuongthuc.Text)
+                {
+                    case "Mã Chi Nhánh":
+                        dgv_chinhanh.DataSource = bus_ChiNhanh.TimCNTheoMa(txt_giatri.Text);
+                        break;
+                    case "Tên Chi Nhánh":
+                        dgv_chinhanh.DataSource = bus_ChiNhanh.TimCNTheoTen(txt_giatri.Text);
+                        break;
+                    case "SĐT Chi Nhánh":
+                        dgv_chinhanh.DataSource = bus_ChiNhanh.TimCNTheoSDT(int.Parse(txt_giatri.Text));
+                        break;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi " + ex.Message);
+            }
         }
     }
 }
