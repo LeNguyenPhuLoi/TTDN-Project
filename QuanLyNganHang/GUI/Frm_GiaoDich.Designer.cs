@@ -48,6 +48,7 @@
             this.txt_LoaiGD = new System.Windows.Forms.TextBox();
             this.txt_MaGD = new System.Windows.Forms.TextBox();
             this.gb_Timkiem = new System.Windows.Forms.GroupBox();
+            this.cbo_STKTK = new System.Windows.Forms.ComboBox();
             this.btn_Tim = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.cbo_PhuongThuc = new System.Windows.Forms.ComboBox();
@@ -253,6 +254,7 @@
             // 
             // gb_Timkiem
             // 
+            this.gb_Timkiem.Controls.Add(this.cbo_STKTK);
             this.gb_Timkiem.Controls.Add(this.btn_Tim);
             this.gb_Timkiem.Controls.Add(this.label11);
             this.gb_Timkiem.Controls.Add(this.cbo_PhuongThuc);
@@ -265,6 +267,15 @@
             this.gb_Timkiem.TabStop = false;
             this.gb_Timkiem.Text = "Tìm Kiếm";
             // 
+            // cbo_STKTK
+            // 
+            this.cbo_STKTK.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbo_STKTK.FormattingEnabled = true;
+            this.cbo_STKTK.Location = new System.Drawing.Point(568, 34);
+            this.cbo_STKTK.Name = "cbo_STKTK";
+            this.cbo_STKTK.Size = new System.Drawing.Size(315, 31);
+            this.cbo_STKTK.TabIndex = 20;
+            // 
             // btn_Tim
             // 
             this.btn_Tim.Location = new System.Drawing.Point(889, 32);
@@ -273,6 +284,7 @@
             this.btn_Tim.TabIndex = 19;
             this.btn_Tim.Text = "Tìm";
             this.btn_Tim.UseVisualStyleBackColor = true;
+            this.btn_Tim.Click += new System.EventHandler(this.btn_Tim_Click);
             // 
             // label11
             // 
@@ -287,10 +299,15 @@
             // 
             this.cbo_PhuongThuc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbo_PhuongThuc.FormattingEnabled = true;
+            this.cbo_PhuongThuc.Items.AddRange(new object[] {
+            "Mã Giao Dịch",
+            "Số Tài Khoản",
+            "Loại Giao Dịch"});
             this.cbo_PhuongThuc.Location = new System.Drawing.Point(172, 34);
             this.cbo_PhuongThuc.Name = "cbo_PhuongThuc";
             this.cbo_PhuongThuc.Size = new System.Drawing.Size(315, 31);
             this.cbo_PhuongThuc.TabIndex = 17;
+            this.cbo_PhuongThuc.SelectedIndexChanged += new System.EventHandler(this.cbo_PhuongThuc_SelectedIndexChanged);
             // 
             // label12
             // 
@@ -321,12 +338,16 @@
             // dgv_GiaoDich
             // 
             this.dgv_GiaoDich.AllowUserToAddRows = false;
+            this.dgv_GiaoDich.AllowUserToDeleteRows = false;
             this.dgv_GiaoDich.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_GiaoDich.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgv_GiaoDich.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_GiaoDich.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_GiaoDich.Location = new System.Drawing.Point(3, 28);
+            this.dgv_GiaoDich.MultiSelect = false;
             this.dgv_GiaoDich.Name = "dgv_GiaoDich";
+            this.dgv_GiaoDich.ReadOnly = true;
+            this.dgv_GiaoDich.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_GiaoDich.Size = new System.Drawing.Size(710, 306);
             this.dgv_GiaoDich.TabIndex = 11;
             this.dgv_GiaoDich.Click += new System.EventHandler(this.dgv_GiaoDich_Click);
@@ -398,5 +419,6 @@
         private System.Windows.Forms.Label lbl_title;
         private System.Windows.Forms.ComboBox cbo_SoTK;
         private System.Windows.Forms.RichTextBox rtxt_MoTa;
+        private System.Windows.Forms.ComboBox cbo_STKTK;
     }
 }

@@ -53,6 +53,7 @@ namespace GUI
             txt_QuocGia.Clear();
             cbo_TrangThai.Text = null;
             cbo_PhuongThuc.SelectedIndex = 0;
+            txt_GiaTri.Clear();
             dgv_LoaiTien.DataSource = bUS_LoaiTien.LayDSLoaiTien();
         }
 

@@ -128,12 +128,16 @@
             // dgv_LoaiTaiKhoan
             // 
             this.dgv_LoaiTaiKhoan.AllowUserToAddRows = false;
+            this.dgv_LoaiTaiKhoan.AllowUserToDeleteRows = false;
             this.dgv_LoaiTaiKhoan.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_LoaiTaiKhoan.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgv_LoaiTaiKhoan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_LoaiTaiKhoan.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_LoaiTaiKhoan.Location = new System.Drawing.Point(3, 28);
+            this.dgv_LoaiTaiKhoan.MultiSelect = false;
             this.dgv_LoaiTaiKhoan.Name = "dgv_LoaiTaiKhoan";
+            this.dgv_LoaiTaiKhoan.ReadOnly = true;
+            this.dgv_LoaiTaiKhoan.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_LoaiTaiKhoan.Size = new System.Drawing.Size(710, 306);
             this.dgv_LoaiTaiKhoan.TabIndex = 11;
             this.dgv_LoaiTaiKhoan.Click += new System.EventHandler(this.dgv_LoaiTaiKhoan_Click);

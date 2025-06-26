@@ -26,7 +26,7 @@ namespace GUI
             this.MinimumSize = new System.Drawing.Size(1600, 900);
             dtp_ThoiGian.MaxDate = DateTime.Now;
             SetSize();
-            dgv_GiaoDich.DataSource = bUS_GiaoDich.LayDSGiaoDich();
+            Clear();
             dgv_GiaoDich.Columns["TAIKHOAN"].Visible = false;
             ThemVaoCBO(bUS_GiaoDich.LaySoTK(), cbo_SoTK);
         }
@@ -61,6 +61,9 @@ namespace GUI
             dtp_ThoiGian.Text = dtp_ThoiGian.MaxDate.ToString();
             rtxt_MoTa.Clear();
             cbo_TrangThai.Text = null;
+            cbo_PhuongThuc.SelectedIndex = 0;
+            txt_GiaTri.Clear();
+            dgv_GiaoDich.DataSource = bUS_GiaoDich.LayDSGiaoDich();
         }
 
         private void Frm_GiaoDich_Resize(object sender, EventArgs e)
@@ -160,6 +163,54 @@ namespace GUI
                 MessageBox.Show("Lỗi: " + ex.Message);
             }
             dgv_GiaoDich.DataSource = bUS_GiaoDich.LayDSGiaoDich();
+        }
+
+        private void btn_Tim_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                switch (cbo_PhuongThuc.Text)
+                {
+                    case "Mã Giao Dịch":
+                        dgv_GiaoDich.DataSource = bUS_GiaoDich.TimGDTheoMa(txt_GiaTri.Text);
+                        break;
+
+                    case "Số Tài Khoản":
+                        dgv_GiaoDich.DataSource = bUS_GiaoDich.TimGDTheoSTK(cbo_STKTK.Text);
+                        break;
+
+                    case "Loại Giao Dịch":
+                        dgv_GiaoDich.DataSource = bUS_GiaoDich.TimGDTheoLoai(txt_GiaTri.Text);
+                        break;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi: " + ex.Message);
+            }
+        }
+
+        private void cbo_PhuongThuc_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if(cbo_PhuongThuc.Text == "Số Tài Khoản")
+                {
+                    cbo_STKTK.Visible = true;
+                    txt_GiaTri.Visible = false;
+                    cbo_STKTK.Items.Clear();
+                    ThemVaoCBO(bUS_GiaoDich.LaySoTK(),cbo_STKTK);
+                }
+                else
+                {
+                    cbo_STKTK.Visible = false;
+                    txt_GiaTri.Visible = true;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi: " + ex.Message);
+            }
         }
     }
 }

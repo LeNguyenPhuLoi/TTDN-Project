@@ -403,12 +403,16 @@
             // dgv_BienLai
             // 
             this.dgv_BienLai.AllowUserToAddRows = false;
+            this.dgv_BienLai.AllowUserToDeleteRows = false;
             this.dgv_BienLai.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_BienLai.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgv_BienLai.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_BienLai.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_BienLai.Location = new System.Drawing.Point(3, 28);
+            this.dgv_BienLai.MultiSelect = false;
             this.dgv_BienLai.Name = "dgv_BienLai";
+            this.dgv_BienLai.ReadOnly = true;
+            this.dgv_BienLai.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_BienLai.Size = new System.Drawing.Size(710, 306);
             this.dgv_BienLai.TabIndex = 11;
             this.dgv_BienLai.Click += new System.EventHandler(this.dgv_BienLai_Click);

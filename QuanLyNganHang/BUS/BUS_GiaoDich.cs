@@ -26,6 +26,24 @@ namespace BUS
             return gd.LaySoTK();
         }
 
+        //gọi hàm tìm giao dịch thep mã
+        public IQueryable TimGDTheoMa(string ma)
+        {
+            return gd.TimGDTheoMa(ma);
+        }
+
+        //gọi hàm tìm giao dịch theo số tài khoản
+        public IQueryable TimGDTheoSTK(string stk)
+        {
+            return gd.TimGDTheoSTK(stk);
+        }
+
+        //gọi hàm tìm giao dịch theo loại giao dịch
+        public IQueryable TimGDTheoLoai(string loai)
+        {
+            return gd.TimGDTheoLoai(loai);
+        }
+
         //gọi hàm kiểm tra số tiền trong tài khoản
         public bool KTTienTrongTK(string sotk, decimal sotiengd)
         {

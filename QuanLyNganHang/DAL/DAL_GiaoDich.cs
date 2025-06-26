@@ -35,6 +35,33 @@ namespace DAL
             return sotk;
         }
 
+        //hàm tìm giao dịch thep mã
+        public IQueryable TimGDTheoMa(string ma)
+        {
+            IQueryable GD = from gd in db.GIAODICHes
+                            where gd.MAGD.Contains(ma)
+                            select gd;
+            return GD;
+        }
+
+        //hàm tìm giao dịch theo số tài khoản
+        public IQueryable TimGDTheoSTK(string stk)
+        {
+            IQueryable GD = from gd in db.GIAODICHes
+                            where gd.MATK.Contains(LayMaTKTheoSo(stk))
+                            select gd;
+            return GD;
+        }
+
+        //hàm tìm giao dịch theo loại giao dịch
+        public IQueryable TimGDTheoLoai(string loai)
+        {
+            IQueryable GD = from gd in db.GIAODICHes
+                            where gd.LOAIGD.Contains(loai)
+                            select gd;
+            return GD;
+        }
+
         //hàm kiểm tra số tiền trong tài khoản
         public bool KTTienTrongTK(string sotk, decimal sotiengd)
         {
