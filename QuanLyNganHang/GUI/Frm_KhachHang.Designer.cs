@@ -177,12 +177,16 @@
             // dgv_KhachHang
             // 
             this.dgv_KhachHang.AllowUserToAddRows = false;
+            this.dgv_KhachHang.AllowUserToDeleteRows = false;
             this.dgv_KhachHang.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_KhachHang.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgv_KhachHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_KhachHang.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_KhachHang.Location = new System.Drawing.Point(3, 28);
+            this.dgv_KhachHang.MultiSelect = false;
             this.dgv_KhachHang.Name = "dgv_KhachHang";
+            this.dgv_KhachHang.ReadOnly = true;
+            this.dgv_KhachHang.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_KhachHang.Size = new System.Drawing.Size(710, 306);
             this.dgv_KhachHang.TabIndex = 11;
             this.dgv_KhachHang.Click += new System.EventHandler(this.dgv_KhachHang_Click);

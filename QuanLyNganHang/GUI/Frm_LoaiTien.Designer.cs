@@ -135,12 +135,16 @@
             // dgv_LoaiTien
             // 
             this.dgv_LoaiTien.AllowUserToAddRows = false;
+            this.dgv_LoaiTien.AllowUserToDeleteRows = false;
             this.dgv_LoaiTien.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_LoaiTien.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgv_LoaiTien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_LoaiTien.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_LoaiTien.Location = new System.Drawing.Point(3, 28);
+            this.dgv_LoaiTien.MultiSelect = false;
             this.dgv_LoaiTien.Name = "dgv_LoaiTien";
+            this.dgv_LoaiTien.ReadOnly = true;
+            this.dgv_LoaiTien.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_LoaiTien.Size = new System.Drawing.Size(710, 306);
             this.dgv_LoaiTien.TabIndex = 11;
             this.dgv_LoaiTien.Click += new System.EventHandler(this.dgv_LoaiTien_Click);

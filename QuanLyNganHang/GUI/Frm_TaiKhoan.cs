@@ -72,6 +72,7 @@ namespace GUI
             dtp_NgayMoTK.Text = dtp_NgayMoTK.MaxDate.ToString();
             cbo_TrangThai.Text = null;
             cbo_PhuongThuc.SelectedIndex = 0;
+            txt_GiaTri.Clear();
             dgv_TaiKhoan.DataSource = bUS_TaiKhoan.LayDSTaiKhoan();
         }
 

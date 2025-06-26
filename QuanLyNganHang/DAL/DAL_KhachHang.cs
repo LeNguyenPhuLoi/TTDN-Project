@@ -50,7 +50,7 @@ namespace DAL
         public IQueryable TimKHTheoCCCD(string cccd)
         {
             IQueryable KH = from kh in db.KHACHHANGs
-                            where kh.CCCD == cccd
+                            where kh.CCCD.Contains(cccd)
                             select kh;
             return KH;
         }
@@ -59,7 +59,7 @@ namespace DAL
         public IQueryable TimKHTheoSDT(string sdt)
         {
             IQueryable KH = from kh in db.KHACHHANGs
-                            where kh.SDT == sdt
+                            where kh.SDT.Contains(sdt)
                             select kh;
             return KH;
         }
