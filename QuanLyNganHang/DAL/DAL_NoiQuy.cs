@@ -26,6 +26,29 @@ namespace DAL
             return NQ;
         }
 
+        public IQueryable LoadTieuDe()
+        {
+            IQueryable NQ = from nq in db.NOIQUYs
+                            select nq.TIEUDE;
+            return NQ;
+        }
+
+        public IQueryable TimNQTheoMa(string ma)
+        {
+            IQueryable NQ = from nq in db.NOIQUYs
+                            where nq.MANQ.Contains(ma)
+                            select nq;
+            return NQ;
+        }
+
+        public IQueryable TimNQTheoTieuDe(string tieude)
+        {
+            IQueryable NQ = from nq in db.NOIQUYs
+                            where nq.TIEUDE.Contains(tieude)
+                            select nq;
+            return NQ;
+        }
+
         //Thêm nội quy
         public bool ThemNQ(ET_NoiQuy et)
         {
