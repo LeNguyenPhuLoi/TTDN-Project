@@ -53,6 +53,7 @@
             this.txt_tieude = new System.Windows.Forms.TextBox();
             this.txt_manq = new System.Windows.Forms.TextBox();
             this.lbl_title = new System.Windows.Forms.Label();
+            this.cbo_timtieude = new System.Windows.Forms.ComboBox();
             this.gb_Timkiem.SuspendLayout();
             this.gb_DanhSach.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_noiquy)).BeginInit();
@@ -62,6 +63,7 @@
             // 
             // gb_Timkiem
             // 
+            this.gb_Timkiem.Controls.Add(this.cbo_timtieude);
             this.gb_Timkiem.Controls.Add(this.btn_Tim);
             this.gb_Timkiem.Controls.Add(this.label11);
             this.gb_Timkiem.Controls.Add(this.cbo_phuongthuc);
@@ -82,6 +84,7 @@
             this.btn_Tim.TabIndex = 19;
             this.btn_Tim.Text = "Tìm";
             this.btn_Tim.UseVisualStyleBackColor = true;
+            this.btn_Tim.Click += new System.EventHandler(this.btn_Tim_Click);
             // 
             // label11
             // 
@@ -96,10 +99,14 @@
             // 
             this.cbo_phuongthuc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbo_phuongthuc.FormattingEnabled = true;
+            this.cbo_phuongthuc.Items.AddRange(new object[] {
+            "Mã Nội Quy",
+            "Tiêu Đề"});
             this.cbo_phuongthuc.Location = new System.Drawing.Point(172, 34);
             this.cbo_phuongthuc.Name = "cbo_phuongthuc";
             this.cbo_phuongthuc.Size = new System.Drawing.Size(315, 24);
             this.cbo_phuongthuc.TabIndex = 17;
+            this.cbo_phuongthuc.TextChanged += new System.EventHandler(this.cbo_phuongthuc_TextChanged);
             // 
             // label12
             // 
@@ -305,6 +312,15 @@
             this.lbl_title.TabIndex = 42;
             this.lbl_title.Text = "Quản Lý Nội Quy";
             // 
+            // cbo_timtieude
+            // 
+            this.cbo_timtieude.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbo_timtieude.FormattingEnabled = true;
+            this.cbo_timtieude.Location = new System.Drawing.Point(568, 33);
+            this.cbo_timtieude.Name = "cbo_timtieude";
+            this.cbo_timtieude.Size = new System.Drawing.Size(315, 24);
+            this.cbo_timtieude.TabIndex = 20;
+            // 
             // Frm_NoiQuy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -359,5 +375,6 @@
         private System.Windows.Forms.TextBox txt_manq;
         private System.Windows.Forms.Label lbl_title;
         private System.Windows.Forms.TextBox txt_mota;
+        private System.Windows.Forms.ComboBox cbo_timtieude;
     }
 }

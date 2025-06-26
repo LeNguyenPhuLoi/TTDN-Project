@@ -32,6 +32,9 @@ namespace GUI
             gb_DanhSach.Width = (width / 3) * 2;
             gb_ThongTin.Location = new Point(width - 510, 150);
             gb_ChucNang.Location = new Point(width - 510, 50);
+            cbo_timtieude.Visible = false;
+            AddToCBO(bus_NoiQuy.LoadTieuDe(), cbo_timtieude);
+            cbo_phuongthuc.SelectedIndex = 0;
             dgv_noiquy.DataSource = bus_NoiQuy.LoadDSNQ();
         }
 
@@ -47,7 +50,15 @@ namespace GUI
             gb_ThongTin.Location = new Point(width - 510, 150);
             gb_ChucNang.Location = new Point(width - 510, 50);
         }
-       
+
+        public void AddToCBO(IQueryable list, ComboBox cbo)
+        {
+            foreach (var item in list)
+            {
+                cbo.Items.Add(item);
+            }
+        }
+
         public void Clear()
         {
             txt_manq.Clear();
@@ -55,6 +66,9 @@ namespace GUI
             txt_mota.Clear();
             dtp_ngaybanhanh.Text = dtp_ngaybanhanh.MaxDate.ToString();
             txt_loaiapdung.Clear();
+            txt_giatri.Clear();
+            cbo_phuongthuc.SelectedIndex = 0;
+            dgv_noiquy.DataSource = bus_NoiQuy.LoadDSNQ();
         }
 
         private void btn_Lammoi_Click(object sender, EventArgs e)
@@ -159,6 +173,48 @@ namespace GUI
                 MessageBox.Show("Lỗi " + ex.Message);
             }
             dgv_noiquy.DataSource = bus_NoiQuy.LoadDSNQ();
+        }
+
+        private void cbo_phuongthuc_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (cbo_phuongthuc.Text == "Tiêu Đề")
+                {
+                    cbo_timtieude.SelectedIndex = 0;
+                    cbo_timtieude.Visible = true;
+                    txt_giatri.Visible = false;
+                }
+                else
+                {
+                    cbo_timtieude.Visible = false;
+                    txt_giatri.Visible = true;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi " + ex.Message);
+            }
+        }
+
+        private void btn_Tim_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                switch (cbo_phuongthuc.Text)
+                {
+                    case "Mã Nội Quy":
+                        dgv_noiquy.DataSource = bus_NoiQuy.TimNQTheoMa(txt_giatri.Text);
+                        break;
+                    case "Tiêu Đề":
+                        dgv_noiquy.DataSource = bus_NoiQuy.TimNQTheoTieuDe(cbo_timtieude.Text);
+                        break;                
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi " + ex.Message);
+            }
         }
     }
 }

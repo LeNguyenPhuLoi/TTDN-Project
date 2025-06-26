@@ -17,6 +17,21 @@ namespace BUS
             return nq.LoadDSNQ();
         }
 
+        public IQueryable LoadTieuDe()
+        {
+            return nq.LoadTieuDe();
+        }
+
+        public IQueryable TimNQTheoMa(string ma)
+        {
+            return nq.TimNQTheoMa(ma);
+        }
+
+        public IQueryable TimNQTheoTieuDe(string tieude)
+        {
+            return nq.TimNQTheoTieuDe(tieude);
+        }
+
         public bool ThemNQ(ET_NoiQuy et)
         {
             return nq.ThemNQ(et);
