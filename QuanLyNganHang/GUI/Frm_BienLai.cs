@@ -25,7 +25,7 @@ namespace GUI
         {
             this.MinimumSize = new System.Drawing.Size(1600, 900);
             SetSize();
-            dgv_BienLai.DataSource = bUS_BienLai.LayDSBienLai();
+            Clear();
             dgv_BienLai.Columns["KHACHHANG"].Visible = false;
             dgv_BienLai.Columns["NHANVIEN"].Visible = false;
             ThemVaoCBO(bUS_BienLai.LayMaGD(), cbo_MaGD);
@@ -71,6 +71,9 @@ namespace GUI
             txt_LoaiBL.Clear();
             rtxt_MoTa.Clear();
             cbo_TrangThai.Text = null;
+            txt_GiaTri.Clear();
+            cbo_PhuongThuc.SelectedIndex = 0;
+            dgv_BienLai.DataSource = bUS_BienLai.LayDSBienLai();
         }
 
         private void btn_Lammoi_Click(object sender, EventArgs e)
@@ -239,6 +242,65 @@ namespace GUI
                 MessageBox.Show("Lỗi: " + ex.Message);
             }
             dgv_BienLai.DataSource = bUS_BienLai.LayDSBienLai();
+        }
+
+        private void btn_Tim_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                switch (cbo_PhuongThuc.Text)
+                {
+                    case "Mã Biên Lai":
+                        dgv_BienLai.DataSource = bUS_BienLai.TimBLTheoMaBl(txt_GiaTri.Text);
+                        break;
+
+                    case "Mã Giao Dịch":
+                        dgv_BienLai.DataSource = bUS_BienLai.TimBLTheoMaGD(txt_GiaTri.Text);
+                        break;
+
+                    case "Tên Khách Hàng":
+                        dgv_BienLai.DataSource = bUS_BienLai.TimBLTheoTenKH(cbo_GiaTri.Text);
+                        break;
+
+                    case "Số Tài Khoản":
+                        dgv_BienLai.DataSource = bUS_BienLai.TimBLTheoSTK(cbo_GiaTri.Text);
+                        break;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi: " + ex.Message);
+            }
+        }
+
+        private void cbo_PhuongThuc_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (cbo_PhuongThuc.SelectedIndex == 2)
+                {
+                    cbo_GiaTri.Items.Clear();
+                    ThemVaoCBO(bUS_BienLai.LayTenKH(), cbo_GiaTri);
+                    txt_GiaTri.Visible = false;
+                    cbo_GiaTri.Visible = true;
+                }
+                else if (cbo_PhuongThuc.SelectedIndex == 3)
+                {
+                    cbo_GiaTri.Items.Clear();
+                    ThemVaoCBO(bUS_BienLai.LaySTK(), cbo_GiaTri);
+                    txt_GiaTri.Visible = false;
+                    cbo_GiaTri.Visible = true;
+                }
+                else
+                {
+                    txt_GiaTri.Visible = true;
+                    cbo_GiaTri.Visible = false;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi: " + ex.Message);
+            }
         }
     }
 }

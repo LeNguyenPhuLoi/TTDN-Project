@@ -21,6 +21,42 @@ namespace BUS
         }
 
 
+        //gọi hàm tìm biên lai theo mã biên lai
+        public IQueryable TimBLTheoMaBl(string ma)
+        {
+            return bl.TimBLTheoMaBl(ma);
+        }
+
+        //gọi hàm tìm biên lai theo mã giao dịch
+        public IQueryable TimBLTheoMaGD(string ma)
+        {
+            return bl.TimBLTheoMaGD(ma);
+        }
+
+        //gọi hàm tìm biên lai theo tên khách hàng
+        public IQueryable TimBLTheoTenKH(string ten)
+        {
+            return bl.TimBLTheoTenKH(ten);
+        }
+
+        //gọi hàm tìm biên lai theo số tài khoản
+        public IQueryable TimBLTheoSTK(string stk)
+        {
+            return bl.TimBLTheoSTK(stk);
+        }
+
+        //gọi hàm lấy số tài khoản
+        public IQueryable LaySTK()
+        {
+            return bl.LaySTK();
+        }
+
+        //gọi hàm lấy tên khách hàng
+        public IQueryable LayTenKH()
+        {
+            return bl.LayTenKH();
+        }
+
         //gọi hàm lấy mã giao dịch
         public IQueryable LayMaGD()
         {

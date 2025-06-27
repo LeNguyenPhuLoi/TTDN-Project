@@ -261,3 +261,25 @@ D:\ĐỒ ÁN TTDN\timkiemvp\TTDN-Project\QuanLyNganHang\ET\obj\Debug\netstandard
 D:\ĐỒ ÁN TTDN\timkiemvp\TTDN-Project\QuanLyNganHang\ET\obj\Debug\netstandard2.0\ET.sourcelink.json
 D:\ĐỒ ÁN TTDN\timkiemvp\TTDN-Project\QuanLyNganHang\ET\obj\Debug\netstandard2.0\ET.dll
 D:\ĐỒ ÁN TTDN\timkiemvp\TTDN-Project\QuanLyNganHang\ET\obj\Debug\netstandard2.0\ET.pdb
+E:\TTDN Project\27-6-2025\t\TTDN-Project\QuanLyNganHang\ET\bin\Debug\netstandard2.0\ET.deps.json
+E:\TTDN Project\27-6-2025\t\TTDN-Project\QuanLyNganHang\ET\bin\Debug\netstandard2.0\ET.dll
+E:\TTDN Project\27-6-2025\t\TTDN-Project\QuanLyNganHang\ET\bin\Debug\netstandard2.0\ET.pdb
+E:\TTDN Project\27-6-2025\t\TTDN-Project\QuanLyNganHang\ET\obj\Debug\netstandard2.0\ET.csproj.AssemblyReference.cache
+E:\TTDN Project\27-6-2025\t\TTDN-Project\QuanLyNganHang\ET\obj\Debug\netstandard2.0\ET.GeneratedMSBuildEditorConfig.editorconfig
+E:\TTDN Project\27-6-2025\t\TTDN-Project\QuanLyNganHang\ET\obj\Debug\netstandard2.0\ET.AssemblyInfoInputs.cache
+E:\TTDN Project\27-6-2025\t\TTDN-Project\QuanLyNganHang\ET\obj\Debug\netstandard2.0\ET.AssemblyInfo.cs
+E:\TTDN Project\27-6-2025\t\TTDN-Project\QuanLyNganHang\ET\obj\Debug\netstandard2.0\ET.csproj.CoreCompileInputs.cache
+E:\TTDN Project\27-6-2025\t\TTDN-Project\QuanLyNganHang\ET\obj\Debug\netstandard2.0\ET.sourcelink.json
+E:\TTDN Project\27-6-2025\t\TTDN-Project\QuanLyNganHang\ET\obj\Debug\netstandard2.0\ET.dll
+E:\TTDN Project\27-6-2025\t\TTDN-Project\QuanLyNganHang\ET\obj\Debug\netstandard2.0\ET.pdb
+E:\TTDN Project\27-6-2025\TTDN-Project\QuanLyNganHang\ET\bin\Debug\netstandard2.0\ET.deps.json
+E:\TTDN Project\27-6-2025\TTDN-Project\QuanLyNganHang\ET\bin\Debug\netstandard2.0\ET.dll
+E:\TTDN Project\27-6-2025\TTDN-Project\QuanLyNganHang\ET\bin\Debug\netstandard2.0\ET.pdb
+E:\TTDN Project\27-6-2025\TTDN-Project\QuanLyNganHang\ET\obj\Debug\netstandard2.0\ET.csproj.AssemblyReference.cache
+E:\TTDN Project\27-6-2025\TTDN-Project\QuanLyNganHang\ET\obj\Debug\netstandard2.0\ET.GeneratedMSBuildEditorConfig.editorconfig
+E:\TTDN Project\27-6-2025\TTDN-Project\QuanLyNganHang\ET\obj\Debug\netstandard2.0\ET.AssemblyInfoInputs.cache
+E:\TTDN Project\27-6-2025\TTDN-Project\QuanLyNganHang\ET\obj\Debug\netstandard2.0\ET.AssemblyInfo.cs
+E:\TTDN Project\27-6-2025\TTDN-Project\QuanLyNganHang\ET\obj\Debug\netstandard2.0\ET.csproj.CoreCompileInputs.cache
+E:\TTDN Project\27-6-2025\TTDN-Project\QuanLyNganHang\ET\obj\Debug\netstandard2.0\ET.sourcelink.json
+E:\TTDN Project\27-6-2025\TTDN-Project\QuanLyNganHang\ET\obj\Debug\netstandard2.0\ET.dll
+E:\TTDN Project\27-6-2025\TTDN-Project\QuanLyNganHang\ET\obj\Debug\netstandard2.0\ET.pdb

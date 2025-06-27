@@ -29,6 +29,58 @@ namespace DAL
         }
 
 
+        //hàm tìm biên lai theo mã biên lai
+        public IQueryable TimBLTheoMaBl(string ma)
+        {
+            IQueryable BL = from bl in db.BIENLAIs
+                            where bl.MABL.Contains(ma)
+                            select bl;
+            return BL;
+        }
+
+        //hàm tìm biên lai theo mã giao dịch
+        public IQueryable TimBLTheoMaGD(string ma)
+        {
+            IQueryable BL = from bl in db.BIENLAIs
+                            where bl.MAGD.Contains(ma)
+                            select bl;
+            return BL;
+        }
+
+        //hàm tìm biên lai theo tên khách hàng
+        public IQueryable TimBLTheoTenKH(string ten)
+        {
+            IQueryable BL = from bl in db.BIENLAIs
+                            where bl.MAKH.Contains(LayMaKHTheoTen(ten))
+                            select bl;
+            return BL;
+        }
+
+        //hàm tìm biên lai theo số tài khoản
+        public IQueryable TimBLTheoSTK(string stk)
+        {
+            IQueryable BL = from bl in db.BIENLAIs
+                            where bl.MATK.Contains(LayMaTKTheoSo(stk))
+                            select bl;
+            return BL;
+        }
+
+        //hàm lấy số tài khoản
+        public IQueryable LaySTK()
+        {
+            IQueryable STK = from tk in db.TAIKHOANs
+                             select tk.SOTAIKHOAN;
+            return STK;
+        }
+
+        //hàm lấy tên khách hàng
+        public IQueryable LayTenKH()
+        {
+            IQueryable KH = from kh in db.KHACHHANGs
+                            select kh.TENKH;
+            return KH;
+        }
+
         //hàm lấy mã giao dịch
         public IQueryable LayMaGD()
         {
