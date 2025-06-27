@@ -55,6 +55,7 @@
             this.label10 = new System.Windows.Forms.Label();
             this.txt_MaBL = new System.Windows.Forms.TextBox();
             this.gb_Timkiem = new System.Windows.Forms.GroupBox();
+            this.cbo_GiaTri = new System.Windows.Forms.ComboBox();
             this.btn_Tim = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.cbo_PhuongThuc = new System.Windows.Forms.ComboBox();
@@ -335,6 +336,7 @@
             // 
             // gb_Timkiem
             // 
+            this.gb_Timkiem.Controls.Add(this.cbo_GiaTri);
             this.gb_Timkiem.Controls.Add(this.btn_Tim);
             this.gb_Timkiem.Controls.Add(this.label11);
             this.gb_Timkiem.Controls.Add(this.cbo_PhuongThuc);
@@ -347,6 +349,15 @@
             this.gb_Timkiem.TabStop = false;
             this.gb_Timkiem.Text = "Tìm Kiếm";
             // 
+            // cbo_GiaTri
+            // 
+            this.cbo_GiaTri.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbo_GiaTri.FormattingEnabled = true;
+            this.cbo_GiaTri.Location = new System.Drawing.Point(568, 34);
+            this.cbo_GiaTri.Name = "cbo_GiaTri";
+            this.cbo_GiaTri.Size = new System.Drawing.Size(315, 31);
+            this.cbo_GiaTri.TabIndex = 42;
+            // 
             // btn_Tim
             // 
             this.btn_Tim.Location = new System.Drawing.Point(889, 32);
@@ -355,6 +366,7 @@
             this.btn_Tim.TabIndex = 19;
             this.btn_Tim.Text = "Tìm";
             this.btn_Tim.UseVisualStyleBackColor = true;
+            this.btn_Tim.Click += new System.EventHandler(this.btn_Tim_Click);
             // 
             // label11
             // 
@@ -369,10 +381,16 @@
             // 
             this.cbo_PhuongThuc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbo_PhuongThuc.FormattingEnabled = true;
+            this.cbo_PhuongThuc.Items.AddRange(new object[] {
+            "Mã Biên Lai",
+            "Mã Giao Dịch",
+            "Tên Khách Hàng",
+            "Số Tài Khoản"});
             this.cbo_PhuongThuc.Location = new System.Drawing.Point(172, 34);
             this.cbo_PhuongThuc.Name = "cbo_PhuongThuc";
             this.cbo_PhuongThuc.Size = new System.Drawing.Size(315, 31);
             this.cbo_PhuongThuc.TabIndex = 17;
+            this.cbo_PhuongThuc.SelectedIndexChanged += new System.EventHandler(this.cbo_PhuongThuc_SelectedIndexChanged);
             // 
             // label12
             // 
@@ -491,5 +509,6 @@
         private System.Windows.Forms.ComboBox cbo_TrangThai;
         private System.Windows.Forms.ComboBox cbo_TenLoaiTien;
         private System.Windows.Forms.ComboBox cbo_SoTien;
+        private System.Windows.Forms.ComboBox cbo_GiaTri;
     }
 }
