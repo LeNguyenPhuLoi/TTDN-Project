@@ -92,7 +92,7 @@
             this.btnDangXuat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDangXuat.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDangXuat.Image = ((System.Drawing.Image)(resources.GetObject("btnDangXuat.Image")));
-            this.btnDangXuat.Location = new System.Drawing.Point(0, 846);
+            this.btnDangXuat.Location = new System.Drawing.Point(0, 848);
             this.btnDangXuat.Name = "btnDangXuat";
             this.btnDangXuat.Size = new System.Drawing.Size(225, 50);
             this.btnDangXuat.TabIndex = 6;
@@ -108,7 +108,7 @@
             this.btnGD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGD.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGD.Image = ((System.Drawing.Image)(resources.GetObject("btnGD.Image")));
-            this.btnGD.Location = new System.Drawing.Point(0, 398);
+            this.btnGD.Location = new System.Drawing.Point(0, 400);
             this.btnGD.Name = "btnGD";
             this.btnGD.Size = new System.Drawing.Size(225, 50);
             this.btnGD.TabIndex = 4;
@@ -124,7 +124,7 @@
             this.btnKH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnKH.Image = ((System.Drawing.Image)(resources.GetObject("btnKH.Image")));
-            this.btnKH.Location = new System.Drawing.Point(0, 566);
+            this.btnKH.Location = new System.Drawing.Point(0, 568);
             this.btnKH.Name = "btnKH";
             this.btnKH.Size = new System.Drawing.Size(225, 50);
             this.btnKH.TabIndex = 4;
@@ -140,7 +140,7 @@
             this.btnKhuyenMai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnKhuyenMai.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnKhuyenMai.Image = ((System.Drawing.Image)(resources.GetObject("btnKhuyenMai.Image")));
-            this.btnKhuyenMai.Location = new System.Drawing.Point(0, 790);
+            this.btnKhuyenMai.Location = new System.Drawing.Point(0, 792);
             this.btnKhuyenMai.Name = "btnKhuyenMai";
             this.btnKhuyenMai.Size = new System.Drawing.Size(225, 50);
             this.btnKhuyenMai.TabIndex = 3;
@@ -179,7 +179,7 @@
             this.btnLichSu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLichSu.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLichSu.Image = ((System.Drawing.Image)(resources.GetObject("btnLichSu.Image")));
-            this.btnLichSu.Location = new System.Drawing.Point(0, 454);
+            this.btnLichSu.Location = new System.Drawing.Point(0, 456);
             this.btnLichSu.Name = "btnLichSu";
             this.btnLichSu.Size = new System.Drawing.Size(226, 50);
             this.btnLichSu.TabIndex = 2;
@@ -218,7 +218,7 @@
             this.btnPhieuNo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPhieuNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPhieuNo.Image = ((System.Drawing.Image)(resources.GetObject("btnPhieuNo.Image")));
-            this.btnPhieuNo.Location = new System.Drawing.Point(0, 734);
+            this.btnPhieuNo.Location = new System.Drawing.Point(0, 736);
             this.btnPhieuNo.Name = "btnPhieuNo";
             this.btnPhieuNo.Size = new System.Drawing.Size(225, 50);
             this.btnPhieuNo.TabIndex = 13;
@@ -233,7 +233,7 @@
             this.btnPhieuVay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPhieuVay.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPhieuVay.Image = ((System.Drawing.Image)(resources.GetObject("btnPhieuVay.Image")));
-            this.btnPhieuVay.Location = new System.Drawing.Point(0, 678);
+            this.btnPhieuVay.Location = new System.Drawing.Point(0, 680);
             this.btnPhieuVay.Name = "btnPhieuVay";
             this.btnPhieuVay.Size = new System.Drawing.Size(225, 50);
             this.btnPhieuVay.TabIndex = 12;
@@ -264,7 +264,7 @@
             this.btnBL.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBL.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBL.Image = ((System.Drawing.Image)(resources.GetObject("btnBL.Image")));
-            this.btnBL.Location = new System.Drawing.Point(0, 510);
+            this.btnBL.Location = new System.Drawing.Point(0, 512);
             this.btnBL.Name = "btnBL";
             this.btnBL.Size = new System.Drawing.Size(226, 50);
             this.btnBL.TabIndex = 10;
@@ -312,7 +312,7 @@
             this.btnInBL.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInBL.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInBL.Image = ((System.Drawing.Image)(resources.GetObject("btnInBL.Image")));
-            this.btnInBL.Location = new System.Drawing.Point(1, 622);
+            this.btnInBL.Location = new System.Drawing.Point(1, 624);
             this.btnInBL.Name = "btnInBL";
             this.btnInBL.Size = new System.Drawing.Size(225, 50);
             this.btnInBL.TabIndex = 5;

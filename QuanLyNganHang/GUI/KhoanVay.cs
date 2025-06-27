@@ -26,7 +26,7 @@ namespace GUI
         private void KhoanVay_Load(object sender, EventArgs e)
         {
             this.BackColor = ColorTranslator.FromHtml("#263238");
-            pnlMain.BackColor = ColorTranslator.FromHtml("#DED4CA");
+            pnlMain.BackColor = ColorTranslator.FromHtml("#DCDCDC");
             lbTim.ForeColor = ColorTranslator.FromHtml("#DED4CA");
 
             dgvKhoanVay.DataSource = bs.LoadDSKhoanVay();

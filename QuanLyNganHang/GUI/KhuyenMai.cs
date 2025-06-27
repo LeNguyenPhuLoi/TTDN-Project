@@ -24,8 +24,8 @@ namespace GUI
         private void frmKhuyenMai_Load(object sender, EventArgs e)
         {
             btnNew.PerformClick(); // Gọi hàm hoàn tác để làm sạch các trường nhập
-            this.BackColor = ColorTranslator.FromHtml("#52362A");
-            pnlMain.BackColor = ColorTranslator.FromHtml("#DED4CA");
+            this.BackColor = ColorTranslator.FromHtml("#263238");
+            pnlMain.BackColor = ColorTranslator.FromHtml("#DCDCDC");
             lbTim.ForeColor = ColorTranslator.FromHtml("#DED4CA");
 
             dgvKhuyenMai.DataSource = bs.LoadDSKhuyenMai();
