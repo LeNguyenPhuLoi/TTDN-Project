@@ -41,5 +41,11 @@ namespace BUS
         {
             return chuyenKhoan.XoaChuyenKhoan(et,out error);
         }
+
+        //Tìm Chuyễn Khoản
+        public IQueryable TimChuyenKhoan(string key)
+        {
+            return chuyenKhoan.TimKiemChuyenKhoan(key);
+        }
     }
 }

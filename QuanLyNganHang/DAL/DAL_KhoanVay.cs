@@ -12,7 +12,7 @@ namespace DAL
         //kết nối tới database = linq to sql
         AutoConnect conn = new AutoConnect();
         QLNHDataContext db;
-
+        
         public DAL_KhoanVay()
         {
             db = new QLNHDataContext(conn.GetConnection());

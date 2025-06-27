@@ -21,8 +21,8 @@ namespace GUI
         BUS_TKDangNhap bustkdn = new BUS_TKDangNhap();
         private void frmTKDangNhap_Load(object sender, EventArgs e)
         {
-            this.BackColor = ColorTranslator.FromHtml("#52362A");
-            pnlMain.BackColor = ColorTranslator.FromHtml("#DED4CA");
+            this.BackColor = ColorTranslator.FromHtml("#263238");
+            pnlMain.BackColor = ColorTranslator.FromHtml("#DCDCDC");
             lbTim.ForeColor = ColorTranslator.FromHtml("#DED4CA");
 
             dgvTaiKhoan.DataSource = bustkdn.LoadTKL();

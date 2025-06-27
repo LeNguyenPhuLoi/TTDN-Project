@@ -22,8 +22,8 @@ namespace GUI
         private void frmChuyenKhoan_Load(object sender, EventArgs e)
         {
             btnHoanTac.PerformClick();
-            this.BackColor = ColorTranslator.FromHtml("#52362A");
-            pnlMain.BackColor = ColorTranslator.FromHtml("#DED4CA");
+            this.BackColor = ColorTranslator.FromHtml("#263238");
+            pnlMain.BackColor = ColorTranslator.FromHtml("#DCDCDC");
             lbTim.ForeColor = ColorTranslator.FromHtml("#DED4CA");
 
             dgvChuyenKhoan.DataSource = bs.LoadDSTK();
@@ -100,10 +100,12 @@ namespace GUI
             txtMaCK.Clear();
             txtSoTien.Clear();
             txtNoiDung.Clear();
+            txtTim.Clear();
             cboMaTKGui.SelectedIndex = -1;
             cboMaTKNhan.SelectedIndex = -1;
             dtpNgayChuyen.Value = DateTime.Now; // Đặt lại ngày chuyển về ngày hiện tại
             txtMaCK.Focus(); // Đặt con trỏ vào ô nhập mã chuyển khoản
+            dgvChuyenKhoan.DataSource = bs.LoadDSTK();
         }
 
         private void dgvChuyenKhoan_Click(object sender, EventArgs e)
@@ -121,6 +123,31 @@ namespace GUI
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void txtTim_TextChanged(object sender, EventArgs e)
+        {
+            string keyword = txtTim.Text.Trim();
+
+            // Nếu người dùng chưa nhập gì hoặc chỉ gõ tạm thời
+            if (string.IsNullOrWhiteSpace(keyword))
+            {
+                dgvChuyenKhoan.DataSource = bs.LoadDSTK();
+                return;
+            }
+
+            // Nếu keyword có vẻ là ngày nhưng chưa đúng -> bỏ qua tìm theo ngày
+            DateTime ngayTim;
+            bool isValidDate = DateTime.TryParse(keyword, out ngayTim) && ngayTim >= new DateTime(1753, 1, 1);
+
+            try
+            {
+                dgvChuyenKhoan.DataSource = bs.TimChuyenKhoan(keyword); // Trong đó đã xử lý isValidDate rồi
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi tìm kiếm: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

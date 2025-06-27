@@ -51,7 +51,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.lbTim = new System.Windows.Forms.Label();
             this.dgvChuyenKhoan = new System.Windows.Forms.DataGridView();
-            this.btnTim = new System.Windows.Forms.Button();
             this.pnlMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvChuyenKhoan)).BeginInit();
             this.SuspendLayout();
@@ -146,6 +145,7 @@
             this.txtTim.Name = "txtTim";
             this.txtTim.Size = new System.Drawing.Size(303, 22);
             this.txtTim.TabIndex = 34;
+            this.txtTim.TextChanged += new System.EventHandler(this.txtTim_TextChanged);
             // 
             // pnlMain
             // 
@@ -293,21 +293,11 @@
             this.dgvChuyenKhoan.TabIndex = 32;
             this.dgvChuyenKhoan.Click += new System.EventHandler(this.dgvChuyenKhoan_Click);
             // 
-            // btnTim
-            // 
-            this.btnTim.Location = new System.Drawing.Point(492, 298);
-            this.btnTim.Name = "btnTim";
-            this.btnTim.Size = new System.Drawing.Size(75, 23);
-            this.btnTim.TabIndex = 36;
-            this.btnTim.Text = "Tìm";
-            this.btnTim.UseVisualStyleBackColor = true;
-            // 
             // frmChuyenKhoan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 556);
-            this.Controls.Add(this.btnTim);
             this.Controls.Add(this.btnInDS);
             this.Controls.Add(this.txtTim);
             this.Controls.Add(this.pnlMain);
@@ -349,6 +339,5 @@
         private System.Windows.Forms.ComboBox cboMaTKNhan;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DataGridView dgvChuyenKhoan;
-        private System.Windows.Forms.Button btnTim;
     }
 }

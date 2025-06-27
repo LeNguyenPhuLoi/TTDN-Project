@@ -1,9 +1,10 @@
-﻿using System;
+﻿using ET;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ET;
 
 namespace DAL
 {
@@ -22,7 +23,7 @@ namespace DAL
         public IQueryable LoadDSTK()
         {
             IQueryable ds = from tk in db.TAIKHOANs
-                            select tk.MATK;      
+                            select tk.MATK;
             return ds;
         }
 
@@ -205,6 +206,37 @@ namespace DAL
             }
 
             return flag;
+        }
+
+        //Tìm kiếm chuyển khoản
+        public IQueryable TimKiemChuyenKhoan(string keyword)
+        {
+            DateTime parsedDate;
+            bool isDate = IsValidSqlDate(keyword, out parsedDate);
+
+            var ds = from ck in db.CHUYENKHOANs
+                     where ck.MACK.Contains(keyword)
+                        || ck.NOIDUNG.Contains(keyword)
+                        || ck.SOTIEN.ToString().Contains(keyword)
+                        || ck.MATKGUI.Contains(keyword) 
+                        || ck.MATKNHAN.Contains(keyword) 
+                        || (isDate && ck.NGAYCK == parsedDate.Date)
+                     select new
+                     {
+                         ck.MACK,
+                         ck.NGAYCK,
+                         ck.SOTIEN,
+                         ck.MATKGUI,
+                         ck.MATKNHAN,
+                         ck.NOIDUNG
+                     };
+            return ds;
+        }
+
+        public bool IsValidSqlDate(string input, out DateTime result)
+        {
+            bool isValid = DateTime.TryParse(input, out result);
+            return isValid && result >= new DateTime(1753, 1, 1) && result <= new DateTime(9999, 12, 31);
         }
     }
 }
