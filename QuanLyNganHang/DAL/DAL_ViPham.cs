@@ -47,6 +47,13 @@ namespace DAL
             return KH;
         }
 
+        public IQueryable LoadMoTa()
+        {
+            IQueryable NQ = from nq in db.NOIQUYs
+                            select nq.TIEUDE;
+            return NQ;
+        }
+
         public string LayTieuDeNQTheoMa(string ma)
         {
             string ten = (from nq in db.NOIQUYs
@@ -93,6 +100,46 @@ namespace DAL
                          where kh.TENKH == ten
                          select kh.MAKH).FirstOrDefault();
             return ma;
+        }
+
+        public IQueryable TimVPTheoMa(string ma)
+        {
+            IQueryable VP = from vp in db.VIPHAMs
+                            where vp.MAVP.Contains(ma)
+                            select new { vp.MAVP, vp.MANQ, vp.MANV, vp.MAKH, vp.NGAYVP, vp.MOTAVP, vp.HINHTHUCXL, vp.TRANGTHAIXL };
+            return VP;
+        }
+
+        public IQueryable TimVPTheoNQ(string nq)
+        {
+            IQueryable VP = from vp in db.VIPHAMs
+                            where vp.MANQ.Contains(nq)
+                            select new { vp.MAVP, vp.MANQ, vp.MANV, vp.MAKH, vp.NGAYVP, vp.MOTAVP, vp.HINHTHUCXL, vp.TRANGTHAIXL };
+            return VP;
+        }
+
+        public IQueryable TimVPTheoNV(string nv)
+        {
+            IQueryable VP = from vp in db.VIPHAMs
+                            where vp.MANV.Contains(nv)
+                            select new { vp.MAVP, vp.MANQ, vp.MANV, vp.MAKH, vp.NGAYVP, vp.MOTAVP, vp.HINHTHUCXL, vp.TRANGTHAIXL };
+            return VP;
+        }
+
+        public IQueryable TimVPTheoKH(string kh)
+        {
+            IQueryable VP = from vp in db.VIPHAMs
+                            where vp.MAKH.Contains(kh)
+                            select new { vp.MAVP, vp.MANQ, vp.MANV, vp.MAKH, vp.NGAYVP, vp.MOTAVP, vp.HINHTHUCXL, vp.TRANGTHAIXL };
+            return VP;
+        }
+
+        public IQueryable TimVPTheoMoTa(string mota)
+        {
+            IQueryable VP = from vp in db.VIPHAMs
+                            where vp.MOTAVP.Contains(mota)
+                            select new { vp.MAVP, vp.MANQ, vp.MANV, vp.MAKH, vp.NGAYVP, vp.MOTAVP, vp.HINHTHUCXL, vp.TRANGTHAIXL };
+            return VP;
         }
 
         //Thêm vi phạm
