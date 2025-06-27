@@ -218,3 +218,13 @@ E:\TTDN Project\26-6-2025\TTDN-Project\QuanLyNganHang\DAL\obj\Debug\DAL.csproj.C
 E:\TTDN Project\26-6-2025\TTDN-Project\QuanLyNganHang\DAL\obj\Debug\DAL.csproj.Up2Date
 E:\TTDN Project\26-6-2025\TTDN-Project\QuanLyNganHang\DAL\obj\Debug\DAL.dll
 E:\TTDN Project\26-6-2025\TTDN-Project\QuanLyNganHang\DAL\obj\Debug\DAL.pdb
+D:\ĐỒ ÁN TTDN\timkiemvp\TTDN-Project\QuanLyNganHang\DAL\bin\Debug\DAL.dll.config
+D:\ĐỒ ÁN TTDN\timkiemvp\TTDN-Project\QuanLyNganHang\DAL\bin\Debug\DAL.dll
+D:\ĐỒ ÁN TTDN\timkiemvp\TTDN-Project\QuanLyNganHang\DAL\bin\Debug\DAL.pdb
+D:\ĐỒ ÁN TTDN\timkiemvp\TTDN-Project\QuanLyNganHang\DAL\bin\Debug\ET.dll
+D:\ĐỒ ÁN TTDN\timkiemvp\TTDN-Project\QuanLyNganHang\DAL\bin\Debug\ET.pdb
+D:\ĐỒ ÁN TTDN\timkiemvp\TTDN-Project\QuanLyNganHang\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+D:\ĐỒ ÁN TTDN\timkiemvp\TTDN-Project\QuanLyNganHang\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+D:\ĐỒ ÁN TTDN\timkiemvp\TTDN-Project\QuanLyNganHang\DAL\obj\Debug\DAL.csproj.Up2Date
+D:\ĐỒ ÁN TTDN\timkiemvp\TTDN-Project\QuanLyNganHang\DAL\obj\Debug\DAL.dll
+D:\ĐỒ ÁN TTDN\timkiemvp\TTDN-Project\QuanLyNganHang\DAL\obj\Debug\DAL.pdb

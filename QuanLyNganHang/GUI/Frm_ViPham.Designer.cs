@@ -50,15 +50,16 @@
             this.btn_Sua = new System.Windows.Forms.Button();
             this.btn_Xoa = new System.Windows.Forms.Button();
             this.gb_ThongTin = new System.Windows.Forms.GroupBox();
+            this.cbo_trangthai = new System.Windows.Forms.ComboBox();
             this.cbo_makh = new System.Windows.Forms.ComboBox();
             this.cbo_manv = new System.Windows.Forms.ComboBox();
             this.cbo_manq = new System.Windows.Forms.ComboBox();
-            this.txt_motavp = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.txt_mavp = new System.Windows.Forms.TextBox();
             this.lbl_title = new System.Windows.Forms.Label();
-            this.cbo_trangthai = new System.Windows.Forms.ComboBox();
+            this.cbo_motavp = new System.Windows.Forms.ComboBox();
+            this.cbo_timnq = new System.Windows.Forms.ComboBox();
             this.gb_Timkiem.SuspendLayout();
             this.gb_DanhSach.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_vipham)).BeginInit();
@@ -71,6 +72,7 @@
             this.gb_Timkiem.Controls.Add(this.btn_Tim);
             this.gb_Timkiem.Controls.Add(this.label11);
             this.gb_Timkiem.Controls.Add(this.cbo_phuongthuc);
+            this.gb_Timkiem.Controls.Add(this.cbo_timnq);
             this.gb_Timkiem.Controls.Add(this.label12);
             this.gb_Timkiem.Controls.Add(this.txt_giatri);
             this.gb_Timkiem.Location = new System.Drawing.Point(27, 69);
@@ -88,6 +90,7 @@
             this.btn_Tim.TabIndex = 19;
             this.btn_Tim.Text = "Tìm";
             this.btn_Tim.UseVisualStyleBackColor = true;
+            this.btn_Tim.Click += new System.EventHandler(this.btn_Tim_Click);
             // 
             // label11
             // 
@@ -102,10 +105,17 @@
             // 
             this.cbo_phuongthuc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbo_phuongthuc.FormattingEnabled = true;
+            this.cbo_phuongthuc.Items.AddRange(new object[] {
+            "Mã Vi Phạm",
+            "Mã Nội Quy",
+            "Mã Nhân Viên",
+            "Mã Khách Hàng",
+            "Mô Tả Vi Phạm"});
             this.cbo_phuongthuc.Location = new System.Drawing.Point(172, 34);
             this.cbo_phuongthuc.Name = "cbo_phuongthuc";
             this.cbo_phuongthuc.Size = new System.Drawing.Size(315, 24);
             this.cbo_phuongthuc.TabIndex = 17;
+            this.cbo_phuongthuc.TextChanged += new System.EventHandler(this.cbo_phuongthuc_TextChanged);
             // 
             // label12
             // 
@@ -271,6 +281,7 @@
             // 
             // gb_ThongTin
             // 
+            this.gb_ThongTin.Controls.Add(this.cbo_motavp);
             this.gb_ThongTin.Controls.Add(this.cbo_trangthai);
             this.gb_ThongTin.Controls.Add(this.cbo_makh);
             this.gb_ThongTin.Controls.Add(this.cbo_manv);
@@ -283,7 +294,6 @@
             this.gb_ThongTin.Controls.Add(this.label5);
             this.gb_ThongTin.Controls.Add(this.txt_hinhthucxl);
             this.gb_ThongTin.Controls.Add(this.label6);
-            this.gb_ThongTin.Controls.Add(this.txt_motavp);
             this.gb_ThongTin.Controls.Add(this.label7);
             this.gb_ThongTin.Controls.Add(this.label8);
             this.gb_ThongTin.Controls.Add(this.txt_mavp);
@@ -293,6 +303,18 @@
             this.gb_ThongTin.TabIndex = 45;
             this.gb_ThongTin.TabStop = false;
             this.gb_ThongTin.Text = "Thông Tin Vi Phạm";
+            // 
+            // cbo_trangthai
+            // 
+            this.cbo_trangthai.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbo_trangthai.FormattingEnabled = true;
+            this.cbo_trangthai.Items.AddRange(new object[] {
+            "ĐÃ XỬ LÝ",
+            "CHƯA XỬ LÝ"});
+            this.cbo_trangthai.Location = new System.Drawing.Point(175, 423);
+            this.cbo_trangthai.Name = "cbo_trangthai";
+            this.cbo_trangthai.Size = new System.Drawing.Size(298, 24);
+            this.cbo_trangthai.TabIndex = 31;
             // 
             // cbo_makh
             // 
@@ -320,13 +342,6 @@
             this.cbo_manq.Name = "cbo_manq";
             this.cbo_manq.Size = new System.Drawing.Size(298, 24);
             this.cbo_manq.TabIndex = 28;
-            // 
-            // txt_motavp
-            // 
-            this.txt_motavp.Location = new System.Drawing.Point(175, 311);
-            this.txt_motavp.Name = "txt_motavp";
-            this.txt_motavp.Size = new System.Drawing.Size(297, 22);
-            this.txt_motavp.TabIndex = 23;
             // 
             // label7
             // 
@@ -364,17 +379,23 @@
             this.lbl_title.TabIndex = 42;
             this.lbl_title.Text = "Quản Lý Vi Phạm";
             // 
-            // cbo_trangthai
+            // cbo_motavp
             // 
-            this.cbo_trangthai.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbo_trangthai.FormattingEnabled = true;
-            this.cbo_trangthai.Items.AddRange(new object[] {
-            "ĐÃ XỬ LÝ",
-            "CHƯA XỬ LÝ"});
-            this.cbo_trangthai.Location = new System.Drawing.Point(175, 423);
-            this.cbo_trangthai.Name = "cbo_trangthai";
-            this.cbo_trangthai.Size = new System.Drawing.Size(298, 24);
-            this.cbo_trangthai.TabIndex = 31;
+            this.cbo_motavp.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbo_motavp.FormattingEnabled = true;
+            this.cbo_motavp.Location = new System.Drawing.Point(174, 317);
+            this.cbo_motavp.Name = "cbo_motavp";
+            this.cbo_motavp.Size = new System.Drawing.Size(298, 24);
+            this.cbo_motavp.TabIndex = 32;
+            // 
+            // cbo_timnq
+            // 
+            this.cbo_timnq.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbo_timnq.FormattingEnabled = true;
+            this.cbo_timnq.Location = new System.Drawing.Point(568, 33);
+            this.cbo_timnq.Name = "cbo_timnq";
+            this.cbo_timnq.Size = new System.Drawing.Size(315, 24);
+            this.cbo_timnq.TabIndex = 20;
             // 
             // Frm_ViPham
             // 
@@ -427,7 +448,6 @@
         private System.Windows.Forms.Button btn_Sua;
         private System.Windows.Forms.Button btn_Xoa;
         private System.Windows.Forms.GroupBox gb_ThongTin;
-        private System.Windows.Forms.TextBox txt_motavp;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txt_mavp;
@@ -436,5 +456,7 @@
         private System.Windows.Forms.ComboBox cbo_manv;
         private System.Windows.Forms.ComboBox cbo_manq;
         private System.Windows.Forms.ComboBox cbo_trangthai;
+        private System.Windows.Forms.ComboBox cbo_motavp;
+        private System.Windows.Forms.ComboBox cbo_timnq;
     }
 }
