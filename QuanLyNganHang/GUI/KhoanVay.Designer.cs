@@ -49,6 +49,8 @@
             this.lbTim = new System.Windows.Forms.Label();
             this.dgvKhoanVay = new System.Windows.Forms.DataGridView();
             this.pnlMain = new System.Windows.Forms.Panel();
+            this.txtTienLai = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.dtpThoiHan = new System.Windows.Forms.DateTimePicker();
             this.dtpNgayVay = new System.Windows.Forms.DateTimePicker();
             this.txtMaVay = new System.Windows.Forms.TextBox();
@@ -65,6 +67,7 @@
             this.txtMaLaiSuat.Name = "txtMaLaiSuat";
             this.txtMaLaiSuat.Size = new System.Drawing.Size(304, 22);
             this.txtMaLaiSuat.TabIndex = 18;
+            this.txtMaLaiSuat.TextChanged += new System.EventHandler(this.txtMaLaiSuat_TextChanged);
             // 
             // dgvLaiSuat
             // 
@@ -85,7 +88,7 @@
             // 
             this.cboMaKH.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboMaKH.FormattingEnabled = true;
-            this.cboMaKH.Location = new System.Drawing.Point(122, 82);
+            this.cboMaKH.Location = new System.Drawing.Point(122, 118);
             this.cboMaKH.Name = "cboMaKH";
             this.cboMaKH.Size = new System.Drawing.Size(182, 24);
             this.cboMaKH.TabIndex = 15;
@@ -93,7 +96,7 @@
             // btnSua
             // 
             this.btnSua.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnSua.Location = new System.Drawing.Point(212, 176);
+            this.btnSua.Location = new System.Drawing.Point(212, 200);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(92, 46);
             this.btnSua.TabIndex = 10;
@@ -104,7 +107,7 @@
             // btnXoa
             // 
             this.btnXoa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnXoa.Location = new System.Drawing.Point(114, 176);
+            this.btnXoa.Location = new System.Drawing.Point(114, 200);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(92, 46);
             this.btnXoa.TabIndex = 11;
@@ -126,7 +129,7 @@
             // btnThem
             // 
             this.btnThem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnThem.Location = new System.Drawing.Point(16, 176);
+            this.btnThem.Location = new System.Drawing.Point(16, 200);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(92, 46);
             this.btnThem.TabIndex = 12;
@@ -146,7 +149,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(19, 117);
+            this.label7.Location = new System.Drawing.Point(19, 153);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(76, 16);
@@ -156,7 +159,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(19, 85);
+            this.label6.Location = new System.Drawing.Point(19, 121);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(83, 16);
@@ -259,6 +262,8 @@
             // 
             this.pnlMain.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlMain.Controls.Add(this.txtTienLai);
+            this.pnlMain.Controls.Add(this.label4);
             this.pnlMain.Controls.Add(this.dtpThoiHan);
             this.pnlMain.Controls.Add(this.dtpNgayVay);
             this.pnlMain.Controls.Add(this.txtMaVay);
@@ -283,6 +288,25 @@
             this.pnlMain.Name = "pnlMain";
             this.pnlMain.Size = new System.Drawing.Size(770, 273);
             this.pnlMain.TabIndex = 30;
+            // 
+            // txtTienLai
+            // 
+            this.txtTienLai.Location = new System.Drawing.Point(98, 80);
+            this.txtTienLai.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTienLai.Name = "txtTienLai";
+            this.txtTienLai.Size = new System.Drawing.Size(142, 22);
+            this.txtTienLai.TabIndex = 24;
+            this.txtTienLai.TextChanged += new System.EventHandler(this.txtTienLai_TextChanged);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(19, 83);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(72, 16);
+            this.label4.TabIndex = 23;
+            this.label4.Text = "Số tiền Lãi:";
             // 
             // dtpThoiHan
             // 
@@ -322,7 +346,7 @@
             "Đang vay",
             "Đã trả xong",
             "Còn nợ"});
-            this.cboTrangThai.Location = new System.Drawing.Point(122, 120);
+            this.cboTrangThai.Location = new System.Drawing.Point(122, 156);
             this.cboTrangThai.Name = "cboTrangThai";
             this.cboTrangThai.Size = new System.Drawing.Size(182, 24);
             this.cboTrangThai.TabIndex = 19;
@@ -386,5 +410,7 @@
         private System.Windows.Forms.Button btnTim;
         private System.Windows.Forms.DateTimePicker dtpThoiHan;
         private System.Windows.Forms.DateTimePicker dtpNgayVay;
+        private System.Windows.Forms.TextBox txtTienLai;
+        private System.Windows.Forms.Label label4;
     }
 }

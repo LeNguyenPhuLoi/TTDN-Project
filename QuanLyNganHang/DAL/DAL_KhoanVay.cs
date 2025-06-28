@@ -52,6 +52,7 @@ namespace DAL
                             { 
                                 kv.MAVAY,
                                 kv.SOTIENVAY,
+                                kv.SOTIENLAI,
                                 kv.NGAYVAY,
                                 kv.THOIHAN,
                                 kv.TRANGTHAI,
@@ -75,6 +76,7 @@ namespace DAL
                     {
                         MAVAY = et.MAVAY,
                         SOTIENVAY = et.SOTIENVAY,
+                        SOTIENLAI = et.SOTIENLAI,
                         NGAYVAY = et.NGAYVAY,
                         THOIHAN = et.THOIHAN,
                         TRANGTHAI = et.TRANGTHAI,
@@ -109,6 +111,7 @@ namespace DAL
                 if (kv != null)
                 {
                     kv.SOTIENVAY = et.SOTIENVAY;
+                    kv.SOTIENLAI = et.SOTIENLAI;
                     kv.NGAYVAY = et.NGAYVAY;
                     kv.THOIHAN = et.THOIHAN;
                     kv.TRANGTHAI = et.TRANGTHAI;
@@ -160,6 +163,36 @@ namespace DAL
                 error = "Lỗi: " + ex.ToString();
             }
             return flag;
+        }
+
+        public decimal TinhTienLai(decimal soTienVay, string maLaiSuat, string ngayVayStr, string ngayTraStr)
+        {
+            // Chuyển đổi định dạng ngày
+            DateTime ngayVay = DateTime.ParseExact(ngayVayStr, "dd/MM/yyyy", null);
+            DateTime ngayTra = DateTime.ParseExact(ngayTraStr, "dd/MM/yyyy", null);
+
+            // Kiểm tra hợp lệ
+            if (ngayTra < ngayVay)
+                throw new Exception("Ngày trả không được nhỏ hơn ngày vay.");
+
+            // Tính số ngày
+            int soNgay = (ngayTra - ngayVay).Days;
+            if (soNgay == 0)
+                soNgay = 1; // Ép tính tối thiểu 1 ngày nếu cùng ngày
+
+            // Lấy lãi suất từ DB
+            var laiSuat = (from ls in db.LAISUATs
+                           where ls.MALAISUAT == maLaiSuat
+                           select ls.LAISUAT1).FirstOrDefault();
+
+            if (laiSuat == null)
+                throw new Exception("Mã lãi suất không tồn tại.");
+
+            // Tính tiền lãi
+            decimal laiSuatThuc = (decimal)laiSuat / 100;
+            decimal tienLai = Math.Round(soTienVay * laiSuatThuc * soNgay / 365, 0); // làm tròn đến đơn vị
+
+            return tienLai;
         }
     }
 }

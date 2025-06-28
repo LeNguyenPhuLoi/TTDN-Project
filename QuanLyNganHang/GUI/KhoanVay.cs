@@ -48,6 +48,7 @@ namespace GUI
         {
             txtMaVay.Clear();
             txtSoTienVay.Clear();
+            txtTienLai.Clear();
             cboMaKH.SelectedIndex = -1;
             cboTrangThai.SelectedIndex = -1;
             dtpNgayVay.Value = DateTime.Now;
@@ -60,6 +61,7 @@ namespace GUI
         private void btnThem_Click(object sender, EventArgs e)
         {
             ET_KhoanVay et = new ET_KhoanVay(txtMaVay.Text,decimal.Parse(txtSoTienVay.Text),
+                                                decimal.Parse(txtTienLai.Text),
                                                 dtpNgayVay.Value,dtpThoiHan.Value,
                                                 cboTrangThai.Text,bs.GetMaKhachHang(cboMaKH.Text),txtMaLaiSuat.Text
                                                 );
@@ -79,6 +81,7 @@ namespace GUI
         private void btnSua_Click(object sender, EventArgs e)
         {
             ET_KhoanVay et = new ET_KhoanVay(txtMaVay.Text, decimal.Parse(txtSoTienVay.Text),
+                                                decimal.Parse(txtTienLai.Text),
                                                 dtpNgayVay.Value, dtpThoiHan.Value,
                                                 cboTrangThai.Text, bs.GetMaKhachHang(cboMaKH.Text), txtMaLaiSuat.Text
                                                 );
@@ -100,6 +103,7 @@ namespace GUI
             if (result == DialogResult.Yes)
             {
                 ET_KhoanVay et = new ET_KhoanVay(txtMaVay.Text, decimal.Parse(txtSoTienVay.Text),
+                                                decimal.Parse(txtTienLai.Text),
                                                 dtpNgayVay.Value, dtpThoiHan.Value,
                                                 cboTrangThai.Text, bs.GetMaKhachHang(cboMaKH.Text), txtMaLaiSuat.Text
                                                 );
@@ -124,11 +128,12 @@ namespace GUI
                 int dong = dgvKhoanVay.CurrentRow.Index;
                 txtMaVay.Text = dgvKhoanVay.Rows[dong].Cells[0].Value.ToString();
                 txtSoTienVay.Text = dgvKhoanVay.Rows[dong].Cells[1].Value.ToString();
-                dtpNgayVay.Text = dgvKhoanVay.Rows[dong].Cells[2].Value.ToString();
-                dtpThoiHan.Text = dgvKhoanVay.Rows[dong].Cells[3].Value.ToString();
-                cboTrangThai.Text = dgvKhoanVay.Rows[dong].Cells[4].Value.ToString();
-                cboMaKH.Text = bs.GetTenKhachHang(dgvKhoanVay.Rows[dong].Cells[5].Value.ToString());
-                txtMaLaiSuat.Text = dgvKhoanVay.Rows[dong].Cells[6].Value.ToString();
+                txtTienLai.Text = dgvKhoanVay.Rows[dong].Cells[2].Value.ToString();
+                dtpNgayVay.Text = dgvKhoanVay.Rows[dong].Cells[3].Value.ToString();
+                dtpThoiHan.Text = dgvKhoanVay.Rows[dong].Cells[4].Value.ToString();
+                cboTrangThai.Text = dgvKhoanVay.Rows[dong].Cells[5].Value.ToString();
+                cboMaKH.Text = bs.GetTenKhachHang(dgvKhoanVay.Rows[dong].Cells[6].Value.ToString());
+                txtMaLaiSuat.Text = dgvKhoanVay.Rows[dong].Cells[7].Value.ToString();
             }
             catch (Exception ex)
             {
@@ -147,6 +152,16 @@ namespace GUI
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void txtTienLai_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void txtMaLaiSuat_TextChanged(object sender, EventArgs e)
+        {
+            txtTienLai.Text = bs.TinhTienLai(decimal.Parse(txtSoTienVay.Text), txtMaLaiSuat.Text, dtpNgayVay.Value.ToString("dd/MM/yyyy"), dtpThoiHan.Value.ToString("dd/MM/yyyy")).ToString();
         }
     }
 }
