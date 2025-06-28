@@ -161,7 +161,9 @@ namespace GUI
 
         private void txtMaLaiSuat_TextChanged(object sender, EventArgs e)
         {
-            txtTienLai.Text = bs.TinhTienLai(decimal.Parse(txtSoTienVay.Text), txtMaLaiSuat.Text, dtpNgayVay.Value.ToString("dd/MM/yyyy"), dtpThoiHan.Value.ToString("dd/MM/yyyy")).ToString();
+            DateTime homnay = DateTime.Now;
+            decimal tong = decimal.Parse(txtSoTienVay.Text) + bs.TinhTienLai(decimal.Parse(txtSoTienVay.Text), txtMaLaiSuat.Text, dtpNgayVay.Value.ToString("dd/MM/yyyy"),homnay.ToString("dd/MM/yyyy"));
+            txtTienLai.Text = tong.ToString();
         }
     }
 }

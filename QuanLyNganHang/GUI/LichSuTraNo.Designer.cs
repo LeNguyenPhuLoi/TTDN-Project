@@ -37,7 +37,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.txtSoTien = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.btnThem = new System.Windows.Forms.Button();
             this.btnHoanTac = new System.Windows.Forms.Button();
@@ -48,6 +47,9 @@
             this.dtpNgayTra = new System.Windows.Forms.DateTimePicker();
             this.txtMaVay = new System.Windows.Forms.TextBox();
             this.pnlMain = new System.Windows.Forms.Panel();
+            this.txtNgayVay = new System.Windows.Forms.TextBox();
+            this.txtSoTien = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.txtTienTra = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLichSu)).BeginInit();
@@ -94,7 +96,7 @@
             this.dgvLichSu.Name = "dgvLichSu";
             this.dgvLichSu.ReadOnly = true;
             this.dgvLichSu.RowHeadersWidth = 62;
-            this.dgvLichSu.Size = new System.Drawing.Size(850, 328);
+            this.dgvLichSu.Size = new System.Drawing.Size(940, 328);
             this.dgvLichSu.TabIndex = 39;
             this.dgvLichSu.Click += new System.EventHandler(this.dgvLichSu_Click);
             // 
@@ -121,7 +123,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(13, 64);
+            this.label3.Location = new System.Drawing.Point(13, 60);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(77, 16);
@@ -137,14 +139,6 @@
             this.label8.Size = new System.Drawing.Size(53, 16);
             this.label8.TabIndex = 0;
             this.label8.Text = "Mã Vay";
-            // 
-            // txtSoTien
-            // 
-            this.txtSoTien.Location = new System.Drawing.Point(114, 62);
-            this.txtSoTien.Margin = new System.Windows.Forms.Padding(4);
-            this.txtSoTien.Name = "txtSoTien";
-            this.txtSoTien.Size = new System.Drawing.Size(190, 22);
-            this.txtSoTien.TabIndex = 1;
             // 
             // label5
             // 
@@ -210,7 +204,7 @@
             this.dgvMaVay.Name = "dgvMaVay";
             this.dgvMaVay.ReadOnly = true;
             this.dgvMaVay.RowHeadersWidth = 51;
-            this.dgvMaVay.Size = new System.Drawing.Size(490, 122);
+            this.dgvMaVay.Size = new System.Drawing.Size(577, 122);
             this.dgvMaVay.TabIndex = 17;
             this.dgvMaVay.Click += new System.EventHandler(this.dgvMaVay_Click);
             // 
@@ -232,7 +226,6 @@
             this.dtpNgayTra.Size = new System.Drawing.Size(180, 22);
             this.dtpNgayTra.TabIndex = 21;
             this.dtpNgayTra.Value = new System.DateTime(2025, 6, 12, 0, 0, 0, 0);
-            this.dtpNgayTra.ValueChanged += new System.EventHandler(this.dtpNgayTra_ValueChanged);
             // 
             // txtMaVay
             // 
@@ -241,12 +234,14 @@
             this.txtMaVay.Name = "txtMaVay";
             this.txtMaVay.Size = new System.Drawing.Size(290, 22);
             this.txtMaVay.TabIndex = 23;
-            this.txtMaVay.TextChanged += new System.EventHandler(this.txtMaVay_TextChanged);
             // 
             // pnlMain
             // 
             this.pnlMain.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlMain.Controls.Add(this.txtNgayVay);
+            this.pnlMain.Controls.Add(this.txtSoTien);
+            this.pnlMain.Controls.Add(this.label6);
             this.pnlMain.Controls.Add(this.txtTienTra);
             this.pnlMain.Controls.Add(this.label4);
             this.pnlMain.Controls.Add(this.txtMaVay);
@@ -258,19 +253,46 @@
             this.pnlMain.Controls.Add(this.btnHoanTac);
             this.pnlMain.Controls.Add(this.btnThem);
             this.pnlMain.Controls.Add(this.label5);
-            this.pnlMain.Controls.Add(this.txtSoTien);
             this.pnlMain.Controls.Add(this.label8);
             this.pnlMain.Controls.Add(this.label3);
             this.pnlMain.Controls.Add(this.label1);
             this.pnlMain.Controls.Add(this.label2);
             this.pnlMain.Location = new System.Drawing.Point(11, 12);
             this.pnlMain.Name = "pnlMain";
-            this.pnlMain.Size = new System.Drawing.Size(850, 242);
+            this.pnlMain.Size = new System.Drawing.Size(940, 242);
             this.pnlMain.TabIndex = 38;
+            // 
+            // txtNgayVay
+            // 
+            this.txtNgayVay.Enabled = false;
+            this.txtNgayVay.Location = new System.Drawing.Point(114, 127);
+            this.txtNgayVay.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNgayVay.Name = "txtNgayVay";
+            this.txtNgayVay.Size = new System.Drawing.Size(190, 22);
+            this.txtNgayVay.TabIndex = 29;
+            // 
+            // txtSoTien
+            // 
+            this.txtSoTien.Enabled = false;
+            this.txtSoTien.Location = new System.Drawing.Point(112, 61);
+            this.txtSoTien.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSoTien.Name = "txtSoTien";
+            this.txtSoTien.Size = new System.Drawing.Size(190, 22);
+            this.txtSoTien.TabIndex = 28;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(13, 127);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(70, 16);
+            this.label6.TabIndex = 26;
+            this.label6.Text = "Ngày Vay:";
             // 
             // txtTienTra
             // 
-            this.txtTienTra.Location = new System.Drawing.Point(114, 108);
+            this.txtTienTra.Location = new System.Drawing.Point(114, 95);
             this.txtTienTra.Margin = new System.Windows.Forms.Padding(4);
             this.txtTienTra.Name = "txtTienTra";
             this.txtTienTra.Size = new System.Drawing.Size(190, 22);
@@ -279,7 +301,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(13, 110);
+            this.label4.Location = new System.Drawing.Point(13, 97);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(69, 16);
@@ -290,7 +312,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(873, 450);
+            this.ClientSize = new System.Drawing.Size(963, 450);
             this.Controls.Add(this.btnTim);
             this.Controls.Add(this.txtTim);
             this.Controls.Add(this.lbTim);
@@ -319,7 +341,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtSoTien;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.Button btnHoanTac;
@@ -332,5 +353,8 @@
         private System.Windows.Forms.Panel pnlMain;
         private System.Windows.Forms.TextBox txtTienTra;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtSoTien;
+        private System.Windows.Forms.TextBox txtNgayVay;
     }
 }
