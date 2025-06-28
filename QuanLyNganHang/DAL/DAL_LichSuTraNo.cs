@@ -45,8 +45,7 @@ namespace DAL
                                 kv.SOTIENLAI,
                                 kv.NGAYVAY,
                                 kv.THOIHAN,
-                                kv.TRANGTHAI,
-                                kv.MALAISUAT
+                                kv.TRANGTHAI
                             };
             return ds;
         }
@@ -79,7 +78,7 @@ namespace DAL
                                   .Sum(lstn => (decimal?)lstn.SOTIENTRA) ?? 0;
 
                 // Kiểm tra số tiền trả có vượt quá tổng tiền vay
-                if (daTra + et.SOTIENTRA > khoanVay.SOTIENLAI)
+                if (daTra + et.SOTIENTRA > et.TIENGOC)
                 {
                     error = "Số tiền trả vượt quá số tiền vay.";
                     return false;
@@ -90,14 +89,14 @@ namespace DAL
                 {
                     MALICHSU = et.MALICHSU,
                     MAVAY = et.MAVAY,
-                    SOTIENGOC = khoanVay.SOTIENLAI,
+                    SOTIENGOC = et.TIENGOC,
                     SOTIENTRA = et.SOTIENTRA,
                     NGAYTRA = et.NGAYTRA
                 };
                 db.LICHSUTRANOs.InsertOnSubmit(ls);
 
                 decimal tongDaTraSauLanNay = daTra + et.SOTIENTRA;
-                decimal tongVay = khoanVay.SOTIENLAI.Value;
+                decimal tongVay = et.TIENGOC;
 
                 // Cập nhật trạng thái khoản vay
                 if (tongDaTraSauLanNay == tongVay)
@@ -154,7 +153,7 @@ namespace DAL
                     if (daTraMoi == tongVay)
                         khoanVay.TRANGTHAI = "Đã trả xong";
                     else if (daTraMoi > 0 && daTraMoi < tongVay)
-                        khoanVay.TRANGTHAI = "Còn nợ"; 
+                        khoanVay.TRANGTHAI = "Còn nợ";
                 }
 
                 db.SubmitChanges();

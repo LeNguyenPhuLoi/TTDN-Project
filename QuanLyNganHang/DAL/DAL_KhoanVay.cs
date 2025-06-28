@@ -167,20 +167,17 @@ namespace DAL
 
         public decimal TinhTienLai(decimal soTienVay, string maLaiSuat, string ngayVayStr, string ngayTraStr)
         {
-            // Chuyển đổi định dạng ngày
+            // Chuyển đổi ngày
             DateTime ngayVay = DateTime.ParseExact(ngayVayStr, "dd/MM/yyyy", null);
             DateTime ngayTra = DateTime.ParseExact(ngayTraStr, "dd/MM/yyyy", null);
 
-            // Kiểm tra hợp lệ
             if (ngayTra < ngayVay)
                 throw new Exception("Ngày trả không được nhỏ hơn ngày vay.");
 
-            // Tính số ngày
             int soNgay = (ngayTra - ngayVay).Days;
-            if (soNgay == 0)
-                soNgay = 1; // Ép tính tối thiểu 1 ngày nếu cùng ngày
+            if (soNgay == 0) soNgay = 1;
 
-            // Lấy lãi suất từ DB
+            // Lấy lãi suất
             var laiSuat = (from ls in db.LAISUATs
                            where ls.MALAISUAT == maLaiSuat
                            select ls.LAISUAT1).FirstOrDefault();
@@ -188,11 +185,13 @@ namespace DAL
             if (laiSuat == null)
                 throw new Exception("Mã lãi suất không tồn tại.");
 
-            // Tính tiền lãi
             decimal laiSuatThuc = (decimal)laiSuat / 100;
-            decimal tienLai = Math.Round(soTienVay * laiSuatThuc * soNgay / 365, 0); // làm tròn đến đơn vị
+
+            // Giả sử lãi suất là theo năm:
+            decimal tienLai = Math.Round(soTienVay * laiSuatThuc * soNgay / 365, 0); // Hoặc không làm tròn
 
             return tienLai;
         }
+
     }
 }
