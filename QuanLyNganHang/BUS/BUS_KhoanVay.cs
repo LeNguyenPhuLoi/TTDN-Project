@@ -17,6 +17,12 @@ namespace BUS
             return kv.LoadKhoanVay();
         }
 
+        //Tính tiền lãi suất
+        public decimal TinhTienLai(decimal soTienVay, string laiSuat, string ngayvay, string ngaytra)
+        {
+            return kv.TinhTienLai(soTienVay, laiSuat, ngayvay, ngaytra);
+        }
+
         // lay danh sách khách hàng
         public IQueryable LoadTenKhachHang()
         {

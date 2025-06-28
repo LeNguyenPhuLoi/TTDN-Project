@@ -20,6 +20,7 @@ namespace GUI
         }
 
         BUS_LichSuTraNo bs = new BUS_LichSuTraNo();
+        BUS_KhoanVay bsKhoanVay = new BUS_KhoanVay();
 
         private void frmLichSuTraNo_Load(object sender, EventArgs e)
         {
@@ -36,7 +37,8 @@ namespace GUI
         private void btnThem_Click(object sender, EventArgs e)
         {
             ET_LichSuTraNo et = new ET_LichSuTraNo(txtMaLichSu.Text,txtMaVay.Text,
-                                                    decimal.Parse(txtSoTienTra.Text),dtpNgayTra.Value);
+                                                    decimal.Parse(txtSoTien.Text),
+                                                    decimal.Parse(txtTienTra.Text),dtpNgayTra.Value);
             string error = "";
             if (bs.ThemLichSuTraNo(et, out error) == true)
             {
@@ -54,7 +56,8 @@ namespace GUI
         private void btnSua_Click(object sender, EventArgs e)
         {
             ET_LichSuTraNo et = new ET_LichSuTraNo(txtMaLichSu.Text, txtMaVay.Text,
-                                                    decimal.Parse(txtSoTienTra.Text), dtpNgayTra.Value);
+                                                    decimal.Parse(txtSoTien.Text),
+                                                    decimal.Parse(txtTienTra.Text), dtpNgayTra.Value);
             string error = "";
             if (bs.CapNhatLichSuTraNo(et, out error) == true)
             {
@@ -74,7 +77,8 @@ namespace GUI
             if (result == DialogResult.Yes)
             {
                 ET_LichSuTraNo et = new ET_LichSuTraNo(txtMaLichSu.Text, txtMaVay.Text,
-                                                    decimal.Parse(txtSoTienTra.Text), dtpNgayTra.Value);
+                                                        decimal.Parse(txtSoTien.Text),
+                                                        decimal.Parse(txtTienTra.Text), dtpNgayTra.Value);
                 string error = "";
                 if (bs.XoaLichSuTraNo(et, out error) == true)
                 {
@@ -94,7 +98,8 @@ namespace GUI
         {
             txtMaLichSu.Clear();
             txtMaVay.Clear();
-            txtSoTienTra.Clear();
+            txtSoTien.Clear();
+            txtTienTra.Clear();
             dtpNgayTra.Value = DateTime.Now;
             txtMaLichSu.Focus(); // Đặt con trỏ vào ô nhập mã lịch sử
         }
@@ -106,8 +111,9 @@ namespace GUI
                 int dong = dgvLichSu.CurrentRow.Index;
                 txtMaLichSu.Text = dgvLichSu.Rows[dong].Cells[0].Value.ToString();
                 txtMaVay.Text = dgvLichSu.Rows[dong].Cells[1].Value.ToString();
-                txtSoTienTra.Text = dgvLichSu.Rows[dong].Cells[2].Value.ToString();
-                dtpNgayTra.Text = dgvLichSu.Rows[dong].Cells[3].Value.ToString();
+                txtSoTien.Text = dgvLichSu.Rows[dong].Cells[2].Value.ToString(); 
+                txtTienTra.Text = dgvLichSu.Rows[dong].Cells[3].Value.ToString();
+                dtpNgayTra.Text = dgvLichSu.Rows[dong].Cells[4].Value.ToString();
             }
             catch (Exception ex)
             {
@@ -121,11 +127,52 @@ namespace GUI
             {
                 int dong = dgvMaVay.CurrentRow.Index;
                 txtMaVay.Text = dgvMaVay.Rows[dong].Cells[0].Value.ToString();
-                txtSoTienTra.Text = dgvMaVay.Rows[dong].Cells[1].Value.ToString();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void dtpNgayTra_ValueChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void txtMaVay_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                string maVay = txtMaVay.Text.Trim();
+                if (string.IsNullOrEmpty(maVay)) return;
+
+                foreach (DataGridViewRow row in dgvMaVay.Rows)
+                {
+                    if (row.IsNewRow) continue; // bỏ dòng thêm mới
+
+                    if (row.Cells.Count < 7) continue; // đủ cột chưa?
+
+                    string cellMaVay = row.Cells[0].Value?.ToString();
+                    if (!string.IsNullOrEmpty(cellMaVay) && cellMaVay.Equals(maVay, StringComparison.OrdinalIgnoreCase))
+                    {
+                        decimal soTienVay = decimal.Parse(row.Cells[1].Value.ToString());
+                        string ngayVayStr = Convert.ToDateTime(row.Cells[3].Value).ToString("dd/MM/yyyy");
+                        string maLaiSuat = row.Cells[6].Value.ToString();
+
+                        decimal tienLai = bsKhoanVay.TinhTienLai(soTienVay, maLaiSuat, ngayVayStr, dtpNgayTra.Value.ToString("dd/MM/yyyy"));
+                        decimal tongTra = soTienVay + tienLai;
+
+                        txtSoTien.Text = tongTra.ToString();
+                        return;
+                    }
+                }
+
+                // Nếu không tìm thấy mã
+                txtSoTien.Text = "";
+            }
+            catch (Exception ex)
+            {
+                txtSoTien.Text = "";
+                MessageBox.Show("Lỗi tính tiền: " + ex.Message);
             }
         }
     }

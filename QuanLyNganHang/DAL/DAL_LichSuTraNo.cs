@@ -26,6 +26,7 @@ namespace DAL
                             {
                                 ls.MALICHSU,
                                 ls.MAVAY,
+                                ls.SOTIENGOC,
                                 ls.SOTIENTRA,
                                 ls.NGAYTRA
                             };
@@ -41,9 +42,11 @@ namespace DAL
                             {
                                 kv.MAVAY,
                                 kv.SOTIENVAY,
+                                kv.SOTIENLAI,
                                 kv.NGAYVAY,
                                 kv.THOIHAN,
-                                kv.TRANGTHAI
+                                kv.TRANGTHAI,
+                                kv.MALAISUAT
                             };
             return ds;
         }
@@ -76,7 +79,7 @@ namespace DAL
                                   .Sum(lstn => (decimal?)lstn.SOTIENTRA) ?? 0;
 
                 // Kiểm tra số tiền trả có vượt quá tổng tiền vay
-                if (daTra + et.SOTIENTRA > khoanVay.SOTIENVAY)
+                if (daTra + et.SOTIENTRA > khoanVay.SOTIENLAI)
                 {
                     error = "Số tiền trả vượt quá số tiền vay.";
                     return false;
@@ -87,13 +90,14 @@ namespace DAL
                 {
                     MALICHSU = et.MALICHSU,
                     MAVAY = et.MAVAY,
+                    SOTIENGOC = khoanVay.SOTIENLAI,
                     SOTIENTRA = et.SOTIENTRA,
                     NGAYTRA = et.NGAYTRA
                 };
                 db.LICHSUTRANOs.InsertOnSubmit(ls);
 
                 decimal tongDaTraSauLanNay = daTra + et.SOTIENTRA;
-                decimal tongVay = khoanVay.SOTIENVAY.Value;
+                decimal tongVay = khoanVay.SOTIENLAI.Value;
 
                 // Cập nhật trạng thái khoản vay
                 if (tongDaTraSauLanNay == tongVay)
@@ -145,7 +149,7 @@ namespace DAL
                                         .Where(t => t.MAVAY == et.MAVAY)
                                         .Sum(t => (decimal?)t.SOTIENTRA) ?? 0;
 
-                    decimal tongVay = khoanVay.SOTIENVAY ?? 0;
+                    decimal tongVay = khoanVay.SOTIENLAI ?? 0;
 
                     if (daTraMoi == tongVay)
                         khoanVay.TRANGTHAI = "Đã trả xong";
