@@ -15,7 +15,7 @@ namespace DAL
         public AutoConnect()
         {
             string host = Dns.GetHostName();
-            string[] instanceOptions = { host, host + "\\SQLEXPRESS01" };
+            string[] instanceOptions = { host, host + "\\SQLEXPRESS" };
 
             connectionString = instanceOptions
                 .Select(instance => $"Data Source={instance};Initial Catalog=QLNH;Integrated Security=True;TrustServerCertificate=True;Connect Timeout=2;")

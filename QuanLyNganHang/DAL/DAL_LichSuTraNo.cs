@@ -42,9 +42,9 @@ namespace DAL
                             {
                                 kv.MAVAY,
                                 kv.SOTIENVAY,
-                                kv.SOTIENLAI,
-                                kv.NGAYVAY,
-                                kv.THOIHAN,
+                                kv.TONGTIEN,
+                                kv.TIENTHANG,
+                                kv.SOTHANG,
                                 kv.TRANGTHAI
                             };
             return ds;
@@ -72,40 +72,47 @@ namespace DAL
                     return false;
                 }
 
-                // Tính tổng số tiền đã trả
+                // Lấy tiền tháng từ khoản vay (sẽ dùng làm tiền gốc mỗi kỳ trả)
+                decimal tienThang = khoanVay.TIENTHANG ?? 0;
+
+                // Tính tổng số tiền đã trả trước đó
                 decimal daTra = db.LICHSUTRANOs
                                   .Where(lstn => lstn.MAVAY == et.MAVAY)
                                   .Sum(lstn => (decimal?)lstn.SOTIENTRA) ?? 0;
 
-                // Kiểm tra số tiền trả có vượt quá tổng tiền vay
-                if (daTra + et.SOTIENTRA > et.TIENGOC)
+                decimal tongPhaiTra = khoanVay.TONGTIEN ?? 0;
+
+                // Kiểm tra trả vượt quá tổng cần trả
+                if (daTra + et.SOTIENTRA > tongPhaiTra)
                 {
-                    error = "Số tiền trả vượt quá số tiền vay.";
+                    error = "Số tiền trả vượt quá tổng tiền phải trả.";
                     return false;
                 }
 
-                // Thêm lịch sử trả nợ
+                // Thêm lịch sử trả nợ mới
                 LICHSUTRANO ls = new LICHSUTRANO
                 {
                     MALICHSU = et.MALICHSU,
                     MAVAY = et.MAVAY,
-                    SOTIENGOC = et.TIENGOC,
-                    SOTIENTRA = et.SOTIENTRA,
+                    SOTIENGOC = tienThang,                // Gán từ TIENTHANG
+                    SOTIENTRA = et.SOTIENTRA,            // Khách thực trả
                     NGAYTRA = et.NGAYTRA
                 };
                 db.LICHSUTRANOs.InsertOnSubmit(ls);
 
-                decimal tongDaTraSauLanNay = daTra + et.SOTIENTRA;
-                decimal tongVay = et.TIENGOC;
+                // Cập nhật trạng thái và giảm số tháng còn lại
+                decimal daTraMoi = daTra + et.SOTIENTRA;
 
-                // Cập nhật trạng thái khoản vay
-                if (tongDaTraSauLanNay == tongVay)
+                if (daTraMoi >= tongPhaiTra)
                 {
                     khoanVay.TRANGTHAI = "Đã trả xong";
+                    khoanVay.SOTHANG = 0;
                 }
-                else if (tongDaTraSauLanNay > 0 && tongDaTraSauLanNay < tongVay)
+                else if (daTraMoi > 0)
                 {
                     khoanVay.TRANGTHAI = "Còn nợ";
+                    if (khoanVay.SOTHANG > 0)
+                        khoanVay.SOTHANG -= 1;
                 }
 
                 db.SubmitChanges();
@@ -120,7 +127,7 @@ namespace DAL
 
 
 
-        // Sửa lịch sử trả nợ
+
         public bool CapNhatLichSuTraNo(ET_LichSuTraNo et, out string error)
         {
             error = string.Empty;
@@ -134,26 +141,46 @@ namespace DAL
                     return false;
                 }
 
+                // Lấy khoản vay liên quan
+                var khoanVay = db.KHOANVAYs.FirstOrDefault(kv => kv.MAVAY == et.MAVAY);
+                if (khoanVay == null)
+                {
+                    error = "Khoản vay không tồn tại.";
+                    return false;
+                }
+
                 // Cập nhật dữ liệu mới
                 ls.MAVAY = et.MAVAY;
                 ls.SOTIENTRA = et.SOTIENTRA;
                 ls.NGAYTRA = et.NGAYTRA;
 
-                // Sau khi sửa, cần cập nhật lại trạng thái khoản vay liên quan
-                var khoanVay = db.KHOANVAYs.FirstOrDefault(kv => kv.MAVAY == et.MAVAY);
-                if (khoanVay != null)
+                // Tính lại tổng số tiền đã trả cho khoản vay này
+                decimal tongDaTra = db.LICHSUTRANOs
+                                      .Where(t => t.MAVAY == et.MAVAY)
+                                      .Sum(t => (decimal?)t.SOTIENTRA) ?? 0;
+
+                decimal tongPhaiTra = khoanVay.TONGTIEN ?? 0;
+
+                // Cập nhật trạng thái
+                if (tongDaTra >= tongPhaiTra)
                 {
-                    // Tính lại tổng số tiền đã trả của khoản vay này
-                    decimal daTraMoi = db.LICHSUTRANOs
-                                        .Where(t => t.MAVAY == et.MAVAY)
-                                        .Sum(t => (decimal?)t.SOTIENTRA) ?? 0;
+                    khoanVay.TRANGTHAI = "Đã trả xong";
+                    khoanVay.SOTHANG = 0;
+                }
+                else if (tongDaTra > 0)
+                {
+                    khoanVay.TRANGTHAI = "Còn nợ";
 
-                    decimal tongVay = khoanVay.SOTIENLAI ?? 0;
-
-                    if (daTraMoi == tongVay)
-                        khoanVay.TRANGTHAI = "Đã trả xong";
-                    else if (daTraMoi > 0 && daTraMoi < tongVay)
-                        khoanVay.TRANGTHAI = "Còn nợ";
+                    decimal tienThang = khoanVay.TIENTHANG ?? 0;
+                    if (tienThang > 0)
+                    {
+                        decimal soThangConLai = Math.Ceiling((tongPhaiTra - tongDaTra) / tienThang);
+                        khoanVay.SOTHANG = (int)soThangConLai;
+                    }
+                }
+                else
+                {
+                    khoanVay.TRANGTHAI = "Đang vay";
                 }
 
                 db.SubmitChanges();
@@ -167,7 +194,6 @@ namespace DAL
         }
 
 
-        // Xóa lịch sử trả nợ
         public bool XoaLichSuTraNo(ET_LichSuTraNo et, out string error)
         {
             error = string.Empty;
@@ -194,14 +220,28 @@ namespace DAL
                                           .Where(t => t.MAVAY == maVay)
                                           .Sum(t => (decimal?)t.SOTIENTRA) ?? 0;
 
-                    decimal tongVay = khoanVay.SOTIENVAY ?? 0;
+                    decimal tongPhaiTra = khoanVay.TONGTIEN ?? 0;
+                    decimal tienThang = khoanVay.TIENTHANG ?? 0;
 
-                    if (tongDaTra == tongVay)
+                    if (tongDaTra >= tongPhaiTra)
+                    {
                         khoanVay.TRANGTHAI = "Đã trả xong";
-                    else if (tongDaTra > 0 && tongDaTra < tongVay)
+                        khoanVay.SOTHANG = 0;
+                    }
+                    else if (tongDaTra > 0)
+                    {
                         khoanVay.TRANGTHAI = "Còn nợ";
+                        if (tienThang > 0)
+                        {
+                            decimal soThangConLai = Math.Ceiling((tongPhaiTra - tongDaTra) / tienThang);
+                            khoanVay.SOTHANG = (int)soThangConLai;
+                        }
+                    }
                     else
+                    {
                         khoanVay.TRANGTHAI = "Đang vay";
+                        khoanVay.SOTHANG = (int)(tongPhaiTra / (tienThang == 0 ? 1 : tienThang));
+                    }
                 }
 
                 db.SubmitChanges();

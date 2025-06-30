@@ -32,7 +32,8 @@ namespace GUI
         private void btnThem_Click(object sender, EventArgs e)
         {
             ET_LaiSuat et = new ET_LaiSuat(txtMaLS.Text, txtTenLoai.Text,
-                                             int.Parse(txtLaiSuat.Text));
+                                             int.Parse(txtLaiSuat.Text),
+                                             cboKL.Text);
             if (bs.ThemLaiSuat(et) == true)
             {
                 MessageBox.Show("Thêm thành công!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -51,7 +52,8 @@ namespace GUI
             if (result == DialogResult.Yes)
             {
                 ET_LaiSuat et = new ET_LaiSuat(txtMaLS.Text, txtTenLoai.Text,
-                                             int.Parse(txtLaiSuat.Text));
+                                             int.Parse(txtLaiSuat.Text),
+                                             cboKL.Text);
                 if (bs.XoaLaiSuat(et) == true)
                 {
                     MessageBox.Show("Xóa thành công!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -68,7 +70,8 @@ namespace GUI
         private void btnSua_Click(object sender, EventArgs e)
         {
             ET_LaiSuat et = new ET_LaiSuat(txtMaLS.Text, txtTenLoai.Text,
-                                             int.Parse(txtLaiSuat.Text));
+                                             int.Parse(txtLaiSuat.Text),
+                                             cboKL.Text);
             if (bs.CapNhatLaiSuat(et) == true)
             {
                 MessageBox.Show("Cập Nhật thành công!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -85,6 +88,7 @@ namespace GUI
             txtLaiSuat.Clear();
             txtMaLS.Clear();
             txtTenLoai.Clear();
+            cboKL.SelectedIndex = -1; // Đặt lại ComboBox về trạng thái không chọn
             txtMaLS.Focus();
         }
 
@@ -96,7 +100,7 @@ namespace GUI
                 txtMaLS.Text = dgvLaiSuat.Rows[dong].Cells[0].Value.ToString();
                 txtTenLoai.Text = dgvLaiSuat.Rows[dong].Cells[1].Value.ToString();
                 txtLaiSuat.Text = dgvLaiSuat.Rows[dong].Cells[2].Value.ToString();
-                
+                cboKL.Text = dgvLaiSuat.Rows[dong].Cells[3].Value.ToString();
             }
             catch (Exception ex)
             {

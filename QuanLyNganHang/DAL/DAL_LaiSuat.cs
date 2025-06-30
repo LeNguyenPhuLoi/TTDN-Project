@@ -22,7 +22,13 @@ namespace DAL
         public IQueryable LoadLaiSuat()
         {
             IQueryable ds = from ls in db.LAISUATs
-                            select ls;
+                            select new 
+                            { 
+                                ls.MALAISUAT,
+                                ls.TENLOAIVAY,
+                                ls.LAISUAT1,
+                                ls.KIEULAI
+                            };
             return ds;
         }
 
@@ -39,7 +45,8 @@ namespace DAL
                     {
                         MALAISUAT = et.MALAISUAT,
                         TENLOAIVAY = et.TENLAISUAT,
-                        LAISUAT1 = et.LAISUAT
+                        LAISUAT1 = et.LAISUAT,
+                        KIEULAI = et.KIEULAI
                     };
                     db.LAISUATs.InsertOnSubmit(ls);
                     db.SubmitChanges();
@@ -65,6 +72,7 @@ namespace DAL
                 {
                     ls.TENLOAIVAY = et.TENLAISUAT;
                     ls.LAISUAT1 = et.LAISUAT;
+                    ls.KIEULAI = et.KIEULAI;
                     db.SubmitChanges();
                     flag = true;
                 }

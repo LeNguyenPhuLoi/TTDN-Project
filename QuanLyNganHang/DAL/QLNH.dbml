@@ -107,9 +107,11 @@
     <Type Name="KHOANVAY">
       <Column Name="MAVAY" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="SOTIENVAY" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
-      <Column Name="SOTIENLAI" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="TONGTIEN" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="TIENTHANG" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
       <Column Name="NGAYVAY" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Column Name="THOIHAN" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="SOTHANG" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
       <Column Name="TRANGTHAI" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="MAKH" Type="System.String" DbType="Char(10)" CanBeNull="true" />
       <Column Name="MALAISUAT" Type="System.String" DbType="Char(10)" CanBeNull="true" />
@@ -133,7 +135,8 @@
     <Type Name="LAISUAT">
       <Column Name="MALAISUAT" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="TENLOAIVAY" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
-      <Column Name="LAISUAT" Member="LAISUAT1" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LAISUAT" Member="LAISUAT1" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="KIEULAI" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Association Name="LAISUAT_KHOANVAY" Member="KHOANVAYs" ThisKey="MALAISUAT" OtherKey="MALAISUAT" Type="KHOANVAY" />
     </Type>
   </Table>

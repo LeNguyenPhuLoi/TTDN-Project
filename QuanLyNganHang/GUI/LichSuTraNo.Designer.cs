@@ -47,9 +47,7 @@
             this.dtpNgayTra = new System.Windows.Forms.DateTimePicker();
             this.txtMaVay = new System.Windows.Forms.TextBox();
             this.pnlMain = new System.Windows.Forms.Panel();
-            this.txtNgayVay = new System.Windows.Forms.TextBox();
             this.txtSoTien = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.txtTienTra = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLichSu)).BeginInit();
@@ -239,9 +237,7 @@
             // 
             this.pnlMain.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlMain.Controls.Add(this.txtNgayVay);
             this.pnlMain.Controls.Add(this.txtSoTien);
-            this.pnlMain.Controls.Add(this.label6);
             this.pnlMain.Controls.Add(this.txtTienTra);
             this.pnlMain.Controls.Add(this.label4);
             this.pnlMain.Controls.Add(this.txtMaVay);
@@ -262,15 +258,6 @@
             this.pnlMain.Size = new System.Drawing.Size(940, 242);
             this.pnlMain.TabIndex = 38;
             // 
-            // txtNgayVay
-            // 
-            this.txtNgayVay.Enabled = false;
-            this.txtNgayVay.Location = new System.Drawing.Point(114, 127);
-            this.txtNgayVay.Margin = new System.Windows.Forms.Padding(4);
-            this.txtNgayVay.Name = "txtNgayVay";
-            this.txtNgayVay.Size = new System.Drawing.Size(190, 22);
-            this.txtNgayVay.TabIndex = 29;
-            // 
             // txtSoTien
             // 
             this.txtSoTien.Enabled = false;
@@ -279,16 +266,6 @@
             this.txtSoTien.Name = "txtSoTien";
             this.txtSoTien.Size = new System.Drawing.Size(190, 22);
             this.txtSoTien.TabIndex = 28;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(13, 127);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(70, 16);
-            this.label6.TabIndex = 26;
-            this.label6.Text = "Ngày Vay:";
             // 
             // txtTienTra
             // 
@@ -353,8 +330,6 @@
         private System.Windows.Forms.Panel pnlMain;
         private System.Windows.Forms.TextBox txtTienTra;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtSoTien;
-        private System.Windows.Forms.TextBox txtNgayVay;
     }
 }
