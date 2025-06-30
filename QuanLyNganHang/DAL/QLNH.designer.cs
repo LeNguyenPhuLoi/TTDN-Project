@@ -2507,11 +2507,15 @@ namespace DAL
 		
 		private System.Nullable<decimal> _SOTIENVAY;
 		
-		private System.Nullable<decimal> _SOTIENLAI;
+		private System.Nullable<decimal> _TONGTIEN;
+		
+		private System.Nullable<decimal> _TIENTHANG;
 		
 		private System.Nullable<System.DateTime> _NGAYVAY;
 		
 		private System.Nullable<System.DateTime> _THOIHAN;
+		
+		private System.Nullable<decimal> _SOTHANG;
 		
 		private string _TRANGTHAI;
 		
@@ -2533,12 +2537,16 @@ namespace DAL
     partial void OnMAVAYChanged();
     partial void OnSOTIENVAYChanging(System.Nullable<decimal> value);
     partial void OnSOTIENVAYChanged();
-    partial void OnSOTIENLAIChanging(System.Nullable<decimal> value);
-    partial void OnSOTIENLAIChanged();
+    partial void OnTONGTIENChanging(System.Nullable<decimal> value);
+    partial void OnTONGTIENChanged();
+    partial void OnTIENTHANGChanging(System.Nullable<decimal> value);
+    partial void OnTIENTHANGChanged();
     partial void OnNGAYVAYChanging(System.Nullable<System.DateTime> value);
     partial void OnNGAYVAYChanged();
     partial void OnTHOIHANChanging(System.Nullable<System.DateTime> value);
     partial void OnTHOIHANChanged();
+    partial void OnSOTHANGChanging(System.Nullable<decimal> value);
+    partial void OnSOTHANGChanged();
     partial void OnTRANGTHAIChanging(string value);
     partial void OnTRANGTHAIChanged();
     partial void OnMAKHChanging(string value);
@@ -2595,22 +2603,42 @@ namespace DAL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SOTIENLAI", DbType="Decimal(18,0)")]
-		public System.Nullable<decimal> SOTIENLAI
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TONGTIEN", DbType="Decimal(18,0)")]
+		public System.Nullable<decimal> TONGTIEN
 		{
 			get
 			{
-				return this._SOTIENLAI;
+				return this._TONGTIEN;
 			}
 			set
 			{
-				if ((this._SOTIENLAI != value))
+				if ((this._TONGTIEN != value))
 				{
-					this.OnSOTIENLAIChanging(value);
+					this.OnTONGTIENChanging(value);
 					this.SendPropertyChanging();
-					this._SOTIENLAI = value;
-					this.SendPropertyChanged("SOTIENLAI");
-					this.OnSOTIENLAIChanged();
+					this._TONGTIEN = value;
+					this.SendPropertyChanged("TONGTIEN");
+					this.OnTONGTIENChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TIENTHANG", DbType="Decimal(18,0)")]
+		public System.Nullable<decimal> TIENTHANG
+		{
+			get
+			{
+				return this._TIENTHANG;
+			}
+			set
+			{
+				if ((this._TIENTHANG != value))
+				{
+					this.OnTIENTHANGChanging(value);
+					this.SendPropertyChanging();
+					this._TIENTHANG = value;
+					this.SendPropertyChanged("TIENTHANG");
+					this.OnTIENTHANGChanged();
 				}
 			}
 		}
@@ -2651,6 +2679,26 @@ namespace DAL
 					this._THOIHAN = value;
 					this.SendPropertyChanged("THOIHAN");
 					this.OnTHOIHANChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SOTHANG", DbType="Decimal(18,0)")]
+		public System.Nullable<decimal> SOTHANG
+		{
+			get
+			{
+				return this._SOTHANG;
+			}
+			set
+			{
+				if ((this._SOTHANG != value))
+				{
+					this.OnSOTHANGChanging(value);
+					this.SendPropertyChanging();
+					this._SOTHANG = value;
+					this.SendPropertyChanged("SOTHANG");
+					this.OnSOTHANGChanged();
 				}
 			}
 		}
@@ -3057,7 +3105,9 @@ namespace DAL
 		
 		private string _TENLOAIVAY;
 		
-		private System.Nullable<int> _LAISUAT1;
+		private System.Nullable<decimal> _LAISUAT1;
+		
+		private string _KIEULAI;
 		
 		private EntitySet<KHOANVAY> _KHOANVAYs;
 		
@@ -3069,8 +3119,10 @@ namespace DAL
     partial void OnMALAISUATChanged();
     partial void OnTENLOAIVAYChanging(string value);
     partial void OnTENLOAIVAYChanged();
-    partial void OnLAISUAT1Changing(System.Nullable<int> value);
+    partial void OnLAISUAT1Changing(System.Nullable<decimal> value);
     partial void OnLAISUAT1Changed();
+    partial void OnKIEULAIChanging(string value);
+    partial void OnKIEULAIChanged();
     #endregion
 		
 		public LAISUAT()
@@ -3119,8 +3171,8 @@ namespace DAL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="LAISUAT", Storage="_LAISUAT1", DbType="Int")]
-		public System.Nullable<int> LAISUAT1
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="LAISUAT", Storage="_LAISUAT1", DbType="Decimal(18,0)")]
+		public System.Nullable<decimal> LAISUAT1
 		{
 			get
 			{
@@ -3135,6 +3187,26 @@ namespace DAL
 					this._LAISUAT1 = value;
 					this.SendPropertyChanged("LAISUAT1");
 					this.OnLAISUAT1Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_KIEULAI", DbType="NVarChar(50)")]
+		public string KIEULAI
+		{
+			get
+			{
+				return this._KIEULAI;
+			}
+			set
+			{
+				if ((this._KIEULAI != value))
+				{
+					this.OnKIEULAIChanging(value);
+					this.SendPropertyChanging();
+					this._KIEULAI = value;
+					this.SendPropertyChanged("KIEULAI");
+					this.OnKIEULAIChanged();
 				}
 			}
 		}

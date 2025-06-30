@@ -41,6 +41,8 @@
             this.txtMaLS = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.dgvLaiSuat = new System.Windows.Forms.DataGridView();
+            this.cboKL = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.pnlMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLaiSuat)).BeginInit();
             this.SuspendLayout();
@@ -49,6 +51,8 @@
             // 
             this.pnlMain.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlMain.Controls.Add(this.label1);
+            this.pnlMain.Controls.Add(this.cboKL);
             this.pnlMain.Controls.Add(this.btnSua);
             this.pnlMain.Controls.Add(this.btnXoa);
             this.pnlMain.Controls.Add(this.btnHoanTac);
@@ -67,7 +71,7 @@
             // 
             // btnSua
             // 
-            this.btnSua.Location = new System.Drawing.Point(469, 26);
+            this.btnSua.Location = new System.Drawing.Point(472, 93);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(103, 52);
             this.btnSua.TabIndex = 17;
@@ -77,7 +81,7 @@
             // 
             // btnXoa
             // 
-            this.btnXoa.Location = new System.Drawing.Point(578, 26);
+            this.btnXoa.Location = new System.Drawing.Point(581, 93);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(103, 52);
             this.btnXoa.TabIndex = 18;
@@ -87,7 +91,7 @@
             // 
             // btnHoanTac
             // 
-            this.btnHoanTac.Location = new System.Drawing.Point(360, 116);
+            this.btnHoanTac.Location = new System.Drawing.Point(581, 24);
             this.btnHoanTac.Name = "btnHoanTac";
             this.btnHoanTac.Size = new System.Drawing.Size(103, 41);
             this.btnHoanTac.TabIndex = 19;
@@ -97,7 +101,7 @@
             // 
             // btnThem
             // 
-            this.btnThem.Location = new System.Drawing.Point(360, 26);
+            this.btnThem.Location = new System.Drawing.Point(363, 93);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(103, 52);
             this.btnThem.TabIndex = 19;
@@ -192,6 +196,30 @@
             this.dgvLaiSuat.TabIndex = 23;
             this.dgvLaiSuat.Click += new System.EventHandler(this.dgvLaiSuat_Click);
             // 
+            // cboKL
+            // 
+            this.cboKL.FormattingEnabled = true;
+            this.cboKL.Items.AddRange(new object[] {
+            "Tháng",
+            "Năm"});
+            this.cboKL.Location = new System.Drawing.Point(454, 29);
+            this.cboKL.Name = "cboKL";
+            this.cboKL.Size = new System.Drawing.Size(121, 24);
+            this.cboKL.TabIndex = 20;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(359, 31);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(80, 22);
+            this.label1.TabIndex = 21;
+            this.label1.Text = "Kiểu Lãi:";
+            // 
             // frmLaiSuat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -224,5 +252,7 @@
         private System.Windows.Forms.TextBox txtMaLS;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.DataGridView dgvLaiSuat;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox cboKL;
     }
 }

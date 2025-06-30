@@ -100,7 +100,7 @@ namespace GUI
             txtMaVay.Clear();
             txtTienTra.Clear();
             txtSoTien.Clear();
-            txtNgayVay.Clear();
+
             dtpNgayTra.Value = DateTime.Now;
             txtMaLichSu.Focus(); // Đặt con trỏ vào ô nhập mã lịch sử
         }
@@ -112,7 +112,7 @@ namespace GUI
                 int dong = dgvLichSu.CurrentRow.Index;
                 txtMaLichSu.Text = dgvLichSu.Rows[dong].Cells[0].Value.ToString();
                 txtMaVay.Text = dgvLichSu.Rows[dong].Cells[1].Value.ToString();
-                txtSoTien.Text = dgvLichSu.Rows[dong].Cells[2].Value.ToString();
+                txtSoTien.Text = dgvLichSu.Rows[dong].Cells[2].Value?.ToString()?? "0";
                 txtTienTra.Text = dgvLichSu.Rows[dong].Cells[3].Value.ToString(); 
                 dtpNgayTra.Text = dgvLichSu.Rows[dong].Cells[4].Value.ToString();
             }
@@ -128,8 +128,7 @@ namespace GUI
             {
                 int dong = dgvMaVay.CurrentRow.Index;
                 txtMaVay.Text = dgvMaVay.Rows[dong].Cells[0].Value.ToString();
-                txtSoTien.Text = dgvMaVay.Rows[dong].Cells[2].Value.ToString();
-                txtNgayVay.Text = DateTime.Parse(dgvMaVay.Rows[dong].Cells[3].Value.ToString()).ToString("dd/MM/yyyy");
+                txtSoTien.Text = dgvMaVay.Rows[dong].Cells[3].Value.ToString();
             }
             catch (Exception ex)
             {

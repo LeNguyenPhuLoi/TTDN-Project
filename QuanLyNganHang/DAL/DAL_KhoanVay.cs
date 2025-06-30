@@ -52,9 +52,11 @@ namespace DAL
                             { 
                                 kv.MAVAY,
                                 kv.SOTIENVAY,
-                                kv.SOTIENLAI,
+                                kv.TONGTIEN,
+                                kv.TIENTHANG,
                                 kv.NGAYVAY,
                                 kv.THOIHAN,
+                                kv.SOTHANG,
                                 kv.TRANGTHAI,
                                 kv.MAKH,
                                 kv.MALAISUAT
@@ -76,9 +78,11 @@ namespace DAL
                     {
                         MAVAY = et.MAVAY,
                         SOTIENVAY = et.SOTIENVAY,
-                        SOTIENLAI = et.SOTIENLAI,
+                        TONGTIEN = et.TONGTIEN,
+                        TIENTHANG = et.TIENTHANG,
                         NGAYVAY = et.NGAYVAY,
                         THOIHAN = et.THOIHAN,
+                        SOTHANG = et.SOTHANG,
                         TRANGTHAI = et.TRANGTHAI,
                         MAKH = et.MAKH,
                         MALAISUAT = et.MALAISUAT
@@ -111,9 +115,11 @@ namespace DAL
                 if (kv != null)
                 {
                     kv.SOTIENVAY = et.SOTIENVAY;
-                    kv.SOTIENLAI = et.SOTIENLAI;
+                    kv.TONGTIEN = et.TONGTIEN;
+                    kv.TIENTHANG = et.TIENTHANG;
                     kv.NGAYVAY = et.NGAYVAY;
                     kv.THOIHAN = et.THOIHAN;
+                    kv.SOTHANG = et.SOTHANG;
                     kv.TRANGTHAI = et.TRANGTHAI;
                     kv.MAKH = et.MAKH;
                     kv.MALAISUAT = et.MALAISUAT;
@@ -164,34 +170,5 @@ namespace DAL
             }
             return flag;
         }
-
-        public decimal TinhTienLai(decimal soTienVay, string maLaiSuat, string ngayVayStr, string ngayTraStr)
-        {
-            // Chuyển đổi ngày
-            DateTime ngayVay = DateTime.ParseExact(ngayVayStr, "dd/MM/yyyy", null);
-            DateTime ngayTra = DateTime.ParseExact(ngayTraStr, "dd/MM/yyyy", null);
-
-            if (ngayTra < ngayVay)
-                throw new Exception("Ngày trả không được nhỏ hơn ngày vay.");
-
-            int soNgay = (ngayTra - ngayVay).Days;
-            if (soNgay == 0) soNgay = 1;
-
-            // Lấy lãi suất
-            var laiSuat = (from ls in db.LAISUATs
-                           where ls.MALAISUAT == maLaiSuat
-                           select ls.LAISUAT1).FirstOrDefault();
-
-            if (laiSuat == null)
-                throw new Exception("Mã lãi suất không tồn tại.");
-
-            decimal laiSuatThuc = (decimal)laiSuat / 100;
-
-            // Giả sử lãi suất là theo năm:
-            decimal tienLai = Math.Round(soTienVay * laiSuatThuc * soNgay / 365, 0); // Hoặc không làm tròn
-
-            return tienLai;
-        }
-
     }
 }
