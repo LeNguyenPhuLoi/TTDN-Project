@@ -170,5 +170,42 @@ namespace DAL
             }
             return flag;
         }
+
+        DAL_ChuyenKhoan dl = new DAL_ChuyenKhoan();
+
+        //Tìm kiếm khoảm vay
+        public IQueryable TimKiemKhoanVay(string keyword)
+        {
+            DateTime parsedDate;
+            bool isDate = dl.IsValidSqlDate(keyword, out parsedDate);
+
+            var ds = from kv in db.KHOANVAYs
+                     where kv.MAVAY.Contains(keyword)
+                        || kv.SOTIENVAY.ToString().Contains(keyword)
+                        || kv.TONGTIEN.ToString().Contains(keyword)
+                        || kv.TIENTHANG.ToString().Contains(keyword)
+                        || kv.NGAYVAY.ToString().Contains(keyword)
+                        || kv.THOIHAN.ToString().Contains(keyword)
+                        || kv.SOTHANG.ToString().Contains(keyword)
+                        || kv.TRANGTHAI.Contains(keyword)
+                        || kv.MAKH.Contains(keyword)
+                        || kv.MALAISUAT.Contains(keyword)
+                        || (isDate && kv.NGAYVAY == parsedDate.Date)
+                        || (isDate && kv.THOIHAN == parsedDate.Date)
+                     select new
+                     {
+                         kv.MAVAY,
+                         kv.SOTIENVAY,
+                         kv.TONGTIEN,
+                         kv.TIENTHANG,
+                         kv.NGAYVAY,
+                         kv.THOIHAN,
+                         kv.SOTHANG,
+                         kv.TRANGTHAI,
+                         kv.MAKH,
+                         kv.MALAISUAT
+                     };
+            return ds;
+        }
     }
 }

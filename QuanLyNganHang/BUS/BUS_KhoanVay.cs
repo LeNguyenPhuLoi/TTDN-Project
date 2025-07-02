@@ -53,5 +53,11 @@ namespace BUS
         {
             return kv.XoaKhoanVay(et, out error);
         }
+
+        //tìm kiem khoản vay
+        public IQueryable TimKiemKhoanVay(string maKhoanVay)
+        {
+            return kv.TimKiemKhoanVay(maKhoanVay);
+        }
     }
 }

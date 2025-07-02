@@ -253,5 +253,30 @@ namespace GUI
         {
             TinhTienKhoanVay();
         }
+
+        private void txtTim_TextChanged(object sender, EventArgs e)
+        {
+            string keyword = txtTim.Text.Trim();
+
+            // Nếu người dùng chưa nhập gì hoặc chỉ gõ tạm thời
+            if (string.IsNullOrWhiteSpace(keyword))
+            {
+                dgvKhoanVay.DataSource = bs.LoadDSKhoanVay();
+                return;
+            }
+
+            // Nếu keyword có vẻ là ngày nhưng chưa đúng -> bỏ qua tìm theo ngày
+            DateTime ngayTim;
+            bool isValidDate = DateTime.TryParse(keyword, out ngayTim) && ngayTim >= new DateTime(1753, 1, 1);
+
+            try
+            {
+                dgvKhoanVay.DataSource = bs.TimKiemKhoanVay(keyword); // Trong đó đã xử lý isValidDate rồi
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi tìm kiếm: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

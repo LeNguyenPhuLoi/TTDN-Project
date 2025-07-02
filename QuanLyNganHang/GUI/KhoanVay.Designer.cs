@@ -59,7 +59,6 @@
             this.dtpNgayVay = new System.Windows.Forms.DateTimePicker();
             this.txtMaVay = new System.Windows.Forms.TextBox();
             this.cboTrangThai = new System.Windows.Forms.ComboBox();
-            this.btnTim = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLaiSuat)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKhoanVay)).BeginInit();
             this.pnlMain.SuspendLayout();
@@ -236,6 +235,7 @@
             this.txtTim.Name = "txtTim";
             this.txtTim.Size = new System.Drawing.Size(303, 22);
             this.txtTim.TabIndex = 33;
+            this.txtTim.TextChanged += new System.EventHandler(this.txtTim_TextChanged);
             // 
             // lbTim
             // 
@@ -398,21 +398,11 @@
             this.cboTrangThai.Size = new System.Drawing.Size(182, 24);
             this.cboTrangThai.TabIndex = 19;
             // 
-            // btnTim
-            // 
-            this.btnTim.Location = new System.Drawing.Point(442, 302);
-            this.btnTim.Name = "btnTim";
-            this.btnTim.Size = new System.Drawing.Size(75, 23);
-            this.btnTim.TabIndex = 37;
-            this.btnTim.Text = "Tìm";
-            this.btnTim.UseVisualStyleBackColor = true;
-            // 
             // frmKhoanVay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1102, 450);
-            this.Controls.Add(this.btnTim);
             this.Controls.Add(this.txtTim);
             this.Controls.Add(this.lbTim);
             this.Controls.Add(this.dgvKhoanVay);
@@ -454,7 +444,6 @@
         private System.Windows.Forms.Panel pnlMain;
         private System.Windows.Forms.TextBox txtMaVay;
         private System.Windows.Forms.ComboBox cboTrangThai;
-        private System.Windows.Forms.Button btnTim;
         private System.Windows.Forms.DateTimePicker dtpThoiHan;
         private System.Windows.Forms.DateTimePicker dtpNgayVay;
         private System.Windows.Forms.TextBox txtTong;
