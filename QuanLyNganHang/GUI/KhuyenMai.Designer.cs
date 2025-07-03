@@ -211,6 +211,7 @@
             this.txtTim.Name = "txtTim";
             this.txtTim.Size = new System.Drawing.Size(303, 22);
             this.txtTim.TabIndex = 23;
+            this.txtTim.TextChanged += new System.EventHandler(this.txtTim_TextChanged);
             // 
             // lbTim
             // 
