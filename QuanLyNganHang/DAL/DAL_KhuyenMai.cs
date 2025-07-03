@@ -151,5 +151,32 @@ namespace DAL
             }
             return clone;
         }
+
+        DAL_ChuyenKhoan dl = new DAL_ChuyenKhoan();
+
+        //Tìm Kiếm Khuyến Mãi
+        public IQueryable TimKiemKhuyenMai(string keyword)
+        {
+            DateTime parsedDate;
+            bool isDate = dl.IsValidSqlDate(keyword, out parsedDate);
+
+            var ds = from km in db.KHUYENMAIs
+                     where km.MAKM.Contains(keyword)
+                        || km.TENKM.Contains(keyword)
+                        || km.MOTA.Contains(keyword)
+                        || (isDate && km.NGAYBD == parsedDate.Date)
+                        || (isDate && km.NGAYKT == parsedDate.Date)
+                        || km.DKAPDUNG.Contains(keyword)
+                     select new
+                     {
+                         km.MAKM,
+                         km.TENKM,
+                         km.MOTA,
+                         km.NGAYBD,
+                         km.NGAYKT,
+                         km.DKAPDUNG
+                     };
+            return ds;
+        }
     }
 }

@@ -35,5 +35,11 @@ namespace BUS
         {
             return km.XoaKM(et, out error);
         }
+
+        // Tìm kiếm khuyến mãi
+        public IQueryable TimKiemKhuyenMai(string keyword)
+        {
+            return km.TimKiemKhuyenMai(keyword);
+        }
     }
 }

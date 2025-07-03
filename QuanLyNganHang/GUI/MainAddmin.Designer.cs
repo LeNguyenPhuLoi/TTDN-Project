@@ -185,14 +185,14 @@
             // giaoDịchToolStripMenuItem
             // 
             this.giaoDịchToolStripMenuItem.Name = "giaoDịchToolStripMenuItem";
-            this.giaoDịchToolStripMenuItem.Size = new System.Drawing.Size(224, 30);
+            this.giaoDịchToolStripMenuItem.Size = new System.Drawing.Size(183, 30);
             this.giaoDịchToolStripMenuItem.Text = "Giao Dịch";
             this.giaoDịchToolStripMenuItem.Click += new System.EventHandler(this.giaoDịchToolStripMenuItem_Click);
             // 
             // biênLaiToolStripMenuItem
             // 
             this.biênLaiToolStripMenuItem.Name = "biênLaiToolStripMenuItem";
-            this.biênLaiToolStripMenuItem.Size = new System.Drawing.Size(224, 30);
+            this.biênLaiToolStripMenuItem.Size = new System.Drawing.Size(183, 30);
             this.biênLaiToolStripMenuItem.Text = "Biên Lai";
             this.biênLaiToolStripMenuItem.Click += new System.EventHandler(this.biênLaiToolStripMenuItem_Click);
             // 
@@ -227,14 +227,14 @@
             // nộiQuyToolStripMenuItem
             // 
             this.nộiQuyToolStripMenuItem.Name = "nộiQuyToolStripMenuItem";
-            this.nộiQuyToolStripMenuItem.Size = new System.Drawing.Size(224, 30);
+            this.nộiQuyToolStripMenuItem.Size = new System.Drawing.Size(171, 30);
             this.nộiQuyToolStripMenuItem.Text = "Nội Quy";
             this.nộiQuyToolStripMenuItem.Click += new System.EventHandler(this.nộiQuyToolStripMenuItem_Click);
             // 
             // viPhạmToolStripMenuItem
             // 
             this.viPhạmToolStripMenuItem.Name = "viPhạmToolStripMenuItem";
-            this.viPhạmToolStripMenuItem.Size = new System.Drawing.Size(224, 30);
+            this.viPhạmToolStripMenuItem.Size = new System.Drawing.Size(171, 30);
             this.viPhạmToolStripMenuItem.Text = "Vi Phạm";
             this.viPhạmToolStripMenuItem.Click += new System.EventHandler(this.viPhạmToolStripMenuItem_Click);
             // 
@@ -319,6 +319,7 @@
             this.picBanner.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picBanner.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.picBanner.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.picBanner.Image = ((System.Drawing.Image)(resources.GetObject("picBanner.Image")));
             this.picBanner.Location = new System.Drawing.Point(0, 0);
             this.picBanner.Name = "picBanner";
             this.picBanner.Size = new System.Drawing.Size(1042, 633);
