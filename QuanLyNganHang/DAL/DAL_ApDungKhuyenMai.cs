@@ -137,5 +137,28 @@ namespace DAL
             }
             return flag;
         }
+
+        //Tìm kiếm áp dụng khuyến mãi
+        DAL_ChuyenKhoan dl = new DAL_ChuyenKhoan();
+
+        public IQueryable TimKiemADKM(string keyword)
+        {
+            DateTime parsedDate;
+            bool isDate = dl.IsValidSqlDate(keyword, out parsedDate);
+
+            var ds = from km in db.APDUNGKHUYENMAIs
+                     where km.MAKM.Contains(keyword)
+                        || km.MAKH.Contains(keyword)
+                        || km.MATK.Contains(keyword)
+                        || (isDate && km.NGAYAPDUNG == parsedDate.Date)
+                     select new
+                     {
+                         km.MAKM,
+                         km.MAKH,
+                         km.MATK,
+                         km.NGAYAPDUNG
+                     };
+            return ds;
+        }
     }
 }
