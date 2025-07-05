@@ -166,5 +166,10 @@ namespace GUI
                 MessageBox.Show("Lỗi tìm kiếm: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void lbTim_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

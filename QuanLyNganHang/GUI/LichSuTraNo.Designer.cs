@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLichSuTraNo));
-            this.btnTim = new System.Windows.Forms.Button();
             this.txtTim = new System.Windows.Forms.TextBox();
             this.lbTim = new System.Windows.Forms.Label();
             this.dgvLichSu = new System.Windows.Forms.DataGridView();
@@ -55,15 +54,6 @@
             this.pnlMain.SuspendLayout();
             this.SuspendLayout();
             // 
-            // btnTim
-            // 
-            this.btnTim.Location = new System.Drawing.Point(504, 265);
-            this.btnTim.Name = "btnTim";
-            this.btnTim.Size = new System.Drawing.Size(75, 23);
-            this.btnTim.TabIndex = 42;
-            this.btnTim.Text = "Tìm";
-            this.btnTim.UseVisualStyleBackColor = true;
-            // 
             // txtTim
             // 
             this.txtTim.Location = new System.Drawing.Point(194, 266);
@@ -71,6 +61,7 @@
             this.txtTim.Name = "txtTim";
             this.txtTim.Size = new System.Drawing.Size(303, 22);
             this.txtTim.TabIndex = 41;
+            this.txtTim.TextChanged += new System.EventHandler(this.txtTim_TextChanged);
             // 
             // lbTim
             // 
@@ -290,7 +281,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(963, 450);
-            this.Controls.Add(this.btnTim);
             this.Controls.Add(this.txtTim);
             this.Controls.Add(this.lbTim);
             this.Controls.Add(this.dgvLichSu);
@@ -309,8 +299,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnTim;
         private System.Windows.Forms.TextBox txtTim;
         private System.Windows.Forms.Label lbTim;
         private System.Windows.Forms.DataGridView dgvLichSu;
