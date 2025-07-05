@@ -40,5 +40,11 @@ namespace BUS
         {
             return ls.XoaLichSuTraNo(et, out error);
         }
+
+        //tìm kiếm lịch sử trả nợ
+        public IQueryable TimKiemLichSuTraNo(string maLichSu)
+        {
+            return ls.TimKiemLSTN(maLichSu);
+        }
     }
 }

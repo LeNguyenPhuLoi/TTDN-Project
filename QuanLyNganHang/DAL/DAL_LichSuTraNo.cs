@@ -254,5 +254,29 @@ namespace DAL
             }
         }
 
+        //Tìm kiếm áp dụng khuyến mãi
+        DAL_ChuyenKhoan dl = new DAL_ChuyenKhoan();
+
+        public IQueryable TimKiemLSTN(string keyword)
+        {
+            DateTime parsedDate;
+            bool isDate = dl.IsValidSqlDate(keyword, out parsedDate);
+
+            var ds = from ls in db.LICHSUTRANOs
+                     where ls.MALICHSU.Contains(keyword) ||
+                           ls.MAVAY.Contains(keyword) ||
+                           ls.SOTIENGOC.ToString().Contains(keyword) ||
+                           ls.SOTIENTRA.ToString().Contains(keyword) ||
+                           (isDate && ls.NGAYTRA == parsedDate.Date)
+                     select new
+                     {
+                         ls.MALICHSU,
+                         ls.MAVAY,
+                         ls.SOTIENGOC,
+                         ls.SOTIENTRA,
+                         ls.NGAYTRA
+                     };
+            return ds;
+        }
     }
 }
