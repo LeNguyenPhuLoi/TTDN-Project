@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLaiSuat));
             this.pnlMain = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cboKL = new System.Windows.Forms.ComboBox();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnHoanTac = new System.Windows.Forms.Button();
@@ -41,8 +43,6 @@
             this.txtMaLS = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.dgvLaiSuat = new System.Windows.Forms.DataGridView();
-            this.cboKL = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.pnlMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLaiSuat)).BeginInit();
             this.SuspendLayout();
@@ -68,6 +68,30 @@
             this.pnlMain.Name = "pnlMain";
             this.pnlMain.Size = new System.Drawing.Size(706, 176);
             this.pnlMain.TabIndex = 22;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(359, 31);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(80, 22);
+            this.label1.TabIndex = 21;
+            this.label1.Text = "Kiểu Lãi:";
+            // 
+            // cboKL
+            // 
+            this.cboKL.FormattingEnabled = true;
+            this.cboKL.Items.AddRange(new object[] {
+            "Tháng",
+            "Năm"});
+            this.cboKL.Location = new System.Drawing.Point(454, 29);
+            this.cboKL.Name = "cboKL";
+            this.cboKL.Size = new System.Drawing.Size(121, 24);
+            this.cboKL.TabIndex = 20;
             // 
             // btnSua
             // 
@@ -195,30 +219,6 @@
             this.dgvLaiSuat.Size = new System.Drawing.Size(706, 258);
             this.dgvLaiSuat.TabIndex = 23;
             this.dgvLaiSuat.Click += new System.EventHandler(this.dgvLaiSuat_Click);
-            // 
-            // cboKL
-            // 
-            this.cboKL.FormattingEnabled = true;
-            this.cboKL.Items.AddRange(new object[] {
-            "Tháng",
-            "Năm"});
-            this.cboKL.Location = new System.Drawing.Point(454, 29);
-            this.cboKL.Name = "cboKL";
-            this.cboKL.Size = new System.Drawing.Size(121, 24);
-            this.cboKL.TabIndex = 20;
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(359, 31);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(80, 22);
-            this.label1.TabIndex = 21;
-            this.label1.Text = "Kiểu Lãi:";
             // 
             // frmLaiSuat
             // 
