@@ -27,4 +27,13 @@ namespace ET
         public string QuocGia { get => _QuocGia; set => _QuocGia = value; }
         public string TrangThai { get => _TrangThai; set => _TrangThai = value; }
     }
+
+    public class ET_LoaiTienRP
+    {
+        public string MaLoaiTien { get; set; }
+        public string TenLoaiTien { get; set; }
+        public string KyHieu { get; set; }
+        public string QuocGia { get; set; }
+        public string TrangThai { get; set; }
+    }
 }
