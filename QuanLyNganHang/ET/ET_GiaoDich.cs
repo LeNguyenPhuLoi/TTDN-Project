@@ -33,4 +33,15 @@ namespace ET
         public string MoTa { get => _MoTa; set => _MoTa = value; }
         public string TrangThai { get => _TrangThai; set => _TrangThai = value; }
     }
+
+    public class ET_GiaoDichRP
+    {
+        public string MaGD { get; set; }
+        public string TenKH { get; set; }
+        public string LoaiGD { get; set; }
+        public decimal SoTien { get; set; }
+        public DateTime ThoiGianGD { get; set; }
+        public string MoTa { get; set; }
+        public string TrangThai { get; set; }
+    }
 }

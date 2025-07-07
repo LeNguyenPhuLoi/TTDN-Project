@@ -42,4 +42,18 @@ namespace ET
         public string Mota { get => _Mota; set => _Mota = value; }
         public string TrangThai { get => _TrangThai; set => _TrangThai = value; }
     }
+
+    public class ET_BienLaiRP
+    {
+        public string MaBL { get; set; }
+        public string MaGD { get; set; }
+        public string TenKH { get; set; }
+        public string SoTaiKhoan { get; set; }
+        public string TenNV { get; set; }
+        public decimal SoTien { get; set; }
+        public string TenLoaiTien { get; set; }
+        public string LoaiBL { get; set; }
+        public string Mota { get; set; }
+        public string TrangThai { get; set; }
+    }
 }

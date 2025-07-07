@@ -18,4 +18,10 @@ namespace ET
         public string MaLoaiTK { get => _MaLoaiTK; set => _MaLoaiTK = value; }
         public string ChiTiet { get => _ChiTiet; set => _ChiTiet = value; }
     }
+
+    public class ET_LoaiTaiKhoanRP
+    {
+        public string MaLoaiTK { get; set; }
+        public string ChiTiet { get; set; }
+    }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Text;
 
 namespace ET
@@ -35,5 +36,17 @@ namespace ET
         public string MaLoaiTien { get => _MaLoaiTien; set => _MaLoaiTien = value; }
         public DateTime NgayMoTK { get => _NgayMoTK; set => _NgayMoTK = value; }
         public string TrangThai { get => _TrangThai; set => _TrangThai = value; }
+    }
+
+    public class ET_TaiKhoanRP
+    {
+        public string MaTK { get; set; }
+        public string TenKH { get; set; }
+        public string SoTaiKhoan { get; set; }
+        public string ChiTiet { get; set; }
+        public string SoDu { get; set; }
+        public string TenLoaiTien { get; set; }
+        public DateTime NgayMoTK { get; set; }
+        public string TrangThai { get; set; }
     }
 }

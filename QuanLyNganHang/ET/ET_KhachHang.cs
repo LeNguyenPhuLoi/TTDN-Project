@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Transactions;
 
 namespace ET
 {
@@ -41,5 +42,19 @@ namespace ET
         public string QuocTich { get => _QuocTich; set => _QuocTich = value; }
         public string DoiTuong { get => _DoiTuong; set => _DoiTuong = value; }
         public DateTime NgayTao { get => _NgayTao; set => _NgayTao = value; }
+    }
+
+    public class ET_KhachHangRP
+    {
+        public string MaKH { get; set; }
+        public string TenKH { get; set; }
+        public string GioiTinh { get; set; }
+        public string Cccd { get; set; }
+        public string Sdt { get; set; }
+        public string Email { get; set; }
+        public string DiaChi { get; set; }
+        public string QuocTich { get; set; }
+        public string DoiTuong { get; set; }
+        public DateTime NgayTao { get; set; }
     }
 }
