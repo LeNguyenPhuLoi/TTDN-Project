@@ -9,6 +9,36 @@ using DAL;
 
 namespace BUS
 {
+    public class BUS_KhachHangRP
+    {
+        //tạo đối tượng xử lý nghiệp vụ
+        DAL_KhachHangRP kh = new DAL_KhachHangRP();
+
+        //gọi hàm lấy danh sách khách hàng cho report
+        public List<ET_KhachHangRP> LoadDSKhachHang()
+        {
+            return kh.LoadDSKhachHang();
+        }
+
+        //gọi hàm lấy danh sách khách hàng cho report theo mã khách hàng
+        public List<ET_KhachHangRP> LoadDSKhachHangTheoMa(string ma)
+        {
+            return kh.LoadDSKhachHangTheoMa(ma);
+        }
+
+        //gọi hàm lấy danh sách khách hàng cho report theo tên khách hàng
+        public List<ET_KhachHangRP> LoadDSKhachHangTheoTen(string ten)
+        {
+            return kh.LoadDSKhachHangTheoTen(ten);
+        }
+
+        //gọi hàm lấy danh sách khách hàng cho report theo sdt
+        public List<ET_KhachHangRP> LoadDSKhachHangTheosdt(string sdt)
+        {
+            return kh.LoadDSKhachHangTheosdt(sdt);
+        }
+    }
+
     public class BUS_KhachHang
     {
         //tạo đối tượng xử lý nghiệp vụ
