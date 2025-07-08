@@ -310,3 +310,15 @@ E:\TTDN Project\7-7-2025\TTDN-Project\QuanLyNganHang\BUS\obj\Debug\BUS.csproj.Co
 E:\TTDN Project\7-7-2025\TTDN-Project\QuanLyNganHang\BUS\obj\Debug\BUS.csproj.Up2Date
 E:\TTDN Project\7-7-2025\TTDN-Project\QuanLyNganHang\BUS\obj\Debug\BUS.dll
 E:\TTDN Project\7-7-2025\TTDN-Project\QuanLyNganHang\BUS\obj\Debug\BUS.pdb
+E:\TTDN Project\Tháng 7\8-7-2025\TTDN-Project\QuanLyNganHang\BUS\bin\Debug\BUS.dll
+E:\TTDN Project\Tháng 7\8-7-2025\TTDN-Project\QuanLyNganHang\BUS\bin\Debug\BUS.pdb
+E:\TTDN Project\Tháng 7\8-7-2025\TTDN-Project\QuanLyNganHang\BUS\bin\Debug\DAL.dll
+E:\TTDN Project\Tháng 7\8-7-2025\TTDN-Project\QuanLyNganHang\BUS\bin\Debug\ET.dll
+E:\TTDN Project\Tháng 7\8-7-2025\TTDN-Project\QuanLyNganHang\BUS\bin\Debug\DAL.pdb
+E:\TTDN Project\Tháng 7\8-7-2025\TTDN-Project\QuanLyNganHang\BUS\bin\Debug\DAL.dll.config
+E:\TTDN Project\Tháng 7\8-7-2025\TTDN-Project\QuanLyNganHang\BUS\bin\Debug\ET.pdb
+E:\TTDN Project\Tháng 7\8-7-2025\TTDN-Project\QuanLyNganHang\BUS\obj\Debug\BUS.csproj.AssemblyReference.cache
+E:\TTDN Project\Tháng 7\8-7-2025\TTDN-Project\QuanLyNganHang\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+E:\TTDN Project\Tháng 7\8-7-2025\TTDN-Project\QuanLyNganHang\BUS\obj\Debug\BUS.csproj.Up2Date
+E:\TTDN Project\Tháng 7\8-7-2025\TTDN-Project\QuanLyNganHang\BUS\obj\Debug\BUS.dll
+E:\TTDN Project\Tháng 7\8-7-2025\TTDN-Project\QuanLyNganHang\BUS\obj\Debug\BUS.pdb

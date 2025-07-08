@@ -1,33 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "E:\\TTDN Project\\7-7-2025\\TTDN-Project\\QuanLyNganHang\\",
+  "WorkspaceRootPath": "E:\\TTDN Project\\Th\u00E1ng 7\\8-7-2025\\TTDN-Project\\QuanLyNganHang\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5E5166B0-7BAE-4657-BBFC-F6B39153A169}|ET\\ET.csproj|e:\\ttdn project\\7-7-2025\\ttdn-project\\quanlynganhang\\et\\et_taikhoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5E5166B0-7BAE-4657-BBFC-F6B39153A169}|ET\\ET.csproj|solutionrelative:et\\et_taikhoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5E5166B0-7BAE-4657-BBFC-F6B39153A169}|ET\\ET.csproj|e:\\ttdn project\\7-7-2025\\ttdn-project\\quanlynganhang\\et\\et_bienlai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5E5166B0-7BAE-4657-BBFC-F6B39153A169}|ET\\ET.csproj|solutionrelative:et\\et_bienlai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5E5166B0-7BAE-4657-BBFC-F6B39153A169}|ET\\ET.csproj|e:\\ttdn project\\7-7-2025\\ttdn-project\\quanlynganhang\\et\\et_giaodich.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5E5166B0-7BAE-4657-BBFC-F6B39153A169}|ET\\ET.csproj|solutionrelative:et\\et_giaodich.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5E5166B0-7BAE-4657-BBFC-F6B39153A169}|ET\\ET.csproj|e:\\ttdn project\\7-7-2025\\ttdn-project\\quanlynganhang\\et\\et_loaitien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5E5166B0-7BAE-4657-BBFC-F6B39153A169}|ET\\ET.csproj|solutionrelative:et\\et_loaitien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5E5166B0-7BAE-4657-BBFC-F6B39153A169}|ET\\ET.csproj|e:\\ttdn project\\7-7-2025\\ttdn-project\\quanlynganhang\\et\\et_loaitaikhoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5E5166B0-7BAE-4657-BBFC-F6B39153A169}|ET\\ET.csproj|solutionrelative:et\\et_loaitaikhoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5E5166B0-7BAE-4657-BBFC-F6B39153A169}|ET\\ET.csproj|e:\\ttdn project\\7-7-2025\\ttdn-project\\quanlynganhang\\et\\et_khachhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5E5166B0-7BAE-4657-BBFC-F6B39153A169}|ET\\ET.csproj|solutionrelative:et\\et_khachhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DD5CDC54-9399-46A4-B844-FB2507673A03}|GUI\\GUI.csproj|E:\\TTDN Project\\7-7-2025\\TTDN-Project\\QuanLyNganHang\\gui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{DD5CDC54-9399-46A4-B844-FB2507673A03}|GUI\\GUI.csproj|E:\\TTDN Project\\Th\u00E1ng 7\\8-7-2025\\TTDN-Project\\QuanLyNganHang\\gui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DD5CDC54-9399-46A4-B844-FB2507673A03}|GUI\\GUI.csproj|solutionrelative:gui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -38,98 +14,20 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "E:\\TTDN Project\\7-7-2025\\TTDN-Project\\QuanLyNganHang\\GUI\\Program.cs",
+              "DocumentMoniker": "E:\\TTDN Project\\Th\u00E1ng 7\\8-7-2025\\TTDN-Project\\QuanLyNganHang\\GUI\\Program.cs",
               "RelativeDocumentMoniker": "GUI\\Program.cs",
-              "ToolTip": "E:\\TTDN Project\\7-7-2025\\TTDN-Project\\QuanLyNganHang\\GUI\\Program.cs",
-              "RelativeToolTip": "GUI\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAANAAAAAAAAAA==",
+              "ToolTip": "E:\\TTDN Project\\Th\u00E1ng 7\\8-7-2025\\TTDN-Project\\QuanLyNganHang\\GUI\\Program.cs*",
+              "RelativeToolTip": "GUI\\Program.cs*",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABIAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-28T10:16:05.033Z",
               "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ET_BienLai.cs",
-              "DocumentMoniker": "E:\\TTDN Project\\7-7-2025\\TTDN-Project\\QuanLyNganHang\\ET\\ET_BienLai.cs",
-              "RelativeDocumentMoniker": "ET\\ET_BienLai.cs",
-              "ToolTip": "E:\\TTDN Project\\7-7-2025\\TTDN-Project\\QuanLyNganHang\\ET\\ET_BienLai.cs*",
-              "RelativeToolTip": "ET\\ET_BienLai.cs*",
-              "ViewState": "AgIAACEAAAAAAAAAAAA5wDEAAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-07T08:55:55.031Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ET_GiaoDich.cs",
-              "DocumentMoniker": "E:\\TTDN Project\\7-7-2025\\TTDN-Project\\QuanLyNganHang\\ET\\ET_GiaoDich.cs",
-              "RelativeDocumentMoniker": "ET\\ET_GiaoDich.cs",
-              "ToolTip": "E:\\TTDN Project\\7-7-2025\\TTDN-Project\\QuanLyNganHang\\ET\\ET_GiaoDich.cs",
-              "RelativeToolTip": "ET\\ET_GiaoDich.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAgwCcAAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-07T08:53:28.127Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ET_LoaiTien.cs",
-              "DocumentMoniker": "E:\\TTDN Project\\7-7-2025\\TTDN-Project\\QuanLyNganHang\\ET\\ET_LoaiTien.cs",
-              "RelativeDocumentMoniker": "ET\\ET_LoaiTien.cs",
-              "ToolTip": "E:\\TTDN Project\\7-7-2025\\TTDN-Project\\QuanLyNganHang\\ET\\ET_LoaiTien.cs",
-              "RelativeToolTip": "ET\\ET_LoaiTien.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAgwCEAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-07T08:52:36.284Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ET_LoaiTaiKhoan.cs",
-              "DocumentMoniker": "E:\\TTDN Project\\7-7-2025\\TTDN-Project\\QuanLyNganHang\\ET\\ET_LoaiTaiKhoan.cs",
-              "RelativeDocumentMoniker": "ET\\ET_LoaiTaiKhoan.cs",
-              "ToolTip": "E:\\TTDN Project\\7-7-2025\\TTDN-Project\\QuanLyNganHang\\ET\\ET_LoaiTaiKhoan.cs",
-              "RelativeToolTip": "ET\\ET_LoaiTaiKhoan.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-07T08:52:03.832Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ET_KhachHang.cs",
-              "DocumentMoniker": "E:\\TTDN Project\\7-7-2025\\TTDN-Project\\QuanLyNganHang\\ET\\ET_KhachHang.cs",
-              "RelativeDocumentMoniker": "ET\\ET_KhachHang.cs",
-              "ToolTip": "E:\\TTDN Project\\7-7-2025\\TTDN-Project\\QuanLyNganHang\\ET\\ET_KhachHang.cs",
-              "RelativeToolTip": "ET\\ET_KhachHang.cs",
-              "ViewState": "AgIAACwAAAAAAAAAAAAswAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-07T08:51:39.181Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ET_TaiKhoan.cs",
-              "DocumentMoniker": "E:\\TTDN Project\\7-7-2025\\TTDN-Project\\QuanLyNganHang\\ET\\ET_TaiKhoan.cs",
-              "RelativeDocumentMoniker": "ET\\ET_TaiKhoan.cs",
-              "ToolTip": "E:\\TTDN Project\\7-7-2025\\TTDN-Project\\QuanLyNganHang\\ET\\ET_TaiKhoan.cs",
-              "RelativeToolTip": "ET\\ET_TaiKhoan.cs",
-              "ViewState": "AgIAAB0AAAAAAAAAAAAgwCsAAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-07T08:49:09.319Z",
               "EditorCaption": ""
             }
           ]

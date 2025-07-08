@@ -9,6 +9,105 @@ using ET;
 
 namespace DAL
 {
+    public class DAL_KhachHangRP
+    {
+        //kết nối database = linq to sql
+        AutoConnect conn = new AutoConnect();
+        QLNHDataContext db;
+
+        public DAL_KhachHangRP()
+        {
+            db = new QLNHDataContext(conn.GetConnection());
+        }
+
+        //hàm lấy danh sách khách hàng cho report
+        public List<ET_KhachHangRP> LoadDSKhachHang()
+        {
+            var query = from kh in db.KHACHHANGs
+                        select new ET_KhachHangRP
+                        {
+                            MaKH = kh.MAKH,
+                            TenKH = kh.TENKH,
+                            GioiTinh = kh.GIOITINH,
+                            Cccd = kh.CCCD,
+                            Sdt = kh.SDT,
+                            Email = kh.EMAIL,
+                            DiaChi = kh.DIACHI,
+                            QuocTich = kh.QUOCTICH,
+                            DoiTuong = kh.DOITUONG,
+                            NgayTao = Convert.ToDateTime(kh.NGAYTAO),
+                        };
+
+            return query.ToList();
+        }
+
+        //hàm lấy danh sách khách hàng cho report theo mã khách hàng
+        public List<ET_KhachHangRP> LoadDSKhachHangTheoMa(string ma)
+        {
+            var query = from kh in db.KHACHHANGs
+                        where kh.MAKH.Contains(ma)
+                        select new ET_KhachHangRP
+                        {
+                            MaKH = kh.MAKH,
+                            TenKH = kh.TENKH,
+                            GioiTinh = kh.GIOITINH,
+                            Cccd = kh.CCCD,
+                            Sdt = kh.SDT,
+                            Email = kh.EMAIL,
+                            DiaChi = kh.DIACHI,
+                            QuocTich = kh.QUOCTICH,
+                            DoiTuong = kh.DOITUONG,
+                            NgayTao = Convert.ToDateTime(kh.NGAYTAO),
+                        };
+
+            return query.ToList();
+        }
+
+        //hàm lấy danh sách khách hàng cho report theo tên khách hàng
+        public List<ET_KhachHangRP> LoadDSKhachHangTheoTen(string ten)
+        {
+            var query = from kh in db.KHACHHANGs
+                        where kh.TENKH.Contains(ten)
+                        select new ET_KhachHangRP
+                        {
+                            MaKH = kh.MAKH,
+                            TenKH = kh.TENKH,
+                            GioiTinh = kh.GIOITINH,
+                            Cccd = kh.CCCD,
+                            Sdt = kh.SDT,
+                            Email = kh.EMAIL,
+                            DiaChi = kh.DIACHI,
+                            QuocTich = kh.QUOCTICH,
+                            DoiTuong = kh.DOITUONG,
+                            NgayTao = Convert.ToDateTime(kh.NGAYTAO),
+                        };
+
+            return query.ToList();
+        }
+
+        //hàm lấy danh sách khách hàng cho report theo sdt
+        public List<ET_KhachHangRP> LoadDSKhachHangTheosdt(string sdt)
+        {
+            var query = from kh in db.KHACHHANGs
+                        where kh.SDT.Contains(sdt)
+                        select new ET_KhachHangRP
+                        {
+                            MaKH = kh.MAKH,
+                            TenKH = kh.TENKH,
+                            GioiTinh = kh.GIOITINH,
+                            Cccd = kh.CCCD,
+                            Sdt = kh.SDT,
+                            Email = kh.EMAIL,
+                            DiaChi = kh.DIACHI,
+                            QuocTich = kh.QUOCTICH,
+                            DoiTuong = kh.DOITUONG,
+                            NgayTao = Convert.ToDateTime(kh.NGAYTAO),
+                        };
+
+            return query.ToList();
+        }
+    }
+
     public class DAL_KhachHang
     {
         //kết nối database = linq to sql
