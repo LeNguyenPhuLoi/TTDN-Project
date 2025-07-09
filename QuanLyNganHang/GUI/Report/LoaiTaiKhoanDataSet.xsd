@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="LoaiTaiKhoanDataSet" targetNamespace="http://tempuri.org/LoaiTaiKhoanDataSet.xsd" xmlns:mstns="http://tempuri.org/LoaiTaiKhoanDataSet.xsd" xmlns="http://tempuri.org/LoaiTaiKhoanDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="LoaiTaiKhoanDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_UserDSName="LoaiTaiKhoanDataSet" msprop:Generator_DataSetName="LoaiTaiKhoanDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="LoaiTaiKhoan" msprop:Generator_RowEvHandlerName="LoaiTaiKhoanRowChangeEventHandler" msprop:Generator_RowDeletedName="LoaiTaiKhoanRowDeleted" msprop:Generator_RowDeletingName="LoaiTaiKhoanRowDeleting" msprop:Generator_RowEvArgName="LoaiTaiKhoanRowChangeEvent" msprop:Generator_TablePropName="LoaiTaiKhoan" msprop:Generator_RowChangedName="LoaiTaiKhoanRowChanged" msprop:Generator_RowChangingName="LoaiTaiKhoanRowChanging" msprop:Generator_TableClassName="LoaiTaiKhoanDataTable" msprop:Generator_RowClassName="LoaiTaiKhoanRow" msprop:Generator_TableVarName="tableLoaiTaiKhoan" msprop:Generator_UserTableName="LoaiTaiKhoan">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MaLoaiTK" msprop:Generator_ColumnPropNameInRow="MaLoaiTK" msprop:Generator_ColumnPropNameInTable="MaLoaiTKColumn" msprop:Generator_ColumnVarNameInTable="columnMaLoaiTK" msprop:Generator_UserColumnName="MaLoaiTK" type="xs:string" minOccurs="0" />
+              <xs:element name="ChiTiet" msprop:Generator_ColumnPropNameInRow="ChiTiet" msprop:Generator_ColumnPropNameInTable="ChiTietColumn" msprop:Generator_ColumnVarNameInTable="columnChiTiet" msprop:Generator_UserColumnName="ChiTiet" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

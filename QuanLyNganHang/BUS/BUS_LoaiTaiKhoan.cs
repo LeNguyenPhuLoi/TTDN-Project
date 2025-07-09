@@ -9,6 +9,30 @@ using DAL;
 
 namespace BUS
 {
+    public class BUS_LoaiTaiKhoanRP
+    {
+        //tạo đối tượng xử lý nghiệp vụ
+        DAL_LoaiTaiKhoanRP ltk = new DAL_LoaiTaiKhoanRP();
+
+        //gọi hàm lấy danh sách loại tài khoản cho report
+        public List<ET_LoaiTaiKhoanRP> LoadDSLoaiTaiKhoan()
+        {
+            return ltk.LoadDSLoaiTaiKhoan();
+        }
+
+        //gọi hàm lấy danh sách loại tài khoản cho report theo mã
+        public List<ET_LoaiTaiKhoanRP> LoadDSLoaiTaiKhoanTheoMa(string ma)
+        {
+            return ltk.LoadDSLoaiTaiKhoanTheoMa(ma);
+        }
+
+        //hàm lấy danh sách loại tài khoản cho report theo chi tiết
+        public List<ET_LoaiTaiKhoanRP> LoadDSLoaiTaiKhoanTheoChiTiet(string chitiet)
+        {
+            return ltk.LoadDSLoaiTaiKhoanTheoChiTiet(chitiet);
+        }
+    }
+        
     public class BUS_LoaiTaiKhoan
     {
         //tạo đối tượng xử lý nghiệp vụ
