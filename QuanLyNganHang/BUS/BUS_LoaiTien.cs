@@ -9,6 +9,36 @@ using DAL;
 
 namespace BUS
 {
+    public class BUS_LoaiTienRP
+    {
+        //tạo đối tượng xử lý nghiệp vụ
+        DAL_LoaiTienRP lt = new DAL_LoaiTienRP();
+
+        //gọi hàm lấy danh sách loại tiền cho report
+        public List<ET_LoaiTienRP> LoadDSLoaiTien()
+        {
+            return lt.LoadDSLoaiTien();
+        }
+
+        //gọi hàm lấy danh sách loại tiền cho report theo mã
+        public List<ET_LoaiTienRP> LoadDSLoaiTienTheoMa(string ma)
+        {
+            return lt.LoadDSLoaiTienTheoMa(ma);
+        }
+
+        //gọi hàm lấy danh sách loại tiền cho report theo tên
+        public List<ET_LoaiTienRP> LoadDSLoaiTienTheoTen(string ten)
+        {
+            return lt.LoadDSLoaiTienTheoTen(ten);
+        }
+
+        //gọi hàm lấy danh sách loại tiền cho report theo quốc gia
+        public List<ET_LoaiTienRP> LoadDSLoaiTienTheoQG(string qg)
+        {
+            return lt.LoadDSLoaiTienTheoQG(qg);
+        }
+    }
+
     public class BUS_LoaiTien
     {
         //tạo đối tượng xử lý nghiệp vụ

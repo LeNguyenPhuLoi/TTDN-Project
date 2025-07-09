@@ -8,7 +8,60 @@ using ET;
 
 namespace DAL
 {
-    public class DAL_LoaiTaiKhoan
+    public class DAL_LoaiTaiKhoanRP
+    {
+        //kết nối database = linq to sql
+        AutoConnect conn = new AutoConnect();
+        QLNHDataContext db;
+
+        public DAL_LoaiTaiKhoanRP()
+        {
+            db = new QLNHDataContext(conn.GetConnection());
+        }
+
+        //hàm lấy danh sách loại tài khoản cho report
+        public List<ET_LoaiTaiKhoanRP> LoadDSLoaiTaiKhoan()
+        {
+            var query = from ltk in db.LOAITAIKHOANs
+                        select new ET_LoaiTaiKhoanRP
+                        {
+                            MaLoaiTK = ltk.MALOAITK,
+                            ChiTiet = ltk.CHITIET,
+                        };
+
+            return query.ToList();
+        }
+
+        //hàm lấy danh sách loại tài khoản cho report theo mã
+        public List<ET_LoaiTaiKhoanRP> LoadDSLoaiTaiKhoanTheoMa(string ma)
+        {
+            var query = from ltk in db.LOAITAIKHOANs
+                        where ltk.MALOAITK.Contains(ma)
+                        select new ET_LoaiTaiKhoanRP
+                        {
+                            MaLoaiTK = ltk.MALOAITK,
+                            ChiTiet = ltk.CHITIET,
+                        };
+
+            return query.ToList();
+        }
+
+        //hàm lấy danh sách loại tài khoản cho report theo chi tiết
+        public List<ET_LoaiTaiKhoanRP> LoadDSLoaiTaiKhoanTheoChiTiet(string chitiet)
+        {
+            var query = from ltk in db.LOAITAIKHOANs
+                        where ltk.CHITIET.Contains(chitiet)
+                        select new ET_LoaiTaiKhoanRP
+                        {
+                            MaLoaiTK = ltk.MALOAITK,
+                            ChiTiet = ltk.CHITIET,
+                        };
+
+            return query.ToList();
+        }
+    }
+
+        public class DAL_LoaiTaiKhoan
     {
         //kết nối database = linq to sql
         AutoConnect conn = new AutoConnect();

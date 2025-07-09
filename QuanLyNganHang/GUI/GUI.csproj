@@ -136,6 +136,18 @@
     <Compile Include="Frm_Report_KhachHang.Designer.cs">
       <DependentUpon>Frm_Report_KhachHang.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frm_Report_LoaiTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Report_LoaiTaiKhoan.Designer.cs">
+      <DependentUpon>Frm_Report_LoaiTaiKhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Report_LoaiTien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Report_LoaiTien.Designer.cs">
+      <DependentUpon>Frm_Report_LoaiTien.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm_TaiKhoan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -191,10 +203,32 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>KhachHangDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Report\LoaiTaiKhoanDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LoaiTaiKhoanDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\LoaiTienDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LoaiTienDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Report\Report_KhachHang.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Report_KhachHang.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Report_LoaiTaiKhoan.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Report_LoaiTaiKhoan.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Report_LoaiTien.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Report_LoaiTien.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="TKDangNhap.cs">
@@ -242,6 +276,12 @@
     <EmbeddedResource Include="Frm_Report_KhachHang.resx">
       <DependentUpon>Frm_Report_KhachHang.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Report_LoaiTaiKhoan.resx">
+      <DependentUpon>Frm_Report_LoaiTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Report_LoaiTien.resx">
+      <DependentUpon>Frm_Report_LoaiTien.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Frm_TaiKhoan.resx">
       <DependentUpon>Frm_TaiKhoan.cs</DependentUpon>
     </EmbeddedResource>
@@ -279,6 +319,14 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>Report_KhachHang.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Report\Report_LoaiTaiKhoan.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Report_LoaiTaiKhoan.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Report_LoaiTien.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Report_LoaiTien.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="TKDangNhap.resx">
       <DependentUpon>TKDangNhap.cs</DependentUpon>
     </EmbeddedResource>
@@ -301,6 +349,28 @@
     </None>
     <None Include="Report\KhachHangDataSet.xss">
       <DependentUpon>KhachHangDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Report\LoaiTaiKhoanDataSet.xsc">
+      <DependentUpon>LoaiTaiKhoanDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Report\LoaiTaiKhoanDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LoaiTaiKhoanDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Report\LoaiTaiKhoanDataSet.xss">
+      <DependentUpon>LoaiTaiKhoanDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Report\LoaiTienDataSet.xsc">
+      <DependentUpon>LoaiTienDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Report\LoaiTienDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LoaiTienDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Report\LoaiTienDataSet.xss">
+      <DependentUpon>LoaiTienDataSet.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

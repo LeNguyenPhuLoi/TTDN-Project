@@ -8,7 +8,86 @@ using ET;
 
 namespace DAL
 {
-    public class DAL_LoaiTien
+    public class DAL_LoaiTienRP
+    {
+        //kết nối database = linq to sql
+        AutoConnect conn = new AutoConnect();
+        QLNHDataContext db;
+
+        public DAL_LoaiTienRP()
+        {
+            db = new QLNHDataContext(conn.GetConnection());
+        }
+
+        //hàm lấy danh sách loại tiền cho report
+        public List<ET_LoaiTienRP> LoadDSLoaiTien()
+        {
+            var query = from lt in db.LOAITIENs
+                        select new ET_LoaiTienRP 
+                        { 
+                            MaLoaiTien = lt.MALOAITIEN,
+                            TenLoaiTien = lt.TENLOAITIEN,
+                            KyHieu = lt.KYHIEU,
+                            QuocGia = lt.QUOCGIA,
+                            TrangThai = lt.TRANGTHAI,
+                        };
+
+            return query.ToList();
+        }
+
+        //hàm lấy danh sách loại tiền cho report theo mã
+        public List<ET_LoaiTienRP> LoadDSLoaiTienTheoMa(string ma)
+        {
+            var query = from lt in db.LOAITIENs
+                        where lt.MALOAITIEN.Contains(ma)
+                        select new ET_LoaiTienRP
+                        {
+                            MaLoaiTien = lt.MALOAITIEN,
+                            TenLoaiTien = lt.TENLOAITIEN,
+                            KyHieu = lt.KYHIEU,
+                            QuocGia = lt.QUOCGIA,
+                            TrangThai = lt.TRANGTHAI,
+                        };
+
+            return query.ToList();
+        }
+
+        //hàm lấy danh sách loại tiền cho report theo tên
+        public List<ET_LoaiTienRP> LoadDSLoaiTienTheoTen(string ten)
+        {
+            var query = from lt in db.LOAITIENs
+                        where lt.TENLOAITIEN.Contains(ten)
+                        select new ET_LoaiTienRP
+                        {
+                            MaLoaiTien = lt.MALOAITIEN,
+                            TenLoaiTien = lt.TENLOAITIEN,
+                            KyHieu = lt.KYHIEU,
+                            QuocGia = lt.QUOCGIA,
+                            TrangThai = lt.TRANGTHAI,
+                        };
+
+            return query.ToList();
+        }
+
+        //hàm lấy danh sách loại tiền cho report theo quốc gia
+        public List<ET_LoaiTienRP> LoadDSLoaiTienTheoQG(string qg)
+        {
+            var query = from lt in db.LOAITIENs
+                        where lt.QUOCGIA.Contains(qg)
+                        select new ET_LoaiTienRP
+                        {
+                            MaLoaiTien = lt.MALOAITIEN,
+                            TenLoaiTien = lt.TENLOAITIEN,
+                            KyHieu = lt.KYHIEU,
+                            QuocGia = lt.QUOCGIA,
+                            TrangThai = lt.TRANGTHAI,
+                        };
+
+            return query.ToList();
+        }
+    }
+
+        public class DAL_LoaiTien
     {
         //kết nối database = linq to sql
         AutoConnect conn = new AutoConnect();
