@@ -148,6 +148,12 @@
     <Compile Include="Frm_Report_LoaiTien.Designer.cs">
       <DependentUpon>Frm_Report_LoaiTien.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frm_Report_TaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Report_TaiKhoan.Designer.cs">
+      <DependentUpon>Frm_Report_TaiKhoan.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm_TaiKhoan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -231,6 +237,17 @@
       <DependentUpon>Report_LoaiTien.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Report\Report_TaiKhoan.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Report_TaiKhoan.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\TaiKhoanDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TaiKhoanDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="TKDangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -282,6 +299,9 @@
     <EmbeddedResource Include="Frm_Report_LoaiTien.resx">
       <DependentUpon>Frm_Report_LoaiTien.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Report_TaiKhoan.resx">
+      <DependentUpon>Frm_Report_TaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Frm_TaiKhoan.resx">
       <DependentUpon>Frm_TaiKhoan.cs</DependentUpon>
     </EmbeddedResource>
@@ -327,6 +347,10 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>Report_LoaiTien.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Report\Report_TaiKhoan.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Report_TaiKhoan.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="TKDangNhap.resx">
       <DependentUpon>TKDangNhap.cs</DependentUpon>
     </EmbeddedResource>
@@ -371,6 +395,17 @@
     </None>
     <None Include="Report\LoaiTienDataSet.xss">
       <DependentUpon>LoaiTienDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Report\TaiKhoanDataSet.xsc">
+      <DependentUpon>TaiKhoanDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Report\TaiKhoanDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TaiKhoanDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Report\TaiKhoanDataSet.xss">
+      <DependentUpon>TaiKhoanDataSet.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

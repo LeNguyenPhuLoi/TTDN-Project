@@ -9,7 +9,37 @@ using DAL;
 
 namespace BUS
 {
-    public class BUS_TaiKhoan
+    public class BUS_TaiKhoanRP
+    {
+        //tạo đối tượng xử lý nghiệp vụ
+        DAL_TaiKhoanRP tk = new DAL_TaiKhoanRP();
+
+        //gọi hàm lấy danh sách tài khoản cho report
+        public List<ET_TaiKhoanRP> LoadDSTaiKhoan()
+        {
+            return tk.LoadDSTaiKhoan();
+        }
+
+        //gọi hàm lấy danh sách tài khoản cho report theo mã
+        public List<ET_TaiKhoanRP> LoadDSTaiKhoanTheoMa(string ma)
+        {
+            return tk.LoadDSTaiKhoanTheoMa(ma);
+        }
+
+        //gọi hàm lấy danh sách tài khoản cho report theo tên khách hàng
+        public List<ET_TaiKhoanRP> LoadDSTaiKhoanTheoTenKH(string ten)
+        {
+            return tk.LoadDSTaiKhoanTheoTenKH(ten);
+        }
+
+        //gọi hàm lấy danh sách tài khoản cho report theo số tài khoản
+        public List<ET_TaiKhoanRP> LoadDSTaiKhoanTheoSoTK(string sotk)
+        {
+            return tk.LoadDSTaiKhoanTheoSoTK(sotk);
+        }
+    }
+
+        public class BUS_TaiKhoan
     {
         //tạo đối tượng xử lý nghiệp vụ
         DAL_TaiKhoan tk = new DAL_TaiKhoan();
