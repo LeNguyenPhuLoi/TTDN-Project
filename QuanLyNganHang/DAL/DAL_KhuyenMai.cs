@@ -77,6 +77,7 @@ namespace DAL
                 else
                 {
                     error = "Mã khuyến mãi đã tồn tại.";
+                    clone = false;
                 }
             }
             catch (Exception ex)
@@ -109,6 +110,7 @@ namespace DAL
                 } else
                 {
                     error = "Mã khuyến mãi không tồn tại cập nhật thất bại.";
+                    clone = false;
                 }
             }
             catch (Exception ex)
@@ -141,6 +143,7 @@ namespace DAL
                 else
                 {
                     error = "Mã khuyến mãi không tồn tại.";
+                    clone = false;
                 }
 
             }

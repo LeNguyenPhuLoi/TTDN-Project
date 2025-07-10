@@ -34,14 +34,15 @@ namespace GUI
             ET_LaiSuat et = new ET_LaiSuat(txtMaLS.Text, txtTenLoai.Text,
                                              int.Parse(txtLaiSuat.Text),
                                              cboKL.Text);
-            if (bs.ThemLaiSuat(et) == true)
+            string errorMessage;
+            if (bs.ThemLaiSuat(et, out errorMessage) == true)
             {
                 MessageBox.Show("Thêm thành công!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 btnHoanTac.PerformClick(); // Gọi hàm hoàn tác để làm sạch các trường nhập
             }
             else
             {
-                MessageBox.Show("Thêm không thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(errorMessage, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             dgvLaiSuat.DataSource = bs.LoadDSLaiSuat();
         }
@@ -54,14 +55,15 @@ namespace GUI
                 ET_LaiSuat et = new ET_LaiSuat(txtMaLS.Text, txtTenLoai.Text,
                                              int.Parse(txtLaiSuat.Text),
                                              cboKL.Text);
-                if (bs.XoaLaiSuat(et) == true)
+                string errorMessage;
+                if (bs.XoaLaiSuat(et, out errorMessage) == true)
                 {
                     MessageBox.Show("Xóa thành công!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     btnHoanTac.PerformClick(); // Gọi hàm hoàn tác để làm sạch các trường nhập
                 }
                 else
                 {
-                    MessageBox.Show("Xóa không thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(errorMessage, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 dgvLaiSuat.DataSource = bs.LoadDSLaiSuat();
             }
@@ -72,13 +74,14 @@ namespace GUI
             ET_LaiSuat et = new ET_LaiSuat(txtMaLS.Text, txtTenLoai.Text,
                                              int.Parse(txtLaiSuat.Text),
                                              cboKL.Text);
-            if (bs.CapNhatLaiSuat(et) == true)
+            string errorMessage;
+            if (bs.CapNhatLaiSuat(et, out errorMessage) == true)
             {
                 MessageBox.Show("Cập Nhật thành công!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-                MessageBox.Show("Cập Nhật không thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(errorMessage, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             dgvLaiSuat.DataSource = bs.LoadDSLaiSuat();
         }

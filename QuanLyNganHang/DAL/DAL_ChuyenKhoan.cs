@@ -95,6 +95,11 @@ namespace DAL
                     db.SubmitChanges();
                     flage = true;
                 }
+                else
+                {
+                    error = "Mã chuyển khoản đã tồn tại.";
+                    return false;
+                }
             }
             catch (Exception ex)
             {
