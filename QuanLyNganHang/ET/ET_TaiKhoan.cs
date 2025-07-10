@@ -44,7 +44,7 @@ namespace ET
         public string TenKH { get; set; }
         public string SoTaiKhoan { get; set; }
         public string ChiTiet { get; set; }
-        public string SoDu { get; set; }
+        public decimal SoDu { get; set; }
         public string TenLoaiTien { get; set; }
         public DateTime NgayMoTK { get; set; }
         public string TrangThai { get; set; }

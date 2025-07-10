@@ -9,7 +9,110 @@ using ET;
 
 namespace DAL
 {
-    public class DAL_TaiKhoan
+    public class DAL_TaiKhoanRP
+    {
+        //kết nối database = linq to sql
+        AutoConnect conn = new AutoConnect();
+        QLNHDataContext db;
+
+        public DAL_TaiKhoanRP()
+        {
+            db = new QLNHDataContext(conn.GetConnection());
+        }
+
+        //hàm lấy danh sách tài khoản cho report
+        public List<ET_TaiKhoanRP> LoadDSTaiKhoan()
+        {
+            var query = from tk in db.TAIKHOANs
+                        join kh in db.KHACHHANGs on tk.MAKH equals kh.MAKH
+                        join ltk in db.LOAITAIKHOANs on tk.MALOAITK equals ltk.MALOAITK
+                        join lt in db.LOAITIENs on tk.MALOAITIEN equals lt.MALOAITIEN
+                        select new ET_TaiKhoanRP
+                        {
+                            MaTK = tk.MATK,
+                            TenKH = kh.TENKH,
+                            SoTaiKhoan = tk.SOTAIKHOAN,
+                            ChiTiet = ltk.CHITIET,
+                            SoDu = Convert.ToDecimal(tk.SODU),
+                            TenLoaiTien = lt.TENLOAITIEN,
+                            NgayMoTK = Convert.ToDateTime(tk.NGAYMOTK),
+                            TrangThai = tk.TRANGTHAI,
+                        };
+
+            return query.ToList();
+        }
+
+        //hàm lấy danh sách tài khoản cho report theo mã
+        public List<ET_TaiKhoanRP> LoadDSTaiKhoanTheoMa(string ma)
+        {
+            var query = from tk in db.TAIKHOANs
+                        join kh in db.KHACHHANGs on tk.MAKH equals kh.MAKH
+                        join ltk in db.LOAITAIKHOANs on tk.MALOAITK equals ltk.MALOAITK
+                        join lt in db.LOAITIENs on tk.MALOAITIEN equals lt.MALOAITIEN
+                        where tk.MATK.Contains(ma)
+                        select new ET_TaiKhoanRP
+                        {
+                            MaTK = tk.MATK,
+                            TenKH = kh.TENKH,
+                            SoTaiKhoan = tk.SOTAIKHOAN,
+                            ChiTiet = ltk.CHITIET,
+                            SoDu = Convert.ToDecimal(tk.SODU),
+                            TenLoaiTien = lt.TENLOAITIEN,
+                            NgayMoTK = Convert.ToDateTime(tk.NGAYMOTK),
+                            TrangThai = tk.TRANGTHAI,
+                        };
+
+            return query.ToList();
+        }
+
+        //hàm lấy danh sách tài khoản cho report theo tên khách hàng
+        public List<ET_TaiKhoanRP> LoadDSTaiKhoanTheoTenKH(string ten)
+        {
+            var query = from tk in db.TAIKHOANs
+                        join kh in db.KHACHHANGs on tk.MAKH equals kh.MAKH
+                        join ltk in db.LOAITAIKHOANs on tk.MALOAITK equals ltk.MALOAITK
+                        join lt in db.LOAITIENs on tk.MALOAITIEN equals lt.MALOAITIEN
+                        where kh.TENKH.Contains(ten)
+                        select new ET_TaiKhoanRP
+                        {
+                            MaTK = tk.MATK,
+                            TenKH = kh.TENKH,
+                            SoTaiKhoan = tk.SOTAIKHOAN,
+                            ChiTiet = ltk.CHITIET,
+                            SoDu = Convert.ToDecimal(tk.SODU),
+                            TenLoaiTien = lt.TENLOAITIEN,
+                            NgayMoTK = Convert.ToDateTime(tk.NGAYMOTK),
+                            TrangThai = tk.TRANGTHAI,
+                        };
+
+            return query.ToList();
+        }
+
+        //hàm lấy danh sách tài khoản cho report theo số tài khoản
+        public List<ET_TaiKhoanRP> LoadDSTaiKhoanTheoSoTK(string sotk)
+        {
+            var query = from tk in db.TAIKHOANs
+                        join kh in db.KHACHHANGs on tk.MAKH equals kh.MAKH
+                        join ltk in db.LOAITAIKHOANs on tk.MALOAITK equals ltk.MALOAITK
+                        join lt in db.LOAITIENs on tk.MALOAITIEN equals lt.MALOAITIEN
+                        where tk.SOTAIKHOAN.Contains(sotk)
+                        select new ET_TaiKhoanRP
+                        {
+                            MaTK = tk.MATK,
+                            TenKH = kh.TENKH,
+                            SoTaiKhoan = tk.SOTAIKHOAN,
+                            ChiTiet = ltk.CHITIET,
+                            SoDu = Convert.ToDecimal(tk.SODU),
+                            TenLoaiTien = lt.TENLOAITIEN,
+                            NgayMoTK = Convert.ToDateTime(tk.NGAYMOTK),
+                            TrangThai = tk.TRANGTHAI,
+                        };
+
+            return query.ToList();
+        }
+    }
+
+        public class DAL_TaiKhoan
     {
         //kết nối database = linq to sql
         AutoConnect conn = new AutoConnect();
