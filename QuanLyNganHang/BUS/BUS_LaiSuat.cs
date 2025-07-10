@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web;
 
 namespace BUS
 {
@@ -18,21 +19,21 @@ namespace BUS
         }
 
         // Thêm lãi suất
-        public bool ThemLaiSuat(ET.ET_LaiSuat et)
+        public bool ThemLaiSuat(ET.ET_LaiSuat et, out string error)
         {
-            return ls.ThemLaiSuat(et);
+            return ls.ThemLaiSuat(et,out error);
         }
 
         // Cập nhật lãi suất
-        public bool CapNhatLaiSuat(ET.ET_LaiSuat et)
+        public bool CapNhatLaiSuat(ET.ET_LaiSuat et, out string error)
         {
-            return ls.CapNhatLaiSuat(et);
+            return ls.CapNhatLaiSuat(et, out error);
         }
 
         // Xóa lãi suất
-        public bool XoaLaiSuat(ET.ET_LaiSuat et)
+        public bool XoaLaiSuat(ET.ET_LaiSuat et, out string error)
         {
-            return ls.XoaLaiSuat(et);
+            return ls.XoaLaiSuat(et, out error);
         }
     }
 }

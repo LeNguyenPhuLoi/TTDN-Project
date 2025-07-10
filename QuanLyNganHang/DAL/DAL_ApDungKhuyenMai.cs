@@ -62,12 +62,13 @@ namespace DAL
             return ds;
         }
         // Thêm Áp Dung khuyến mãi
-        public bool ThemApDungKhuyenMai(ET_ApDungKhuyenMai et)
+        public bool ThemApDungKhuyenMai(ET_ApDungKhuyenMai et, out string error)
         {
+            error = string.Empty;
             bool flag = false;
             try
             {
-                var exists = db.APDUNGKHUYENMAIs.Any(adkm => adkm.MAKM == et.MAKM && adkm.MAKH == et.MAKM);
+                var exists = db.APDUNGKHUYENMAIs.Any(adkm => adkm.MAKM == et.MAKM && adkm.MAKH == et.MAKH);
                 if (!exists)
                 {
                     APDUNGKHUYENMAI km = new APDUNGKHUYENMAI
@@ -81,17 +82,23 @@ namespace DAL
                     db.SubmitChanges();
                     flag = true;
                 }
+                else
+                {
+                    error = "Khuyến mãi này đã được áp dụng cho khách hàng.";
+                    return false;
+                }
             }
             catch (Exception ex)
             {
+                error = "Lỗi: " + ex.ToString();
                 flag = false;
-                Console.WriteLine("Lỗi: " + ex.ToString());
             }
             return flag;
         }
         // Sửa áp dụng khuyến mãi
-        public bool CapNhatApDungKhuyenMai(ET_ApDungKhuyenMai et)
+        public bool CapNhatApDungKhuyenMai(ET_ApDungKhuyenMai et, out string error)
         {
+            error = string.Empty;
             bool flag = false;
             try
             {
@@ -103,17 +110,23 @@ namespace DAL
                     db.SubmitChanges();
                     flag = true;
                 }
+                else
+                {
+                    error = "Không tìm thấy áp dụng khuyến mãi với mã khuyến mãi và mã khách hàng đã cho.";
+                    return false;
+                }
             }
             catch (Exception ex)
             {
                 flag = false;
-                Console.WriteLine("Lỗi: " + ex.ToString());
+                error = "Lỗi: " + ex.ToString();
             }
             return flag;
         }
         // Xóa áp dụng khuyến mãi
-        public bool XoaApDungKhuyenMai(ET_ApDungKhuyenMai et)
+        public bool XoaApDungKhuyenMai(ET_ApDungKhuyenMai et, out string error)
         {
+            error = string.Empty;
             bool flag = false;
             try
             {
@@ -129,11 +142,16 @@ namespace DAL
                     }
                     flag = true;
                 }
+                else
+                {
+                    error = "Không tìm thấy áp dụng khuyến mãi với mã khuyến mãi và mã khách hàng đã cho.";
+                    return false;
+                }
             }
             catch (Exception ex)
             {
                 flag = false;
-                Console.WriteLine("Lỗi: " + ex.ToString());
+                error = "Lỗi: " + ex.ToString();
             }
             return flag;
         }

@@ -33,8 +33,9 @@ namespace DAL
         }
 
         // Thêm lãi suất
-        public bool ThemLaiSuat(ET_LaiSuat et)
+        public bool ThemLaiSuat(ET_LaiSuat et, out string error)
         {
+            error = string.Empty;
             bool flag = false;
             try
             {
@@ -52,18 +53,24 @@ namespace DAL
                     db.SubmitChanges();
                     flag = true;
                 }
+                else
+                {
+                    error = "Mã lãi suất đã tồn tại!";
+                    flag = false;
+                }
             }
             catch (Exception ex)
             {
                 flag = false;
-                Console.WriteLine("Lỗi: " + ex.ToString());
+                error = "Lỗi: " + ex.ToString();
             }
             return flag;
         }
 
         // Sửa lãi suất
-        public bool CapNhatLaiSuat(ET_LaiSuat et)
+        public bool CapNhatLaiSuat(ET_LaiSuat et, out string error)
         {
+            error = string.Empty;
             bool flag = false;
             try
             {
@@ -76,18 +83,24 @@ namespace DAL
                     db.SubmitChanges();
                     flag = true;
                 }
+                else
+                {
+                    error = "Mã lãi suất không tồn tại!";
+                    flag = false;
+                }
             }
             catch (Exception ex)
             {
                 flag = false;
-                Console.WriteLine("Lỗi: " + ex.ToString());
+                error = "Lỗi: " + ex.ToString();
             }
             return flag;
         }
 
         // Xóa lãi suất
-        public bool XoaLaiSuat(ET_LaiSuat et)
+        public bool XoaLaiSuat(ET_LaiSuat et, out string error)
         {
+            error = string.Empty;
             bool flag = false;
             try
             {
@@ -103,11 +116,16 @@ namespace DAL
                     }
                     flag = true;
                 }
+                else
+                {
+                    error = "Mã lãi suất không tồn tại!";
+                    flag = false;
+                }
             }
             catch (Exception ex)
             {
                 flag = false;
-                Console.WriteLine("Lỗi: " + ex.ToString());
+                error = "Lỗi: " + ex.ToString();
             }
             return flag;
         }

@@ -94,6 +94,7 @@ namespace DAL
                 else
                 {
                     error = "Mã khoản vay đã tồn tại!";
+                    return false;
                 }
             }
             catch (Exception ex)
@@ -129,6 +130,7 @@ namespace DAL
                 else
                 {
                     error = "Mã khoản vay không tồn tại!";
+                    return false;
                 }
             }
             catch (Exception ex)
@@ -161,6 +163,7 @@ namespace DAL
                 else
                 {
                     error = "Mã khoản vay không tồn tại!";
+                    return false;
                 }
             }
             catch (Exception ex)

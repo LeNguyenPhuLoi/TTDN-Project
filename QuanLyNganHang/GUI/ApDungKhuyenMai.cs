@@ -49,14 +49,15 @@ namespace GUI
         private void btnThem_Click(object sender, EventArgs e)
         {
             ET_ApDungKhuyenMai et = new ET_ApDungKhuyenMai(txtMaKM.Text, txtMaKH.Text, cboMaTK.Text, dtpNgayApDung.Value);
-            if (bs.ThemApDungKhuyenMai(et) == true)
+            string error= "";
+            if (bs.ThemApDungKhuyenMai(et, out error) == true)
             {
                 MessageBox.Show("Thêm thành công!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 btnHoanTac.PerformClick(); // Gọi hàm hoàn tác để làm sạch các trường nhập
             }
             else
             {
-                MessageBox.Show("Thêm không thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(error, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             dgvApDungKhuyenMai.DataSource = bs.LoadDSApDungKhuyenMai();
         }
@@ -64,14 +65,15 @@ namespace GUI
         private void btnXoa_Click(object sender, EventArgs e)
         {
             ET_ApDungKhuyenMai et = new ET_ApDungKhuyenMai(txtMaKM.Text, txtMaKH.Text, cboMaTK.Text, dtpNgayApDung.Value);
-            if (bs.XoaApDungKhuyenMai(et) == true)
+            string error = "";
+            if (bs.XoaApDungKhuyenMai(et, out error) == true)
             {
                 MessageBox.Show("Xóa thành công!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 btnHoanTac.PerformClick(); // Gọi hàm hoàn tác để làm sạch các trường nhập
             }
             else
             {
-                MessageBox.Show("Xóa không thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(error, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             dgvApDungKhuyenMai.DataSource = bs.LoadDSApDungKhuyenMai();
         }
@@ -79,13 +81,14 @@ namespace GUI
         private void btnSua_Click(object sender, EventArgs e)
         {
             ET_ApDungKhuyenMai et = new ET_ApDungKhuyenMai(txtMaKM.Text, txtMaKH.Text, cboMaTK.Text, dtpNgayApDung.Value);
-            if (bs.CapNhatApDungKhuyenMai(et) == true)
+            string error = "";
+            if (bs.CapNhatApDungKhuyenMai(et, out error) == true)
             {
                 MessageBox.Show("Cập Nhật thành công!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-                MessageBox.Show("Cập Nhật không thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(error, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             dgvApDungKhuyenMai.DataSource = bs.LoadDSApDungKhuyenMai();
         }

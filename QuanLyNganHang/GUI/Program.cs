@@ -16,7 +16,7 @@ namespace GUI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Frm_KhachHang());
+            Application.Run(new Frm_TaiKhoan());
         }
     }
 

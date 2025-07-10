@@ -37,21 +37,21 @@ namespace BUS
         }
 
         // Thêm áp dụng khuyến mãi
-        public bool ThemApDungKhuyenMai(ET_ApDungKhuyenMai et)
+        public bool ThemApDungKhuyenMai(ET_ApDungKhuyenMai et, out string error)
         {
-            return adkm.ThemApDungKhuyenMai(et);
+            return adkm.ThemApDungKhuyenMai(et,out error);
         }
 
         // Cập nhật áp dụng khuyến mãi
-        public bool CapNhatApDungKhuyenMai(ET_ApDungKhuyenMai et)
+        public bool CapNhatApDungKhuyenMai(ET_ApDungKhuyenMai et, out string error)
         {
-            return adkm.CapNhatApDungKhuyenMai(et);
+            return adkm.CapNhatApDungKhuyenMai(et, out error);
         }
 
         // Xóa áp dụng khuyến mãi
-        public bool XoaApDungKhuyenMai(ET_ApDungKhuyenMai et)
+        public bool XoaApDungKhuyenMai(ET_ApDungKhuyenMai et, out string error)
         {
-            return adkm.XoaApDungKhuyenMai(et);
+            return adkm.XoaApDungKhuyenMai(et, out error);
         }
     }
 }
