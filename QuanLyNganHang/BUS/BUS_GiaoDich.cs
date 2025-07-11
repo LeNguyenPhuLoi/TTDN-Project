@@ -9,6 +9,36 @@ using DAL;
 
 namespace BUS
 {
+    public class BUS_GiaoDichRP
+    {
+        //tạo đối tượng xử lý nghiệp vụ
+        DAL_GiaoDichRP gd = new DAL_GiaoDichRP();
+
+        //gọi hàm lấy danh sách giao dịch cho report
+        public List<ET_GiaoDichRP> LoadDSGiaoDich()
+        {
+            return gd.LoadDSGiaoDich();
+        }
+
+        //gọi hàm lấy danh sách giao dịch cho report theo mã
+        public List<ET_GiaoDichRP> LoadDSGiaoDichTheoMa(string ma)
+        {
+            return gd.LoadDSGiaoDichTheoMa(ma);
+        }
+
+        //hàm lấy danh sách giao dịch cho report theo số tài khoản
+        public List<ET_GiaoDichRP> LoadDSGiaoDichTheoSTK(string stk)
+        {
+            return gd.LoadDSGiaoDichTheoSTK(stk);
+        }
+
+        //hàm lấy danh sách giao dịch cho report theo loại giao dịch
+        public List<ET_GiaoDichRP> LoadDSGiaoDichTheoLoaiGD(string loai)
+        {
+            return gd.LoadDSGiaoDichTheoLoaiGD(loai);
+        }
+    }
+
     public class BUS_GiaoDich
     {
         //tạo đối tượng xử lý nghiệp vụ
