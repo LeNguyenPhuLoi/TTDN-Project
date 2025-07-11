@@ -8,7 +8,98 @@ using ET;
 
 namespace DAL
 {
-    public class DAL_GiaoDich
+    public class DAL_GiaoDichRP
+    {
+        //kết nối với database = linq to sql
+        AutoConnect conn = new AutoConnect();
+        QLNHDataContext db;
+
+        public DAL_GiaoDichRP()
+        {
+            db = new QLNHDataContext(conn.GetConnection());
+        }
+
+        //hàm lấy danh sách giao dịch cho report
+        public List<ET_GiaoDichRP> LoadDSGiaoDich()
+        {
+            var query = from gd in db.GIAODICHes
+                        join tk in db.TAIKHOANs on gd.MATK equals tk.MATK
+                        select new ET_GiaoDichRP
+                        {
+                            MaGD = gd.MAGD,
+                            SoTK = tk.SOTAIKHOAN,
+                            LoaiGD = gd.LOAIGD,
+                            SoTien = Convert.ToDecimal(gd.SOTIEN),
+                            ThoiGianGD = Convert.ToDateTime(gd.THOIGIANGD),
+                            MoTa = gd.MOTA,
+                            TrangThai = gd.TRANGTHAI,
+                        };
+
+            return query.ToList();
+        }
+
+        //hàm lấy danh sách giao dịch cho report theo mã
+        public List<ET_GiaoDichRP> LoadDSGiaoDichTheoMa(string ma)
+        {
+            var query = from gd in db.GIAODICHes
+                        join tk in db.TAIKHOANs on gd.MATK equals tk.MATK
+                        where gd.MAGD.Contains(ma)
+                        select new ET_GiaoDichRP
+                        {
+                            MaGD = gd.MAGD,
+                            SoTK = tk.SOTAIKHOAN,
+                            LoaiGD = gd.LOAIGD,
+                            SoTien = Convert.ToDecimal(gd.SOTIEN),
+                            ThoiGianGD = Convert.ToDateTime(gd.THOIGIANGD),
+                            MoTa = gd.MOTA,
+                            TrangThai = gd.TRANGTHAI,
+                        };
+
+            return query.ToList();
+        }
+
+        //hàm lấy danh sách giao dịch cho report theo số tài khoản
+        public List<ET_GiaoDichRP> LoadDSGiaoDichTheoSTK(string stk)
+        {
+            var query = from gd in db.GIAODICHes
+                        join tk in db.TAIKHOANs on gd.MATK equals tk.MATK
+                        where tk.SOTAIKHOAN.Contains(stk)
+                        select new ET_GiaoDichRP
+                        {
+                            MaGD = gd.MAGD,
+                            SoTK = tk.SOTAIKHOAN,
+                            LoaiGD = gd.LOAIGD,
+                            SoTien = Convert.ToDecimal(gd.SOTIEN),
+                            ThoiGianGD = Convert.ToDateTime(gd.THOIGIANGD),
+                            MoTa = gd.MOTA,
+                            TrangThai = gd.TRANGTHAI,
+                        };
+
+            return query.ToList();
+        }
+
+        //hàm lấy danh sách giao dịch cho report theo loại giao dịch
+        public List<ET_GiaoDichRP> LoadDSGiaoDichTheoLoaiGD(string loai)
+        {
+            var query = from gd in db.GIAODICHes
+                        join tk in db.TAIKHOANs on gd.MATK equals tk.MATK
+                        where gd.LOAIGD.Contains(loai)
+                        select new ET_GiaoDichRP
+                        {
+                            MaGD = gd.MAGD,
+                            SoTK = tk.SOTAIKHOAN,
+                            LoaiGD = gd.LOAIGD,
+                            SoTien = Convert.ToDecimal(gd.SOTIEN),
+                            ThoiGianGD = Convert.ToDateTime(gd.THOIGIANGD),
+                            MoTa = gd.MOTA,
+                            TrangThai = gd.TRANGTHAI,
+                        };
+
+            return query.ToList();
+        }
+    }
+
+        public class DAL_GiaoDich
     {
         //kết nối với database = linq to sql
         AutoConnect conn = new AutoConnect();

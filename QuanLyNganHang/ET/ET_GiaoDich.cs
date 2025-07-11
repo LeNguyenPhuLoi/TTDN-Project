@@ -37,7 +37,7 @@ namespace ET
     public class ET_GiaoDichRP
     {
         public string MaGD { get; set; }
-        public string TenKH { get; set; }
+        public string SoTK { get; set; }
         public string LoaiGD { get; set; }
         public decimal SoTien { get; set; }
         public DateTime ThoiGianGD { get; set; }

@@ -130,6 +130,12 @@
     <Compile Include="Frm_PhongBan.Designer.cs">
       <DependentUpon>Frm_PhongBan.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frm_Report_GiaoDich.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Report_GiaoDich.Designer.cs">
+      <DependentUpon>Frm_Report_GiaoDich.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm_Report_KhachHang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -204,6 +210,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Report\GiaoDichDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GiaoDichDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Report\KhachHangDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -218,6 +229,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>LoaiTienDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Report_GiaoDich.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Report_GiaoDich.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Report\Report_KhachHang.cs">
       <AutoGen>True</AutoGen>
@@ -290,6 +307,9 @@
     <EmbeddedResource Include="Frm_PhongBan.resx">
       <DependentUpon>Frm_PhongBan.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Report_GiaoDich.resx">
+      <DependentUpon>Frm_Report_GiaoDich.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Frm_Report_KhachHang.resx">
       <DependentUpon>Frm_Report_KhachHang.cs</DependentUpon>
     </EmbeddedResource>
@@ -335,6 +355,10 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Report\Report_GiaoDich.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Report_GiaoDich.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Report\Report_KhachHang.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>Report_KhachHang.cs</LastGenOutput>
@@ -363,6 +387,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Report\GiaoDichDataSet.xsc">
+      <DependentUpon>GiaoDichDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Report\GiaoDichDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GiaoDichDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Report\GiaoDichDataSet.xss">
+      <DependentUpon>GiaoDichDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Report\KhachHangDataSet.xsc">
       <DependentUpon>KhachHangDataSet.xsd</DependentUpon>
     </None>
