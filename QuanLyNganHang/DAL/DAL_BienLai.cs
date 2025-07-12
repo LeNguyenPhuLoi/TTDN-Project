@@ -9,7 +9,122 @@ using ET;
 
 namespace DAL
 {
-    public class DAL_BienLai
+    public class DAL_BienLaiRP
+    {
+        //kết nối tới database = linq to sql
+        AutoConnect conn = new AutoConnect();
+        QLNHDataContext db;
+
+        public DAL_BienLaiRP()
+        {
+            db = new QLNHDataContext(conn.GetConnection());
+        }
+
+        //hàm lấy danh sách biên lai cho report
+        public List<ET_BienLaiRP> LoadDSBienLai()
+        {
+            var query = from bl in db.BIENLAIs
+                        join kh in db.KHACHHANGs on bl.MAKH equals kh.MAKH
+                        join tk in db.TAIKHOANs on bl.MATK equals tk.MATK
+                        join nv in db.NHANVIENs on bl.MANV equals nv.MANV
+                        join lt in db.LOAITIENs on bl.MALOAITIEN equals lt.MALOAITIEN
+                        select new ET_BienLaiRP
+                        {
+                            MaBL = bl.MABL,
+                            MaGD = bl.MAGD,
+                            TenKH = kh.TENKH,
+                            SoTaiKhoan = tk.SOTAIKHOAN,
+                            TenNV = nv.TENNV,
+                            SoTien = Convert.ToDecimal(bl.SOTIEN),
+                            TenLoaiTien = lt.TENLOAITIEN,
+                            LoaiBL = bl.LOAIBL,
+                            Mota = bl.MOTA,
+                            TrangThai = bl.TRANGTHAI,
+                        };
+
+            return query.ToList();
+        }
+
+        //hàm lấy danh sách biên lai cho report theo mã biên lai
+        public List<ET_BienLaiRP> LoadDSBienLaiTheoMa(string ma)
+        {
+            var query = from bl in db.BIENLAIs
+                        join kh in db.KHACHHANGs on bl.MAKH equals kh.MAKH
+                        join tk in db.TAIKHOANs on bl.MATK equals tk.MATK
+                        join nv in db.NHANVIENs on bl.MANV equals nv.MANV
+                        join lt in db.LOAITIENs on bl.MALOAITIEN equals lt.MALOAITIEN
+                        where bl.MABL.Contains(ma)
+                        select new ET_BienLaiRP
+                        {
+                            MaBL = bl.MABL,
+                            MaGD = bl.MAGD,
+                            TenKH = kh.TENKH,
+                            SoTaiKhoan = tk.SOTAIKHOAN,
+                            TenNV = nv.TENNV,
+                            SoTien = Convert.ToDecimal(bl.SOTIEN),
+                            TenLoaiTien = lt.TENLOAITIEN,
+                            LoaiBL = bl.LOAIBL,
+                            Mota = bl.MOTA,
+                            TrangThai = bl.TRANGTHAI,
+                        };
+
+            return query.ToList();
+        }
+
+        //hàm lấy danh sách biên lai cho report theo tên khách hàng
+        public List<ET_BienLaiRP> LoadDSBienLaiTheoTenKH(string ten)
+        {
+            var query = from bl in db.BIENLAIs
+                        join kh in db.KHACHHANGs on bl.MAKH equals kh.MAKH
+                        join tk in db.TAIKHOANs on bl.MATK equals tk.MATK
+                        join nv in db.NHANVIENs on bl.MANV equals nv.MANV
+                        join lt in db.LOAITIENs on bl.MALOAITIEN equals lt.MALOAITIEN
+                        where kh.TENKH.Contains(ten)
+                        select new ET_BienLaiRP
+                        {
+                            MaBL = bl.MABL,
+                            MaGD = bl.MAGD,
+                            TenKH = kh.TENKH,
+                            SoTaiKhoan = tk.SOTAIKHOAN,
+                            TenNV = nv.TENNV,
+                            SoTien = Convert.ToDecimal(bl.SOTIEN),
+                            TenLoaiTien = lt.TENLOAITIEN,
+                            LoaiBL = bl.LOAIBL,
+                            Mota = bl.MOTA,
+                            TrangThai = bl.TRANGTHAI,
+                        };
+
+            return query.ToList();
+        }
+
+        //hàm lấy danh sách biên lai cho report theo số tài khoản
+        public List<ET_BienLaiRP> LoadDSBienLaiTheoSTK(string stk)
+        {
+            var query = from bl in db.BIENLAIs
+                        join kh in db.KHACHHANGs on bl.MAKH equals kh.MAKH
+                        join tk in db.TAIKHOANs on bl.MATK equals tk.MATK
+                        join nv in db.NHANVIENs on bl.MANV equals nv.MANV
+                        join lt in db.LOAITIENs on bl.MALOAITIEN equals lt.MALOAITIEN
+                        where tk.SOTAIKHOAN.Contains(stk)
+                        select new ET_BienLaiRP
+                        {
+                            MaBL = bl.MABL,
+                            MaGD = bl.MAGD,
+                            TenKH = kh.TENKH,
+                            SoTaiKhoan = tk.SOTAIKHOAN,
+                            TenNV = nv.TENNV,
+                            SoTien = Convert.ToDecimal(bl.SOTIEN),
+                            TenLoaiTien = lt.TENLOAITIEN,
+                            LoaiBL = bl.LOAIBL,
+                            Mota = bl.MOTA,
+                            TrangThai = bl.TRANGTHAI,
+                        };
+
+            return query.ToList();
+        }
+    }
+
+        public class DAL_BienLai
     {
         //kết nối tới database = linq to sql
         AutoConnect conn = new AutoConnect();

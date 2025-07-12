@@ -130,6 +130,12 @@
     <Compile Include="Frm_PhongBan.Designer.cs">
       <DependentUpon>Frm_PhongBan.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frm_Report_BienLai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Report_BienLai.Designer.cs">
+      <DependentUpon>Frm_Report_BienLai.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm_Report_GiaoDich.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -210,6 +216,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Report\BienLaiDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BienLaiDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Report\GiaoDichDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -229,6 +240,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>LoaiTienDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Report_BienLai.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Report_BienLai.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Report\Report_GiaoDich.cs">
       <AutoGen>True</AutoGen>
@@ -307,6 +324,9 @@
     <EmbeddedResource Include="Frm_PhongBan.resx">
       <DependentUpon>Frm_PhongBan.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Report_BienLai.resx">
+      <DependentUpon>Frm_Report_BienLai.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Frm_Report_GiaoDich.resx">
       <DependentUpon>Frm_Report_GiaoDich.cs</DependentUpon>
     </EmbeddedResource>
@@ -355,6 +375,10 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Report\Report_BienLai.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Report_BienLai.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Report\Report_GiaoDich.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>Report_GiaoDich.cs</LastGenOutput>
@@ -387,6 +411,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Report\BienLaiDataSet.xsc">
+      <DependentUpon>BienLaiDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Report\BienLaiDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BienLaiDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Report\BienLaiDataSet.xss">
+      <DependentUpon>BienLaiDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Report\GiaoDichDataSet.xsc">
       <DependentUpon>GiaoDichDataSet.xsd</DependentUpon>
     </None>

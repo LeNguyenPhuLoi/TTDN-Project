@@ -9,7 +9,37 @@ using DAL;
 
 namespace BUS
 {
-    public class BUS_BienLai
+    public class BUS_BienLaiRP
+    {
+        //tạo đối tượng xử lý nghiệp vụ
+        DAL_BienLaiRP bl = new DAL_BienLaiRP();
+
+        //gọi hàm lấy danh sách biên lai cho report
+        public List<ET_BienLaiRP> LoadDSBienLai()
+        {
+            return bl.LoadDSBienLai();
+        }
+
+        //gọi hàm lấy danh sách biên lai cho report theo mã biên lai
+        public List<ET_BienLaiRP> LoadDSBienLaiTheoMa(string ma)
+        {
+            return bl.LoadDSBienLaiTheoMa(ma);
+        }
+
+        //gọi hàm lấy danh sách biên lai cho report theo tên khách hàng
+        public List<ET_BienLaiRP> LoadDSBienLaiTheoTenKH(string ten)
+        {
+            return bl.LoadDSBienLaiTheoTenKH(ten);
+        }
+
+        //gọi hàm lấy danh sách biên lai cho report theo số tài khoản
+        public List<ET_BienLaiRP> LoadDSBienLaiTheoSTK(string stk)
+        {
+            return bl.LoadDSBienLaiTheoSTK(stk);
+        }
+    }
+
+        public class BUS_BienLai
     {
         //tạo đối tượng xử lý nghiệp vụ
         DAL_BienLai bl = new DAL_BienLai();
