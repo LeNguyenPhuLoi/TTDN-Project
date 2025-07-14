@@ -17,5 +17,12 @@ namespace ET
 
         public int MaPB { get => _MaPB; set => _MaPB = value; }
         public string TenPB { get => _TenPB; set => _TenPB = value; }
+
+        public class ET_ReportPhongBan
+        {
+            public int MaPB { get; set; }
+            public string TenPB { get; set; }
+
+        }
     }
 }

@@ -26,5 +26,14 @@ namespace ET
         public string MoTa { get => _MoTa; set => _MoTa = value; }
         public DateTime NgayBH { get => _NgayBH; set => _NgayBH = value; }
         public string LoaiApDung { get => _LoaiApDung; set => _LoaiApDung = value; }
+
+        public class ET_ReportNoiQuy
+        {
+            public string MaNQ { get; set; }
+            public string TieuDe { get; set; }
+            public string MoTa { get; set; }
+            public DateTime NgayBH { get; set; }
+            public string LoaiApDung { get; set; }
+        }
     }
 }

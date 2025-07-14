@@ -23,5 +23,13 @@ namespace ET
         public string TenCN { get => _TenCN; set => _TenCN = value; }
         public string DiaChiCN { get => _DiaChiCN; set => _DiaChiCN = value; }
         public int SdtCN { get => _SdtCN; set => _SdtCN = value; }
+
+        public class ET_ReportChiNhanh
+        {
+            public string MaCN { get; set; }
+            public string TenCN { get; set; }
+            public string DiaChiCN { get; set; }
+            public int SdtCN { get; set; }
+        }
     }
 }
