@@ -35,5 +35,17 @@ namespace ET
         public string MoTaVP { get => _MoTaVP; set => _MoTaVP = value; }
         public string HinhThucXL { get => _HinhThucXL; set => _HinhThucXL = value; }
         public string TrangThaiXL { get => _TrangThaiXL; set => _TrangThaiXL = value; }
+
+        public class ET_ReportViPham
+        {
+            public string MaVP { get; set; }
+            public string MaNQ { get; set; }
+            public string MaNV { get; set; }
+            public string MaKH { get; set; }
+            public DateTime NgayVP { get; set; }
+            public string MoTaVP { get; set; }
+            public string HinhThucXL { get; set; }
+            public string TrangThaiXL { get; set; }
+        }
     }
 }

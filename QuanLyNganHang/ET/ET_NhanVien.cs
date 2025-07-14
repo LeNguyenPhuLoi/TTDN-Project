@@ -41,5 +41,20 @@ namespace ET
         public int Sdt { get => _Sdt; set => _Sdt = value; }
         public int MaPB { get => _MaPB; set => _MaPB = value; }
         public string MaCN { get => _MaCN; set => _MaCN = value; }
+
+        public class ET_ReportNhanVien
+        {
+            public string MaNV { get; set; }
+            public string TenNV { get; set; }
+            public string GioiTinh { get; set; }
+            public DateTime NgaySinh { get;set; }
+            public string Chuc { get; set; }
+            public float Luong { get; set; }
+            public string DiaChi { get; set; }
+            public int Sdt { get; set; }
+            public int MaPB { get; set; }
+            public string MaCN { get; set; }
+
+        }
     }
 }
