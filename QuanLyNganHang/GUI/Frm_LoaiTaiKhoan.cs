@@ -11,7 +11,7 @@ using BUS;
 
 namespace GUI
 {
-    public partial class Frm_LoaiTaiKhoan : GUI.Form1
+    public partial class Frm_LoaiTaiKhoan : Form
     {
         public Frm_LoaiTaiKhoan()
         {
