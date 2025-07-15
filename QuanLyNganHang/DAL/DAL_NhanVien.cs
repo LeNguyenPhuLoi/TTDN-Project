@@ -4,9 +4,106 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ET;
+using static ET.ET_NhanVien;
 
 namespace DAL
 {
+    public class DAL_ReportNhanVien
+    {
+        //kết nối database = linq to sql
+        AutoConnect conn = new AutoConnect();
+        QLNHDataContext db;
+
+        public DAL_ReportNhanVien()
+        {
+            db = new QLNHDataContext(conn.GetConnection());
+        }
+
+        public List<ET_ReportNhanVien> LoadDSNhanVien()
+        {
+            var query = from nv in db.NHANVIENs
+                        select new ET_ReportNhanVien
+                        {
+                            MaNV = nv.MANV,
+                            TenNV = nv.TENNV,
+                            GioiTinh = nv.GIOITINH,
+                            NgaySinh = Convert.ToDateTime(nv.NGAYSINH),
+                            Chuc = nv.CHUC,
+                            Luong = Convert.ToInt32(nv.LUONG),
+                            DiaChi = nv.DIACHI,
+                            Sdt = Convert.ToInt32(nv.SDT),
+                            MaCN = nv.MACN,
+                            MaPB = Convert.ToInt32(nv.MAPB),
+
+                        };
+
+            return query.ToList();
+        }
+
+        public List<ET_ReportNhanVien> TimRPNhanVienTheoMa(string ma)
+        {
+            var query = from nv in db.NHANVIENs
+                        where nv.MANV.Contains(ma)
+                        select new ET_ReportNhanVien
+                        {
+                            MaNV = nv.MANV,
+                            TenNV = nv.TENNV,
+                            GioiTinh = nv.GIOITINH,
+                            NgaySinh = Convert.ToDateTime(nv.NGAYSINH),
+                            Chuc = nv.CHUC,
+                            Luong = Convert.ToInt32(nv.LUONG),
+                            DiaChi = nv.DIACHI,
+                            Sdt = Convert.ToInt32(nv.SDT),
+                            MaCN = nv.MACN,
+                            MaPB = Convert.ToInt32(nv.MAPB),
+                        };
+
+            return query.ToList();
+        }
+
+        public List<ET_ReportNhanVien> TimRPNhanVienTheoTen(string ten)
+        {
+            var query = from nv in db.NHANVIENs
+                        where nv.TENNV.Contains(ten)
+                        select new ET_ReportNhanVien
+                        {
+                            MaNV = nv.MANV,
+                            TenNV = nv.TENNV,
+                            GioiTinh = nv.GIOITINH,
+                            NgaySinh = Convert.ToDateTime(nv.NGAYSINH),
+                            Chuc = nv.CHUC,
+                            Luong = Convert.ToInt32(nv.LUONG),
+                            DiaChi = nv.DIACHI,
+                            Sdt = Convert.ToInt32(nv.SDT),
+                            MaCN = nv.MACN,
+                            MaPB = Convert.ToInt32(nv.MAPB),
+                        };
+
+            return query.ToList();
+        }
+
+        public List<ET_ReportNhanVien> TimRPNhanVienTheoSdt(string sdt)
+        {
+            var query = from nv in db.NHANVIENs
+                        where nv.SDT.ToString().Contains(sdt)
+                        select new ET_ReportNhanVien
+                        {
+                            MaNV = nv.MANV,
+                            TenNV = nv.TENNV,
+                            GioiTinh = nv.GIOITINH,
+                            NgaySinh = Convert.ToDateTime(nv.NGAYSINH),
+                            Chuc = nv.CHUC,
+                            Luong = Convert.ToInt32(nv.LUONG),
+                            DiaChi = nv.DIACHI,
+                            Sdt = Convert.ToInt32(nv.SDT),
+                            MaCN = nv.MACN,
+                            MaPB = Convert.ToInt32(nv.MAPB),
+                        };
+
+            return query.ToList();
+        }
+    }
+
     public class DAL_NhanVien
     {
         //Kết nối với Linq to SQL
@@ -104,9 +201,8 @@ namespace DAL
 
             return NV;
         }
-
         //Thêm nhân viên
-        public bool     ThemNV(ET_NhanVien et)
+        public bool ThemNV(ET_NhanVien et)
         {
             bool ss = false;
             try
