@@ -5,9 +5,35 @@ using System.Text;
 using System.Threading.Tasks;
 using ET;
 using DAL;
+using static ET.ET_NhanVien;
 
 namespace BUS
 {
+
+    public class BUS_ReportNhanVien
+    {
+        DAL_ReportNhanVien nv = new DAL_ReportNhanVien();
+
+        public List<ET_ReportNhanVien> LoadDSNhanVien()
+        {
+            return nv.LoadDSNhanVien();
+        }
+
+        public List<ET_ReportNhanVien> TimRPNhanVienTheoMa(string ma)
+        {
+            return nv.TimRPNhanVienTheoMa(ma);
+        }
+
+        public List<ET_ReportNhanVien> TimRPNhanVienTheoTen(string ten)
+        {
+            return nv.TimRPNhanVienTheoTen(ten);
+        }
+
+        public List<ET_ReportNhanVien> TimRPNhanVienTheoSdt(string sdt)
+        {
+            return nv.TimRPNhanVienTheoSdt(sdt);
+        }
+    }
     public class BUS_NhanVien
     {
         DAL_NhanVien nv = new DAL_NhanVien();

@@ -48,11 +48,11 @@
             this.crv_KhachHang.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.crv_KhachHang.Cursor = System.Windows.Forms.Cursors.Default;
             this.crv_KhachHang.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.crv_KhachHang.Location = new System.Drawing.Point(3, 25);
+            this.crv_KhachHang.Location = new System.Drawing.Point(3, 31);
             this.crv_KhachHang.Margin = new System.Windows.Forms.Padding(5);
             this.crv_KhachHang.Name = "crv_KhachHang";
             this.crv_KhachHang.ReportSource = this.Report_KhachHang1;
-            this.crv_KhachHang.Size = new System.Drawing.Size(1327, 606);
+            this.crv_KhachHang.Size = new System.Drawing.Size(1327, 600);
             this.crv_KhachHang.TabIndex = 0;
             this.crv_KhachHang.ToolPanelWidth = 333;
             // 
@@ -69,7 +69,7 @@
             this.gb_TimKiem.Margin = new System.Windows.Forms.Padding(5);
             this.gb_TimKiem.Name = "gb_TimKiem";
             this.gb_TimKiem.Padding = new System.Windows.Forms.Padding(5);
-            this.gb_TimKiem.Size = new System.Drawing.Size(1077, 71);
+            this.gb_TimKiem.Size = new System.Drawing.Size(1316, 71);
             this.gb_TimKiem.TabIndex = 1;
             this.gb_TimKiem.TabStop = false;
             this.gb_TimKiem.Text = "Tìm Kiếm";
@@ -98,7 +98,7 @@
             // 
             this.txt_GiaTri.Location = new System.Drawing.Point(572, 30);
             this.txt_GiaTri.Name = "txt_GiaTri";
-            this.txt_GiaTri.Size = new System.Drawing.Size(315, 29);
+            this.txt_GiaTri.Size = new System.Drawing.Size(315, 35);
             this.txt_GiaTri.TabIndex = 22;
             // 
             // label11
@@ -106,7 +106,7 @@
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(10, 34);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(160, 22);
+            this.label11.Size = new System.Drawing.Size(198, 26);
             this.label11.TabIndex = 20;
             this.label11.Text = "Phương Thức Tìm";
             // 
@@ -115,7 +115,7 @@
             this.label12.AutoSize = true;
             this.label12.Location = new System.Drawing.Point(497, 34);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(70, 22);
+            this.label12.Size = new System.Drawing.Size(86, 26);
             this.label12.TabIndex = 21;
             this.label12.Text = "Giá Trị";
             // 
@@ -125,11 +125,11 @@
             this.cbo_PhuongThuc.FormattingEnabled = true;
             this.cbo_PhuongThuc.Items.AddRange(new object[] {
             "Mã Khách Hàng",
-            "Tên Khách Hàng",
+            "Tên Khách Hàng ",
             "Số Điện Thoại"});
-            this.cbo_PhuongThuc.Location = new System.Drawing.Point(176, 31);
+            this.cbo_PhuongThuc.Location = new System.Drawing.Point(203, 29);
             this.cbo_PhuongThuc.Name = "cbo_PhuongThuc";
-            this.cbo_PhuongThuc.Size = new System.Drawing.Size(315, 30);
+            this.cbo_PhuongThuc.Size = new System.Drawing.Size(288, 34);
             this.cbo_PhuongThuc.TabIndex = 23;
             // 
             // gb_DanhSachKhacHang
@@ -145,7 +145,7 @@
             // 
             // Frm_Report_KhachHang
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 27F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1333, 727);
             this.Controls.Add(this.gb_DanhSachKhacHang);
