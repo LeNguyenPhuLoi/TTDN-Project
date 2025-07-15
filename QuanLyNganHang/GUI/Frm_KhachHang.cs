@@ -11,7 +11,7 @@ using BUS;
 
 namespace GUI
 {
-    public partial class Frm_KhachHang : GUI.Form1
+    public partial class Frm_KhachHang : Form
     {
         public Frm_KhachHang()
         {

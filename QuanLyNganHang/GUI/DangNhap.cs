@@ -57,7 +57,7 @@ namespace GUI
                 }
                 else if (bs.IsNhanVien(account))
                 {
-                    NextForm = new frmMainUser();
+                    NextForm = new Form1();
                 }
                 else
                 {

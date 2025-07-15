@@ -12,7 +12,7 @@ using System.Linq;
 
 namespace GUI
 {
-    public partial class Frm_TaiKhoan : GUI.Form1
+    public partial class Frm_TaiKhoan : Form
     {
         public Frm_TaiKhoan()
         {

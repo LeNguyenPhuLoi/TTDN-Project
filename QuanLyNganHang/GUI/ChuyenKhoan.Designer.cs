@@ -58,7 +58,7 @@
             // btnInDS
             // 
             this.btnInDS.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnInDS.Location = new System.Drawing.Point(992, 770);
+            this.btnInDS.Location = new System.Drawing.Point(992, 827);
             this.btnInDS.Name = "btnInDS";
             this.btnInDS.Size = new System.Drawing.Size(91, 35);
             this.btnInDS.TabIndex = 35;
@@ -115,9 +115,9 @@
             // 
             this.btnHoanTac.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnHoanTac.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHoanTac.Location = new System.Drawing.Point(643, 223);
+            this.btnHoanTac.Location = new System.Drawing.Point(643, 218);
             this.btnHoanTac.Name = "btnHoanTac";
-            this.btnHoanTac.Size = new System.Drawing.Size(88, 37);
+            this.btnHoanTac.Size = new System.Drawing.Size(114, 46);
             this.btnHoanTac.TabIndex = 12;
             this.btnHoanTac.Text = "Hoàn tác";
             this.btnHoanTac.UseVisualStyleBackColor = true;
@@ -302,12 +302,12 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvChuyenKhoan.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvChuyenKhoan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvChuyenKhoan.Location = new System.Drawing.Point(12, 348);
+            this.dgvChuyenKhoan.Location = new System.Drawing.Point(12, 339);
             this.dgvChuyenKhoan.MultiSelect = false;
             this.dgvChuyenKhoan.Name = "dgvChuyenKhoan";
             this.dgvChuyenKhoan.ReadOnly = true;
             this.dgvChuyenKhoan.RowHeadersWidth = 62;
-            this.dgvChuyenKhoan.Size = new System.Drawing.Size(1073, 416);
+            this.dgvChuyenKhoan.Size = new System.Drawing.Size(1073, 262);
             this.dgvChuyenKhoan.TabIndex = 32;
             this.dgvChuyenKhoan.Click += new System.EventHandler(this.dgvChuyenKhoan_Click);
             // 
@@ -315,7 +315,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1103, 556);
+            this.AutoSize = true;
+            this.ClientSize = new System.Drawing.Size(1103, 613);
             this.Controls.Add(this.btnInDS);
             this.Controls.Add(this.txtTim);
             this.Controls.Add(this.pnlMain);
