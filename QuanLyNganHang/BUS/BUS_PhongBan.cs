@@ -5,9 +5,29 @@ using System.Text;
 using System.Threading.Tasks;
 using ET;
 using DAL;
+using static ET.ET_PhongBan;
 
 namespace BUS
 {
+    public class BUS_ReportPhongBan
+    {
+         DAL_ReportPhongBan nv = new DAL_ReportPhongBan();
+
+        public List<ET_ReportPhongBan> LoadDSPhongBan()
+        {
+            return nv.LoadDSPhongBan();
+        }
+
+        public List<ET_ReportPhongBan> TimRPPhongBanTheoMa(string ma)
+        {
+            return nv.TimRPPhongBanTheoMa(ma);
+        }
+
+        public List<ET_ReportPhongBan> TimRPPhongBanTheoTen(string ten)
+        {
+            return nv.TimRPPhongBanTheoTen(ten);
+        }
+    }
     public class BUS_PhongBan
     {
         DAL_PhongBan pb = new DAL_PhongBan();
