@@ -57,6 +57,7 @@
             this.label10 = new System.Windows.Forms.Label();
             this.txt_manv = new System.Windows.Forms.TextBox();
             this.gb_Timkiem = new System.Windows.Forms.GroupBox();
+            this.cbo_timcn = new System.Windows.Forms.ComboBox();
             this.btn_Tim = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.cbo_phuongthuc = new System.Windows.Forms.ComboBox();
@@ -65,7 +66,6 @@
             this.gb_DanhSach = new System.Windows.Forms.GroupBox();
             this.dgv_nhanvien = new System.Windows.Forms.DataGridView();
             this.lbl_title = new System.Windows.Forms.Label();
-            this.cbo_timcn = new System.Windows.Forms.ComboBox();
             this.gb_ChucNang.SuspendLayout();
             this.gb_ThongTin.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -361,6 +361,15 @@
             this.gb_Timkiem.TabStop = false;
             this.gb_Timkiem.Text = "Tìm Kiếm";
             // 
+            // cbo_timcn
+            // 
+            this.cbo_timcn.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbo_timcn.FormattingEnabled = true;
+            this.cbo_timcn.Location = new System.Drawing.Point(568, 33);
+            this.cbo_timcn.Name = "cbo_timcn";
+            this.cbo_timcn.Size = new System.Drawing.Size(315, 24);
+            this.cbo_timcn.TabIndex = 20;
+            // 
             // btn_Tim
             // 
             this.btn_Tim.Location = new System.Drawing.Point(889, 32);
@@ -445,15 +454,6 @@
             this.lbl_title.TabIndex = 37;
             this.lbl_title.Text = "Quản Lý Nhân Viên";
             // 
-            // cbo_timcn
-            // 
-            this.cbo_timcn.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbo_timcn.FormattingEnabled = true;
-            this.cbo_timcn.Location = new System.Drawing.Point(568, 33);
-            this.cbo_timcn.Name = "cbo_timcn";
-            this.cbo_timcn.Size = new System.Drawing.Size(315, 24);
-            this.cbo_timcn.TabIndex = 20;
-            // 
             // Frm_NhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -466,7 +466,6 @@
             this.Controls.Add(this.lbl_title);
             this.Name = "Frm_NhanVien";
             this.Text = "Frm_NhanVien";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Frm_NhanVien_Load);
             this.Resize += new System.EventHandler(this.Frm_NhanVien_Resize);
             this.gb_ChucNang.ResumeLayout(false);

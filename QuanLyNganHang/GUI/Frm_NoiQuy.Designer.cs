@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.gb_Timkiem = new System.Windows.Forms.GroupBox();
+            this.cbo_timtieude = new System.Windows.Forms.ComboBox();
             this.btn_Tim = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.cbo_phuongthuc = new System.Windows.Forms.ComboBox();
@@ -53,7 +54,6 @@
             this.txt_tieude = new System.Windows.Forms.TextBox();
             this.txt_manq = new System.Windows.Forms.TextBox();
             this.lbl_title = new System.Windows.Forms.Label();
-            this.cbo_timtieude = new System.Windows.Forms.ComboBox();
             this.gb_Timkiem.SuspendLayout();
             this.gb_DanhSach.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_noiquy)).BeginInit();
@@ -75,6 +75,15 @@
             this.gb_Timkiem.TabIndex = 44;
             this.gb_Timkiem.TabStop = false;
             this.gb_Timkiem.Text = "Tìm Kiếm";
+            // 
+            // cbo_timtieude
+            // 
+            this.cbo_timtieude.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbo_timtieude.FormattingEnabled = true;
+            this.cbo_timtieude.Location = new System.Drawing.Point(568, 33);
+            this.cbo_timtieude.Name = "cbo_timtieude";
+            this.cbo_timtieude.Size = new System.Drawing.Size(315, 24);
+            this.cbo_timtieude.TabIndex = 20;
             // 
             // btn_Tim
             // 
@@ -312,15 +321,6 @@
             this.lbl_title.TabIndex = 42;
             this.lbl_title.Text = "Quản Lý Nội Quy";
             // 
-            // cbo_timtieude
-            // 
-            this.cbo_timtieude.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbo_timtieude.FormattingEnabled = true;
-            this.cbo_timtieude.Location = new System.Drawing.Point(568, 33);
-            this.cbo_timtieude.Name = "cbo_timtieude";
-            this.cbo_timtieude.Size = new System.Drawing.Size(315, 24);
-            this.cbo_timtieude.TabIndex = 20;
-            // 
             // Frm_NoiQuy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -333,7 +333,6 @@
             this.Controls.Add(this.lbl_title);
             this.Name = "Frm_NoiQuy";
             this.Text = "Frm_NoiQuy";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Frm_NoiQuy_Load);
             this.Resize += new System.EventHandler(this.Frm_NoiQuy_Resize);
             this.gb_Timkiem.ResumeLayout(false);

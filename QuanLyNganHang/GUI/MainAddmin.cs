@@ -19,10 +19,6 @@ namespace GUI
 
         private void frmMainAddmin_Load(object sender, EventArgs e)
         {
-            mnuMain.BackColor = ColorTranslator.FromHtml("#B12830");
-            mnuMain.ForeColor = ColorTranslator.FromHtml("#DED4CA");
-            this.BackColor = ColorTranslator.FromHtml("#DED4CA");
-
             tmrBannerLoop.Interval = 6000;
             tmrBannerLoop.Start();
         }
@@ -65,11 +61,6 @@ namespace GUI
             {
                 this.Close();
             }
-        }
-
-        private void picBanner_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void nhânViênToolStripMenuItem_Click(object sender, EventArgs e)
@@ -178,6 +169,24 @@ namespace GUI
         {
             frmTKDangNhap frm = new frmTKDangNhap();
             OpenMain(frm);
+        }
+
+        private void btnMM_Click(object sender, EventArgs e)
+        {
+            if (this.WindowState == FormWindowState.Normal)
+                this.WindowState = FormWindowState.Maximized;
+            else
+                this.WindowState = FormWindowState.Normal;
+        }
+
+        private void btnZoom_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void picBanner_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

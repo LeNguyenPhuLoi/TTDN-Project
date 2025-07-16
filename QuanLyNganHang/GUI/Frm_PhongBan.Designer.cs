@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.gb_Timkiem = new System.Windows.Forms.GroupBox();
+            this.cbo_timtenpb = new System.Windows.Forms.ComboBox();
             this.btn_Tim = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.cbo_phuongthuc = new System.Windows.Forms.ComboBox();
@@ -47,7 +48,6 @@
             this.txt_tenpb = new System.Windows.Forms.TextBox();
             this.txt_mapb = new System.Windows.Forms.TextBox();
             this.lbl_title = new System.Windows.Forms.Label();
-            this.cbo_timtenpb = new System.Windows.Forms.ComboBox();
             this.gb_Timkiem.SuspendLayout();
             this.gb_DanhSach.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_phongban)).BeginInit();
@@ -69,6 +69,15 @@
             this.gb_Timkiem.TabIndex = 44;
             this.gb_Timkiem.TabStop = false;
             this.gb_Timkiem.Text = "Tìm Kiếm";
+            // 
+            // cbo_timtenpb
+            // 
+            this.cbo_timtenpb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbo_timtenpb.FormattingEnabled = true;
+            this.cbo_timtenpb.Location = new System.Drawing.Point(568, 32);
+            this.cbo_timtenpb.Name = "cbo_timtenpb";
+            this.cbo_timtenpb.Size = new System.Drawing.Size(315, 24);
+            this.cbo_timtenpb.TabIndex = 20;
             // 
             // btn_Tim
             // 
@@ -250,15 +259,6 @@
             this.lbl_title.TabIndex = 42;
             this.lbl_title.Text = "Quản Lý Phòng Ban";
             // 
-            // cbo_timtenpb
-            // 
-            this.cbo_timtenpb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbo_timtenpb.FormattingEnabled = true;
-            this.cbo_timtenpb.Location = new System.Drawing.Point(568, 32);
-            this.cbo_timtenpb.Name = "cbo_timtenpb";
-            this.cbo_timtenpb.Size = new System.Drawing.Size(315, 24);
-            this.cbo_timtenpb.TabIndex = 20;
-            // 
             // Frm_PhongBan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -271,7 +271,6 @@
             this.Controls.Add(this.lbl_title);
             this.Name = "Frm_PhongBan";
             this.Text = "Frm_PhongBan";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Frm_PhongBan_Load);
             this.Resize += new System.EventHandler(this.Frm_PhongBan_Resize);
             this.gb_Timkiem.ResumeLayout(false);
