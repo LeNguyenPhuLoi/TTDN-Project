@@ -32,6 +32,7 @@
             this.btn_Tim = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.cbo_phuongthuc = new System.Windows.Forms.ComboBox();
+            this.cbo_timnq = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
             this.txt_giatri = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -50,6 +51,7 @@
             this.btn_Sua = new System.Windows.Forms.Button();
             this.btn_Xoa = new System.Windows.Forms.Button();
             this.gb_ThongTin = new System.Windows.Forms.GroupBox();
+            this.cbo_motavp = new System.Windows.Forms.ComboBox();
             this.cbo_trangthai = new System.Windows.Forms.ComboBox();
             this.cbo_makh = new System.Windows.Forms.ComboBox();
             this.cbo_manv = new System.Windows.Forms.ComboBox();
@@ -58,8 +60,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.txt_mavp = new System.Windows.Forms.TextBox();
             this.lbl_title = new System.Windows.Forms.Label();
-            this.cbo_motavp = new System.Windows.Forms.ComboBox();
-            this.cbo_timnq = new System.Windows.Forms.ComboBox();
             this.gb_Timkiem.SuspendLayout();
             this.gb_DanhSach.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_vipham)).BeginInit();
@@ -116,6 +116,15 @@
             this.cbo_phuongthuc.Size = new System.Drawing.Size(315, 24);
             this.cbo_phuongthuc.TabIndex = 17;
             this.cbo_phuongthuc.TextChanged += new System.EventHandler(this.cbo_phuongthuc_TextChanged);
+            // 
+            // cbo_timnq
+            // 
+            this.cbo_timnq.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbo_timnq.FormattingEnabled = true;
+            this.cbo_timnq.Location = new System.Drawing.Point(568, 33);
+            this.cbo_timnq.Name = "cbo_timnq";
+            this.cbo_timnq.Size = new System.Drawing.Size(315, 24);
+            this.cbo_timnq.TabIndex = 20;
             // 
             // label12
             // 
@@ -304,6 +313,15 @@
             this.gb_ThongTin.TabStop = false;
             this.gb_ThongTin.Text = "Thông Tin Vi Phạm";
             // 
+            // cbo_motavp
+            // 
+            this.cbo_motavp.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbo_motavp.FormattingEnabled = true;
+            this.cbo_motavp.Location = new System.Drawing.Point(174, 317);
+            this.cbo_motavp.Name = "cbo_motavp";
+            this.cbo_motavp.Size = new System.Drawing.Size(298, 24);
+            this.cbo_motavp.TabIndex = 32;
+            // 
             // cbo_trangthai
             // 
             this.cbo_trangthai.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -379,24 +397,6 @@
             this.lbl_title.TabIndex = 42;
             this.lbl_title.Text = "Quản Lý Vi Phạm";
             // 
-            // cbo_motavp
-            // 
-            this.cbo_motavp.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbo_motavp.FormattingEnabled = true;
-            this.cbo_motavp.Location = new System.Drawing.Point(174, 317);
-            this.cbo_motavp.Name = "cbo_motavp";
-            this.cbo_motavp.Size = new System.Drawing.Size(298, 24);
-            this.cbo_motavp.TabIndex = 32;
-            // 
-            // cbo_timnq
-            // 
-            this.cbo_timnq.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbo_timnq.FormattingEnabled = true;
-            this.cbo_timnq.Location = new System.Drawing.Point(568, 33);
-            this.cbo_timnq.Name = "cbo_timnq";
-            this.cbo_timnq.Size = new System.Drawing.Size(315, 24);
-            this.cbo_timnq.TabIndex = 20;
-            // 
             // Frm_ViPham
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -409,7 +409,6 @@
             this.Controls.Add(this.lbl_title);
             this.Name = "Frm_ViPham";
             this.Text = "Frm_ViPham";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Frm_ViPham_Load);
             this.Resize += new System.EventHandler(this.Frm_ViPham_Resize);
             this.gb_Timkiem.ResumeLayout(false);

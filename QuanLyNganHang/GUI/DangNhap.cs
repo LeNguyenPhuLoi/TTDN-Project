@@ -21,24 +21,19 @@ namespace GUI
         BUS_DangNhap bs = new BUS_DangNhap();
         public Form NextForm { get; set; } // Lưu form tiếp theo
 
-        private void frmDangNhap_Load(object sender, EventArgs e)
+
+        private void btnZoom_Click(object sender, EventArgs e)
         {
-            this.BackColor = ColorTranslator.FromHtml("#DED4CA");
-            pnlLogo.BackColor = ColorTranslator.FromHtml("#000000");
-
-            label1.ForeColor = ColorTranslator.FromHtml("#52362A");
-            label2.ForeColor = ColorTranslator.FromHtml("#52362A");
-            label3.ForeColor = ColorTranslator.FromHtml("#52362A");
-
-            btnLogin.BackColor = ColorTranslator.FromHtml("#52362A");
-            btnLogin.ForeColor = ColorTranslator.FromHtml("#DED4CA");
-            btnThoat.BackColor = ColorTranslator.FromHtml("#DED4CA");
-            btnThoat.ForeColor = ColorTranslator.FromHtml("#AF262E");
+            this.WindowState = FormWindowState.Minimized;
         }
 
-        private void btnThoat_Click(object sender, EventArgs e)
+        private void btnClose_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            DialogResult rs = MessageBox.Show("Bạn có muốn đóng ứng dụng không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (rs == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -48,7 +43,7 @@ namespace GUI
 
             // Kiểm tra thông tin đăng nhập
             var account = bs.DangNhap(username, password);
-            if (account != null )
+            if (account != null)
             {
 
                 if (bs.IsAdmin(account))
@@ -57,7 +52,7 @@ namespace GUI
                 }
                 else if (bs.IsNhanVien(account))
                 {
-                    NextForm = new Form1();
+                    NextForm = new Frm_MainUser();
                 }
                 else
                 {
@@ -78,6 +73,19 @@ namespace GUI
                 txtPass.Clear();
                 txtMaDN.Clear();
                 txtMaDN.Focus();
+            }
+        }
+
+        private void frmDangNhap_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void frmDangNhap_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnLogin.PerformClick();
             }
         }
     }

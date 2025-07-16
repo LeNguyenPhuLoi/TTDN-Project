@@ -300,7 +300,6 @@
             this.Controls.Add(this.lbl_title);
             this.Name = "Frm_ChiNhanh";
             this.Text = "Frm_ChiNhanh";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Frm_ChiNhanh_Load);
             this.Resize += new System.EventHandler(this.Frm_ChiNhanh_Resize);
             this.gb_Timkiem.ResumeLayout(false);

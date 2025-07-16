@@ -150,7 +150,6 @@ D:\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.Frm_TaiKhoan.resources
 D:\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.Frm_ViPham.resources
 D:\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.frmDangNhap.resources
 D:\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.frmLichSuTraNo.resources
-D:\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.frmMainUser.resources
 D:\ĐỒ ÁN TTDN\chuc nang\TTDN-Project\QuanLyNganHang\GUI\bin\Debug\GUI.exe.config
 D:\ĐỒ ÁN TTDN\chuc nang\TTDN-Project\QuanLyNganHang\GUI\bin\Debug\GUI.exe
 D:\ĐỒ ÁN TTDN\chuc nang\TTDN-Project\QuanLyNganHang\GUI\bin\Debug\GUI.pdb
@@ -1365,7 +1364,6 @@ D:\ĐỒ ÁN TTDN\report nhan vien\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI
 D:\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.Frm_Report_BienLai.resources
 D:\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.Frm_Report_GiaoDich.resources
 D:\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.Frm_Report_NhanVien.resources
-D:\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.Form1.resources
 D:\ĐỒ ÁN TTDN\report cho phong ban\TTDN-Project\QuanLyNganHang\GUI\bin\Debug\GUI.exe.config
 D:\ĐỒ ÁN TTDN\report cho phong ban\TTDN-Project\QuanLyNganHang\GUI\bin\Debug\GUI.exe
 D:\ĐỒ ÁN TTDN\report cho phong ban\TTDN-Project\QuanLyNganHang\GUI\bin\Debug\GUI.pdb
@@ -1430,3 +1428,5 @@ D:\ĐỒ ÁN TTDN\report cho phong ban\TTDN-Project\QuanLyNganHang\GUI\obj\Debug
 D:\ĐỒ ÁN TTDN\report cho phong ban\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.csproj.Up2Date
 D:\ĐỒ ÁN TTDN\report cho phong ban\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.exe
 D:\ĐỒ ÁN TTDN\report cho phong ban\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.pdb
+D:\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.Frm_Report_PhongBan.resources
+D:\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.Frm_MainUser.resources
