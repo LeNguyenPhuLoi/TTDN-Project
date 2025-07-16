@@ -166,6 +166,12 @@
     <Compile Include="Frm_Report_NhanVien.Designer.cs">
       <DependentUpon>Frm_Report_NhanVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frm_Report_PhongBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Report_PhongBan.Designer.cs">
+      <DependentUpon>Frm_Report_PhongBan.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm_Report_TaiKhoan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -252,6 +258,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>NhanVienDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Report\PhongBanDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PhongBanDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Report\Report_BienLai.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -286,6 +297,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Report_NhanVien.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Report_PhongBan.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Report_PhongBan.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Report\Report_TaiKhoan.cs">
@@ -362,6 +379,9 @@
     <EmbeddedResource Include="Frm_Report_NhanVien.resx">
       <DependentUpon>Frm_Report_NhanVien.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Report_PhongBan.resx">
+      <DependentUpon>Frm_Report_PhongBan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Frm_Report_TaiKhoan.resx">
       <DependentUpon>Frm_Report_TaiKhoan.cs</DependentUpon>
     </EmbeddedResource>
@@ -421,6 +441,10 @@
     <EmbeddedResource Include="Report\Report_NhanVien.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>Report_NhanVien.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Report_PhongBan.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Report_PhongBan.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Report\Report_TaiKhoan.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -503,6 +527,17 @@
     </None>
     <None Include="Report\NhanVienDataSet.xss">
       <DependentUpon>NhanVienDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Report\PhongBanDataSet.xsc">
+      <DependentUpon>PhongBanDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Report\PhongBanDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PhongBanDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Report\PhongBanDataSet.xss">
+      <DependentUpon>PhongBanDataSet.xsd</DependentUpon>
     </None>
     <None Include="Report\TaiKhoanDataSet.xsc">
       <DependentUpon>TaiKhoanDataSet.xsd</DependentUpon>

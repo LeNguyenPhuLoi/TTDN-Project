@@ -21,7 +21,7 @@ namespace DAL
 
         public List<ET_ReportNhanVien> LoadDSNhanVien()
         {
-            var query = from nv in db.NHANVIENs
+            var fast = from nv in db.NHANVIENs
                         select new ET_ReportNhanVien
                         {
                             MaNV = nv.MANV,
@@ -37,12 +37,12 @@ namespace DAL
 
                         };
 
-            return query.ToList();
+            return fast.ToList();
         }
 
         public List<ET_ReportNhanVien> TimRPNhanVienTheoMa(string ma)
         {
-            var query = from nv in db.NHANVIENs
+            var fast = from nv in db.NHANVIENs
                         where nv.MANV.Contains(ma)
                         select new ET_ReportNhanVien
                         {
@@ -58,12 +58,12 @@ namespace DAL
                             MaPB = Convert.ToInt32(nv.MAPB),
                         };
 
-            return query.ToList();
+            return fast.ToList();
         }
 
         public List<ET_ReportNhanVien> TimRPNhanVienTheoTen(string ten)
         {
-            var query = from nv in db.NHANVIENs
+            var fast = from nv in db.NHANVIENs
                         where nv.TENNV.Contains(ten)
                         select new ET_ReportNhanVien
                         {
@@ -79,12 +79,12 @@ namespace DAL
                             MaPB = Convert.ToInt32(nv.MAPB),
                         };
 
-            return query.ToList();
+            return fast.ToList();
         }
 
         public List<ET_ReportNhanVien> TimRPNhanVienTheoSdt(string sdt)
         {
-            var query = from nv in db.NHANVIENs
+            var fast = from nv in db.NHANVIENs
                         where nv.SDT.ToString().Contains(sdt)
                         select new ET_ReportNhanVien
                         {
@@ -100,7 +100,7 @@ namespace DAL
                             MaPB = Convert.ToInt32(nv.MAPB),
                         };
 
-            return query.ToList();
+            return fast.ToList();
         }
     }
 
