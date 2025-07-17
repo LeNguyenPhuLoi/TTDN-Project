@@ -1560,3 +1560,5 @@ E:\TTDN Project\Tháng 7\17-7-2025\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI
 E:\TTDN Project\Tháng 7\17-7-2025\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.csproj.Up2Date
 E:\TTDN Project\Tháng 7\17-7-2025\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.exe
 E:\TTDN Project\Tháng 7\17-7-2025\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.pdb
+D:\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.Controls.RJTextBox.resources
+D:\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.Frm_Report_ViPham.resources

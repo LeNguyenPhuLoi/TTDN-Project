@@ -5,10 +5,13 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.UI.WebControls;
 using System.Windows.Forms;
+
 
 namespace GUI
 {
@@ -21,10 +24,32 @@ namespace GUI
         BUS_ChuyenKhoan bs = new BUS_ChuyenKhoan();
         private void frmChuyenKhoan_Load(object sender, EventArgs e)
         {
+           
+
+            dgvChuyenKhoan.RowHeadersVisible = false;
+            // Màu nền khi chọn ô (dòng)
+            dgvChuyenKhoan.DefaultCellStyle.SelectionBackColor = Color.Yellow; // hoặc Color.Yellow
+
+            // Cỡ chữ cho toàn bộ lưới
+            dgvChuyenKhoan.Font = new Font("Segoe UI", 12);
+
+            // Cỡ chữ cho tiêu đề cột
+            dgvChuyenKhoan.EnableHeadersVisualStyles = false; // Cho phép dùng style tùy chỉnh
+            dgvChuyenKhoan.ColumnHeadersDefaultCellStyle.BackColor = Color.DodgerBlue;
+            dgvChuyenKhoan.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            dgvChuyenKhoan.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 13, FontStyle.Bold);
+
+            // Xem kẽ màu dòng
+            dgvChuyenKhoan.RowsDefaultCellStyle.BackColor = Color.White;
+            dgvChuyenKhoan.AlternatingRowsDefaultCellStyle.BackColor = Color.LightBlue; // xanh dương sáng
+
+            // Cỡ chữ cho ô dữ liệu
+            dgvChuyenKhoan.DefaultCellStyle.Font = new Font("Segoe UI", 12);
+
+            // Canh giữa dữ liệu nếu cần
+            dgvChuyenKhoan.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
+
             btnHoanTac.PerformClick();
-            this.BackColor = ColorTranslator.FromHtml("#263238");
-            pnlMain.BackColor = ColorTranslator.FromHtml("#DCDCDC");
-            lbTim.ForeColor = ColorTranslator.FromHtml("#DED4CA");
 
             dgvChuyenKhoan.DataSource = bs.LoadDSTK();
             AddToCombo(bs.LoadMaTK(),cboMaTKGui);
@@ -149,6 +174,11 @@ namespace GUI
             {
                 MessageBox.Show("Lỗi tìm kiếm: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void pnlMain_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
