@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "1P2WwtaACb4=",
+  "dgSpecHash": "QiQ3VZCVDek=",
   "success": true,
-  "projectFilePath": "D:\\ĐỒ ÁN TTDN\\report vi pham\\TTDN-Project\\QuanLyNganHang\\ET\\ET.csproj",
+  "projectFilePath": "E:\\TTDN Project\\Tháng 7\\17-7-2025\\TTDN-Project\\QuanLyNganHang\\ET\\ET.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Users\\ADMIN\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+    "C:\\Users\\veros\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\veros\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
   ],
   "logs": []
 }

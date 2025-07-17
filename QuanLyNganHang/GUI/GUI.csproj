@@ -39,6 +39,7 @@
     <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.ServiceProcess" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
@@ -63,6 +64,21 @@
     </Compile>
     <Compile Include="ChuyenKhoan.Designer.cs">
       <DependentUpon>ChuyenKhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\RJButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\RJCombobox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\RJTextBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\RJTextBox.Designer.cs">
+      <DependentUpon>RJTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Rounded_Panel.cs">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="DangNhap.cs">
       <SubType>Form</SubType>
@@ -338,6 +354,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ChuyenKhoan.resx">
       <DependentUpon>ChuyenKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\RJTextBox.resx">
+      <DependentUpon>RJTextBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DangNhap.resx">
       <DependentUpon>DangNhap.cs</DependentUpon>
