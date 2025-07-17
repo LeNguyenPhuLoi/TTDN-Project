@@ -178,6 +178,12 @@
     <Compile Include="Frm_Report_TaiKhoan.Designer.cs">
       <DependentUpon>Frm_Report_TaiKhoan.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frm_Report_ViPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Report_ViPham.Designer.cs">
+      <DependentUpon>Frm_Report_ViPham.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm_TaiKhoan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -305,10 +311,21 @@
       <DependentUpon>Report_TaiKhoan.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Report\Report_ViPham.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Report_ViPham.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Report\TaiKhoanDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>TaiKhoanDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ViPhamDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ViPhamDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="TKDangNhap.cs">
       <SubType>Form</SubType>
@@ -379,6 +396,9 @@
     <EmbeddedResource Include="Frm_Report_TaiKhoan.resx">
       <DependentUpon>Frm_Report_TaiKhoan.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Report_ViPham.resx">
+      <DependentUpon>Frm_Report_ViPham.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Frm_TaiKhoan.resx">
       <DependentUpon>Frm_TaiKhoan.cs</DependentUpon>
     </EmbeddedResource>
@@ -441,6 +461,10 @@
     <EmbeddedResource Include="Report\Report_TaiKhoan.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>Report_TaiKhoan.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Report_ViPham.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Report_ViPham.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="TKDangNhap.resx">
       <DependentUpon>TKDangNhap.cs</DependentUpon>
@@ -563,6 +587,17 @@
     <Content Include="Images\MindLess.ico" />
     <Content Include="Images\MindLess.png" />
     <Content Include="Images\nene.jpg" />
+    <None Include="Report\ViPhamDataSet.xsc">
+      <DependentUpon>ViPhamDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Report\ViPhamDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ViPhamDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Report\ViPhamDataSet.xss">
+      <DependentUpon>ViPhamDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Resources\Screenshot 2025-07-16 125629.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
