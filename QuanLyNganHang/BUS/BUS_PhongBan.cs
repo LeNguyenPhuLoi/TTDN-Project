@@ -11,21 +11,21 @@ namespace BUS
 {
     public class BUS_ReportPhongBan
     {
-         DAL_ReportPhongBan nv = new DAL_ReportPhongBan();
+         DAL_ReportPhongBan pb = new DAL_ReportPhongBan();
 
         public List<ET_ReportPhongBan> LoadDSPhongBan()
         {
-            return nv.LoadDSPhongBan();
+            return pb.LoadDSPhongBan();
         }
 
         public List<ET_ReportPhongBan> TimRPPhongBanTheoMa(string ma)
         {
-            return nv.TimRPPhongBanTheoMa(ma);
+            return pb.TimRPPhongBanTheoMa(ma);
         }
 
         public List<ET_ReportPhongBan> TimRPPhongBanTheoTen(string ten)
         {
-            return nv.TimRPPhongBanTheoTen(ten);
+            return pb.TimRPPhongBanTheoTen(ten);
         }
     }
     public class BUS_PhongBan

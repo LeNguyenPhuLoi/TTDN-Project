@@ -5,9 +5,39 @@ using System.Text;
 using System.Threading.Tasks;
 using ET;
 using DAL;
+using static ET.ET_ViPham;
 
 namespace BUS
 {
+    public class BUS_ReportViPham
+    {
+        DAL_ReportViPham vp = new DAL_ReportViPham();
+
+        public List<ET_ReportViPham> LoadDSViPham()
+        {
+            return vp.LoadDSViPham();
+        }
+
+        public List<ET_ReportViPham> TimRPViPhamTheoMa(string ma)
+        {
+            return vp.TimRPViPhamTheoMa(ma);
+        }
+
+        public List<ET_ReportViPham> TimRPViPhamTheoMaNV(string manv)
+        {
+            return vp.TimRPViPhamTheoMaNV(manv);
+        }
+
+        public List<ET_ReportViPham> TimRPViPhamTheoMaKH(string makh)
+        {
+            return vp.TimRPViPhamTheoMaKH(makh);
+        }
+
+        public List<ET_ReportViPham> TimRPViPhamTheoMoTa(string mota)
+        {
+            return vp.TimRPViPhamTheoMoTa(mota);
+        }
+    }
     public class BUS_ViPham
     {
         DAL_ViPham vp = new DAL_ViPham();

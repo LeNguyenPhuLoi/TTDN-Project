@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ViPhamDataSet" targetNamespace="http://tempuri.org/ViPhamDataSet.xsd" xmlns:mstns="http://tempuri.org/ViPhamDataSet.xsd" xmlns="http://tempuri.org/ViPhamDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ViPhamDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_UserDSName="ViPhamDataSet" msprop:Generator_DataSetName="ViPhamDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ViPham" msprop:Generator_RowEvHandlerName="ViPhamRowChangeEventHandler" msprop:Generator_RowDeletedName="ViPhamRowDeleted" msprop:Generator_RowDeletingName="ViPhamRowDeleting" msprop:Generator_RowEvArgName="ViPhamRowChangeEvent" msprop:Generator_TablePropName="ViPham" msprop:Generator_RowChangedName="ViPhamRowChanged" msprop:Generator_RowChangingName="ViPhamRowChanging" msprop:Generator_TableClassName="ViPhamDataTable" msprop:Generator_RowClassName="ViPhamRow" msprop:Generator_TableVarName="tableViPham" msprop:Generator_UserTableName="ViPham">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MaVP" msprop:Generator_ColumnPropNameInRow="MaVP" msprop:Generator_ColumnPropNameInTable="MaVPColumn" msprop:Generator_ColumnVarNameInTable="columnMaVP" msprop:Generator_UserColumnName="MaVP" type="xs:string" minOccurs="0" />
+              <xs:element name="MaNQ" msprop:Generator_ColumnPropNameInRow="MaNQ" msprop:Generator_ColumnPropNameInTable="MaNQColumn" msprop:Generator_ColumnVarNameInTable="columnMaNQ" msprop:Generator_UserColumnName="MaNQ" type="xs:string" minOccurs="0" />
+              <xs:element name="MaNV" msprop:Generator_ColumnPropNameInRow="MaNV" msprop:Generator_ColumnPropNameInTable="MaNVColumn" msprop:Generator_ColumnVarNameInTable="columnMaNV" msprop:Generator_UserColumnName="MaNV" type="xs:string" minOccurs="0" />
+              <xs:element name="MaKH" msprop:Generator_ColumnPropNameInRow="MaKH" msprop:Generator_ColumnPropNameInTable="MaKHColumn" msprop:Generator_ColumnVarNameInTable="columnMaKH" msprop:Generator_UserColumnName="MaKH" type="xs:string" minOccurs="0" />
+              <xs:element name="NgayVP" msprop:Generator_ColumnPropNameInRow="NgayVP" msprop:Generator_ColumnPropNameInTable="NgayVPColumn" msprop:Generator_ColumnVarNameInTable="columnNgayVP" msprop:Generator_UserColumnName="NgayVP" type="xs:string" minOccurs="0" />
+              <xs:element name="MoTaVP" msprop:Generator_ColumnPropNameInRow="MoTaVP" msprop:Generator_ColumnPropNameInTable="MoTaVPColumn" msprop:Generator_ColumnVarNameInTable="columnMoTaVP" msprop:Generator_UserColumnName="MoTaVP" type="xs:string" minOccurs="0" />
+              <xs:element name="HinhThucXL" msprop:Generator_ColumnPropNameInRow="HinhThucXL" msprop:Generator_ColumnPropNameInTable="HinhThucXLColumn" msprop:Generator_ColumnVarNameInTable="columnHinhThucXL" msprop:Generator_UserColumnName="HinhThucXL" type="xs:string" minOccurs="0" />
+              <xs:element name="TrangThaiXL" msprop:Generator_ColumnPropNameInRow="TrangThaiXL" msprop:Generator_ColumnPropNameInTable="TrangThaiXLColumn" msprop:Generator_ColumnVarNameInTable="columnTrangThaiXL" msprop:Generator_UserColumnName="TrangThaiXL" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

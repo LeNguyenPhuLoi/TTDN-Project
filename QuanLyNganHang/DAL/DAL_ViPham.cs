@@ -4,9 +4,116 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ET;
+using static ET.ET_ViPham;
 
 namespace DAL
 {
+
+    public class DAL_ReportViPham
+    {
+        //kết nối database = linq to sql
+        AutoConnect conn = new AutoConnect();
+        QLNHDataContext db;
+
+        public DAL_ReportViPham()
+        {
+            db = new QLNHDataContext(conn.GetConnection());
+        }
+
+        public List<ET_ReportViPham> LoadDSViPham()
+        {
+            var fast = from vp in db.VIPHAMs
+                       select new ET_ReportViPham
+                       {
+                           MaVP = vp.MAVP,
+                           MaNQ = vp.MANQ,
+                           MaNV = vp.MANV,
+                           MaKH = vp.MAKH,
+                           NgayVP = Convert.ToDateTime(vp.NGAYVP),
+                           MoTaVP = vp.MOTAVP,
+                           HinhThucXL = vp.HINHTHUCXL,
+                           TrangThaiXL = vp.TRANGTHAIXL
+                       };
+
+            return fast.ToList();
+        }
+
+        public List<ET_ReportViPham> TimRPViPhamTheoMa(string ma)
+        {
+            var fast = from vp in db.VIPHAMs
+                       where vp.MAVP.Contains(ma)
+                       select new ET_ReportViPham
+                       {
+                           MaVP = vp.MAVP,
+                           MaNQ = vp.MANQ,
+                           MaNV = vp.MANV,
+                           MaKH = vp.MAKH,
+                           NgayVP = Convert.ToDateTime(vp.NGAYVP),
+                           MoTaVP = vp.MOTAVP,
+                           HinhThucXL = vp.HINHTHUCXL,
+                           TrangThaiXL = vp.TRANGTHAIXL
+                       };
+
+            return fast.ToList();
+        }
+
+        public List<ET_ReportViPham> TimRPViPhamTheoMaNV(string manv)
+        {
+            var fast = from vp in db.VIPHAMs
+                       where vp.MANV.Contains(manv)
+                       select new ET_ReportViPham
+                       {
+                           MaVP = vp.MAVP,
+                           MaNQ = vp.MANQ,
+                           MaNV = vp.MANV,
+                           MaKH = vp.MAKH,
+                           NgayVP = Convert.ToDateTime(vp.NGAYVP),
+                           MoTaVP = vp.MOTAVP,
+                           HinhThucXL = vp.HINHTHUCXL,
+                           TrangThaiXL = vp.TRANGTHAIXL
+                       };
+
+            return fast.ToList();
+        }
+
+        public List<ET_ReportViPham> TimRPViPhamTheoMaKH(string makh)
+        {
+            var fast = from vp in db.VIPHAMs
+                       where vp.MAKH.Contains(makh)
+                       select new ET_ReportViPham
+                       {
+                           MaVP = vp.MAVP,
+                           MaNQ = vp.MANQ,
+                           MaNV = vp.MANV,
+                           MaKH = vp.MAKH,
+                           NgayVP = Convert.ToDateTime(vp.NGAYVP),
+                           MoTaVP = vp.MOTAVP,
+                           HinhThucXL = vp.HINHTHUCXL,
+                           TrangThaiXL = vp.TRANGTHAIXL
+                       };
+
+            return fast.ToList();
+        }
+
+        public List<ET_ReportViPham> TimRPViPhamTheoMoTa(string mota)
+        {
+            var fast = from vp in db.VIPHAMs
+                       where vp.MOTAVP.Contains(mota)
+                       select new ET_ReportViPham
+                       {
+                           MaVP = vp.MAVP,
+                           MaNQ = vp.MANQ,
+                           MaNV = vp.MANV,
+                           MaKH = vp.MAKH,
+                           NgayVP = Convert.ToDateTime(vp.NGAYVP),
+                           MoTaVP = vp.MOTAVP,
+                           HinhThucXL = vp.HINHTHUCXL,
+                           TrangThaiXL = vp.TRANGTHAIXL
+                       };
+
+            return fast.ToList();
+        }
+    }
     public class DAL_ViPham
     {
         ////Kết nối với Linq to SQL
