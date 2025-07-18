@@ -71,6 +71,9 @@
     <Compile Include="Controls\RJCombobox.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="Controls\RJDatePicker.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Controls\RJTextBox.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -606,6 +609,8 @@
     <Content Include="Images\MindLess.ico" />
     <Content Include="Images\MindLess.png" />
     <Content Include="Images\nene.jpg" />
+    <None Include="Resources\calendarDark.png" />
+    <None Include="Resources\calendarWhite.png" />
     <None Include="Report\ViPhamDataSet.xsc">
       <DependentUpon>ViPhamDataSet.xsd</DependentUpon>
     </None>

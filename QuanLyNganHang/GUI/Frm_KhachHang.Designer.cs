@@ -30,10 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_KhachHang));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lbl_title = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pb = new System.Windows.Forms.PictureBox();
@@ -47,6 +47,7 @@
             this.panel_DanhSach = new GUI.Controls.Rounded_Panel();
             this.dgv_KhachHang = new System.Windows.Forms.DataGridView();
             this.panel_ThongTin = new GUI.Controls.Rounded_Panel();
+            this.dtp_NgayTao = new CustomControls.RJControls.RJDatePicker();
             this.txt_QuocTich = new GUI.Controls.RJTextBox();
             this.txt_DiaChi = new GUI.Controls.RJTextBox();
             this.txt_Email = new GUI.Controls.RJTextBox();
@@ -61,7 +62,6 @@
             this.rdb_Nu = new System.Windows.Forms.RadioButton();
             this.label10 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.dtp_NgayTao = new System.Windows.Forms.DateTimePicker();
             this.label9 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -100,7 +100,7 @@
             this.lbl_title.AutoSize = true;
             this.lbl_title.Font = new System.Drawing.Font("Times New Roman", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_title.ForeColor = System.Drawing.Color.Red;
-            this.lbl_title.Location = new System.Drawing.Point(636, 0);
+            this.lbl_title.Location = new System.Drawing.Point(620, 0);
             this.lbl_title.Name = "lbl_title";
             this.lbl_title.Size = new System.Drawing.Size(376, 42);
             this.lbl_title.TabIndex = 0;
@@ -114,8 +114,8 @@
             this.panel2.Controls.Add(this.pb_Them);
             this.panel2.Controls.Add(this.pb_TimKiem);
             this.panel2.Controls.Add(this.pb_Minimize);
-            this.panel2.Controls.Add(this.pb_X);
             this.panel2.Controls.Add(this.lbl_title);
+            this.panel2.Controls.Add(this.pb_X);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
@@ -216,47 +216,47 @@
             // 
             this.dgv_KhachHang.AllowUserToAddRows = false;
             this.dgv_KhachHang.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.ForestGreen;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgv_KhachHang.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.ForestGreen;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgv_KhachHang.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_KhachHang.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_KhachHang.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgv_KhachHang.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dgv_KhachHang.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv_KhachHang.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_KhachHang.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_KhachHang.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_KhachHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.Gray;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.ForestGreen;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_KhachHang.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.ForestGreen;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_KhachHang.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgv_KhachHang.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_KhachHang.EnableHeadersVisualStyles = false;
             this.dgv_KhachHang.Location = new System.Drawing.Point(0, 0);
             this.dgv_KhachHang.MultiSelect = false;
             this.dgv_KhachHang.Name = "dgv_KhachHang";
             this.dgv_KhachHang.ReadOnly = true;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_KhachHang.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_KhachHang.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgv_KhachHang.RowHeadersWidth = 51;
             this.dgv_KhachHang.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_KhachHang.Size = new System.Drawing.Size(716, 324);
@@ -267,6 +267,7 @@
             // 
             this.panel_ThongTin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.panel_ThongTin.BorderColor = System.Drawing.Color.White;
+            this.panel_ThongTin.Controls.Add(this.dtp_NgayTao);
             this.panel_ThongTin.Controls.Add(this.txt_QuocTich);
             this.panel_ThongTin.Controls.Add(this.txt_DiaChi);
             this.panel_ThongTin.Controls.Add(this.txt_Email);
@@ -279,7 +280,6 @@
             this.panel_ThongTin.Controls.Add(this.panel1);
             this.panel_ThongTin.Controls.Add(this.label10);
             this.panel_ThongTin.Controls.Add(this.label2);
-            this.panel_ThongTin.Controls.Add(this.dtp_NgayTao);
             this.panel_ThongTin.Controls.Add(this.label9);
             this.panel_ThongTin.Controls.Add(this.label3);
             this.panel_ThongTin.Controls.Add(this.label8);
@@ -293,6 +293,22 @@
             this.panel_ThongTin.Size = new System.Drawing.Size(489, 566);
             this.panel_ThongTin.TabIndex = 39;
             this.panel_ThongTin.Thickness = 5F;
+            // 
+            // dtp_NgayTao
+            // 
+            this.dtp_NgayTao.BorderColor = System.Drawing.Color.Black;
+            this.dtp_NgayTao.BorderSize = 2;
+            this.dtp_NgayTao.CustomFormat = "dd/MM/yyyy HH:mm:ss";
+            this.dtp_NgayTao.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            this.dtp_NgayTao.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtp_NgayTao.Location = new System.Drawing.Point(175, 510);
+            this.dtp_NgayTao.MinDate = new System.DateTime(1985, 1, 1, 0, 0, 0, 0);
+            this.dtp_NgayTao.MinimumSize = new System.Drawing.Size(0, 35);
+            this.dtp_NgayTao.Name = "dtp_NgayTao";
+            this.dtp_NgayTao.Size = new System.Drawing.Size(297, 35);
+            this.dtp_NgayTao.SkinColor = System.Drawing.Color.Silver;
+            this.dtp_NgayTao.TabIndex = 42;
+            this.dtp_NgayTao.TextColor = System.Drawing.Color.Black;
             // 
             // txt_QuocTich
             // 
@@ -445,7 +461,7 @@
             // 
             this.cbo_DoiTuong.BackColor = System.Drawing.Color.Silver;
             this.cbo_DoiTuong.BorderColor = System.Drawing.Color.Black;
-            this.cbo_DoiTuong.BorderSize = 1;
+            this.cbo_DoiTuong.BorderSize = 2;
             this.cbo_DoiTuong.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
             this.cbo_DoiTuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.cbo_DoiTuong.ForeColor = System.Drawing.Color.Black;
@@ -458,7 +474,7 @@
             this.cbo_DoiTuong.Location = new System.Drawing.Point(175, 458);
             this.cbo_DoiTuong.MinimumSize = new System.Drawing.Size(200, 30);
             this.cbo_DoiTuong.Name = "cbo_DoiTuong";
-            this.cbo_DoiTuong.Padding = new System.Windows.Forms.Padding(1);
+            this.cbo_DoiTuong.Padding = new System.Windows.Forms.Padding(2);
             this.cbo_DoiTuong.Size = new System.Drawing.Size(297, 30);
             this.cbo_DoiTuong.TabIndex = 39;
             // 
@@ -521,17 +537,6 @@
             this.label2.Size = new System.Drawing.Size(154, 23);
             this.label2.TabIndex = 2;
             this.label2.Text = "Tên Khách Hàng:";
-            // 
-            // dtp_NgayTao
-            // 
-            this.dtp_NgayTao.CalendarMonthBackground = System.Drawing.Color.Silver;
-            this.dtp_NgayTao.CustomFormat = "dd/MM/yyyy HH:mm:ss";
-            this.dtp_NgayTao.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtp_NgayTao.Location = new System.Drawing.Point(175, 510);
-            this.dtp_NgayTao.MinDate = new System.DateTime(1985, 1, 1, 0, 0, 0, 0);
-            this.dtp_NgayTao.Name = "dtp_NgayTao";
-            this.dtp_NgayTao.Size = new System.Drawing.Size(297, 32);
-            this.dtp_NgayTao.TabIndex = 27;
             // 
             // label9
             // 
@@ -748,7 +753,7 @@
             // 
             this.cbo_PhuongThuc.BackColor = System.Drawing.Color.Silver;
             this.cbo_PhuongThuc.BorderColor = System.Drawing.Color.Black;
-            this.cbo_PhuongThuc.BorderSize = 1;
+            this.cbo_PhuongThuc.BorderSize = 2;
             this.cbo_PhuongThuc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
             this.cbo_PhuongThuc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.cbo_PhuongThuc.ForeColor = System.Drawing.Color.Black;
@@ -763,7 +768,7 @@
             this.cbo_PhuongThuc.Location = new System.Drawing.Point(179, 18);
             this.cbo_PhuongThuc.MinimumSize = new System.Drawing.Size(200, 30);
             this.cbo_PhuongThuc.Name = "cbo_PhuongThuc";
-            this.cbo_PhuongThuc.Padding = new System.Windows.Forms.Padding(1);
+            this.cbo_PhuongThuc.Padding = new System.Windows.Forms.Padding(2);
             this.cbo_PhuongThuc.Size = new System.Drawing.Size(315, 30);
             this.cbo_PhuongThuc.TabIndex = 38;
             // 
@@ -837,7 +842,6 @@
         private System.Windows.Forms.DataGridView dgv_KhachHang;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.DateTimePicker dtp_NgayTao;
         private System.Windows.Forms.RadioButton rdb_Nam;
         private System.Windows.Forms.RadioButton rdb_Nu;
         private System.Windows.Forms.Panel panel1;
@@ -869,5 +873,6 @@
         private System.Windows.Forms.PictureBox pb;
         private System.Windows.Forms.Timer timer_TimKiem;
         private System.Windows.Forms.Timer timer_ChucNang;
+        private CustomControls.RJControls.RJDatePicker dtp_NgayTao;
     }
 }
