@@ -138,10 +138,14 @@ namespace GUI.Controls
                 }
             }
         }
-        protected override void OnHandleCreated(EventArgs e)
+        protected override void OnParentChanged(EventArgs e)
         {
-            base.OnHandleCreated(e);
-            this.Parent.BackColorChanged += new EventHandler(Container_BackColorChanged);
+            base.OnParentChanged(e);
+
+            if (this.Parent != null)
+            {
+                this.Parent.BackColorChanged += new EventHandler(Container_BackColorChanged);
+            }
         }
 
         private void Container_BackColorChanged(object sender, EventArgs e)

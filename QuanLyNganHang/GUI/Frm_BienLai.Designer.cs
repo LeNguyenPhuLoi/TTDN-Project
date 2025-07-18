@@ -448,7 +448,6 @@
             // 
             // Frm_BienLai
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
             this.ClientSize = new System.Drawing.Size(1584, 861);
             this.Controls.Add(this.gb_ChucNang);
             this.Controls.Add(this.gb_ThongTin);
