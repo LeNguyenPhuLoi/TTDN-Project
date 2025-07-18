@@ -24,9 +24,39 @@ namespace GUI
 
         private void frmApDungKhuyenMai_Load(object sender, EventArgs e)
         {
-            this.BackColor = ColorTranslator.FromHtml("#263238");
-            pnlMain.BackColor = ColorTranslator.FromHtml("#DCDCDC");
-            lbTim.ForeColor = ColorTranslator.FromHtml("#DED4CA");
+            //ko doi mau khi chon vao
+            dgvApDungKhuyenMai.DefaultCellStyle.SelectionForeColor = Color.Black;
+            dgvKhuyenMai.DefaultCellStyle.SelectionForeColor = Color.Black;
+            dgvKH.DefaultCellStyle.SelectionForeColor = Color.Black;
+
+            dgvApDungKhuyenMai.RowHeadersVisible = false;
+            // Màu nền khi chọn ô (dòng)
+            dgvApDungKhuyenMai.DefaultCellStyle.SelectionBackColor = Color.Yellow; // hoặc Color.Yellow
+            dgvKH.DefaultCellStyle.SelectionBackColor = Color.Yellow; // hoặc Color.Yellow
+            dgvKhuyenMai.DefaultCellStyle.SelectionBackColor = Color.Yellow; // hoặc Color.Yellow
+
+            // Cỡ chữ cho toàn bộ lưới
+            dgvApDungKhuyenMai.Font = new Font("Segoe UI", 12);
+
+            // Cỡ chữ cho tiêu đề cột
+            dgvApDungKhuyenMai.EnableHeadersVisualStyles = false; // Cho phép dùng style tùy chỉnh
+            dgvApDungKhuyenMai.ColumnHeadersDefaultCellStyle.BackColor = Color.DodgerBlue;
+            dgvApDungKhuyenMai.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            dgvApDungKhuyenMai.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 13, FontStyle.Bold);
+
+            // Xem kẽ màu dòng
+            dgvApDungKhuyenMai.RowsDefaultCellStyle.BackColor = Color.White;
+            dgvApDungKhuyenMai.AlternatingRowsDefaultCellStyle.BackColor = Color.LightBlue; // xanh dương sáng
+            dgvKhuyenMai.RowsDefaultCellStyle.BackColor = Color.White;
+            dgvKhuyenMai.AlternatingRowsDefaultCellStyle.BackColor = Color.LightBlue; // xanh dương sáng
+            dgvKH.RowsDefaultCellStyle.BackColor = Color.White;
+            dgvKH.AlternatingRowsDefaultCellStyle.BackColor = Color.LightBlue; // xanh dương sáng
+
+            // Cỡ chữ cho ô dữ liệu
+            dgvApDungKhuyenMai.DefaultCellStyle.Font = new Font("Segoe UI", 12);
+
+            // Canh giữa dữ liệu nếu cần
+            dgvApDungKhuyenMai.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
 
             dgvApDungKhuyenMai.DataSource = bs.LoadDSApDungKhuyenMai();
             dgvKH.DataSource = bs.LoadDSKhachHang();
@@ -48,49 +78,73 @@ namespace GUI
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            ET_ApDungKhuyenMai et = new ET_ApDungKhuyenMai(txtMaKM.Text, txtMaKH.Text, cboMaTK.Text, dtpNgayApDung.Value);
-            string error= "";
-            if (bs.ThemApDungKhuyenMai(et, out error) == true)
+            try
             {
-                MessageBox.Show("Thêm thành công!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                btnHoanTac.PerformClick(); // Gọi hàm hoàn tác để làm sạch các trường nhập
+                ET_ApDungKhuyenMai et = new ET_ApDungKhuyenMai(txtMaKM.Text, txtMaKH.Text, cboMaTK.Text, dtpNgayApDung.Value);
+                string error = "";
+                if (bs.ThemApDungKhuyenMai(et, out error) == true)
+                {
+                    MessageBox.Show("Thêm thành công!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    btnHoanTac.PerformClick(); // Gọi hàm hoàn tác để làm sạch các trường nhập
+                }
+                else
+                {
+                    MessageBox.Show(error, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                dgvApDungKhuyenMai.DataSource = bs.LoadDSApDungKhuyenMai();
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show(error, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Vui lòng không để trống", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
             }
-            dgvApDungKhuyenMai.DataSource = bs.LoadDSApDungKhuyenMai();
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            ET_ApDungKhuyenMai et = new ET_ApDungKhuyenMai(txtMaKM.Text, txtMaKH.Text, cboMaTK.Text, dtpNgayApDung.Value);
-            string error = "";
-            if (bs.XoaApDungKhuyenMai(et, out error) == true)
+            try
             {
-                MessageBox.Show("Xóa thành công!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                btnHoanTac.PerformClick(); // Gọi hàm hoàn tác để làm sạch các trường nhập
+                ET_ApDungKhuyenMai et = new ET_ApDungKhuyenMai(txtMaKM.Text, txtMaKH.Text, cboMaTK.Text, dtpNgayApDung.Value);
+                string error = "";
+                if (bs.XoaApDungKhuyenMai(et, out error) == true)
+                {
+                    MessageBox.Show("Xóa thành công!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    btnHoanTac.PerformClick(); // Gọi hàm hoàn tác để làm sạch các trường nhập
+                }
+                else
+                {
+                    MessageBox.Show(error, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                dgvApDungKhuyenMai.DataSource = bs.LoadDSApDungKhuyenMai();
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show(error, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Vui lòng chọn dòng cần xóa", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
             }
-            dgvApDungKhuyenMai.DataSource = bs.LoadDSApDungKhuyenMai();
         }
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            ET_ApDungKhuyenMai et = new ET_ApDungKhuyenMai(txtMaKM.Text, txtMaKH.Text, cboMaTK.Text, dtpNgayApDung.Value);
-            string error = "";
-            if (bs.CapNhatApDungKhuyenMai(et, out error) == true)
+            try
             {
-                MessageBox.Show("Cập Nhật thành công!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                ET_ApDungKhuyenMai et = new ET_ApDungKhuyenMai(txtMaKM.Text, txtMaKH.Text, cboMaTK.Text, dtpNgayApDung.Value);
+                string error = "";
+                if (bs.CapNhatApDungKhuyenMai(et, out error) == true)
+                {
+                    MessageBox.Show("Cập Nhật thành công!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show(error, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                dgvApDungKhuyenMai.DataSource = bs.LoadDSApDungKhuyenMai();
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show(error, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Vui lòng chọn dòng cần cập nhật", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
             }
-            dgvApDungKhuyenMai.DataSource = bs.LoadDSApDungKhuyenMai();
         }
 
         private void dgvApDungKhuyenMai_Click(object sender, EventArgs e)
@@ -109,19 +163,6 @@ namespace GUI
             }
         }
 
-        private void dgvKH_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                int dong = dgvKH.CurrentRow.Index;
-                txtMaKH.Text = dgvKH.Rows[dong].Cells[0].Value.ToString();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-
 
         private void btnHoanTac_Click(object sender, EventArgs e)
         {
@@ -130,19 +171,6 @@ namespace GUI
             cboMaTK.SelectedIndex = -1; // Đặt lại ComboBox về trạng thái không chọn
             dtpNgayApDung.Value = DateTime.Now; // Đặt lại ngày áp dụng về ngày hiện tại
             cboMaTK.Focus(); // Đặt con trỏ vào ô mã khuyến mãi để nhập tiếp
-        }
-
-        private void dgvKhuyenMai_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                int dong = dgvKhuyenMai.CurrentRow.Index;
-                txtMaKM.Text = dgvKhuyenMai.Rows[dong].Cells[0].Value.ToString();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
         }
 
         private void txtTim_TextChanged(object sender, EventArgs e)
@@ -170,9 +198,35 @@ namespace GUI
             }
         }
 
-        private void lbTim_Click(object sender, EventArgs e)
+        private void dgvKH_Click(object sender, EventArgs e)
         {
+            try
+            {
+                int dong = dgvKH.CurrentRow.Index;
+                txtMaKH.Text = dgvKH.Rows[dong].Cells[0].Value.ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
 
+        private void dgvKhuyenMai_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int dong = dgvKhuyenMai.CurrentRow.Index;
+                txtMaKM.Text = dgvKhuyenMai.Rows[dong].Cells[0].Value.ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
