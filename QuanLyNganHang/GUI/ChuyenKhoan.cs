@@ -24,8 +24,6 @@ namespace GUI
         BUS_ChuyenKhoan bs = new BUS_ChuyenKhoan();
         private void frmChuyenKhoan_Load(object sender, EventArgs e)
         {
-           
-
             dgvChuyenKhoan.RowHeadersVisible = false;
             // Màu nền khi chọn ô (dòng)
             dgvChuyenKhoan.DefaultCellStyle.SelectionBackColor = Color.Yellow; // hoặc Color.Yellow
@@ -65,51 +63,15 @@ namespace GUI
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            ET_ChuyenKhoan et = new ET_ChuyenKhoan(txtMaCK.Text, dtpNgayChuyen.Value,
-                                                    int.Parse(txtSoTien.Text),cboMaTKGui.Text,
-                                                    cboMaTKNhan.Text,txtNoiDung.Text);
-            string error = "";
-            if (bs.ThemChuyenKhoan(et, out error) == true)
-            {
-                MessageBox.Show("Thêm thành công!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                btnHoanTac.PerformClick(); // Gọi hàm hoàn tác để làm sạch các trường nhập
-            }
-            else
-            {
-                MessageBox.Show(error, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            dgvChuyenKhoan.DataSource = bs.LoadDSTK();
-        }
-
-        private void btnSua_Click(object sender, EventArgs e)
-        {
-            ET_ChuyenKhoan et = new ET_ChuyenKhoan(txtMaCK.Text, dtpNgayChuyen.Value,
-                                                    int.Parse(txtSoTien.Text), cboMaTKGui.Text,
-                                                    cboMaTKNhan.Text, txtNoiDung.Text);
-            string error = "";
-            if (bs.CapNhatChuyenKhoan(et,out error) == true)
-            {
-                MessageBox.Show("Cập Nhật thành công!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-            {
-                MessageBox.Show(error, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            dgvChuyenKhoan.DataSource = bs.LoadDSTK();
-        }
-
-        private void btnXoa_Click(object sender, EventArgs e)
-        {
-            DialogResult result = MessageBox.Show("Bạn có chắc muốn xóa không?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (result == DialogResult.Yes)
+            try
             {
                 ET_ChuyenKhoan et = new ET_ChuyenKhoan(txtMaCK.Text, dtpNgayChuyen.Value,
-                                                    int.Parse(txtSoTien.Text), cboMaTKGui.Text,
-                                                    cboMaTKNhan.Text, txtNoiDung.Text);
+                                                   int.Parse(txtSoTien.Text), cboMaTKGui.Text,
+                                                   cboMaTKNhan.Text, txtNoiDung.Text);
                 string error = "";
-                if (bs.XoaChuyenKhoan(et, out error) == true)
+                if (bs.ThemChuyenKhoan(et, out error) == true)
                 {
-                    MessageBox.Show("Xóa thành công!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Thêm thành công!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     btnHoanTac.PerformClick(); // Gọi hàm hoàn tác để làm sạch các trường nhập
                 }
                 else
@@ -117,6 +79,66 @@ namespace GUI
                     MessageBox.Show(error, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 dgvChuyenKhoan.DataSource = bs.LoadDSTK();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Vui lòng không để trống dữ liệu", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ET_ChuyenKhoan et = new ET_ChuyenKhoan(txtMaCK.Text, dtpNgayChuyen.Value,
+                                                    int.Parse(txtSoTien.Text), cboMaTKGui.Text,
+                                                    cboMaTKNhan.Text, txtNoiDung.Text);
+                string error = "";
+                if (bs.CapNhatChuyenKhoan(et, out error) == true)
+                {
+                    MessageBox.Show("Cập Nhật thành công!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show(error, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                dgvChuyenKhoan.DataSource = bs.LoadDSTK();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Vui lòng không để trống dữ liệu", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DialogResult result = MessageBox.Show("Bạn có chắc muốn xóa không?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    ET_ChuyenKhoan et = new ET_ChuyenKhoan(txtMaCK.Text, dtpNgayChuyen.Value,
+                                                        int.Parse(txtSoTien.Text), cboMaTKGui.Text,
+                                                        cboMaTKNhan.Text, txtNoiDung.Text);
+                    string error = "";
+                    if (bs.XoaChuyenKhoan(et, out error) == true)
+                    {
+                        MessageBox.Show("Xóa thành công!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        btnHoanTac.PerformClick(); // Gọi hàm hoàn tác để làm sạch các trường nhập
+                    }
+                    else
+                    {
+                        MessageBox.Show(error, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    dgvChuyenKhoan.DataSource = bs.LoadDSTK();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Vui lòng không để trống dữ liệu", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
             }
         }
 
@@ -179,6 +201,11 @@ namespace GUI
         private void pnlMain_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
