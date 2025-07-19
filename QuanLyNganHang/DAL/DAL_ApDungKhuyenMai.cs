@@ -68,6 +68,14 @@ namespace DAL
             bool flag = false;
             try
             {
+                //ktra ap dung khuyến mãi có trống ko
+                var checks = db.APDUNGKHUYENMAIs.FirstOrDefault(adkm => adkm.MAKM == et.MAKM && adkm.MAKH == et.MAKH);
+                if (checks == null)
+                {
+                    error = "Vui lòng không để trống";
+                    return false;
+                }
+
                 var exists = db.APDUNGKHUYENMAIs.Any(adkm => adkm.MAKM == et.MAKM && adkm.MAKH == et.MAKH);
                 if (!exists)
                 {
@@ -88,9 +96,10 @@ namespace DAL
                     return false;
                 }
             }
+
             catch (Exception ex)
             {
-                error = "Lỗi: " + ex.ToString();
+                error = "Lỗi: " + ex.Message;
                 flag = false;
             }
             return flag;
@@ -102,13 +111,18 @@ namespace DAL
             bool flag = false;
             try
             {
-                var km = db.APDUNGKHUYENMAIs.Single(k => k.MAKM == et.MAKM && k.MAKH == et.MAKH);
+                var km = db.APDUNGKHUYENMAIs.FirstOrDefault(k => k.MAKM == et.MAKM && k.MAKH == et.MAKH);
                 if (km != null)
                 {
                     km.MATK = et.MATK;
                     km.NGAYAPDUNG = et.NGAYAPDUNG;
                     db.SubmitChanges();
                     flag = true;
+                }
+                else if (km == null)
+                {
+                    error = "Vui lòng chọn dòng cần cập nhật";
+                    return false;
                 }
                 else
                 {
@@ -118,8 +132,8 @@ namespace DAL
             }
             catch (Exception ex)
             {
+                error = "Lỗi: " + ex.Message;
                 flag = false;
-                error = "Lỗi: " + ex.ToString();
             }
             return flag;
         }
@@ -130,17 +144,19 @@ namespace DAL
             bool flag = false;
             try
             {
-                var xoa = from adkm in db.APDUNGKHUYENMAIs
-                          where adkm.MAKM == et.MAKM && adkm.MAKH == et.MAKH
-                          select adkm;
+                var xoa = db.APDUNGKHUYENMAIs.FirstOrDefault(c => c.MAKH == et.MAKH && c.MAKM == et.MAKM);
+
                 if (xoa != null)
                 {
-                    foreach (var i in xoa)
-                    {
-                        db.APDUNGKHUYENMAIs.DeleteOnSubmit(i);
-                        db.SubmitChanges();
-                    }
+                    db.APDUNGKHUYENMAIs.DeleteOnSubmit(xoa);
+                    db.SubmitChanges();
                     flag = true;
+
+                }
+                else if (xoa == null)
+                {
+                    error = "Vui lòng chọn dòng cần xóa";
+                    return false;
                 }
                 else
                 {
@@ -150,8 +166,8 @@ namespace DAL
             }
             catch (Exception ex)
             {
+                error = "Lỗi: " + ex.Message;
                 flag = false;
-                error = "Lỗi: " + ex.ToString();
             }
             return flag;
         }

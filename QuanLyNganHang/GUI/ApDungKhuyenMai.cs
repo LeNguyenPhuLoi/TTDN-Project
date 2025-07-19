@@ -24,6 +24,7 @@ namespace GUI
 
         private void frmApDungKhuyenMai_Load(object sender, EventArgs e)
         {
+
             //ko doi mau khi chon vao
             dgvApDungKhuyenMai.DefaultCellStyle.SelectionForeColor = Color.Black;
             dgvKhuyenMai.DefaultCellStyle.SelectionForeColor = Color.Black;
@@ -96,7 +97,6 @@ namespace GUI
             catch (Exception ex)
             {
                 MessageBox.Show("Vui lòng không để trống", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
             }
         }
 
@@ -104,23 +104,26 @@ namespace GUI
         {
             try
             {
-                ET_ApDungKhuyenMai et = new ET_ApDungKhuyenMai(txtMaKM.Text, txtMaKH.Text, cboMaTK.Text, dtpNgayApDung.Value);
-                string error = "";
-                if (bs.XoaApDungKhuyenMai(et, out error) == true)
+                DialogResult result = MessageBox.Show("Bạn có chắc muốn xóa không?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
                 {
-                    MessageBox.Show("Xóa thành công!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    btnHoanTac.PerformClick(); // Gọi hàm hoàn tác để làm sạch các trường nhập
+                    ET_ApDungKhuyenMai et = new ET_ApDungKhuyenMai(txtMaKM.Text, txtMaKH.Text, cboMaTK.Text, dtpNgayApDung.Value);
+                    string error = "";
+                    if (bs.XoaApDungKhuyenMai(et, out error) == true)
+                    {
+                        MessageBox.Show("Xóa thành công!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        btnHoanTac.PerformClick(); // Gọi hàm hoàn tác để làm sạch các trường nhập
+                    }
+                    else
+                    {
+                        MessageBox.Show(error, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    dgvApDungKhuyenMai.DataSource = bs.LoadDSApDungKhuyenMai();
                 }
-                else
-                {
-                    MessageBox.Show(error, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                dgvApDungKhuyenMai.DataSource = bs.LoadDSApDungKhuyenMai();
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Vui lòng chọn dòng cần xóa", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
             }
         }
 
@@ -143,7 +146,6 @@ namespace GUI
             catch (Exception ex)
             {
                 MessageBox.Show("Vui lòng chọn dòng cần cập nhật", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
             }
         }
 
