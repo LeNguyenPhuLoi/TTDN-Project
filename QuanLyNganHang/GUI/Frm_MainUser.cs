@@ -16,7 +16,27 @@ namespace GUI
         public Frm_MainUser()
         {
             InitializeComponent();
+            this.DoubleBuffered = true;
+            this.SetStyle(ControlStyles.ResizeRedraw, true);
         }
+
+        protected override void WndProc(ref Message m)
+        {
+            const int WM_ENTERSIZEMOVE = 0x0231;
+            const int WM_EXITSIZEMOVE = 0x0232;
+
+            if (m.Msg == WM_ENTERSIZEMOVE)
+            {
+                this.SuspendLayout(); // Bắt đầu kéo form → dừng layout
+            }
+            else if (m.Msg == WM_EXITSIZEMOVE)
+            {
+                this.ResumeLayout();  // Kết thúc kéo form → resume lại layout
+            }
+
+            base.WndProc(ref m);
+        }
+
 
         private Button currentButton = null;
 
@@ -41,6 +61,7 @@ namespace GUI
 
         // Biến tạm
         Form currentForm = new Form();
+
         private void OpenMain(Form childForm)
         {
             // Tắt form hiện tại để chuyển form mới

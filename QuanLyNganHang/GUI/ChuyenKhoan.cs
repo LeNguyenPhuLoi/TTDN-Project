@@ -24,6 +24,10 @@ namespace GUI
         BUS_ChuyenKhoan bs = new BUS_ChuyenKhoan();
         private void frmChuyenKhoan_Load(object sender, EventArgs e)
         {
+            //ko doi mau khi chon vao
+            dgvChuyenKhoan.DefaultCellStyle.SelectionForeColor = Color.Black;
+
+            //bỏ tiêu đề cột trống
             dgvChuyenKhoan.RowHeadersVisible = false;
             // Màu nền khi chọn ô (dòng)
             dgvChuyenKhoan.DefaultCellStyle.SelectionBackColor = Color.Yellow; // hoặc Color.Yellow
@@ -107,8 +111,7 @@ namespace GUI
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Vui lòng không để trống dữ liệu", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
+                MessageBox.Show("Vui lòng chọn để sửa", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -137,8 +140,7 @@ namespace GUI
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Vui lòng không để trống dữ liệu", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
+                MessageBox.Show("Vui lòng chọn dữ liệu muốn xóa", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -198,14 +200,35 @@ namespace GUI
             }
         }
 
-        private void pnlMain_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void btnThoat_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void txtSoTien_Leave(object sender, EventArgs e)
+        {
+            // Nếu để trống thì không làm gì cả
+            if (string.IsNullOrWhiteSpace(txtSoTien.Text))
+            {
+                errorProvider1.SetError(txtSoTien, ""); // Xóa lỗi
+                txtSoTien.BackColor = Color.White; // Trả lại màu bình thường
+                return;
+            }
+            
+            //Ktra nhập có đúng định dạng số không
+            if (!decimal.TryParse(txtSoTien.Text, out _))
+            {
+                txtSoTien.BackColor = Color.LightPink; // Highlight đỏ hồng khi sai
+                errorProvider1.SetError(txtSoTien, "Vui lòng nhập số hợp lệ."); // hiện icon lỗi
+                MessageBox.Show("Vui lòng nhập số hợp lệ!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtSoTien.Clear(); // Xóa nội dung ô nhập
+                txtSoTien.Focus(); // Trả lại con trỏ để sửa
+            }
+            else
+            {
+                errorProvider1.SetError(txtSoTien, ""); // Xóa icon lỗi
+                txtSoTien.BackColor = Color.White; // Đúng thì trả về màu bình thường
+            }
         }
     }
 }

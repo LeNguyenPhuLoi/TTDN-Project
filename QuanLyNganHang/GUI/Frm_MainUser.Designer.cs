@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_MainUser));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.btnZoom = new System.Windows.Forms.Button();
             this.btnMM = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
@@ -97,6 +98,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.btnZoom);
             this.panel1.Controls.Add(this.btnMM);
             this.panel1.Controls.Add(this.btnClose);
@@ -108,6 +110,13 @@
             this.panel1.Size = new System.Drawing.Size(1443, 46);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // panel3
+            // 
+            this.panel3.Location = new System.Drawing.Point(243, 46);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1200, 743);
+            this.panel3.TabIndex = 8;
             // 
             // btnZoom
             // 
@@ -608,7 +617,7 @@
             this.picBanner.Name = "picBanner";
             this.picBanner.Size = new System.Drawing.Size(1200, 743);
             this.picBanner.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picBanner.TabIndex = 6;
+            this.picBanner.TabIndex = 10;
             this.picBanner.TabStop = false;
             // 
             // Frm_MainUser
@@ -694,6 +703,7 @@
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnZoom;
         private System.Windows.Forms.Button btnMM;
+        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox picBanner;
     }
 }
