@@ -184,13 +184,12 @@
             // 
             // sidebar
             // 
-            this.sidebar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
             this.sidebar.AutoScroll = true;
             this.sidebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(29)))));
             this.sidebar.Controls.Add(this.menuContainerQL);
             this.sidebar.Controls.Add(this.menuContainerRP);
             this.sidebar.Controls.Add(this.panel4);
+            this.sidebar.Dock = System.Windows.Forms.DockStyle.Left;
             this.sidebar.Location = new System.Drawing.Point(0, 46);
             this.sidebar.Name = "sidebar";
             this.sidebar.Padding = new System.Windows.Forms.Padding(0, 30, 0, 0);
@@ -614,11 +613,11 @@
             this.picBanner.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.picBanner.Dock = System.Windows.Forms.DockStyle.Fill;
             this.picBanner.Image = ((System.Drawing.Image)(resources.GetObject("picBanner.Image")));
-            this.picBanner.Location = new System.Drawing.Point(0, 0);
+            this.picBanner.Location = new System.Drawing.Point(237, 46);
             this.picBanner.Name = "picBanner";
-            this.picBanner.Size = new System.Drawing.Size(1443, 789);
+            this.picBanner.Size = new System.Drawing.Size(1206, 743);
             this.picBanner.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picBanner.TabIndex = 10;
+            this.picBanner.TabIndex = 12;
             this.picBanner.TabStop = false;
             // 
             // Frm_MainUser
@@ -627,9 +626,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1443, 789);
+            this.Controls.Add(this.picBanner);
             this.Controls.Add(this.sidebar);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.picBanner);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
