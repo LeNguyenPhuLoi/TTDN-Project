@@ -147,7 +147,7 @@ namespace GUI
             if (sidebarExpand)
             {
                 sidebar.Width -= 10;
-                if (sidebar.Width <= 0)
+                if (sidebar.Width <= 60)
                 {
                     sidebarExpand = false;
                     sidebarTransition.Stop();
