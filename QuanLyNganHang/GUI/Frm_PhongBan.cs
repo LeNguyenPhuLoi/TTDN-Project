@@ -23,32 +23,17 @@ namespace GUI
 
         private void Frm_PhongBan_Load(object sender, EventArgs e)
         {
-            int width = this.Width;
-            int height = this.Height;
-            lbl_title.Location = new Point((width / 2) - 170, 0);
-            gb_Timkiem.Location = new Point(10, 50);
-            gb_DanhSach.Location = new Point(10, 150);
-            gb_DanhSach.Height = height - 200;
-            gb_DanhSach.Width = (width / 3) * 2;
-            gb_ThongTin.Location = new Point(width - 510, 150);
-            gb_ChucNang.Location = new Point(width - 510, 50);
+            //Đổi màu khi được chọn
+            dgv_phongban.DefaultCellStyle.SelectionBackColor = Color.Orange;
+
+            //Xen kẽ màu với nhau
+            dgv_phongban.RowsDefaultCellStyle.BackColor = Color.Bisque;
+            dgv_phongban.AlternatingRowsDefaultCellStyle.BackColor = Color.White;
+
             dgv_phongban.DataSource = bus_PhongBan.LoadDSPB();
             cbo_timtenpb.Visible = false;
             cbo_phuongthuc.SelectedIndex = 0;
             AddToCBO(bus_PhongBan.LoadTenPB(), cbo_timtenpb);
-        }
-
-        private void Frm_PhongBan_Resize(object sender, EventArgs e)
-        {
-            int width = this.Width;
-            int height = this.Height;
-            lbl_title.Location = new Point((width / 2) - 170, 0);
-            gb_Timkiem.Location = new Point(10, 50);
-            gb_DanhSach.Location = new Point(10, 150);
-            gb_DanhSach.Height = height - 200;
-            gb_DanhSach.Width = (width / 3) * 2;
-            gb_ThongTin.Location = new Point(width - 510, 150);
-            gb_ChucNang.Location = new Point(width - 510, 50);
         }
 
         public void AddToCBO(IQueryable list, ComboBox cbo)
