@@ -50,6 +50,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvApDungKhuyenMai)).BeginInit();
             this.pnlMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKH)).BeginInit();
@@ -67,7 +68,7 @@
             this.btnHoanTac.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.btnHoanTac.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHoanTac.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHoanTac.Location = new System.Drawing.Point(720, 635);
+            this.btnHoanTac.Location = new System.Drawing.Point(720, 681);
             this.btnHoanTac.Name = "btnHoanTac";
             this.btnHoanTac.Size = new System.Drawing.Size(112, 49);
             this.btnHoanTac.TabIndex = 13;
@@ -85,7 +86,7 @@
             this.btnSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSua.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSua.ForeColor = System.Drawing.Color.White;
-            this.btnSua.Location = new System.Drawing.Point(424, 635);
+            this.btnSua.Location = new System.Drawing.Point(424, 681);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(112, 49);
             this.btnSua.TabIndex = 14;
@@ -103,7 +104,7 @@
             this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnXoa.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoa.ForeColor = System.Drawing.Color.White;
-            this.btnXoa.Location = new System.Drawing.Point(572, 635);
+            this.btnXoa.Location = new System.Drawing.Point(572, 681);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(112, 49);
             this.btnXoa.TabIndex = 15;
@@ -121,7 +122,7 @@
             this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThem.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThem.ForeColor = System.Drawing.Color.White;
-            this.btnThem.Location = new System.Drawing.Point(274, 635);
+            this.btnThem.Location = new System.Drawing.Point(274, 681);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(112, 49);
             this.btnThem.TabIndex = 16;
@@ -134,7 +135,7 @@
             this.txtTim.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTim.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTim.Location = new System.Drawing.Point(235, 368);
+            this.txtTim.Location = new System.Drawing.Point(235, 418);
             this.txtTim.Margin = new System.Windows.Forms.Padding(4);
             this.txtTim.Name = "txtTim";
             this.txtTim.Size = new System.Drawing.Size(426, 30);
@@ -145,7 +146,7 @@
             // 
             this.lbTim.AutoSize = true;
             this.lbTim.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTim.Location = new System.Drawing.Point(27, 364);
+            this.lbTim.Location = new System.Drawing.Point(27, 414);
             this.lbTim.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbTim.Name = "lbTim";
             this.lbTim.Size = new System.Drawing.Size(200, 33);
@@ -162,13 +163,13 @@
             this.dgvApDungKhuyenMai.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvApDungKhuyenMai.BackgroundColor = System.Drawing.Color.White;
             this.dgvApDungKhuyenMai.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvApDungKhuyenMai.Location = new System.Drawing.Point(25, 421);
+            this.dgvApDungKhuyenMai.Location = new System.Drawing.Point(25, 475);
             this.dgvApDungKhuyenMai.MultiSelect = false;
             this.dgvApDungKhuyenMai.Name = "dgvApDungKhuyenMai";
             this.dgvApDungKhuyenMai.ReadOnly = true;
             this.dgvApDungKhuyenMai.RowHeadersWidth = 62;
             this.dgvApDungKhuyenMai.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvApDungKhuyenMai.Size = new System.Drawing.Size(1278, 201);
+            this.dgvApDungKhuyenMai.Size = new System.Drawing.Size(1278, 193);
             this.dgvApDungKhuyenMai.TabIndex = 26;
             this.dgvApDungKhuyenMai.Click += new System.EventHandler(this.dgvApDungKhuyenMai_Click);
             // 
@@ -261,7 +262,7 @@
             this.btnThoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThoat.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThoat.ForeColor = System.Drawing.Color.White;
-            this.btnThoat.Location = new System.Drawing.Point(862, 635);
+            this.btnThoat.Location = new System.Drawing.Point(862, 681);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(112, 49);
             this.btnThoat.TabIndex = 37;
@@ -360,7 +361,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Controls.Add(this.panel1, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.pnlMain, 0, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(25, 19);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(25, 69);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -368,11 +369,25 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1278, 326);
             this.tableLayoutPanel1.TabIndex = 48;
             // 
+            // label6
+            // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Red;
+            this.label6.Location = new System.Drawing.Point(205, 9);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(871, 50);
+            this.label6.TabIndex = 49;
+            this.label6.Text = "QUẢN TRỊ ÁP DỤNG KHUYẾN MÃI";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // frmApDungKhuyenMai
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1328, 696);
+            this.ClientSize = new System.Drawing.Size(1328, 742);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.txtTim);
@@ -422,5 +437,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Label label6;
     }
 }
