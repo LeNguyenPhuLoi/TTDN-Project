@@ -35,6 +35,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtMaDN = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.showpass = new System.Windows.Forms.CheckBox();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.btnLogin = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
@@ -42,7 +43,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.showpass = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -126,6 +126,20 @@
             this.panel2.Size = new System.Drawing.Size(334, 316);
             this.panel2.TabIndex = 4;
             // 
+            // showpass
+            // 
+            this.showpass.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.showpass.AutoSize = true;
+            this.showpass.BackColor = System.Drawing.Color.Transparent;
+            this.showpass.ForeColor = System.Drawing.Color.Silver;
+            this.showpass.Location = new System.Drawing.Point(106, 199);
+            this.showpass.Name = "showpass";
+            this.showpass.Size = new System.Drawing.Size(132, 24);
+            this.showpass.TabIndex = 9;
+            this.showpass.Text = "Show Password";
+            this.showpass.UseVisualStyleBackColor = false;
+            this.showpass.CheckedChanged += new System.EventHandler(this.showpass_CheckedChanged);
+            // 
             // linkLabel2
             // 
             this.linkLabel2.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -206,20 +220,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
-            // 
-            // showpass
-            // 
-            this.showpass.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.showpass.AutoSize = true;
-            this.showpass.BackColor = System.Drawing.Color.Transparent;
-            this.showpass.ForeColor = System.Drawing.Color.Silver;
-            this.showpass.Location = new System.Drawing.Point(106, 199);
-            this.showpass.Name = "showpass";
-            this.showpass.Size = new System.Drawing.Size(132, 24);
-            this.showpass.TabIndex = 9;
-            this.showpass.Text = "Show Password";
-            this.showpass.UseVisualStyleBackColor = false;
-            this.showpass.CheckedChanged += new System.EventHandler(this.showpass_CheckedChanged);
             // 
             // frmDangNhap
             // 
