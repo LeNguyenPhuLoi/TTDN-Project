@@ -36,13 +36,13 @@
             this.txtMaDN = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.btnLogin = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.txtPass = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.showpass = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -113,8 +113,8 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.panel2.Controls.Add(this.showpass);
             this.panel2.Controls.Add(this.linkLabel2);
-            this.panel2.Controls.Add(this.linkLabel1);
             this.panel2.Controls.Add(this.btnLogin);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.txtPass);
@@ -128,33 +128,23 @@
             // 
             // linkLabel2
             // 
-            this.linkLabel2.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.linkLabel2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.linkLabel2.AutoSize = true;
             this.linkLabel2.DisabledLinkColor = System.Drawing.Color.LightGray;
             this.linkLabel2.LinkColor = System.Drawing.Color.DarkGray;
-            this.linkLabel2.Location = new System.Drawing.Point(104, 282);
+            this.linkLabel2.Location = new System.Drawing.Point(102, 281);
             this.linkLabel2.Name = "linkLabel2";
             this.linkLabel2.Size = new System.Drawing.Size(144, 20);
             this.linkLabel2.TabIndex = 8;
             this.linkLabel2.TabStop = true;
             this.linkLabel2.Text = "Create New Account";
             // 
-            // linkLabel1
-            // 
-            this.linkLabel1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.LinkColor = System.Drawing.Color.LightGray;
-            this.linkLabel1.Location = new System.Drawing.Point(116, 203);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(113, 20);
-            this.linkLabel1.TabIndex = 7;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Fogot Password";
-            // 
             // btnLogin
             // 
-            this.btnLogin.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btnLogin.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnLogin.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnLogin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Blue;
+            this.btnLogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Navy;
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.ForeColor = System.Drawing.Color.White;
             this.btnLogin.Location = new System.Drawing.Point(85, 230);
@@ -164,7 +154,6 @@
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = true;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
-            this.btnLogin.Enter += new System.EventHandler(this.btnClose_Click);
             // 
             // label4
             // 
@@ -180,7 +169,6 @@
             // 
             this.txtPass.Location = new System.Drawing.Point(42, 163);
             this.txtPass.Name = "txtPass";
-            this.txtPass.PasswordChar = '*';
             this.txtPass.Size = new System.Drawing.Size(260, 27);
             this.txtPass.TabIndex = 5;
             // 
@@ -219,6 +207,20 @@
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
+            // showpass
+            // 
+            this.showpass.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.showpass.AutoSize = true;
+            this.showpass.BackColor = System.Drawing.Color.Transparent;
+            this.showpass.ForeColor = System.Drawing.Color.Silver;
+            this.showpass.Location = new System.Drawing.Point(106, 199);
+            this.showpass.Name = "showpass";
+            this.showpass.Size = new System.Drawing.Size(132, 24);
+            this.showpass.TabIndex = 9;
+            this.showpass.Text = "Show Password";
+            this.showpass.UseVisualStyleBackColor = false;
+            this.showpass.CheckedChanged += new System.EventHandler(this.showpass_CheckedChanged);
+            // 
             // frmDangNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -255,7 +257,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtMaDN;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtPass;
         private System.Windows.Forms.Label label3;
@@ -265,5 +266,6 @@
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnZoom;
         private System.Windows.Forms.Button btnLogin;
+        private System.Windows.Forms.CheckBox showpass;
     }
 }

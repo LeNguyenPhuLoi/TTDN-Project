@@ -76,17 +76,23 @@ namespace GUI
             }
         }
 
-        private void frmDangNhap_Load(object sender, EventArgs e)
-        {
-            
-        }
-
         private void frmDangNhap_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
                 btnLogin.PerformClick();
             }
+        }
+
+        private void frmDangNhap_Load(object sender, EventArgs e)
+        {
+            txtMaDN.Focus();
+            txtPass.UseSystemPasswordChar = !showpass.Checked;
+        }
+
+        private void showpass_CheckedChanged(object sender, EventArgs e)
+        {
+            txtPass.UseSystemPasswordChar = !showpass.Checked;
         }
     }
 }

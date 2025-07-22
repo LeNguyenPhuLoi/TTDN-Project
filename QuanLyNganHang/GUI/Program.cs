@@ -16,13 +16,13 @@ namespace GUI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Frm_GiaoDich());
+            Application.Run(new frmDangNhap());
         }
     }
 
 
 
-    // MỞ RA KHI MUỐN SỬ DỤNG ĐĂNG NHẬP
+    // MỞ RA KHI MUỐN SỬ DỤNG ĐĂNG NHẬP or HOÀN THÀNH ĐỒ ÁN
 
     //internal static class Program
     //{
