@@ -114,6 +114,7 @@
             this.btn_Lammoi.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btn_Lammoi.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Bisque;
             this.btn_Lammoi.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Orange;
+            this.btn_Lammoi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Lammoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Lammoi.Location = new System.Drawing.Point(318, 31);
             this.btn_Lammoi.Name = "btn_Lammoi";
@@ -147,6 +148,7 @@
             this.btn_Xoa.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btn_Xoa.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Bisque;
             this.btn_Xoa.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Orange;
+            this.btn_Xoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Xoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Xoa.Location = new System.Drawing.Point(216, 31);
             this.btn_Xoa.Name = "btn_Xoa";
@@ -541,6 +543,7 @@
             // 
             // lbl_title
             // 
+            this.lbl_title.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbl_title.AutoSize = true;
             this.lbl_title.Font = new System.Drawing.Font("Times New Roman", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_title.ForeColor = System.Drawing.Color.Red;
