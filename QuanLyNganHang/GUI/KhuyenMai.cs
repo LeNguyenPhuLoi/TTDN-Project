@@ -23,11 +23,32 @@ namespace GUI
 
         private void frmKhuyenMai_Load(object sender, EventArgs e)
         {
-            btnNew.PerformClick(); // Gọi hàm hoàn tác để làm sạch các trường nhập
-            this.BackColor = ColorTranslator.FromHtml("#263238");
-            pnlMain.BackColor = ColorTranslator.FromHtml("#DCDCDC");
-            lbTim.ForeColor = ColorTranslator.FromHtml("#DED4CA");
+            //ko doi mau khi chon vao
+            dgvKhuyenMai.DefaultCellStyle.SelectionForeColor = Color.Black;
 
+            // Màu nền khi chọn ô (dòng)
+            dgvKhuyenMai.DefaultCellStyle.SelectionBackColor = Color.Yellow; // hoặc Color.Yellow
+
+            // Cỡ chữ cho toàn bộ lưới
+            dgvKhuyenMai.Font = new Font("Segoe UI", 12);
+
+            // Cỡ chữ cho tiêu đề cột
+            dgvKhuyenMai.EnableHeadersVisualStyles = false; // Cho phép dùng style tùy chỉnh
+            dgvKhuyenMai.ColumnHeadersDefaultCellStyle.BackColor = Color.DodgerBlue;
+            dgvKhuyenMai.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            dgvKhuyenMai.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 13, FontStyle.Bold);
+
+            // Xem kẽ màu dòng
+            dgvKhuyenMai.RowsDefaultCellStyle.BackColor = Color.White;
+            dgvKhuyenMai.AlternatingRowsDefaultCellStyle.BackColor = Color.LightBlue; // xanh dương sáng
+
+            // Cỡ chữ cho ô dữ liệu
+            dgvKhuyenMai.DefaultCellStyle.Font = new Font("Segoe UI", 12);
+
+            // Canh giữa dữ liệu nếu cần
+            dgvKhuyenMai.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
+
+            btnNew.PerformClick(); // Gọi hàm hoàn tác để làm sạch các trường nhập
             dgvKhuyenMai.DataSource = bs.LoadDSKhuyenMai();
         }
 
@@ -140,6 +161,11 @@ namespace GUI
             {
                 MessageBox.Show("Lỗi tìm kiếm: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            this.Close(); // Đóng form hiện tại
         }
     }
 }

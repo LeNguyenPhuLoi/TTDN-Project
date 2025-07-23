@@ -61,14 +61,14 @@
             // 
             // btnHoanTac
             // 
-            this.btnHoanTac.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnHoanTac.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnHoanTac.BackColor = System.Drawing.Color.White;
             this.btnHoanTac.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnHoanTac.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
             this.btnHoanTac.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.btnHoanTac.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHoanTac.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHoanTac.Location = new System.Drawing.Point(720, 681);
+            this.btnHoanTac.Location = new System.Drawing.Point(513, 681);
             this.btnHoanTac.Name = "btnHoanTac";
             this.btnHoanTac.Size = new System.Drawing.Size(112, 49);
             this.btnHoanTac.TabIndex = 13;
@@ -78,7 +78,7 @@
             // 
             // btnSua
             // 
-            this.btnSua.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnSua.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnSua.BackColor = System.Drawing.Color.Blue;
             this.btnSua.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnSua.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Blue;
@@ -86,7 +86,7 @@
             this.btnSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSua.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSua.ForeColor = System.Drawing.Color.White;
-            this.btnSua.Location = new System.Drawing.Point(424, 681);
+            this.btnSua.Location = new System.Drawing.Point(214, 681);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(112, 49);
             this.btnSua.TabIndex = 14;
@@ -96,7 +96,7 @@
             // 
             // btnXoa
             // 
-            this.btnXoa.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnXoa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnXoa.BackColor = System.Drawing.Color.Red;
             this.btnXoa.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnXoa.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
@@ -104,7 +104,7 @@
             this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnXoa.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoa.ForeColor = System.Drawing.Color.White;
-            this.btnXoa.Location = new System.Drawing.Point(572, 681);
+            this.btnXoa.Location = new System.Drawing.Point(363, 681);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(112, 49);
             this.btnXoa.TabIndex = 15;
@@ -114,7 +114,7 @@
             // 
             // btnThem
             // 
-            this.btnThem.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnThem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnThem.BackColor = System.Drawing.Color.Lime;
             this.btnThem.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnThem.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Lime;
@@ -122,7 +122,7 @@
             this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThem.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThem.ForeColor = System.Drawing.Color.White;
-            this.btnThem.Location = new System.Drawing.Point(274, 681);
+            this.btnThem.Location = new System.Drawing.Point(72, 681);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(112, 49);
             this.btnThem.TabIndex = 16;
@@ -254,7 +254,7 @@
             // 
             // btnThoat
             // 
-            this.btnThoat.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnThoat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnThoat.BackColor = System.Drawing.Color.Red;
             this.btnThoat.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnThoat.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
@@ -262,7 +262,7 @@
             this.btnThoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThoat.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThoat.ForeColor = System.Drawing.Color.White;
-            this.btnThoat.Location = new System.Drawing.Point(862, 681);
+            this.btnThoat.Location = new System.Drawing.Point(1169, 681);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(112, 49);
             this.btnThoat.TabIndex = 37;
