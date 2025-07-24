@@ -1,4 +1,5 @@
 ﻿using DAL;
+using ET;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -58,6 +59,24 @@ namespace BUS
         public IQueryable TimKiemKhoanVay(string maKhoanVay)
         {
             return kv.TimKiemKhoanVay(maKhoanVay);
+        }
+
+        
+    }
+    public class BUS_KhoanVay_RP
+    {
+        DAL_KhoanVayRP kv = new DAL_KhoanVayRP();
+
+        // Lấy danh sách khoản vay để báo cáo
+        public List<ET_KhoanVay_RP> LoadKhoanVayRP()
+        {
+            return kv.LoadDSKhoanVay();
+        }
+
+        //tim kiếm khoản vay de bao cáo
+        public List<ET_KhoanVay_RP> TimKiemKhoanVayRP(string keyword)
+        {
+            return kv.TimRPKhoanVay(keyword);
         }
     }
 }

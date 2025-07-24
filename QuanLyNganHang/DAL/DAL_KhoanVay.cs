@@ -1,12 +1,74 @@
-﻿using System;
+﻿using ET;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ET;
+using static ET.ET_NhanVien;
 
 namespace DAL
 {
+    public class DAL_KhoanVayRP
+    {
+        //kết nối tới database = linq to sql
+        AutoConnect conn = new AutoConnect();
+        QLNHDataContext db;
+
+        public DAL_KhoanVayRP()
+        {
+            db = new QLNHDataContext(conn.GetConnection());
+        }
+
+        //hàm lấy danh sách khoản vay cho report
+        public List<ET_KhoanVay_RP> LoadDSKhoanVay()
+        {
+            var query = from kv in db.KHOANVAYs
+                        join kh in db.KHACHHANGs on kv.MAKH equals kh.MAKH
+                        join ls in db.LAISUATs on kv.MALAISUAT equals ls.MALAISUAT
+                        select new ET_KhoanVay_RP
+                        {
+                            MAVAY = kv.MAVAY,
+                            SOTIENVAY = (decimal)kv.SOTIENVAY,
+                            TONGTIEN = (decimal)kv.TONGTIEN,
+                            TIENTHANG = (decimal)kv.TIENTHANG,
+                            NGAYVAY = Convert.ToDateTime(kv.NGAYVAY),
+                            THOIHAN = Convert.ToDateTime(kv.THOIHAN),
+                            SOTHANG = (int)kv.SOTHANG,
+                            TRANGTHAI = kv.TRANGTHAI,
+                            MAKH = kv.MAKH,
+                            TENKH = kh.TENKH,
+                            LAISUAT = (decimal)ls.LAISUAT1,
+                            TENLAISUAT = ls.TENLOAIVAY
+                        };
+            return query.ToList();
+        }
+
+        //Tim khoan vay
+        public List<ET_KhoanVay_RP> TimRPKhoanVay(string keyword)
+        {
+            var search = from kv in db.KHOANVAYs
+                         join kh in db.KHACHHANGs on kv.MAKH equals kh.MAKH
+                         join ls in db.LAISUATs on kv.MALAISUAT equals ls.MALAISUAT
+                         where kv.MAVAY.Contains(keyword)
+                         select new ET_KhoanVay_RP
+                         {
+                             MAVAY = kv.MAVAY,
+                             SOTIENVAY = (decimal)kv.SOTIENVAY,
+                             TONGTIEN = (decimal)kv.TONGTIEN,
+                             TIENTHANG = (decimal)kv.TIENTHANG,
+                             NGAYVAY = Convert.ToDateTime(kv.NGAYVAY),
+                             THOIHAN = Convert.ToDateTime(kv.THOIHAN),
+                             SOTHANG = (int)kv.SOTHANG,
+                             TRANGTHAI = kv.TRANGTHAI,
+                             MAKH = kv.MAKH,
+                             TENKH = kh.TENKH,
+                             LAISUAT = (decimal)ls.LAISUAT1,
+                             TENLAISUAT = ls.TENLOAIVAY
+                         };
+
+            return search.ToList();
+        }
+    }
     public class DAL_KhoanVay
     {
         //kết nối tới database = linq to sql

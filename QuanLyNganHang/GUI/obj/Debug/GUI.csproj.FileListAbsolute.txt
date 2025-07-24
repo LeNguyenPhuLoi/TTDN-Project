@@ -1955,3 +1955,4 @@ D:\ĐỒ ÁN TTDN\fix noi quy\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.cspr
 D:\ĐỒ ÁN TTDN\fix noi quy\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.csproj.Up2Date
 D:\ĐỒ ÁN TTDN\fix noi quy\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.exe
 D:\ĐỒ ÁN TTDN\fix noi quy\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.pdb
+D:\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.frmPhieuGhiNoRP.resources

@@ -44,7 +44,7 @@ namespace ET
         public string TRANGTHAI { get; set; } 
         public string MAKH { get; set; } 
         public string TENKH { get; set; } 
-        public string LAISUAT { get; set; } 
+        public decimal LAISUAT { get; set; } 
         public string TENLAISUAT { get; set; } 
     }
 }
