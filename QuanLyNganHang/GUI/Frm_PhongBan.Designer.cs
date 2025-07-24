@@ -172,9 +172,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gb_DanhSach.Controls.Add(this.dgv_phongban);
             this.gb_DanhSach.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gb_DanhSach.Location = new System.Drawing.Point(16, 158);
+            this.gb_DanhSach.Location = new System.Drawing.Point(16, 162);
             this.gb_DanhSach.Name = "gb_DanhSach";
-            this.gb_DanhSach.Size = new System.Drawing.Size(1018, 337);
+            this.gb_DanhSach.Size = new System.Drawing.Size(1018, 333);
             this.gb_DanhSach.TabIndex = 43;
             this.gb_DanhSach.TabStop = false;
             this.gb_DanhSach.Text = "Danh Sách";
@@ -187,11 +187,11 @@
             this.dgv_phongban.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_phongban.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgv_phongban.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_phongban.Location = new System.Drawing.Point(3, 18);
+            this.dgv_phongban.Location = new System.Drawing.Point(3, 27);
             this.dgv_phongban.Name = "dgv_phongban";
             this.dgv_phongban.RowHeadersWidth = 51;
             this.dgv_phongban.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_phongban.Size = new System.Drawing.Size(1009, 316);
+            this.dgv_phongban.Size = new System.Drawing.Size(1009, 303);
             this.dgv_phongban.TabIndex = 11;
             this.dgv_phongban.Click += new System.EventHandler(this.dgv_phongban_Click);
             // 

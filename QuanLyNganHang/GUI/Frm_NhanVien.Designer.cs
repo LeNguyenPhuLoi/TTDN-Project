@@ -184,9 +184,9 @@
             this.gb_ThongTin.Controls.Add(this.label10);
             this.gb_ThongTin.Controls.Add(this.txt_manv);
             this.gb_ThongTin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gb_ThongTin.Location = new System.Drawing.Point(1037, 171);
+            this.gb_ThongTin.Location = new System.Drawing.Point(1037, 154);
             this.gb_ThongTin.Name = "gb_ThongTin";
-            this.gb_ThongTin.Size = new System.Drawing.Size(489, 579);
+            this.gb_ThongTin.Size = new System.Drawing.Size(489, 582);
             this.gb_ThongTin.TabIndex = 40;
             this.gb_ThongTin.TabStop = false;
             this.gb_ThongTin.Text = "Thông Tin Nhân Viên";
@@ -517,9 +517,9 @@
             this.gb_DanhSach.BackColor = System.Drawing.Color.White;
             this.gb_DanhSach.Controls.Add(this.dgv_nhanvien);
             this.gb_DanhSach.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gb_DanhSach.Location = new System.Drawing.Point(17, 158);
+            this.gb_DanhSach.Location = new System.Drawing.Point(17, 155);
             this.gb_DanhSach.Name = "gb_DanhSach";
-            this.gb_DanhSach.Size = new System.Drawing.Size(1014, 592);
+            this.gb_DanhSach.Size = new System.Drawing.Size(1014, 582);
             this.gb_DanhSach.TabIndex = 38;
             this.gb_DanhSach.TabStop = false;
             this.gb_DanhSach.Text = "Danh Sách";
@@ -537,7 +537,7 @@
             this.dgv_nhanvien.RowHeadersVisible = false;
             this.dgv_nhanvien.RowHeadersWidth = 51;
             this.dgv_nhanvien.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_nhanvien.Size = new System.Drawing.Size(1008, 662);
+            this.dgv_nhanvien.Size = new System.Drawing.Size(1008, 652);
             this.dgv_nhanvien.TabIndex = 11;
             this.dgv_nhanvien.Click += new System.EventHandler(this.dgv_nhanvien_Click);
             // 
@@ -558,7 +558,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1540, 762);
+            this.ClientSize = new System.Drawing.Size(1540, 765);
             this.Controls.Add(this.gb_ChucNang);
             this.Controls.Add(this.gb_ThongTin);
             this.Controls.Add(this.gb_Timkiem);
