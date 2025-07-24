@@ -459,3 +459,14 @@ D:\ĐỒ ÁN TTDN\fix chi nhanh\TTDN-Project\QuanLyNganHang\ET\obj\Debug\netstan
 D:\ĐỒ ÁN TTDN\fix chi nhanh\TTDN-Project\QuanLyNganHang\ET\obj\Debug\netstandard2.0\ET.sourcelink.json
 D:\ĐỒ ÁN TTDN\fix chi nhanh\TTDN-Project\QuanLyNganHang\ET\obj\Debug\netstandard2.0\ET.dll
 D:\ĐỒ ÁN TTDN\fix chi nhanh\TTDN-Project\QuanLyNganHang\ET\obj\Debug\netstandard2.0\ET.pdb
+D:\ĐỒ ÁN TTDN\fix noi quy\TTDN-Project\QuanLyNganHang\ET\bin\Debug\netstandard2.0\ET.deps.json
+D:\ĐỒ ÁN TTDN\fix noi quy\TTDN-Project\QuanLyNganHang\ET\bin\Debug\netstandard2.0\ET.dll
+D:\ĐỒ ÁN TTDN\fix noi quy\TTDN-Project\QuanLyNganHang\ET\bin\Debug\netstandard2.0\ET.pdb
+D:\ĐỒ ÁN TTDN\fix noi quy\TTDN-Project\QuanLyNganHang\ET\obj\Debug\netstandard2.0\ET.csproj.AssemblyReference.cache
+D:\ĐỒ ÁN TTDN\fix noi quy\TTDN-Project\QuanLyNganHang\ET\obj\Debug\netstandard2.0\ET.GeneratedMSBuildEditorConfig.editorconfig
+D:\ĐỒ ÁN TTDN\fix noi quy\TTDN-Project\QuanLyNganHang\ET\obj\Debug\netstandard2.0\ET.AssemblyInfoInputs.cache
+D:\ĐỒ ÁN TTDN\fix noi quy\TTDN-Project\QuanLyNganHang\ET\obj\Debug\netstandard2.0\ET.AssemblyInfo.cs
+D:\ĐỒ ÁN TTDN\fix noi quy\TTDN-Project\QuanLyNganHang\ET\obj\Debug\netstandard2.0\ET.csproj.CoreCompileInputs.cache
+D:\ĐỒ ÁN TTDN\fix noi quy\TTDN-Project\QuanLyNganHang\ET\obj\Debug\netstandard2.0\ET.sourcelink.json
+D:\ĐỒ ÁN TTDN\fix noi quy\TTDN-Project\QuanLyNganHang\ET\obj\Debug\netstandard2.0\ET.dll
+D:\ĐỒ ÁN TTDN\fix noi quy\TTDN-Project\QuanLyNganHang\ET\obj\Debug\netstandard2.0\ET.pdb
