@@ -23,15 +23,13 @@ namespace GUI
 
         private void Frm_ViPham_Load(object sender, EventArgs e)
         {
-            int width = this.Width;
-            int height = this.Height;
-            lbl_title.Location = new Point((width / 2) - 170, 0);
-            gb_Timkiem.Location = new Point(10, 50);
-            gb_DanhSach.Location = new Point(10, 150);
-            gb_DanhSach.Height = height - 200;
-            gb_DanhSach.Width = (width / 3) * 2;
-            gb_ThongTin.Location = new Point(width - 510, 150);
-            gb_ChucNang.Location = new Point(width - 510, 50);
+            //Đổi màu khi được chọn
+            dgv_vipham.DefaultCellStyle.SelectionBackColor = Color.Orange;
+
+            //Xen kẽ màu với nhau
+            dgv_vipham.RowsDefaultCellStyle.BackColor = Color.Bisque;
+            dgv_vipham.AlternatingRowsDefaultCellStyle.BackColor = Color.White;
+
             dgv_vipham.DataSource = bus_ViPham.LoadDSVP();
             cbo_timnq.Visible = false;
             AddToCBO(bus_ViPham.LoadNQ(), cbo_manq);
@@ -41,18 +39,6 @@ namespace GUI
             AddToCBO(bus_ViPham.LoadMoTa(), cbo_timnq);
         }
 
-        private void Frm_ViPham_Resize(object sender, EventArgs e)
-        {
-            int width = this.Width;
-            int height = this.Height;
-            lbl_title.Location = new Point((width / 2) - 170, 0);
-            gb_Timkiem.Location = new Point(10, 50);
-            gb_DanhSach.Location = new Point(10, 150);
-            gb_DanhSach.Height = height - 200;
-            gb_DanhSach.Width = (width / 3) * 2;
-            gb_ThongTin.Location = new Point(width - 510, 150);
-            gb_ChucNang.Location = new Point(width - 510, 50);
-        }
 
         public void AddToCBO(IQueryable list, ComboBox cbo)
         {
@@ -248,5 +234,6 @@ namespace GUI
                 MessageBox.Show("Lỗi " + ex.Message);
             }
         }
+
     }
 }
