@@ -270,12 +270,16 @@ namespace GUI
 
         private void btnPhieuVay_Click(object sender, EventArgs e)
         {
-
+            HighlightButton(btnPhieuVay);
+            frmPhieuGhiNoRP frm = new frmPhieuGhiNoRP();
+            OpenMain(frm);
         }
 
         private void btnPhieuTraNo_Click(object sender, EventArgs e)
         {
-
+            HighlightButton(btnPhieuTraNo);
+            frmReport_LichSuTraNo frm = new frmReport_LichSuTraNo();
+            OpenMain(frm);
         }
 
         private void Form1_Load(object sender, EventArgs e)

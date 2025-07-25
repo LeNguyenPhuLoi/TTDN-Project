@@ -61,5 +61,15 @@ namespace GUI
             crvPhieuVay.Refresh();
             txtMaVay.Focus();
         }
+
+        private void txtMaVay_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

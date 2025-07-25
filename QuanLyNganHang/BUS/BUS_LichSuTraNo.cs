@@ -1,12 +1,14 @@
-﻿using System;
+﻿using DAL;
+using ET;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DAL;
 
 namespace BUS
 {
+
     public class BUS_LichSuTraNo
     {
         DAL_LichSuTraNo ls = new DAL.DAL_LichSuTraNo();
@@ -45,6 +47,22 @@ namespace BUS
         public IQueryable TimKiemLichSuTraNo(string maLichSu)
         {
             return ls.TimKiemLSTN(maLichSu);
+        }
+    }
+    public class BUS_LichSuTraNo_RP
+    {
+        DAL_LichSuTraNo_RP kv = new DAL_LichSuTraNo_RP();
+
+        // Lấy danh sách lịch sử trả nợ để báo cáo
+        public List<ET_LichSuTraNo_RP> LoadLSTNRP()
+        {
+            return kv.LoadDSLSTN();
+        }
+
+        //tim kiếm Lich Su Trả Nợ de bao cáo
+        public List<ET_LichSuTraNo_RP> TimLSTNRP(string keyword)
+        {
+            return kv.TimRPLSTN(keyword);
         }
     }
 }

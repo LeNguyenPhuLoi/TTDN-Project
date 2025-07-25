@@ -62,6 +62,7 @@
             this.label2.Size = new System.Drawing.Size(108, 33);
             this.label2.TabIndex = 31;
             this.label2.Text = "Mã Vay:";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // txtMaVay
             // 
@@ -74,6 +75,7 @@
             this.txtMaVay.Name = "txtMaVay";
             this.txtMaVay.Size = new System.Drawing.Size(378, 30);
             this.txtMaVay.TabIndex = 30;
+            this.txtMaVay.TextChanged += new System.EventHandler(this.txtMaVay_TextChanged);
             // 
             // btnTim
             // 
