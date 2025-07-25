@@ -21,4 +21,16 @@ namespace ET
         public decimal SOTIENTRA { get; set; }
         public DateTime NGAYTRA { get; set; }
     }
+
+    public class ET_LichSuTraNo_RP
+    {       
+        public string MALICHSU { get; set; }
+        public string MAVAY { get; set; }
+        public string MAKH { get; set; }
+        public string TENKH { get; set; }
+        public decimal TIENGOC { get; set; }
+        public decimal SOTIENTRA { get; set; }
+        public DateTime NGAYTRA { get; set; }
+        public string TRANGTHAI { get; set; }
+    }
 }

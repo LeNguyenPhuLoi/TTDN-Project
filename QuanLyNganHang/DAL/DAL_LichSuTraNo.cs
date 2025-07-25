@@ -7,6 +7,62 @@ using ET;
 
 namespace DAL
 {
+    public class DAL_LichSuTraNo_RP
+    {
+        //kết nối tới database = linq to sql
+        AutoConnect conn = new AutoConnect();
+        QLNHDataContext db;
+
+        public DAL_LichSuTraNo_RP()
+        {
+            db = new QLNHDataContext(conn.GetConnection());
+        }
+
+        // Lấy danh sách lịch sử trả nợ cho báo cáo
+        public List<ET_LichSuTraNo_RP> LoadDSLSTN()
+        {
+            var query = from ls in db.LICHSUTRANOs
+                        join kv in db.KHOANVAYs on ls.MAVAY equals kv.MAVAY
+                        join kh in db.KHACHHANGs on kv.MAKH equals kh.MAKH
+                        select new ET_LichSuTraNo_RP
+                        {
+                            MALICHSU = ls.MALICHSU,
+                            MAVAY = ls.MAVAY,
+                            MAKH = kv.MAKH,
+                            TENKH = kh.TENKH,
+                            TIENGOC = (decimal)ls.SOTIENGOC,
+                            SOTIENTRA = (decimal)ls.SOTIENTRA,
+                            NGAYTRA = Convert.ToDateTime(ls.NGAYTRA),
+                            TRANGTHAI = kv.TRANGTHAI
+                        };
+            return query.ToList();
+        }
+
+        //Tim khoan vay
+        public List<ET_LichSuTraNo_RP> TimRPLSTN(string keyword)
+        {
+            var search = from ls in db.LICHSUTRANOs
+                         join kv in db.KHOANVAYs on ls.MAVAY equals kv.MAVAY
+                         join kh in db.KHACHHANGs on kv.MAKH equals kh.MAKH
+                         where ls.MALICHSU.Contains(keyword) ||
+                               kv.MAVAY.Contains(keyword)
+                         select new ET_LichSuTraNo_RP
+                         {
+                             MALICHSU = ls.MALICHSU,
+                             MAVAY = ls.MAVAY,
+                             MAKH = kv.MAKH,
+                             TENKH = kh.TENKH,
+                             TIENGOC = (decimal)ls.SOTIENGOC,
+                             SOTIENTRA = (decimal)ls.SOTIENTRA,
+                             NGAYTRA = Convert.ToDateTime(ls.NGAYTRA),
+                             TRANGTHAI = kv.TRANGTHAI
+                         };
+
+            return search.ToList();
+        }
+    }
+
+
     public class DAL_LichSuTraNo
     {
         //kết nối tới database = linq to sql

@@ -268,6 +268,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>KhachHangDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Report\LichSuTraNoDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LichSuTraNoDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Report\LoaiTaiKhoanDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -309,6 +314,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Report_KhachHang.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Report_LichSuTraNo.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Report_LichSuTraNo.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Report\Report_LoaiTaiKhoan.cs">
@@ -362,6 +373,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ViPhamDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report_LichSuTraNo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report_LichSuTraNo.Designer.cs">
+      <DependentUpon>Report_LichSuTraNo.cs</DependentUpon>
     </Compile>
     <Compile Include="TKDangNhap.cs">
       <SubType>Form</SubType>
@@ -484,6 +501,10 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>Report_KhachHang.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Report\Report_LichSuTraNo.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Report_LichSuTraNo.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Report\Report_LoaiTaiKhoan.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>Report_LoaiTaiKhoan.cs</LastGenOutput>
@@ -511,6 +532,9 @@
     <EmbeddedResource Include="Report\Report_ViPham.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>Report_ViPham.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_LichSuTraNo.resx">
+      <DependentUpon>Report_LichSuTraNo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TKDangNhap.resx">
       <DependentUpon>TKDangNhap.cs</DependentUpon>
@@ -556,6 +580,17 @@
     </None>
     <None Include="Report\KhachHangDataSet.xss">
       <DependentUpon>KhachHangDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Report\LichSuTraNoDataSet.xsc">
+      <DependentUpon>LichSuTraNoDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Report\LichSuTraNoDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LichSuTraNoDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Report\LichSuTraNoDataSet.xss">
+      <DependentUpon>LichSuTraNoDataSet.xsd</DependentUpon>
     </None>
     <None Include="Report\LoaiTaiKhoanDataSet.xsc">
       <DependentUpon>LoaiTaiKhoanDataSet.xsd</DependentUpon>
