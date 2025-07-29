@@ -291,5 +291,12 @@ namespace GUI
         {
 
         }
+
+        private void btnInGiaoDich_Click(object sender, EventArgs e)
+        {
+            HighlightButton(btnInGiaoDich);
+            Frm_Report_GiaoDich frm = new Frm_Report_GiaoDich();
+            OpenMain(frm);
+        }
     }
 }

@@ -73,6 +73,8 @@
             this.sidebarTransition = new System.Windows.Forms.Timer(this.components);
             this.tmrBannerLoop = new System.Windows.Forms.Timer(this.components);
             this.picBanner = new System.Windows.Forms.PictureBox();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.btnInGiaoDich = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnHam)).BeginInit();
             this.sidebar.SuspendLayout();
@@ -93,6 +95,7 @@
             this.panel24.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBanner)).BeginInit();
+            this.panel13.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -455,6 +458,7 @@
             this.menuContainerRP.Controls.Add(this.panel22);
             this.menuContainerRP.Controls.Add(this.panel23);
             this.menuContainerRP.Controls.Add(this.panel24);
+            this.menuContainerRP.Controls.Add(this.panel13);
             this.menuContainerRP.Location = new System.Drawing.Point(3, 90);
             this.menuContainerRP.Margin = new System.Windows.Forms.Padding(3, 5, 0, 5);
             this.menuContainerRP.Name = "menuContainerRP";
@@ -620,6 +624,32 @@
             this.picBanner.TabIndex = 12;
             this.picBanner.TabStop = false;
             // 
+            // panel13
+            // 
+            this.panel13.BackColor = System.Drawing.SystemColors.Control;
+            this.panel13.Controls.Add(this.btnInGiaoDich);
+            this.panel13.Location = new System.Drawing.Point(0, 180);
+            this.panel13.Margin = new System.Windows.Forms.Padding(0);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(240, 45);
+            this.panel13.TabIndex = 17;
+            // 
+            // btnInGiaoDich
+            // 
+            this.btnInGiaoDich.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
+            this.btnInGiaoDich.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInGiaoDich.ForeColor = System.Drawing.Color.White;
+            this.btnInGiaoDich.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnInGiaoDich.Location = new System.Drawing.Point(-20, -24);
+            this.btnInGiaoDich.Name = "btnInGiaoDich";
+            this.btnInGiaoDich.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.btnInGiaoDich.Size = new System.Drawing.Size(268, 94);
+            this.btnInGiaoDich.TabIndex = 2;
+            this.btnInGiaoDich.Text = "    -           Giao Dịch";
+            this.btnInGiaoDich.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnInGiaoDich.UseVisualStyleBackColor = false;
+            this.btnInGiaoDich.Click += new System.EventHandler(this.btnInGiaoDich_Click);
+            // 
             // Frm_MainUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -656,6 +686,7 @@
             this.panel24.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picBanner)).EndInit();
+            this.panel13.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -705,6 +736,8 @@
         private System.Windows.Forms.Button btnMM;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox picBanner;
+        private System.Windows.Forms.Panel panel13;
+        private System.Windows.Forms.Button btnInGiaoDich;
     }
 }
 

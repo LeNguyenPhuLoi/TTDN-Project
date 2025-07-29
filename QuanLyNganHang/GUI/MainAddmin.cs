@@ -188,5 +188,71 @@ namespace GUI
         {
 
         }
+
+        private void báoCáoPhòngBanToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Frm_Report_PhongBan frm = new Frm_Report_PhongBan();
+            OpenMain(frm);
+        }
+
+        private void báoCáoNhânViênToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Frm_Report_NhanVien frm = new Frm_Report_NhanVien();
+            OpenMain(frm);
+        }
+
+        private void báoCáoViPhạmToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Frm_Report_ViPham frm = new Frm_Report_ViPham();
+            OpenMain(frm);
+        }
+
+        private void báoCáoKháchHàngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Frm_Report_KhachHang frm = new Frm_Report_KhachHang();
+            OpenMain(frm);
+        }
+
+        private void báoCáoTàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Frm_Report_TaiKhoan frm = new Frm_Report_TaiKhoan();
+            OpenMain(frm);
+        }
+
+        private void loạiTàiKhoảnToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Frm_Report_LoaiTaiKhoan frm = new Frm_Report_LoaiTaiKhoan();
+            OpenMain(frm);
+        }
+
+        private void loạiTiềnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Frm_Report_LoaiTien frm = new Frm_Report_LoaiTien();
+            OpenMain(frm);
+        }
+
+        private void biênLaiToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Frm_Report_BienLai frm = new Frm_Report_BienLai();
+            OpenMain(frm);
+        }
+
+        private void giaoDịchToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Frm_Report_GiaoDich frm = new Frm_Report_GiaoDich();
+            OpenMain(frm);
+        }
+
+        private void phiếuGhiNợToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmPhieuGhiNoRP frm = new frmPhieuGhiNoRP();
+            OpenMain(frm);
+        }
+
+        private void phiếuTranoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmReport_LichSuTraNo frm = new frmReport_LichSuTraNo();
+            OpenMain(frm);
+        }
     }
 }
