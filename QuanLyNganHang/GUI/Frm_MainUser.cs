@@ -92,7 +92,7 @@ namespace GUI
             if(menuExpand == false)
             {
                 menuContainerQL.Height += 10;
-                if(menuContainerQL.Height >= 413)
+                if(menuContainerQL.Height >= 330)
                 {
                     menuTransition.Stop();
                     menuExpand = true;
@@ -156,7 +156,7 @@ namespace GUI
             else
             {
                 sidebar.Width += 10;
-                if (sidebar.Width >= 190)
+                if (sidebar.Width >= 172)
                 {
                     sidebarExpand = true;
                     sidebarTransition.Stop();
