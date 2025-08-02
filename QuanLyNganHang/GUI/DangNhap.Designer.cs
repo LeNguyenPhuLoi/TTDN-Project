@@ -148,10 +148,10 @@
             this.linkLabel2.LinkColor = System.Drawing.Color.DarkGray;
             this.linkLabel2.Location = new System.Drawing.Point(102, 281);
             this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(144, 20);
+            this.linkLabel2.Size = new System.Drawing.Size(154, 20);
             this.linkLabel2.TabIndex = 8;
             this.linkLabel2.TabStop = true;
-            this.linkLabel2.Text = "Create New Account";
+            this.linkLabel2.Text = "© MindLess Company";
             // 
             // btnLogin
             // 

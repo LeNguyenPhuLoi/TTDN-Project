@@ -94,5 +94,7 @@ namespace GUI
         {
             txtPass.UseSystemPasswordChar = !showpass.Checked;
         }
+
+
     }
 }
