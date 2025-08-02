@@ -2090,3 +2090,4 @@ D:\ĐỒ ÁN TTDN\fix vi pham\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.cspr
 D:\ĐỒ ÁN TTDN\fix vi pham\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.exe
 D:\ĐỒ ÁN TTDN\fix vi pham\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.pdb
 D:\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.frmReport_LichSuTraNo.resources
+D:\TTDN-Project\QuanLyNganHang\GUI\obj\Debug\GUI.exe.config

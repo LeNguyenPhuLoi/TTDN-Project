@@ -49,18 +49,24 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtMaVay = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.dgvMaVay = new System.Windows.Forms.DataGridView();
             this.dtpNgayTra = new System.Windows.Forms.DateTimePicker();
             this.label8 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.dgvMaVay = new System.Windows.Forms.DataGridView();
             this.label6 = new System.Windows.Forms.Label();
             this.btnThoat = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLichSu)).BeginInit();
             this.pnlMain.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMaVay)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtTim
@@ -90,20 +96,19 @@
             // 
             this.dgvLichSu.AllowUserToResizeColumns = false;
             this.dgvLichSu.AllowUserToResizeRows = false;
-            this.dgvLichSu.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvLichSu.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.dgvLichSu.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvLichSu.BackgroundColor = System.Drawing.Color.White;
             this.dgvLichSu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvLichSu.Location = new System.Drawing.Point(11, 405);
+            this.dgvLichSu.Location = new System.Drawing.Point(3, 3);
             this.dgvLichSu.MultiSelect = false;
             this.dgvLichSu.Name = "dgvLichSu";
             this.dgvLichSu.ReadOnly = true;
             this.dgvLichSu.RowHeadersVisible = false;
             this.dgvLichSu.RowHeadersWidth = 62;
             this.dgvLichSu.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvLichSu.Size = new System.Drawing.Size(1247, 184);
+            this.dgvLichSu.Size = new System.Drawing.Size(2000, 179);
             this.dgvLichSu.TabIndex = 39;
             this.dgvLichSu.Click += new System.EventHandler(this.dgvLichSu_Click);
             // 
@@ -148,7 +153,7 @@
             this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThem.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThem.ForeColor = System.Drawing.Color.White;
-            this.btnThem.Location = new System.Drawing.Point(32, 610);
+            this.btnThem.Location = new System.Drawing.Point(32, 6);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(112, 49);
             this.btnThem.TabIndex = 12;
@@ -165,7 +170,7 @@
             this.btnHoanTac.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.btnHoanTac.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHoanTac.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHoanTac.Location = new System.Drawing.Point(475, 612);
+            this.btnHoanTac.Location = new System.Drawing.Point(466, 6);
             this.btnHoanTac.Name = "btnHoanTac";
             this.btnHoanTac.Size = new System.Drawing.Size(112, 49);
             this.btnHoanTac.TabIndex = 12;
@@ -183,7 +188,7 @@
             this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnXoa.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoa.ForeColor = System.Drawing.Color.White;
-            this.btnXoa.Location = new System.Drawing.Point(328, 610);
+            this.btnXoa.Location = new System.Drawing.Point(322, 6);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(112, 49);
             this.btnXoa.TabIndex = 11;
@@ -201,7 +206,7 @@
             this.btnSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSua.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSua.ForeColor = System.Drawing.Color.White;
-            this.btnSua.Location = new System.Drawing.Point(179, 610);
+            this.btnSua.Location = new System.Drawing.Point(182, 6);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(112, 49);
             this.btnSua.TabIndex = 10;
@@ -295,9 +300,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.Controls.Add(this.txtMaVay);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.dgvMaVay);
             this.panel1.Controls.Add(this.dtpNgayTra);
             this.panel1.Controls.Add(this.label8);
+            this.panel1.Controls.Add(this.panel2);
             this.panel1.Location = new System.Drawing.Point(626, 3);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(617, 269);
@@ -311,7 +316,7 @@
             this.txtMaVay.Location = new System.Drawing.Point(142, 71);
             this.txtMaVay.Margin = new System.Windows.Forms.Padding(4);
             this.txtMaVay.Name = "txtMaVay";
-            this.txtMaVay.Size = new System.Drawing.Size(459, 30);
+            this.txtMaVay.Size = new System.Drawing.Size(377, 30);
             this.txtMaVay.TabIndex = 23;
             // 
             // label1
@@ -324,27 +329,6 @@
             this.label1.Size = new System.Drawing.Size(117, 33);
             this.label1.TabIndex = 0;
             this.label1.Text = "Ngày trả:";
-            // 
-            // dgvMaVay
-            // 
-            this.dgvMaVay.AllowUserToResizeColumns = false;
-            this.dgvMaVay.AllowUserToResizeRows = false;
-            this.dgvMaVay.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvMaVay.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvMaVay.BackgroundColor = System.Drawing.Color.White;
-            this.dgvMaVay.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMaVay.Location = new System.Drawing.Point(24, 121);
-            this.dgvMaVay.MultiSelect = false;
-            this.dgvMaVay.Name = "dgvMaVay";
-            this.dgvMaVay.ReadOnly = true;
-            this.dgvMaVay.RowHeadersVisible = false;
-            this.dgvMaVay.RowHeadersWidth = 51;
-            this.dgvMaVay.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvMaVay.Size = new System.Drawing.Size(577, 136);
-            this.dgvMaVay.TabIndex = 17;
-            this.dgvMaVay.Click += new System.EventHandler(this.dgvMaVay_Click);
             // 
             // dtpNgayTra
             // 
@@ -371,15 +355,45 @@
             this.label8.TabIndex = 0;
             this.label8.Text = "Mã Vay";
             // 
+            // panel2
+            // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.AutoScroll = true;
+            this.panel2.Controls.Add(this.dgvMaVay);
+            this.panel2.Location = new System.Drawing.Point(24, 118);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(564, 148);
+            this.panel2.TabIndex = 24;
+            // 
+            // dgvMaVay
+            // 
+            this.dgvMaVay.AllowUserToResizeColumns = false;
+            this.dgvMaVay.AllowUserToResizeRows = false;
+            this.dgvMaVay.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.dgvMaVay.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvMaVay.BackgroundColor = System.Drawing.Color.White;
+            this.dgvMaVay.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMaVay.Location = new System.Drawing.Point(3, 3);
+            this.dgvMaVay.MultiSelect = false;
+            this.dgvMaVay.Name = "dgvMaVay";
+            this.dgvMaVay.ReadOnly = true;
+            this.dgvMaVay.RowHeadersVisible = false;
+            this.dgvMaVay.RowHeadersWidth = 51;
+            this.dgvMaVay.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvMaVay.Size = new System.Drawing.Size(800, 121);
+            this.dgvMaVay.TabIndex = 17;
+            this.dgvMaVay.Click += new System.EventHandler(this.dgvMaVay_Click);
+            // 
             // label6
             // 
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label6.Dock = System.Windows.Forms.DockStyle.Top;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Red;
-            this.label6.Location = new System.Drawing.Point(291, 7);
+            this.label6.Location = new System.Drawing.Point(0, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(716, 50);
+            this.label6.Size = new System.Drawing.Size(1270, 50);
             this.label6.TabIndex = 44;
             this.label6.Text = "QUẢN LÝ LỊCH SỬ TRẢ NỢ";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -394,7 +408,7 @@
             this.btnThoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThoat.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThoat.ForeColor = System.Drawing.Color.White;
-            this.btnThoat.Location = new System.Drawing.Point(1127, 612);
+            this.btnThoat.Location = new System.Drawing.Point(1129, 6);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(112, 49);
             this.btnThoat.TabIndex = 45;
@@ -406,21 +420,43 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // panel3
+            // 
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel3.AutoScroll = true;
+            this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.Controls.Add(this.dgvLichSu);
+            this.panel3.Location = new System.Drawing.Point(15, 409);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1240, 206);
+            this.panel3.TabIndex = 46;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.btnThoat);
+            this.panel4.Controls.Add(this.btnHoanTac);
+            this.panel4.Controls.Add(this.btnXoa);
+            this.panel4.Controls.Add(this.btnSua);
+            this.panel4.Controls.Add(this.btnThem);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel4.Location = new System.Drawing.Point(0, 606);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1270, 67);
+            this.panel4.TabIndex = 47;
+            // 
             // frmLichSuTraNo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1270, 673);
-            this.Controls.Add(this.btnThoat);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel4);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.txtTim);
             this.Controls.Add(this.lbTim);
-            this.Controls.Add(this.dgvLichSu);
-            this.Controls.Add(this.btnSua);
-            this.Controls.Add(this.btnThem);
-            this.Controls.Add(this.btnHoanTac);
-            this.Controls.Add(this.btnXoa);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmLichSuTraNo";
             this.Text = "Quản Lý Lịch Sử Trả Nợ:";
@@ -431,8 +467,11 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMaVay)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -464,5 +503,8 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnThoat;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel4;
     }
 }
