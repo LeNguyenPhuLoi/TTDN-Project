@@ -121,8 +121,10 @@
             // 
             // gb_DanhSachViPham
             // 
+            this.gb_DanhSachViPham.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.gb_DanhSachViPham.Controls.Add(this.crv_ViPham);
-            this.gb_DanhSachViPham.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.gb_DanhSachViPham.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gb_DanhSachViPham.Location = new System.Drawing.Point(0, 79);
             this.gb_DanhSachViPham.Name = "gb_DanhSachViPham";
@@ -134,9 +136,11 @@
             // crv_ViPham
             // 
             this.crv_ViPham.ActiveViewIndex = 0;
+            this.crv_ViPham.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.crv_ViPham.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.crv_ViPham.Cursor = System.Windows.Forms.Cursors.Default;
-            this.crv_ViPham.Dock = System.Windows.Forms.DockStyle.Fill;
             this.crv_ViPham.Location = new System.Drawing.Point(3, 30);
             this.crv_ViPham.Margin = new System.Windows.Forms.Padding(5);
             this.crv_ViPham.Name = "crv_ViPham";

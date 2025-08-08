@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\ĐỒ ÁN TTDN\\test\\TTDN-Project\\QuanLyNganHang\\ET\\ET.csproj": {}
+    "D:\\ĐỒ ÁN TTDN\\fix giao dien report\\TTDN-Project\\QuanLyNganHang\\ET\\ET.csproj": {}
   },
   "projects": {
-    "D:\\ĐỒ ÁN TTDN\\test\\TTDN-Project\\QuanLyNganHang\\ET\\ET.csproj": {
+    "D:\\ĐỒ ÁN TTDN\\fix giao dien report\\TTDN-Project\\QuanLyNganHang\\ET\\ET.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ĐỒ ÁN TTDN\\test\\TTDN-Project\\QuanLyNganHang\\ET\\ET.csproj",
+        "projectUniqueName": "D:\\ĐỒ ÁN TTDN\\fix giao dien report\\TTDN-Project\\QuanLyNganHang\\ET\\ET.csproj",
         "projectName": "ET",
-        "projectPath": "D:\\ĐỒ ÁN TTDN\\test\\TTDN-Project\\QuanLyNganHang\\ET\\ET.csproj",
+        "projectPath": "D:\\ĐỒ ÁN TTDN\\fix giao dien report\\TTDN-Project\\QuanLyNganHang\\ET\\ET.csproj",
         "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-        "outputPath": "D:\\ĐỒ ÁN TTDN\\test\\TTDN-Project\\QuanLyNganHang\\ET\\obj\\",
+        "outputPath": "D:\\ĐỒ ÁN TTDN\\fix giao dien report\\TTDN-Project\\QuanLyNganHang\\ET\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
