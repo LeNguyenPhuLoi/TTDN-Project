@@ -119,8 +119,10 @@
             // 
             // gb_DanhSachPhongBan
             // 
+            this.gb_DanhSachPhongBan.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.gb_DanhSachPhongBan.Controls.Add(this.crv_PhongBan);
-            this.gb_DanhSachPhongBan.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.gb_DanhSachPhongBan.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gb_DanhSachPhongBan.Location = new System.Drawing.Point(0, 84);
             this.gb_DanhSachPhongBan.Name = "gb_DanhSachPhongBan";
@@ -132,9 +134,11 @@
             // crv_PhongBan
             // 
             this.crv_PhongBan.ActiveViewIndex = 0;
+            this.crv_PhongBan.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.crv_PhongBan.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.crv_PhongBan.Cursor = System.Windows.Forms.Cursors.Default;
-            this.crv_PhongBan.Dock = System.Windows.Forms.DockStyle.Fill;
             this.crv_PhongBan.Location = new System.Drawing.Point(3, 30);
             this.crv_PhongBan.Margin = new System.Windows.Forms.Padding(5);
             this.crv_PhongBan.Name = "crv_PhongBan";
