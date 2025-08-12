@@ -189,6 +189,7 @@
             this.dgv_phongban.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_phongban.Location = new System.Drawing.Point(3, 27);
             this.dgv_phongban.Name = "dgv_phongban";
+            this.dgv_phongban.RowHeadersVisible = false;
             this.dgv_phongban.RowHeadersWidth = 51;
             this.dgv_phongban.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_phongban.Size = new System.Drawing.Size(1009, 303);

@@ -256,6 +256,7 @@
             this.dgv_vipham.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_vipham.Location = new System.Drawing.Point(6, 23);
             this.dgv_vipham.Name = "dgv_vipham";
+            this.dgv_vipham.RowHeadersVisible = false;
             this.dgv_vipham.RowHeadersWidth = 51;
             this.dgv_vipham.Size = new System.Drawing.Size(926, 440);
             this.dgv_vipham.TabIndex = 11;

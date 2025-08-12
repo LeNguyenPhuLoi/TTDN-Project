@@ -9,14 +9,17 @@
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="PhongBanDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_UserDSName="PhongBanDataSet" msprop:Generator_DataSetName="PhongBanDataSet">
+  <xs:element name="PhongBanDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="PhongBanDataSet" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="PhongBanDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="PhongBan" msprop:Generator_RowEvHandlerName="PhongBanRowChangeEventHandler" msprop:Generator_RowDeletedName="PhongBanRowDeleted" msprop:Generator_RowDeletingName="PhongBanRowDeleting" msprop:Generator_RowEvArgName="PhongBanRowChangeEvent" msprop:Generator_TablePropName="PhongBan" msprop:Generator_RowChangedName="PhongBanRowChanged" msprop:Generator_RowChangingName="PhongBanRowChanging" msprop:Generator_TableClassName="PhongBanDataTable" msprop:Generator_RowClassName="PhongBanRow" msprop:Generator_TableVarName="tablePhongBan" msprop:Generator_UserTableName="PhongBan">
+        <xs:element name="PhongBan" msprop:Generator_RowClassName="PhongBanRow" msprop:Generator_RowEvHandlerName="PhongBanRowChangeEventHandler" msprop:Generator_RowDeletedName="PhongBanRowDeleted" msprop:Generator_RowDeletingName="PhongBanRowDeleting" msprop:Generator_RowEvArgName="PhongBanRowChangeEvent" msprop:Generator_TablePropName="PhongBan" msprop:Generator_RowChangedName="PhongBanRowChanged" msprop:Generator_UserTableName="PhongBan" msprop:Generator_RowChangingName="PhongBanRowChanging" msprop:Generator_TableClassName="PhongBanDataTable" msprop:Generator_TableVarName="tablePhongBan">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="MaPB" msprop:Generator_ColumnPropNameInRow="MaPB" msprop:Generator_ColumnPropNameInTable="MaPBColumn" msprop:Generator_ColumnVarNameInTable="columnMaPB" msprop:Generator_UserColumnName="MaPB" type="xs:string" minOccurs="0" />
-              <xs:element name="TenPB" msprop:Generator_ColumnPropNameInRow="TenPB" msprop:Generator_ColumnPropNameInTable="TenPBColumn" msprop:Generator_ColumnVarNameInTable="columnTenPB" msprop:Generator_UserColumnName="TenPB" type="xs:string" minOccurs="0" />
+              <xs:element name="MaPB" msprop:Generator_UserColumnName="MaPB" msprop:Generator_ColumnPropNameInTable="MaPBColumn" msprop:Generator_ColumnPropNameInRow="MaPB" msprop:Generator_ColumnVarNameInTable="columnMaPB" type="xs:string" minOccurs="0" />
+              <xs:element name="TenPB" msprop:Generator_UserColumnName="TenPB" msprop:Generator_ColumnPropNameInTable="TenPBColumn" msprop:Generator_ColumnPropNameInRow="TenPB" msprop:Generator_ColumnVarNameInTable="columnTenPB" type="xs:string" minOccurs="0" />
+              <xs:element name="MaNV" msprop:Generator_ColumnPropNameInRow="MaNV" msprop:Generator_ColumnPropNameInTable="MaNVColumn" msprop:Generator_ColumnVarNameInTable="columnMaNV" msprop:Generator_UserColumnName="MaNV" type="xs:string" minOccurs="0" />
+              <xs:element name="TenNV" msprop:Generator_ColumnPropNameInRow="TenNV" msprop:Generator_ColumnPropNameInTable="TenNVColumn" msprop:Generator_ColumnVarNameInTable="columnTenNV" msprop:Generator_UserColumnName="TenNV" type="xs:string" minOccurs="0" />
+              <xs:element name="Sdt" msprop:Generator_ColumnPropNameInRow="Sdt" msprop:Generator_ColumnPropNameInTable="SdtColumn" msprop:Generator_ColumnVarNameInTable="columnSdt" msprop:Generator_UserColumnName="Sdt" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

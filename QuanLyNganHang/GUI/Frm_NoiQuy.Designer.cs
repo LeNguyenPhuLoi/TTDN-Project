@@ -236,10 +236,11 @@
             this.dgv_noiquy.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_noiquy.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgv_noiquy.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_noiquy.Location = new System.Drawing.Point(3, 18);
+            this.dgv_noiquy.Location = new System.Drawing.Point(3, 27);
             this.dgv_noiquy.Name = "dgv_noiquy";
+            this.dgv_noiquy.RowHeadersVisible = false;
             this.dgv_noiquy.RowHeadersWidth = 51;
-            this.dgv_noiquy.Size = new System.Drawing.Size(975, 316);
+            this.dgv_noiquy.Size = new System.Drawing.Size(975, 307);
             this.dgv_noiquy.TabIndex = 11;
             this.dgv_noiquy.Click += new System.EventHandler(this.dgv_noiquy_Click);
             // 
