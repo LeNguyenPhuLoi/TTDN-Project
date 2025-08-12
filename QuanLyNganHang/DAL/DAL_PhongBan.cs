@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using ET;
@@ -23,11 +24,14 @@ namespace DAL
         public List<ET_ReportPhongBan> LoadDSPhongBan()
         {
             var fast = from pb in db.PHONGBANs
-                        select new ET_ReportPhongBan
+                       join nv in db.NHANVIENs on pb.MAPB equals nv.MAPB
+                       select new ET_ReportPhongBan
                         {
                             MaPB = pb.MAPB,
                             TenPB = pb.TENPB,
-
+                            MaNV = nv.MANV,
+                            TenNV = nv.TENNV,  
+                            Sdt = Convert.ToInt32(nv.SDT)
                         };
 
             return fast.ToList();
@@ -36,11 +40,15 @@ namespace DAL
         public List<ET_ReportPhongBan> TimRPPhongBanTheoMa(string ma)
         {
             var fast = from pb in db.PHONGBANs
-                        where pb.MAPB.ToString().Contains(ma)
+                       join nv in db.NHANVIENs on pb.MAPB equals nv.MAPB
+                       where pb.MAPB.ToString().Contains(ma)
                         select new ET_ReportPhongBan
                         {
                             MaPB = pb.MAPB,
                             TenPB = pb.TENPB,
+                            MaNV = nv.MANV,
+                            TenNV = nv.TENNV,
+                            Sdt = Convert.ToInt32(nv.SDT)
                         };
 
             return fast.ToList();
@@ -49,11 +57,15 @@ namespace DAL
         public List<ET_ReportPhongBan> TimRPPhongBanTheoTen(string ten)
         {
             var fast = from pb in db.PHONGBANs
-                        where pb.TENPB.Contains(ten)
+                       join nv in db.NHANVIENs on pb.MAPB equals nv.MAPB
+                       where pb.TENPB.Contains(ten)
                         select new ET_ReportPhongBan
                         {
                             MaPB = pb.MAPB,
                             TenPB = pb.TENPB,
+                            MaNV = nv.MANV,
+                            TenNV = nv.TENNV,
+                            Sdt = Convert.ToInt32(nv.SDT)
                         };
 
             return fast.ToList();

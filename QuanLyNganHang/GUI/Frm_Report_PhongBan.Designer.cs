@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.gb_TimKiem = new System.Windows.Forms.GroupBox();
+            this.cbo_tenpb = new System.Windows.Forms.ComboBox();
             this.btn_LamMoi = new System.Windows.Forms.Button();
             this.btn_Tim = new System.Windows.Forms.Button();
             this.txt_GiaTri = new System.Windows.Forms.TextBox();
@@ -44,12 +45,13 @@
             // 
             // gb_TimKiem
             // 
+            this.gb_TimKiem.Controls.Add(this.txt_GiaTri);
             this.gb_TimKiem.Controls.Add(this.btn_LamMoi);
             this.gb_TimKiem.Controls.Add(this.btn_Tim);
-            this.gb_TimKiem.Controls.Add(this.txt_GiaTri);
             this.gb_TimKiem.Controls.Add(this.label11);
             this.gb_TimKiem.Controls.Add(this.label12);
             this.gb_TimKiem.Controls.Add(this.cbo_PhuongThuc);
+            this.gb_TimKiem.Controls.Add(this.cbo_tenpb);
             this.gb_TimKiem.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gb_TimKiem.Location = new System.Drawing.Point(3, 5);
             this.gb_TimKiem.Margin = new System.Windows.Forms.Padding(5);
@@ -59,6 +61,15 @@
             this.gb_TimKiem.TabIndex = 3;
             this.gb_TimKiem.TabStop = false;
             this.gb_TimKiem.Text = "Tìm Kiếm";
+            // 
+            // cbo_tenpb
+            // 
+            this.cbo_tenpb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbo_tenpb.FormattingEnabled = true;
+            this.cbo_tenpb.Location = new System.Drawing.Point(604, 22);
+            this.cbo_tenpb.Name = "cbo_tenpb";
+            this.cbo_tenpb.Size = new System.Drawing.Size(315, 34);
+            this.cbo_tenpb.TabIndex = 26;
             // 
             // btn_LamMoi
             // 
@@ -82,7 +93,7 @@
             // 
             // txt_GiaTri
             // 
-            this.txt_GiaTri.Location = new System.Drawing.Point(603, 25);
+            this.txt_GiaTri.Location = new System.Drawing.Point(604, 22);
             this.txt_GiaTri.Name = "txt_GiaTri";
             this.txt_GiaTri.Size = new System.Drawing.Size(315, 35);
             this.txt_GiaTri.TabIndex = 22;
@@ -116,6 +127,7 @@
             this.cbo_PhuongThuc.Name = "cbo_PhuongThuc";
             this.cbo_PhuongThuc.Size = new System.Drawing.Size(272, 34);
             this.cbo_PhuongThuc.TabIndex = 23;
+            this.cbo_PhuongThuc.TextChanged += new System.EventHandler(this.cbo_PhuongThuc_TextChanged);
             // 
             // gb_DanhSachPhongBan
             // 
@@ -145,6 +157,7 @@
             this.crv_PhongBan.ReportSource = this.Report_PhongBan1;
             this.crv_PhongBan.Size = new System.Drawing.Size(1221, 653);
             this.crv_PhongBan.TabIndex = 0;
+            this.crv_PhongBan.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
             this.crv_PhongBan.ToolPanelWidth = 333;
             // 
             // Frm_Report_PhongBan
@@ -176,5 +189,6 @@
         private System.Windows.Forms.GroupBox gb_DanhSachPhongBan;
         private CrystalDecisions.Windows.Forms.CrystalReportViewer crv_PhongBan;
         private Report.Report_PhongBan Report_PhongBan1;
+        private System.Windows.Forms.ComboBox cbo_tenpb;
     }
 }

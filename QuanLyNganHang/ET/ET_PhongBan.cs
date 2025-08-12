@@ -23,6 +23,12 @@ namespace ET
             public int MaPB { get; set; }
             public string TenPB { get; set; }
 
+            public string TenNV { get; set; }
+
+            public string MaNV { get; set; }
+
+            public int Sdt { get; set; } 
+
         }
     }
 }

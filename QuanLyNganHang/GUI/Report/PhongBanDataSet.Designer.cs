@@ -283,6 +283,12 @@ namespace GUI.Report {
             
             private global::System.Data.DataColumn columnTenPB;
             
+            private global::System.Data.DataColumn columnMaNV;
+            
+            private global::System.Data.DataColumn columnTenNV;
+            
+            private global::System.Data.DataColumn columnSdt;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public PhongBanDataTable() {
@@ -334,6 +340,30 @@ namespace GUI.Report {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn MaNVColumn {
+                get {
+                    return this.columnMaNV;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn TenNVColumn {
+                get {
+                    return this.columnTenNV;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn SdtColumn {
+                get {
+                    return this.columnSdt;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -369,11 +399,14 @@ namespace GUI.Report {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public PhongBanRow AddPhongBanRow(string MaPB, string TenPB) {
+            public PhongBanRow AddPhongBanRow(string MaPB, string TenPB, string MaNV, string TenNV, string Sdt) {
                 PhongBanRow rowPhongBanRow = ((PhongBanRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         MaPB,
-                        TenPB};
+                        TenPB,
+                        MaNV,
+                        TenNV,
+                        Sdt};
                 rowPhongBanRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowPhongBanRow);
                 return rowPhongBanRow;
@@ -398,6 +431,9 @@ namespace GUI.Report {
             internal void InitVars() {
                 this.columnMaPB = base.Columns["MaPB"];
                 this.columnTenPB = base.Columns["TenPB"];
+                this.columnMaNV = base.Columns["MaNV"];
+                this.columnTenNV = base.Columns["TenNV"];
+                this.columnSdt = base.Columns["Sdt"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -407,6 +443,12 @@ namespace GUI.Report {
                 base.Columns.Add(this.columnMaPB);
                 this.columnTenPB = new global::System.Data.DataColumn("TenPB", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTenPB);
+                this.columnMaNV = new global::System.Data.DataColumn("MaNV", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMaNV);
+                this.columnTenNV = new global::System.Data.DataColumn("TenNV", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTenNV);
+                this.columnSdt = new global::System.Data.DataColumn("Sdt", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSdt);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -581,6 +623,54 @@ namespace GUI.Report {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string MaNV {
+                get {
+                    try {
+                        return ((string)(this[this.tablePhongBan.MaNVColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'MaNV\' in table \'PhongBan\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablePhongBan.MaNVColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string TenNV {
+                get {
+                    try {
+                        return ((string)(this[this.tablePhongBan.TenNVColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TenNV\' in table \'PhongBan\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablePhongBan.TenNVColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Sdt {
+                get {
+                    try {
+                        return ((string)(this[this.tablePhongBan.SdtColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Sdt\' in table \'PhongBan\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablePhongBan.SdtColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsMaPBNull() {
                 return this.IsNull(this.tablePhongBan.MaPBColumn);
             }
@@ -601,6 +691,42 @@ namespace GUI.Report {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetTenPBNull() {
                 this[this.tablePhongBan.TenPBColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsMaNVNull() {
+                return this.IsNull(this.tablePhongBan.MaNVColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetMaNVNull() {
+                this[this.tablePhongBan.MaNVColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsTenNVNull() {
+                return this.IsNull(this.tablePhongBan.TenNVColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetTenNVNull() {
+                this[this.tablePhongBan.TenNVColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsSdtNull() {
+                return this.IsNull(this.tablePhongBan.SdtColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetSdtNull() {
+                this[this.tablePhongBan.SdtColumn] = global::System.Convert.DBNull;
             }
         }
         

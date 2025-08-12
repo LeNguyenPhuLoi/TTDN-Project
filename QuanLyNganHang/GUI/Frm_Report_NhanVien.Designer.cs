@@ -146,6 +146,7 @@
             this.crv_NhanVien.ReportSource = this.Report_NhanVien1;
             this.crv_NhanVien.Size = new System.Drawing.Size(1248, 705);
             this.crv_NhanVien.TabIndex = 0;
+            this.crv_NhanVien.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
             this.crv_NhanVien.ToolPanelWidth = 333;
             // 
             // Frm_Report_NhanVien

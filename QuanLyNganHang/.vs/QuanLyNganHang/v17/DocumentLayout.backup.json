@@ -1,13 +1,17 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\\u0110\u1ED2 \u00C1N TTDN\\fix giao dien report\\TTDN-Project\\QuanLyNganHang\\",
+  "WorkspaceRootPath": "D:\\\u0110\u1ED2 \u00C1N TTDN\\fix\\TTDN-Project\\QuanLyNganHang\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DD5CDC54-9399-46A4-B844-FB2507673A03}|GUI\\GUI.csproj|D:\\\u0110\u1ED2 \u00C1N TTDN\\fix giao dien report\\TTDN-Project\\QuanLyNganHang\\gui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{DD5CDC54-9399-46A4-B844-FB2507673A03}|GUI\\GUI.csproj|d:\\\u0111\u1ED3 \u00E1n ttdn\\fix\\ttdn-project\\quanlynganhang\\gui\\frm_report_phongban.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{DD5CDC54-9399-46A4-B844-FB2507673A03}|GUI\\GUI.csproj|solutionrelative:gui\\frm_report_phongban.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD5CDC54-9399-46A4-B844-FB2507673A03}|GUI\\GUI.csproj|d:\\\u0111\u1ED3 \u00E1n ttdn\\fix\\ttdn-project\\quanlynganhang\\gui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DD5CDC54-9399-46A4-B844-FB2507673A03}|GUI\\GUI.csproj|solutionrelative:gui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{28FFE92F-BC73-4740-9150-176B686649BD}|DAL\\DAL.csproj|D:\\\u0110\u1ED2 \u00C1N TTDN\\fix giao dien report\\TTDN-Project\\QuanLyNganHang\\dal\\autoconnect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{28FFE92F-BC73-4740-9150-176B686649BD}|DAL\\DAL.csproj|D:\\\u0110\u1ED2 \u00C1N TTDN\\fix\\TTDN-Project\\QuanLyNganHang\\dal\\autoconnect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{28FFE92F-BC73-4740-9150-176B686649BD}|DAL\\DAL.csproj|solutionrelative:dal\\autoconnect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -18,17 +22,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
-              "DocumentMoniker": "D:\\\u0110\u1ED2 \u00C1N TTDN\\fix giao dien report\\TTDN-Project\\QuanLyNganHang\\GUI\\Program.cs",
+              "DocumentMoniker": "D:\\\u0110\u1ED2 \u00C1N TTDN\\fix\\TTDN-Project\\QuanLyNganHang\\GUI\\Program.cs",
               "RelativeDocumentMoniker": "GUI\\Program.cs",
-              "ToolTip": "D:\\\u0110\u1ED2 \u00C1N TTDN\\fix giao dien report\\TTDN-Project\\QuanLyNganHang\\GUI\\Program.cs",
+              "ToolTip": "D:\\\u0110\u1ED2 \u00C1N TTDN\\fix\\TTDN-Project\\QuanLyNganHang\\GUI\\Program.cs",
               "RelativeToolTip": "GUI\\Program.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAAwB4AAAAWAAAAAAAAAA==",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAwB4AAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-15T03:04:40.929Z",
               "IsPinned": true,
@@ -36,11 +40,23 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
+              "Title": "Frm_Report_PhongBan.cs [Design]",
+              "DocumentMoniker": "D:\\\u0110\u1ED2 \u00C1N TTDN\\fix\\TTDN-Project\\QuanLyNganHang\\GUI\\Frm_Report_PhongBan.cs",
+              "RelativeDocumentMoniker": "GUI\\Frm_Report_PhongBan.cs",
+              "ToolTip": "D:\\\u0110\u1ED2 \u00C1N TTDN\\fix\\TTDN-Project\\QuanLyNganHang\\GUI\\Frm_Report_PhongBan.cs [Design]",
+              "RelativeToolTip": "GUI\\Frm_Report_PhongBan.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-12T02:49:18.749Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "AutoConnect.cs",
-              "DocumentMoniker": "D:\\\u0110\u1ED2 \u00C1N TTDN\\fix giao dien report\\TTDN-Project\\QuanLyNganHang\\DAL\\AutoConnect.cs",
+              "DocumentMoniker": "D:\\\u0110\u1ED2 \u00C1N TTDN\\fix\\TTDN-Project\\QuanLyNganHang\\DAL\\AutoConnect.cs",
               "RelativeDocumentMoniker": "DAL\\AutoConnect.cs",
-              "ToolTip": "D:\\\u0110\u1ED2 \u00C1N TTDN\\fix giao dien report\\TTDN-Project\\QuanLyNganHang\\DAL\\AutoConnect.cs",
+              "ToolTip": "D:\\\u0110\u1ED2 \u00C1N TTDN\\fix\\TTDN-Project\\QuanLyNganHang\\DAL\\AutoConnect.cs",
               "RelativeToolTip": "DAL\\AutoConnect.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAABDAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",

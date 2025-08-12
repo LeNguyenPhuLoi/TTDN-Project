@@ -199,6 +199,7 @@
             this.dgv_chinhanh.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_chinhanh.Location = new System.Drawing.Point(6, 21);
             this.dgv_chinhanh.Name = "dgv_chinhanh";
+            this.dgv_chinhanh.RowHeadersVisible = false;
             this.dgv_chinhanh.RowHeadersWidth = 51;
             this.dgv_chinhanh.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_chinhanh.Size = new System.Drawing.Size(959, 310);

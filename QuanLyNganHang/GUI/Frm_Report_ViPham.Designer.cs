@@ -147,6 +147,7 @@
             this.crv_ViPham.ReportSource = this.Report_ViPham1;
             this.crv_ViPham.Size = new System.Drawing.Size(1226, 653);
             this.crv_ViPham.TabIndex = 0;
+            this.crv_ViPham.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
             this.crv_ViPham.ToolPanelWidth = 333;
             // 
             // Frm_Report_ViPham
