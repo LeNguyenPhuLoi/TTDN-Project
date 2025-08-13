@@ -240,6 +240,7 @@ namespace DAL
         public bool ThemTaiKhoan(ET_TaiKhoan et)
         {
             bool flag = false;
+            db = new QLNHDataContext(conn.GetConnection());
             try
             {
                 var exist = db.TAIKHOANs.Any(x => x.MATK == et.MaTK);
@@ -273,6 +274,7 @@ namespace DAL
         public bool SuaTaiKhoan(ET_TaiKhoan et)
         {
             bool flag = false;
+            db = new QLNHDataContext(conn.GetConnection());
             try
             {
                 var update = db.TAIKHOANs.SingleOrDefault(x => x.MATK == et.MaTK);
@@ -302,6 +304,7 @@ namespace DAL
         public bool XoaTaiKhoan(ET_TaiKhoan et)
         {
             bool flag = false;
+            db = new QLNHDataContext(conn.GetConnection());
             try
             {
                 var tk = db.TAIKHOANs.SingleOrDefault(x => x.MATK == et.MaTK);
