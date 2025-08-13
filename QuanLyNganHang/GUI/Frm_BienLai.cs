@@ -24,7 +24,7 @@ namespace GUI
 
         private void Frm_BienLai_Load(object sender, EventArgs e)
         {
-            this.MinimumSize = new System.Drawing.Size(1600, 900);
+            this.MinimumSize = new System.Drawing.Size(1400, 900);
             SetSize();
             Clear();
             dgv_BienLai.Columns["KHACHHANG"].Visible = false;
