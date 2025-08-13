@@ -341,6 +341,7 @@ namespace DAL
         public bool ThemBienLai(ET_BienLai et)
         {
             bool flag = false;
+            db = new QLNHDataContext(conn.GetConnection());
             try
             {
                 var exist = db.BIENLAIs.Any(x => x.MABL == et.MaBL);
@@ -376,6 +377,7 @@ namespace DAL
         public bool SuaBienLai(ET_BienLai et)
         {
             bool flag = false;
+            db = new QLNHDataContext(conn.GetConnection());
             try
             {
                 var update = db.BIENLAIs.SingleOrDefault(x => x.MABL == et.MaBL);
@@ -408,6 +410,7 @@ namespace DAL
         public bool XoaBienLai(ET_BienLai et)
         {
             bool flag = false;
+            db = new QLNHDataContext(conn.GetConnection());
             try
             {
                 var bl = db.BIENLAIs.SingleOrDefault(x => x.MABL == et.MaBL);

@@ -167,6 +167,7 @@ namespace DAL
         public bool ThemKhachHang(ET_KhachHang et)
         {
             bool flag = false;
+            db = new QLNHDataContext(conn.GetConnection());
             try
             {
                 var exist = db.KHACHHANGs.Any(kh => kh.MAKH == et.MaKH);
@@ -202,6 +203,7 @@ namespace DAL
         public bool SuaThongTinKhachHang(ET_KhachHang et)
         {
             bool flag = false;
+            db = new QLNHDataContext(conn.GetConnection());
             try
             {
                 var update = db.KHACHHANGs.SingleOrDefault(kh => kh.MAKH == et.MaKH);
@@ -233,6 +235,7 @@ namespace DAL
         public bool XoaKhachHang(ET_KhachHang et)
         {
             bool flag = false;
+            db = new QLNHDataContext(conn.GetConnection());
             try
             {
                 var kh = db.KHACHHANGs.SingleOrDefault(n => n.MAKH == et.MaKH);

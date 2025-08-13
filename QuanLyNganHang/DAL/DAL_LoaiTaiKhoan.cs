@@ -102,6 +102,7 @@ namespace DAL
         public bool ThemLoaiTaiKhoan(ET_LoaiTaiKhoan et)
         {
             bool flag = false;
+            db = new QLNHDataContext(conn.GetConnection());
             try
             {
                 var exist = db.LOAITAIKHOANs.Any(x => x.MALOAITK == et.MaLoaiTK);
@@ -129,6 +130,7 @@ namespace DAL
         public bool SuaThongTinLoaiTaiKhoan(ET_LoaiTaiKhoan et)
         {
             bool flag = false;
+            db = new QLNHDataContext(conn.GetConnection());
             try
             {
                 var update = db.LOAITAIKHOANs.SingleOrDefault(x => x.MALOAITK == et.MaLoaiTK);
@@ -152,6 +154,7 @@ namespace DAL
         public bool XoaLoaiTaiKhoan(ET_LoaiTaiKhoan et)
         {
             bool flag = false;
+            db = new QLNHDataContext(conn.GetConnection());
             try
             {
                 var ltk = db.LOAITAIKHOANs.SingleOrDefault(x => x.MALOAITK == et.MaLoaiTK);

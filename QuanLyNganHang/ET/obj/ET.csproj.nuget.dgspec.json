@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\TTDN-Project\\QuanLyNganHang\\ET\\ET.csproj": {}
+    "E:\\TTDN Project\\Tháng 8\\13-08-2025\\TTDN-Project\\QuanLyNganHang\\ET\\ET.csproj": {}
   },
   "projects": {
-    "D:\\TTDN-Project\\QuanLyNganHang\\ET\\ET.csproj": {
+    "E:\\TTDN Project\\Tháng 8\\13-08-2025\\TTDN-Project\\QuanLyNganHang\\ET\\ET.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\TTDN-Project\\QuanLyNganHang\\ET\\ET.csproj",
+        "projectUniqueName": "E:\\TTDN Project\\Tháng 8\\13-08-2025\\TTDN-Project\\QuanLyNganHang\\ET\\ET.csproj",
         "projectName": "ET",
-        "projectPath": "D:\\TTDN-Project\\QuanLyNganHang\\ET\\ET.csproj",
-        "packagesPath": "C:\\Users\\leloi\\.nuget\\packages\\",
-        "outputPath": "D:\\TTDN-Project\\QuanLyNganHang\\ET\\obj\\",
+        "projectPath": "E:\\TTDN Project\\Tháng 8\\13-08-2025\\TTDN-Project\\QuanLyNganHang\\ET\\ET.csproj",
+        "packagesPath": "C:\\Users\\veros\\.nuget\\packages\\",
+        "outputPath": "E:\\TTDN Project\\Tháng 8\\13-08-2025\\TTDN-Project\\QuanLyNganHang\\ET\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\leloi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\veros\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -68,7 +68,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     }

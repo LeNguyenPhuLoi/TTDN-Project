@@ -229,6 +229,7 @@ namespace DAL
         public bool ThemGiaoDich(ET_GiaoDich et)
         {
             bool flag = false;
+            db = new QLNHDataContext(conn.GetConnection());
             try
             {
                 var exist = db.GIAODICHes.Any(x => x.MAGD == et.LoaiGD);
@@ -261,6 +262,7 @@ namespace DAL
         public bool SuaGiaoDich(ET_GiaoDich et)
         {
             bool flag = false;
+            db = new QLNHDataContext(conn.GetConnection());
             try
             {
                 var update = db.GIAODICHes.SingleOrDefault(x => x.MAGD == et.MaGD);
@@ -289,6 +291,7 @@ namespace DAL
         public bool XoaGiaoDich(ET_GiaoDich et)
         {
             bool flag = false;
+            db = new QLNHDataContext(conn.GetConnection());
             try
             {
                 var gd = db.GIAODICHes.SingleOrDefault(x => x.MAGD == et.MaGD);

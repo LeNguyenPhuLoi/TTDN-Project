@@ -137,6 +137,7 @@ namespace DAL
         public bool ThemLoaiTien(ET_LoaiTien et)
         {
             bool flag = false;
+            db = new QLNHDataContext(conn.GetConnection());
             try
             {
                 var exist = db.LOAITIENs.Any(x => x.MALOAITIEN == et.MaLoaiTien);
@@ -167,6 +168,7 @@ namespace DAL
         public bool SuaThongTinLoaiTien(ET_LoaiTien et)
         {
             bool flag = false;
+            db = new QLNHDataContext(conn.GetConnection());
             try
             {
                 var update = db.LOAITIENs.SingleOrDefault(x => x.MALOAITIEN == et.MaLoaiTien);
@@ -193,6 +195,7 @@ namespace DAL
         public bool XoaLoaiTien(ET_LoaiTien et)
         {
             bool flag = false;
+            db = new QLNHDataContext(conn.GetConnection());
             try
             {
                 var lt = db.LOAITIENs.SingleOrDefault(x => x.MALOAITIEN == et.MaLoaiTien);
