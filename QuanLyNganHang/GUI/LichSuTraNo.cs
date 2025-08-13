@@ -132,9 +132,10 @@ namespace GUI
                     {
                         MessageBox.Show(error, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
-                    dgvMaVay.DataSource = bs.LoadDSKhoanVay();
-                    dgvLichSu.DataSource = bs.LoadDSLichSuTraNo();
+                    
                 }
+                dgvMaVay.DataSource = bs.LoadDSKhoanVay();
+                dgvLichSu.DataSource = bs.LoadDSLichSuTraNo();
             }
             catch (Exception ex)
             {
