@@ -131,8 +131,14 @@ namespace DAL
         {
             error = string.Empty;
             bool flag = false;
+            db = new QLNHDataContext(conn.GetConnection());
             try
             {
+                if(et.SOTIENVAY < 0)
+                {
+                    error = "Số tiền vay không hợp lệ.";
+                    return flag;
+                }
                 var exists = db.KHOANVAYs.Any(kv => kv.MAVAY == et.MAVAY);
                 if (!exists)
                 {
@@ -172,8 +178,14 @@ namespace DAL
         {
             error = string.Empty;
             bool flag = false;
+            db = new QLNHDataContext(conn.GetConnection());
             try
             {
+                if (et.SOTIENVAY < 0)
+                {
+                    error = "Số tiền vay không hợp lệ.";
+                    return flag;
+                }
                 var kv = db.KHOANVAYs.Single(k => k.MAVAY == et.MAVAY);
                 if (kv != null)
                 {
@@ -208,6 +220,7 @@ namespace DAL
         {
             error = string.Empty;
             bool flag = false;
+            db = new QLNHDataContext(conn.GetConnection());
             try
             {
                 var xoa = from kv in db.KHOANVAYs

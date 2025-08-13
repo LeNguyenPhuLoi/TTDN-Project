@@ -18,6 +18,11 @@ namespace BUS
             return adkm.LoadKhuyenMai();
         }
 
+        public IQueryable LoadDSTKtheoMa(string ma)
+        {
+            return adkm.LoadDSTKtheoMa(ma);
+        }
+
         //Tìm kiếm áp dụng khuyến mãi
         public IQueryable TimKiemApDungKhuyenMai(string keyword)
         {
