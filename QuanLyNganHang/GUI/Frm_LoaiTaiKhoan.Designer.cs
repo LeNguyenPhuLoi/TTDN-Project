@@ -379,6 +379,7 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgv_LoaiTaiKhoan.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgv_LoaiTaiKhoan.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_LoaiTaiKhoan.EnableHeadersVisualStyles = false;
             this.dgv_LoaiTaiKhoan.Location = new System.Drawing.Point(0, 0);
             this.dgv_LoaiTaiKhoan.MultiSelect = false;
@@ -394,7 +395,7 @@
             this.dgv_LoaiTaiKhoan.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgv_LoaiTaiKhoan.RowHeadersWidth = 51;
             this.dgv_LoaiTaiKhoan.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_LoaiTaiKhoan.Size = new System.Drawing.Size(536, 309);
+            this.dgv_LoaiTaiKhoan.Size = new System.Drawing.Size(716, 309);
             this.dgv_LoaiTaiKhoan.TabIndex = 12;
             this.dgv_LoaiTaiKhoan.Click += new System.EventHandler(this.dgv_LoaiTaiKhoan_Click);
             // 
