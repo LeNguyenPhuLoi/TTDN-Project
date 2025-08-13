@@ -33,6 +33,14 @@ namespace DAL
         }
 
         // Lấy danh sách tài khoản
+        public IQueryable LoadDSTKtheoMa(string ma)
+        {
+            IQueryable ds = from tk in db.TAIKHOANs
+                            where tk.MAKH == ma
+                            select tk.MATK;
+            return ds;
+        }
+
         public IQueryable LoadDSKM()
         {
             IQueryable ds = from tk in db.KHUYENMAIs
@@ -47,6 +55,8 @@ namespace DAL
                             };
             return ds;
         }
+
+
 
         // Lấy danh sách áp dụng khuyến mãi
         public IQueryable LoadKhuyenMai()
@@ -66,16 +76,9 @@ namespace DAL
         {
             error = string.Empty;
             bool flag = false;
+            db = new QLNHDataContext(conn.GetConnection());
             try
-            {
-                //ktra ap dung khuyến mãi có trống ko
-                var checks = db.APDUNGKHUYENMAIs.FirstOrDefault(adkm => adkm.MAKM == et.MAKM && adkm.MAKH == et.MAKH);
-                if (checks == null)
-                {
-                    error = "Vui lòng không để trống";
-                    return false;
-                }
-
+            { 
                 var exists = db.APDUNGKHUYENMAIs.Any(adkm => adkm.MAKM == et.MAKM && adkm.MAKH == et.MAKH);
                 if (!exists)
                 {
@@ -109,6 +112,7 @@ namespace DAL
         {
             error = string.Empty;
             bool flag = false;
+            db = new QLNHDataContext(conn.GetConnection());
             try
             {
                 var km = db.APDUNGKHUYENMAIs.FirstOrDefault(k => k.MAKM == et.MAKM && k.MAKH == et.MAKH);
@@ -142,6 +146,7 @@ namespace DAL
         {
             error = string.Empty;
             bool flag = false;
+            db = new QLNHDataContext(conn.GetConnection());
             try
             {
                 var xoa = db.APDUNGKHUYENMAIs.FirstOrDefault(c => c.MAKH == et.MAKH && c.MAKM == et.MAKM);

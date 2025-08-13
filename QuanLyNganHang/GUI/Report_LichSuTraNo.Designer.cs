@@ -48,7 +48,7 @@
             this.btnNew.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNew.Location = new System.Drawing.Point(820, 24);
             this.btnNew.Name = "btnNew";
-            this.btnNew.Size = new System.Drawing.Size(95, 40);
+            this.btnNew.Size = new System.Drawing.Size(127, 40);
             this.btnNew.TabIndex = 37;
             this.btnNew.Text = "Làm mới";
             this.btnNew.UseVisualStyleBackColor = false;

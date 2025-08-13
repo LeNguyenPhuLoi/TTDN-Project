@@ -86,7 +86,7 @@
             this.txtMaLaiSuat.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMaLaiSuat.Location = new System.Drawing.Point(203, 120);
             this.txtMaLaiSuat.Name = "txtMaLaiSuat";
-            this.txtMaLaiSuat.Size = new System.Drawing.Size(365, 30);
+            this.txtMaLaiSuat.Size = new System.Drawing.Size(307, 30);
             this.txtMaLaiSuat.TabIndex = 18;
             this.txtMaLaiSuat.TextChanged += new System.EventHandler(this.txtMaLaiSuat_TextChanged);
             // 
@@ -399,6 +399,7 @@
             this.txtSoTienVay.Name = "txtSoTienVay";
             this.txtSoTienVay.Size = new System.Drawing.Size(328, 30);
             this.txtSoTienVay.TabIndex = 31;
+            this.txtSoTienVay.TextChanged += new System.EventHandler(this.txtSoTienVay_TextChanged);
             this.txtSoTienVay.Leave += new System.EventHandler(this.txtSoTienVay_Leave);
             // 
             // label2

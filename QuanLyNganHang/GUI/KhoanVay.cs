@@ -308,10 +308,7 @@ namespace GUI
             }
         }
 
-        private void txtSoTienVay_TextChanged(object sender, EventArgs e)
-        {
-            TinhTienKhoanVay();
-        }
+        
 
         private void txtMaLaiSuat_TextChanged(object sender, EventArgs e)
         {
@@ -372,6 +369,11 @@ namespace GUI
                 errorProvider1.SetError(txtSoTienVay, ""); // Xóa icon lỗi
                 txtSoTienVay.BackColor = Color.White; // Đúng thì trả về màu bình thường
             }
+        }
+
+        private void txtSoTienVay_TextChanged(object sender, EventArgs e)
+        {
+            TinhTienKhoanVay();
         }
     }
 }

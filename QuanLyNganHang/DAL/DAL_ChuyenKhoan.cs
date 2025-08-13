@@ -48,6 +48,7 @@ namespace DAL
         {
             error = string.Empty;
             bool flage = false;
+            db = new QLNHDataContext(conn.GetConnection());
             try
             {
                 // Kiểm tra tài khoản gửi có tồn tại
@@ -63,6 +64,12 @@ namespace DAL
                 if ((taiKhoanGui.SODU ?? 0) < et.SOTIEN)
                 {
                     error = "Tài khoản gửi không đủ tiền.";
+                    return false;
+                }
+
+                if(et.SOTIEN < 0)
+                {
+                    error = "Số Tiền không hợp lệ.";
                     return false;
                 }
 
@@ -87,6 +94,11 @@ namespace DAL
 
                     // Cộng tiền tài khoản nhận nếu tồn tại
                     var taiKhoanNhan = db.TAIKHOANs.FirstOrDefault(tk => tk.MATK == et.MATKNHAN);
+                    if(taiKhoanGui == taiKhoanNhan)
+                    {
+                        error = "Tài Khoản nhận không được trùng với tài khoản gửi.";
+                        return false;
+                    }
                     if (taiKhoanNhan != null)
                     {
                         taiKhoanNhan.SODU = (taiKhoanNhan.SODU ?? 0) + (decimal)et.SOTIEN;
@@ -113,13 +125,26 @@ namespace DAL
         {
             error = string.Empty;
             bool flag = false;
-
+            db = new QLNHDataContext(conn.GetConnection());
             try
             {
                 var ck = db.CHUYENKHOANs.FirstOrDefault(n => n.MACK == et.MACK);
                 if (ck == null)
                 {
                     error = "Không tìm thấy giao dịch chuyển khoản.";
+                    return false;
+                }
+
+                if (et.SOTIEN < 0)
+                {
+                    error = "Số Tiền không hợp lệ.";
+                    return false;
+                }
+
+                // 🔹 Kiểm tra tài khoản gửi và nhận có trùng nhau không
+                if (et.MATKGUI == et.MATKNHAN)
+                {
+                    error = "Tài khoản nhận không được trùng với tài khoản gửi.";
                     return false;
                 }
 
@@ -179,6 +204,7 @@ namespace DAL
         {
             error = "";
             bool flag = false;
+            db = new QLNHDataContext(conn.GetConnection());
             try
             {
                 var ck = db.CHUYENKHOANs.FirstOrDefault(c => c.MACK == et.MACK);

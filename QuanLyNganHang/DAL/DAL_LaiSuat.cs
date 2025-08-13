@@ -37,6 +37,7 @@ namespace DAL
         {
             error = string.Empty;
             bool flag = false;
+            db = new QLNHDataContext(conn.GetConnection());
             try
             {
                 var exists = db.LAISUATs.Any(ls => ls.MALAISUAT == et.MALAISUAT);
@@ -72,6 +73,7 @@ namespace DAL
         {
             error = string.Empty;
             bool flag = false;
+            db = new QLNHDataContext(conn.GetConnection());
             try
             {
                 var ls = db.LAISUATs.Single(l => l.MALAISUAT == et.MALAISUAT);
@@ -102,6 +104,7 @@ namespace DAL
         {
             error = string.Empty;
             bool flag = false;
+            db = new QLNHDataContext(conn.GetConnection());
             try
             {
                 var xoa = from ls in db.LAISUATs

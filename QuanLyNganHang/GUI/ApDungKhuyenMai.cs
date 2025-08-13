@@ -63,9 +63,6 @@ namespace GUI
             dgvKH.DataSource = bs.LoadDSKhachHang();
             dgvKhuyenMai.DataSource = bs.LoadDSKM();
             
-            // Thêm dữ liệu vào các ComboBox
-            AddToCombo(bsck.LoadMaTK(), cboMaTK);
-            
             btnHoanTac.PerformClick();
         }
 
@@ -229,6 +226,24 @@ namespace GUI
         private void btnThoat_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private string maKHCu = "";
+        private void txtMaKH_TextChanged(object sender, EventArgs e)
+        {
+            string maKHmoi = txtMaKH.Text.Trim();
+
+            if (maKHmoi != maKHCu) // Nếu khác giá trị cũ
+            {
+                maKHCu = maKHmoi; // Cập nhật giá trị mới
+
+                // Xóa toàn bộ dữ liệu trong ComboBox
+                cboMaTK.Items.Clear();
+
+                // Nếu muốn load mới khi khác thì bật dòng dưới:
+                AddToCombo(bs.LoadDSTKtheoMa(maKHmoi), cboMaTK);
+            }
+
         }
     }
 }

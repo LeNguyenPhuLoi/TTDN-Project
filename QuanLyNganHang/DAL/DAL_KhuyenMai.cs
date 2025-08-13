@@ -54,6 +54,7 @@ namespace DAL
         {
             error = string.Empty;
             bool clone = false;
+            db = new QLNHDataContext(conn.GetConnection());
             try
             {
                 //ktra xem ma khuyến mãi đã tồn tại chưa
@@ -92,6 +93,7 @@ namespace DAL
         {
             error = string.Empty;
             bool clone = false;
+            db = new QLNHDataContext(conn.GetConnection());
             try
             {
 
@@ -125,6 +127,7 @@ namespace DAL
         {
             error = string.Empty;
             bool clone = false;
+            db = new QLNHDataContext(conn.GetConnection());
             try
             {
                 //kiểm tra xem mã khuyến mãi có tồn tại không

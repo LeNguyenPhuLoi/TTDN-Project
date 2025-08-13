@@ -394,7 +394,7 @@
             this.btnLS.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
             this.btnLS.Size = new System.Drawing.Size(268, 94);
             this.btnLS.TabIndex = 2;
-            this.btnLS.Text = "    -           Lịch Sử Trả Mợ";
+            this.btnLS.Text = "    -           Lịch Sử Trả Nợ";
             this.btnLS.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLS.UseVisualStyleBackColor = false;
             this.btnLS.Click += new System.EventHandler(this.btnLS_Click);
