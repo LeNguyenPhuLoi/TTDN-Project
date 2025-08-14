@@ -117,6 +117,7 @@ namespace DAL
         public bool ThemPB(ET_PhongBan et)
         {
             bool ss = false;
+            db = new QLNHDataContext(conn.GetConnection());
             try
             {
                 var amp = db.PHONGBANs.Any(pb => pb.MAPB == et.MaPB);
@@ -144,6 +145,7 @@ namespace DAL
         public bool SuaPB(ET_PhongBan et)
         {
             bool ss = false;
+            db = new QLNHDataContext(conn.GetConnection());
             try
             {
                 var change = db.PHONGBANs.SingleOrDefault(pb => pb.MAPB == et.MaPB);
@@ -168,6 +170,7 @@ namespace DAL
         public bool XoaPB(ET_PhongBan et)
         {
             bool ss = false;
+            db = new QLNHDataContext(conn.GetConnection());
             try
             {
                 var delete = db.PHONGBANs.SingleOrDefault(pb => pb.MAPB == et.MaPB);
