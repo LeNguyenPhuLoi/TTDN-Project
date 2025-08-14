@@ -142,7 +142,7 @@ namespace GUI
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Vui lòng chọn dòng cần cập nhật", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Vui lòng không để trống khi cập nhật", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

@@ -216,6 +216,34 @@ namespace DAL
                     return false;
                 }
 
+                var khoanVay = db.KHOANVAYs.FirstOrDefault(kv => kv.MAVAY == et.MAVAY);
+                decimal tongPhaiTra = khoanVay.TONGTIEN ?? 0;
+                decimal tienThang = khoanVay.TIENTHANG ?? 0;
+                decimal tongDaTra = db.LICHSUTRANOs
+                                      .Where(t => t.MAVAY == et.MAVAY)
+                                      .Sum(t => (decimal?)t.SOTIENTRA) ?? 0;
+
+                decimal soTienConLai = tongPhaiTra - tongDaTra;
+
+                if (et.SOTIENTRA <= 0)
+                {
+                    error = "Số tiền trả phải lớn hơn 0.";
+                    return false;
+                }
+
+                if (et.SOTIENTRA > soTienConLai)
+                {
+                    error = "Số tiền trả vượt quá số nợ còn lại.";
+                    return false;
+                }
+
+                // Cho phép trả >= 1 tháng tiền
+                if (et.SOTIENTRA < tienThang && et.SOTIENTRA < soTienConLai)
+                {
+                    error = $"Số tiền trả tối thiểu là {tienThang:N0} hoặc toàn bộ nợ còn lại.";
+                    return false;
+                }
+
                 // Cập nhật dữ liệu mới
                 ls.MAVAY = et.MAVAY;
                 ls.SOTIENTRA = et.SOTIENTRA;

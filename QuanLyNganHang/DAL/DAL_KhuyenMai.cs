@@ -57,6 +57,11 @@ namespace DAL
             db = new QLNHDataContext(conn.GetConnection());
             try
             {
+                if(et.TENKM == "")
+                {
+                    error = "Tên khuyến mãi không được để trống.";
+                    return false;
+                }
                 //ktra xem ma khuyến mãi đã tồn tại chưa
                 var space = db.KHUYENMAIs.Any(x => x.MAKM == et.MAKM);
                 if (!space)
@@ -96,7 +101,11 @@ namespace DAL
             db = new QLNHDataContext(conn.GetConnection());
             try
             {
-
+                if (et.TENKM == "")
+                {
+                    error = "Tên khuyến mãi không được để trống.";
+                    return false;
+                }
                 //kiểm tra xem mã khuyến mãi có tồn tại không
                 var capnhat = db.KHUYENMAIs.Single(km => km.MAKM == et.MAKM);
                 if (capnhat != null)

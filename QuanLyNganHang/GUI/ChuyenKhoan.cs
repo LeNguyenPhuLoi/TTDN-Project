@@ -111,7 +111,7 @@ namespace GUI
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Vui lòng chọn để sửa", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Vui lòng không để trống khi sửa", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
