@@ -40,6 +40,13 @@ namespace DAL
             db = new QLNHDataContext(conn.GetConnection());
             try
             {
+                var check = db.LAISUATs.Any(ls => ls.TENLOAIVAY == et.TENLAISUAT);
+                if (check)
+                {
+                    error = "Tên loại vay đã tồn tại.";
+                    return flag;
+                }
+
                 var exists = db.LAISUATs.Any(ls => ls.MALAISUAT == et.MALAISUAT);
                 if (!exists)
                 {
