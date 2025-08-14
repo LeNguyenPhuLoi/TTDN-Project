@@ -120,6 +120,10 @@ namespace DAL
             db = new QLNHDataContext(conn.GetConnection());
             try
             {
+                if(et.TenPB == "")
+                {
+                    return false;
+                }
                 var amp = db.PHONGBANs.Any(pb => pb.MAPB == et.MaPB);
                 if (!amp)
                 {
@@ -148,6 +152,10 @@ namespace DAL
             db = new QLNHDataContext(conn.GetConnection());
             try
             {
+                if (et.TenPB == "")
+                {
+                    return false;
+                }
                 var change = db.PHONGBANs.SingleOrDefault(pb => pb.MAPB == et.MaPB);
                 if (change != null)
                 {

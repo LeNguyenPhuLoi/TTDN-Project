@@ -56,6 +56,10 @@ namespace DAL
             db = new QLNHDataContext(conn.GetConnection());
             try
             {
+                if(et.TieuDe == "")
+                {
+                    return false;
+                }
                 var amp = db.NOIQUYs.Any(nq => nq.MANQ == et.MaNQ);
                 if (!amp)
                 {
@@ -87,6 +91,10 @@ namespace DAL
             db = new QLNHDataContext(conn.GetConnection());
             try
             {
+                if (et.TieuDe == "")
+                {
+                    return false;
+                }
                 var change = db.NOIQUYs.SingleOrDefault(nq => nq.MANQ == et.MaNQ);
                 if (change != null)
                 {

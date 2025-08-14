@@ -57,6 +57,10 @@ namespace DAL
             db = new QLNHDataContext(conn.GetConnection());
             try
             {
+                if(et.TenCN == "")
+                {
+                    return false;
+                }
                 var amp = db.CHINHANHs.Any(cn => cn.MACN == et.MaCN);
                 if (!amp)
                 {
@@ -87,6 +91,10 @@ namespace DAL
             db = new QLNHDataContext(conn.GetConnection());
             try
             {
+                if (et.TenCN == "")
+                {
+                    return false;
+                }
                 var change = db.CHINHANHs.SingleOrDefault(cn => cn.MACN == et.MaCN);
                 if (change != null)
                 {

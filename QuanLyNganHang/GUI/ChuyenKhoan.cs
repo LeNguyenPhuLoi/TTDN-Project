@@ -205,7 +205,7 @@ namespace GUI
             this.Close();
         }
 
-        private void txtSoTien_Leave(object sender, EventArgs e)
+        private void txtSoTien_TextChanged(object sender, EventArgs e)
         {
             // Nếu để trống thì không làm gì cả
             if (string.IsNullOrWhiteSpace(txtSoTien.Text))
@@ -214,7 +214,7 @@ namespace GUI
                 txtSoTien.BackColor = Color.White; // Trả lại màu bình thường
                 return;
             }
-            
+
             //Ktra nhập có đúng định dạng số không
             if (!decimal.TryParse(txtSoTien.Text, out _))
             {
