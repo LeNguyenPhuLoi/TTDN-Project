@@ -253,6 +253,7 @@ namespace DAL
         public bool ThemVP(ET_ViPham et)
         {
             bool ss = false;
+            db = new QLNHDataContext(conn.GetConnection());
             try
             {
                 var amp = db.VIPHAMs.Any(vp => vp.MAVP == et.MaVP);
@@ -286,6 +287,7 @@ namespace DAL
         public bool SuaVP(ET_ViPham et)
         {
             bool ss = false;
+            db = new QLNHDataContext(conn.GetConnection());
             try
             {
                 var change = db.VIPHAMs.SingleOrDefault(vp => vp.MAVP == et.MaVP);
@@ -316,6 +318,7 @@ namespace DAL
         public bool XoaVP(ET_ViPham et)
         {
             bool ss = false;
+            db = new QLNHDataContext(conn.GetConnection());
             try
             {
                 var delete = db.VIPHAMs.SingleOrDefault(vp => vp.MAVP == et.MaVP);

@@ -54,6 +54,7 @@ namespace DAL
         public bool ThemCN(ET_ChiNhanh et)
         {
             bool ss = false;
+            db = new QLNHDataContext(conn.GetConnection());
             try
             {
                 var amp = db.CHINHANHs.Any(cn => cn.MACN == et.MaCN);
@@ -83,6 +84,7 @@ namespace DAL
         public bool SuaCN(ET_ChiNhanh et)
         {
             bool ss = false;
+            db = new QLNHDataContext(conn.GetConnection());
             try
             {
                 var change = db.CHINHANHs.SingleOrDefault(cn => cn.MACN == et.MaCN);
@@ -109,6 +111,7 @@ namespace DAL
         public bool XoaCN(ET_ChiNhanh et)
         {
             bool ss = false;
+            db = new QLNHDataContext(conn.GetConnection());
             try
             {
                 var delete = db.CHINHANHs.SingleOrDefault(cn => cn.MACN == et.MaCN);

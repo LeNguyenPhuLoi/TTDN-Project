@@ -53,6 +53,7 @@ namespace DAL
         public bool ThemNQ(ET_NoiQuy et)
         {
             bool ss = false;
+            db = new QLNHDataContext(conn.GetConnection());
             try
             {
                 var amp = db.NOIQUYs.Any(nq => nq.MANQ == et.MaNQ);
@@ -83,6 +84,7 @@ namespace DAL
         public bool SuaNQ(ET_NoiQuy et)
         {
             bool ss = false;
+            db = new QLNHDataContext(conn.GetConnection());
             try
             {
                 var change = db.NOIQUYs.SingleOrDefault(nq => nq.MANQ == et.MaNQ);
@@ -110,6 +112,7 @@ namespace DAL
         public bool XoaNQ(ET_NoiQuy et)
         {
             bool ss = false;
+            db = new QLNHDataContext(conn.GetConnection());
             try
             {
                 var delete = db.NOIQUYs.SingleOrDefault(nq => nq.MANQ == et.MaNQ);

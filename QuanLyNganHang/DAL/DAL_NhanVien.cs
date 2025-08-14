@@ -205,6 +205,7 @@ namespace DAL
         public bool ThemNV(ET_NhanVien et)
         {
             bool ss = false;
+            db = new QLNHDataContext(conn.GetConnection());
             try
             {
                 var amp = db.NHANVIENs.Any(nv => nv.MANV == et.MaNV);
@@ -240,6 +241,7 @@ namespace DAL
         public bool SuaNV(ET_NhanVien et)
         {
             bool ss = false;
+            db = new QLNHDataContext(conn.GetConnection());
             try
             {
                 var change = db.NHANVIENs.SingleOrDefault(nv => nv.MANV == et.MaNV);
@@ -272,6 +274,7 @@ namespace DAL
         public bool XoaNV(ET_NhanVien et)
         {
             bool ss = false;
+            db = new QLNHDataContext(conn.GetConnection());
             try
             {
                 var delete = db.NHANVIENs.SingleOrDefault(nv => nv.MANV == et.MaNV);
