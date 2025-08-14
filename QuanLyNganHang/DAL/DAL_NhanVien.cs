@@ -208,6 +208,10 @@ namespace DAL
             db = new QLNHDataContext(conn.GetConnection());
             try
             {
+                if(et.TenNV == "")
+                {
+                    return false;
+                }
                 var amp = db.NHANVIENs.Any(nv => nv.MANV == et.MaNV);
                 if (!amp)
                 {
@@ -244,6 +248,10 @@ namespace DAL
             db = new QLNHDataContext(conn.GetConnection());
             try
             {
+                if (et.TenNV == "")
+                {
+                    return false;
+                }
                 var change = db.NHANVIENs.SingleOrDefault(nv => nv.MANV == et.MaNV);
                 if (change != null)
                 {

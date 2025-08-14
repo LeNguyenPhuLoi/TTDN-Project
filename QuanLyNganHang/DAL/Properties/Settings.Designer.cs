@@ -55,5 +55,16 @@ namespace DAL.Properties {
                 return ((string)(this["QLNHConnectionString2"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=ADMIN-PC\\SQLEXPRESS;Initial Catalog=QLNH;Integrated Security=True;Tru" +
+            "stServerCertificate=True")]
+        public string QLNHConnectionString3 {
+            get {
+                return ((string)(this["QLNHConnectionString3"]));
+            }
+        }
     }
 }

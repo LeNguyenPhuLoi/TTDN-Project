@@ -310,7 +310,7 @@
             this.txtSoTien.Name = "txtSoTien";
             this.txtSoTien.Size = new System.Drawing.Size(287, 30);
             this.txtSoTien.TabIndex = 19;
-            this.txtSoTien.Leave += new System.EventHandler(this.txtSoTien_Leave);
+            this.txtSoTien.TextChanged += new System.EventHandler(this.txtSoTien_TextChanged);
             // 
             // txtMaCK
             // 
