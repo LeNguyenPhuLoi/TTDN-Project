@@ -365,9 +365,9 @@
             this.label7.Location = new System.Drawing.Point(36, 123);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(249, 33);
+            this.label7.Size = new System.Drawing.Size(231, 33);
             this.label7.TabIndex = 0;
-            this.label7.Text = "Mã Tài Khoản Nhận:";
+            this.label7.Text = "Mã Tài Khoản Gửi:";
             // 
             // label3
             // 

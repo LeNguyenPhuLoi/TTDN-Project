@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BUS", "BUS\BUS.csproj", "{0
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{28FFE92F-BC73-4740-9150-176B686649BD}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Quan Lý Ngân Hàng(MindLess CMP)", "Quan Lý Ngân Hàng(MindLess CMP)\Quan Lý Ngân Hàng(MindLess CMP).vdproj", "{A0214041-FFDC-D00E-1A4E-C1D19EE2C3C4}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup1", "Setup1\Setup1.vdproj", "{F5D91FD6-F519-3AC5-2EF1-6ADD62B256F6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,10 @@ Global
 		{28FFE92F-BC73-4740-9150-176B686649BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{28FFE92F-BC73-4740-9150-176B686649BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{28FFE92F-BC73-4740-9150-176B686649BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0214041-FFDC-D00E-1A4E-C1D19EE2C3C4}.Debug|Any CPU.ActiveCfg = Debug
+		{A0214041-FFDC-D00E-1A4E-C1D19EE2C3C4}.Release|Any CPU.ActiveCfg = Release
+		{F5D91FD6-F519-3AC5-2EF1-6ADD62B256F6}.Debug|Any CPU.ActiveCfg = Debug
+		{F5D91FD6-F519-3AC5-2EF1-6ADD62B256F6}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
