@@ -133,6 +133,7 @@ namespace DAL
                     error = "Không tìm thấy áp dụng khuyến mãi với mã khuyến mãi và mã khách hàng đã cho.";
                     return false;
                 }
+
             }
             catch (Exception ex)
             {
